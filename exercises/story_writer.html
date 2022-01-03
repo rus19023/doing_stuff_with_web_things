@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story Editor</title>
   <script>
   	function loadStory() {
@@ -44,15 +47,15 @@
   </style>
 </head>
 
-<body>
-	<h1>Story Editor</h1>
-	Story Name:<input class="inputs" id=name_input type='text'></input>
-	<section>
-		<button class="buttons" onclick="loadStory()">Find and Edit It</button>
-		<button class="buttons" onclick="saveStory()">Save It</button>
-		<button class="buttons" onclick="displayStory()">Display It</button>
-	</section>
-	<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-	<section id="story_display"></section>
-</body>
+	<body>
+		<h1>Story Editor</h1>
+		Story Name:<input class="inputs" id=name_input type='text'></input>
+		<section>
+			<button class="buttons" onclick="loadStory()">Find and Edit It</button>
+			<button class="buttons" onclick="saveStory()">Save It</button>
+			<button class="buttons" onclick="displayStory()">Display It</button>
+		</section>
+		<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+		<section id="story_display"></section>
+	</body>
 </html>
