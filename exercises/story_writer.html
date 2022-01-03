@@ -3,40 +3,56 @@
 <head>
   <title>Story Editor</title>
   <script>
-  	function loadStory(){
+  	function loadStory() {
   		var storyName = document.getElementById("name_input").value
   		var storyHTML = localStorage.getItem(storyName)
   		document.getElementById("story_editor").value = storyHTML
   	}
-  	function saveStory(){
+
+  	function saveStory() {
   		var storyName = document.getElementById("name_input").value
   		var storyHTML = document.getElementById("story_editor").value
   		localStorage.setItem(storyName,storyHTML)
   	}
-  	function displayStory(){
+
+  	function displayStory() {
   		var storyHTML = document.getElementById("story_editor").value
   		document.getElementById("story_display").innerHTML = storyHTML
   	}
   </script>
 
   <style>
-  	textarea{
+	.inputs {
+  		background-color: rgb(255, 224, 241);
+	}
+
+	.inputs, .buttons {
+		border-radius: 5px;
+		margin: 1vw;
+		border: 2px solid hotpink;
+	}
+
+	.buttons {
+		background: rgb(187, 28, 116);
+		color: pink;
+	}
+
+  	textarea {
   		width:800px;
   		height: 250px;
-  		background-color: lightyellow;
   	}
   </style>
 </head>
 
 <body>
 	<h1>Story Editor</h1>
-	Story Name:<input id=name_input></input>
+	Story Name:<input class="inputs" id=name_input type='text'></input>
 	<section>
-		<button onclick="loadStory()">Find and Edit It</button>
-		<button onclick="saveStory()">Save It</button>
-		<button onclick="displayStory()">Display It</button>
+		<button class="buttons" onclick="loadStory()">Find and Edit It</button>
+		<button class="buttons" onclick="saveStory()">Save It</button>
+		<button class="buttons" onclick="displayStory()">Display It</button>
 	</section>
-	<textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+	<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
 	<section id="story_display"></section>
 </body>
 </html>
