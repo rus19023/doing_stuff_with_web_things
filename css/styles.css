@@ -1,6 +1,28 @@
+html {
+    color: #fff;
+    background: #585858;
+    padding: 1vw;
+}
+
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8vh;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 4vh;
-    color: #fff;
-    background: black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #00ffff;
+}
+
+a:visited {
+    color: #a8f7ac;
+    text-decoration: none;
 }
