@@ -12,9 +12,9 @@ var ol = "<ol>";
 // create links list
 let weekno = 1;
 for (let i = 1; i <= weekno; i++) {
-  let n1 = `/week${i}/`;
-  let e1 = `/week${i}/exercise${i}.html`;
-  let c1 = `/week${i}/challenge${i}.html`;
+  let n1 = `/myportfolio/week${i}/`;
+  let e1 = `/myportfolio/week${i}/exercise${i}.html`;
+  let c1 = `/myportfolio/week${i}/challenge${i}.html`;
   console.log(`n1: ${n1}`);
   console.log(`e1: ${e1}`);
   console.log(`c1: ${c1}`);
