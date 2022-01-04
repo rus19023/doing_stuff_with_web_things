@@ -10,20 +10,22 @@ function fileExists(url)
 var container = document.getElementById("container");
 var ol = "<ol>";
 // create links list
-let weekno = 2;
+let weekno = 1;
 for (let i = 1; i <= weekno; i++) {
-  ol += `<li><a href="week${i}/">Week ${i} Notes</a></li>`;
+  let n1 = `/myportfolio/week${i}/`;
   let e1 = `/myportfolio/week${i}/exercise${i}.html`;
   let c1 = `/myportfolio/week${i}/challenge${i}.html`;
+  console.log(`n1: ${n1}`);
   console.log(`e1: ${e1}`);
   console.log(`c1: ${c1}`);
+  ol += `<li><a href="${n1}/">Week ${i} Notes</a></li>`;
   console.log(`container: ${container.innerHTML}`);
 
   if (fileExists(e1)) {
-    ol +=  `<li><a href="week${i}/exercise${i}.html">Exercise ${i}</a></li>`;
+    ol +=  `<li><a href="${e1}">Exercise ${i}</a></li>`;
   }
   if (fileExists(c1)) {
-    ol +=  `<li><a href="week${i}/challenge${i}.html">Challenge ${i}</a></li>`;
+    ol +=  `<li><a href="${c1}">Challenge ${i}</a></li>`;
   }
 }
 ol += "</ol>";
