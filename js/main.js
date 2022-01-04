@@ -13,8 +13,8 @@ var ol = "<ol>";
 let weekno = 2;
 for (let i = 1; i <= weekno; i++) {
   ol += `<li><a href="week${i}/">Week ${i} Notes</a></li>`;
-  let e1 = `/week${i}/exercise${i}.html`;
-  let c1 = `/week${i}/challenge${i}.html`;
+  let e1 = `/myportfolio/week${i}/exercise${i}.html`;
+  let c1 = `/myportfolio/week${i}/challenge${i}.html`;
   console.log(`e1: ${e1}`);
   console.log(`c1: ${c1}`);
   console.log(`container: ${container.innerHTML}`);
