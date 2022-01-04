@@ -1,23 +1,31 @@
-// create link list element
-var list = document.getElementById("list");
-var ol = document.createElement("ol");
-var li = document.createElement("li");
-var li2 = document.createElement("li");
-var label, url;
-// create links array
-let weekno = 1;
-for (let i = 0; i <= weekno; i++) {
-  label = `Week ${i} Notes`;
-  url = `week${i}/`;
-  console.log(label);
-  console.log(url);
-  label2 = `Exercise ${i}`;
-  url2 = `exercises/exercise${i}.html`;
-  console.log(label2);
-  console.log(url2);
-  li.innerHTML = `<a href="${url}">${label}</a>`;
-  li2.innerHTML = `<a href="${url2}">${label2}</a>`;
-  ol.appendChild(li);
-  ol.appendChild(li2);
-  list.appendChild(ol);
+function fileExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
 }
+
+// create link list element
+var container = document.getElementById("container");
+var ol = "<ol>";
+// create links list
+let weekno = 2;
+for (let i = 1; i <= weekno; i++) {
+  ol += `<li><a href="week${i}/">Week ${i} Notes</a></li>`;
+  let e1 = `/week${i}/exercise${i}.html`;
+  let c1 = `/week${i}/challenge${i}.html`;
+  console.log(`e1: ${e1}`);
+  console.log(`c1: ${c1}`);
+  console.log(`container: ${container.innerHTML}`);
+
+  if (fileExists(e1)) {
+    ol +=  `<li><a href="week${i}/exercise${i}.html">Exercise ${i}</a></li>`;
+  }
+  if (fileExists(c1)) {
+    ol +=  `<li><a href="week${i}/challenge${i}.html">Challenge ${i}</a></li>`;
+  }
+}
+ol += "</ol>";
+container.innerHTML = ol;
+console.log(`container: ${container.innerHTML}`);
