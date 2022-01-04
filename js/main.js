@@ -18,7 +18,7 @@ for (let i = 1; i <= weekno; i++) {
   console.log(`n1: ${n1}`);
   console.log(`e1: ${e1}`);
   console.log(`c1: ${c1}`);
-  ol += `<li><a href="${n1}/">Week ${i} Notes</a></li>`;
+  ol += `<li><a href="${n1}">Week ${i} Notes</a></li>`;
   console.log(`container: ${container.innerHTML}`);
 
   if (fileExists(e1)) {
