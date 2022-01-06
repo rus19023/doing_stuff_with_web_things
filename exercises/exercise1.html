@@ -23,6 +23,10 @@
   		var storyHTML = document.getElementById("story_editor").value
   		document.getElementById("story_display").innerHTML = storyHTML
   	}
+
+	function ex1() {
+		
+	}
   </script>
 
   <style>
@@ -49,14 +53,20 @@
 </head>
 
 	<body>
-		<h1>Story Editor</h1>
-		Story Name:<input class="inputs" id=name_input type='text' value="The Teddy Bear"></input>
-		<section>
+		<h1>Week 01</h1>
+		<section id="storyPage">
+			<h2>Story Editor</h2>
+			Story Name:
+			<input class="inputs" id=name_input type='text' value="The Teddy Bear"></input>
 			<button class="buttons" onclick="loadStory()">Find and Edit It</button>
 			<button class="buttons" onclick="saveStory()">Save It</button>
 			<button class="buttons" onclick="displayStory()">Display It</button>
-		</section>
 		<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-		<section id="story_display"></section>
+		<div id="story_display"></div>
+		</section>
+		<section id="Exercises">
+			<h2>Exercises</h2>
+
+		</section>
 	</body>
 </html>
