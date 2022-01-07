@@ -4,28 +4,31 @@
 html {
     color: #fff;
     background: $mdgrey;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    padding: 0 2vw;
-    width: 94%;
+    padding: 0 4vw;
+    max-width: 100%;
     font-family: $fontsecond;
     background: black;
+    border-radius: 10px;
 }
 
 div, img {
     font-family: $fontprimary;
     background: black;
     padding: 2vw;
-    width: 92%;
+    max-width: 100%;
     margin: 2vw;
+    border-radius: 10px;
 }
 
-h1 { font-size: 7vh; }
+h1 { font-size: 5vh; }
 
-h2 { font-size: 5vh;}
+h2 { font-size: 4vh;}
 
-h3 { font-size: 4vh; }
+h3 { font-size: 3vh; }
 
 p {
     color: $primary;
@@ -52,4 +55,21 @@ a:hover {
 
 img {
     width: 50%;
+}
+
+.buttons {
+    text-align: center;
+    cursor: pointer;
+    background: black;
+    border: $buttonborder;
+    padding: 2vw;
+    width: 25%;
+    margin: 0 auto;
+    height: 6vh;
+    border-radius: 10px;
+    & a {
+        text-decoration: none;
+        color: $contrast;
+        font-size: 4vh;
+    }
 }

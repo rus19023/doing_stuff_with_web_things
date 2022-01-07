@@ -3,33 +3,36 @@
 html {
   color: #fff;
   background: #686868;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  padding: 0 2vw;
-  width: 94%;
+  padding: 0 4vw;
+  max-width: 100%;
   font-family: "Dosis", sans-serif;
   background: black;
+  border-radius: 10px;
 }
 
 div, img {
   font-family: "Nunito", sans-serif;
   background: black;
   padding: 2vw;
-  width: 92%;
+  max-width: 100%;
   margin: 2vw;
+  border-radius: 10px;
 }
 
 h1 {
-  font-size: 7vh;
-}
-
-h2 {
   font-size: 5vh;
 }
 
-h3 {
+h2 {
   font-size: 4vh;
+}
+
+h3 {
+  font-size: 3vh;
 }
 
 p {
@@ -57,4 +60,21 @@ a:hover {
 
 img {
   width: 50%;
+}
+
+.buttons {
+  text-align: center;
+  cursor: pointer;
+  background: black;
+  border: 4px solid #f5aeff;
+  padding: 2vw;
+  width: 25%;
+  margin: 0 auto;
+  height: 6vh;
+  border-radius: 10px;
+}
+.buttons a {
+  text-decoration: none;
+  color: #f5aeff;
+  font-size: 4vh;
 }/*# sourceMappingURL=styles.css.map */
