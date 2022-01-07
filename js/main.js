@@ -38,7 +38,7 @@ function createMenu() {
     let n1 = `${baseurl}week${i}/`;
     let e1 = `${baseurl}exercises/exercise${i}.html`;
     let c1 = `${baseurl}challenges/challenge${i}.html`;
-    console.log(`folderString: ${folderString}`);
+    //console.log(`folderString: ${folderString}`);
     console.log(`e1: ${e1}`);
     console.log(`c1: ${c1}`);
     ol += `<li><a href="${n1}">Week ${i} Notes</a></li>`;
