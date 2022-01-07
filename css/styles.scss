@@ -1,0 +1,50 @@
+@import "variables";
+html {
+    color: #fff;
+    background: $mdgrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 2vw auto;
+    padding: 1vw;
+    width: 90%;
+    font-family: $fontsecond;
+    background: black;
+}
+
+#container, li, img {
+    font-family: $fontprimary;
+    background: black;
+    padding: 2vw;
+    width: 90%;
+    margin: auto 2vw;
+}
+
+p { padding: 4vw; }
+
+h1 { font-size: 6vh; }
+
+h2 { font-size: 4vh;}
+
+h3 { font-size: 3vh; }
+
+p, li {
+    color: $primary;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: $accent;
+}
+
+a:visited {
+    color: $accent;
+    text-decoration: none;
+}
+
+img {
+    width: 50%;
+}
