@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap');
 @import "variables";
 html {
     color: #fff;
@@ -5,31 +7,30 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 2vw auto;
-    padding: 1vw;
-    width: 90%;
+    padding: 0 2vw;
+    width: 94%;
     font-family: $fontsecond;
     background: black;
 }
 
-#container, li, img {
+div, img {
     font-family: $fontprimary;
     background: black;
     padding: 2vw;
-    width: 90%;
-    margin: auto 2vw;
+    width: 92%;
+    margin: 2vw;
 }
 
-p { padding: 4vw; }
+h1 { font-size: 7vh; }
 
-h1 { font-size: 6vh; }
+h2 { font-size: 5vh;}
 
-h2 { font-size: 4vh;}
+h3 { font-size: 4vh; }
 
-h3 { font-size: 3vh; }
-
-p, li {
+p {
     color: $primary;
+    padding: 2vw;
+    margin: 0 2vw;
 }
 
 li {
@@ -43,6 +44,10 @@ a {
 a:visited {
     color: $accent;
     text-decoration: none;
+}
+
+a:hover {
+    color: white;
 }
 
 img {

@@ -1,42 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 html {
   color: #fff;
   background: #686868;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 2vw auto;
-  padding: 1vw;
-  width: 90%;
+  padding: 0 2vw;
+  width: 94%;
   font-family: "Dosis", sans-serif;
   background: black;
 }
 
-#container, li, img {
+div, img {
   font-family: "Nunito", sans-serif;
   background: black;
   padding: 2vw;
-  width: 90%;
-  margin: auto 2vw;
-}
-
-p {
-  padding: 4vw;
+  width: 92%;
+  margin: 2vw;
 }
 
 h1 {
-  font-size: 6vh;
+  font-size: 7vh;
 }
 
 h2 {
-  font-size: 4vh;
+  font-size: 5vh;
 }
 
 h3 {
-  font-size: 3vh;
+  font-size: 4vh;
 }
 
-p, li {
+p {
   color: #ffccae;
+  padding: 2vw;
+  margin: 0 2vw;
 }
 
 li {
@@ -50,6 +49,10 @@ a {
 a:visited {
   color: #b9ffae;
   text-decoration: none;
+}
+
+a:hover {
+  color: white;
 }
 
 img {
