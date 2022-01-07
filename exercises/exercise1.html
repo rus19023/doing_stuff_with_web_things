@@ -6,50 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
   <title>Story Editor</title>
-  <script>
-  	function loadStory() {
-  		var storyName = document.getElementById("name_input").value
-  		var storyHTML = localStorage.getItem(storyName)
-  		document.getElementById("story_editor").value = storyHTML
-  	}
 
-  	function saveStory() {
-  		var storyName = document.getElementById("name_input").value
-  		var storyHTML = document.getElementById("story_editor").value
-  		localStorage.setItem(storyName,storyHTML)
-  	}
-
-  	function displayStory() {
-  		var storyHTML = document.getElementById("story_editor").value
-  		document.getElementById("story_display").innerHTML = storyHTML
-  	}
-
-	function ex1() {
-		
-	}
-  </script>
-
-  <style>
-	.inputs {
-  		background-color: rgb(255, 224, 241);
-	}
-
-	.inputs, .buttons {
-		border-radius: 5px;
-		margin: 1vw;
-		border: 2px solid hotpink;
-	}
-
-	.buttons {
-		background: rgb(187, 28, 116);
-		color: pink;
-	}
-
-  	textarea {
-  		width:800px;
-  		height: 250px;
-  	}
-  </style>
+  
 </head>
 
 	<body>
@@ -66,7 +24,22 @@
 		</section>
 		<section id="Exercises">
 			<h2>Exercises</h2>
-
+			<form action="">
+				<p>
+					Write a JavaScript function that reverses a number. Example x = 32243; Expected Output : 34223
+				</p>
+				<label for="">Reverse Number
+					<input type="text" name="number_input" id="number_input" placeholder="Enter number here">
+				</label>
+				<button class="buttons" onclick="reverseNumber()">Run</button>
+				<div id="reverse_output"></div>
+			</form>
 		</section>
+		<footer>
+		  <h5 class="buttons">
+			<a href="/">Menu</a>
+		  </h5>
+		</footer>
+		<script src="https://rus19023.github.io/myportfolio/js/main.js"></script>
 	</body>
 </html>
