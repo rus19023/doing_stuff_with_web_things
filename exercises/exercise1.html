@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
   <title>Story Editor</title>
 </head>
 
 	<body>
 		<h5 class="tab-bar">
-		  <a href="/">Menu</a>
+		  <a href="../">Menu</a>
 		  <a href="#story">Story Editor</a>
 		  <a href="#exercises">Exercises</a>
 		</h5>
@@ -18,17 +18,19 @@
 
 		<section id="exercises">
 			<h2>Exercises</h2>
-			<form action="">
-				<p>
-					Write a JavaScript function that reverses a number. Example x = 32243; Expected Output : 34223
-				</p>
-				<label class="labels" for="">Reverse Number <br>
-					<input class="inputs" type="text" name="number_input" id="number_input" placeholder="Enter number here" value="32243">
-				</label> <br>
-				<button class="buttons" onclick="reverseNumber()">Run</button>
-			</form>
 			<div>
-				<p id="reverse_output">Output here</p>
+				<form action="">
+					<p>
+						Write a JavaScript function that reverses a number. <br> Example x = 32243: Expected Output : 34223
+					</p>
+					<label class="labels" for="">Reverse Number <br>
+						<input class="inputs" type="text" name="number_input" id="number_input" placeholder="Enter number here" value="32243">
+					</label> <br>
+					<button class="buttons" onclick="reverseNumber()">Run</button>
+				</form>
+				<div>
+					<p id="reverse_output">Output here</p>
+				</div>
 			</div>
 		</section>
 
@@ -42,6 +44,6 @@
 		<textarea class="textarea" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
 		<div id="story_show"></div>
 		</section>
-		<script src="https://rus19023.github.io/myportfolio/js/main.js"></script>
+		<script src="../js/main.js"></script>
 	</body>
 </html>
