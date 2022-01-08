@@ -40,6 +40,11 @@ ul li {
     list-style: none;
 }
 
+ol li {
+    color: $secondary;
+    background: $primary;
+}
+
 a {
     color: $accent;
 }
