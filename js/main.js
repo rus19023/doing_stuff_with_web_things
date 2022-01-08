@@ -24,8 +24,8 @@ function createMenu() {
   let seconds = today.getTime() - termdate.getTime();
   // add 1 to weeks to account for rounding down
   let weekno = Math.floor(seconds / secondsPerWeek) + 1;
-  //let baseurl = "https://rus19023.github.io/myportfolio/";
-  let baseurl = "/";
+  let baseurl = "https://rus19023.github.io/myportfolio/";
+  //let baseurl = "/";
   console.log(`termdate: ${termdate}`);
   console.log(`today: ${today}`);
   console.log(`seconds: ${seconds}`);
