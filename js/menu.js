@@ -1,7 +1,7 @@
 const navlist = [
     {
         "name": "Week 01 Notes",
-        "url": "week01/"
+        "url": "week01/ "
     },
     {
         "name": "Week 01 Exercises",

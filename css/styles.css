@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 html {
   color: #fff;
-  background: #686868;
+  background: #a87300;
   font-size: 16px;
 }
 
@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Dosis", sans-serif;
   background: black;
   border-radius: 10px;
+  margin: 2vw auto;
 }
 
 div, img {
@@ -24,15 +25,32 @@ div, img {
 }
 
 h1 {
-  font-size: 5vh;
+  font-size: 6vh;
 }
 
 h2 {
-  font-size: 4vh;
+  font-size: 4.5vh;
+  width: 95%;
 }
 
 h3 {
+  font-size: 4vh;
+  width: 90%;
+}
+
+h4 {
   font-size: 3vh;
+  width: 85%;
+}
+
+h5 {
+  font-size: 2vh;
+  width: 80%;
+}
+
+h6 {
+  font-size: 2vh;
+  width: 75%;
 }
 
 p {
@@ -40,6 +58,7 @@ p {
   font-family: "Nunito", sans-serif;
   padding: 2vw;
   margin: 0 2vw;
+  background: black;
 }
 
 ul li {
