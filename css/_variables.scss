@@ -5,8 +5,8 @@ $accent: adjust-hue($primary, 90deg);
 $contrast: adjust-hue($accent, 180deg);
 $primaryborder: darken($primary, 20%);
 $warning: darken($contrast, 50%);
+$nav: adjust-hue($primary, 210deg);
 $valid: adjust-hue($accent, 270deg);
-$nav: adjust-hue($accent, 210deg);
 
 $debug: rgb(190, 255, 60);
 

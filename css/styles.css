@@ -37,6 +37,7 @@ h3 {
 
 p {
   color: #ffccae;
+  font-family: "Nunito", sans-serif;
   padding: 2vw;
   margin: 0 2vw;
 }
@@ -77,30 +78,30 @@ img {
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
-  color: #ffffff;
+  color: #b9ffae;
   font-family: "Dosis", sans-serif;
   font-weight: bold;
   font-size: max(4vh);
 }
 .buttons a {
   text-decoration: none;
-  color: #ffffff;
+  color: #b9ffae;
   font-size: 4vh;
 }
 
 .inputs {
-  max-width: 50%;
+  max-width: 90%;
 }
 
 .textarea, .inputs {
   background: #ffccae;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 4px solid #ff8c48;
   margin: 1vw;
 }
 
 textarea {
-  width: 100%;
+  max-width: 100%;
   height: 25vh;
 }
 
@@ -110,13 +111,13 @@ textarea {
   bottom: 0;
   width: 100%;
   border-radius: 0;
-  height: 6vh;
+  height: 4vh;
 }
 .tab-bar a {
   float: left;
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #ffaee1;
+  color: #aeb9ff;
   padding: 1vw 2vw;
 }/*# sourceMappingURL=styles.css.map */

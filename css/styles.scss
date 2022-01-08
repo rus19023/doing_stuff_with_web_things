@@ -32,6 +32,7 @@ h3 { font-size: 3vh; }
 
 p {
     color: $primary;
+    font-family: $fontprimary;
     padding: 2vw;
     margin: 0 2vw;
 }
@@ -72,30 +73,30 @@ img {
     margin: 0 auto;
     height: 10vh;
     border-radius: 10px;
-    color: $secondary;
+    color: $accent;
     font-family: $fontsecond;
     font-weight: bold;
     font-size: $font4;
     & a {
         text-decoration: none;
-        color: $secondary;
+        color: $accent;
         font-size: 4vh;
     }
 }
 
 .inputs {
-    max-width: 50%;
+    max-width: 90%;
 }
 
 .textarea, .inputs {
     background: $primary;
-    border-radius: 5px;
+    border-radius: 10px;
     border: $inputborder;
     margin: 1vw;
 }
 
 textarea {
-    width: 100%;
+    max-width: 100%;
     height: 25vh;
 }
 
@@ -105,7 +106,7 @@ textarea {
     bottom: 0;
     width: 100%;
     border-radius: 0;
-    height: 6vh;
+    height: 4vh;
     a {
         float: left;
         display: block;
