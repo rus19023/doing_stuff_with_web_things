@@ -36,7 +36,7 @@ p {
     margin: 0 2vw;
 }
 
-li {
+ul li {
     list-style: none;
 }
 
@@ -69,7 +69,7 @@ img {
     border-radius: 10px;
     & a {
         text-decoration: none;
-        color: $contrast;
+        color: $secondary;
         font-size: 4vh;
     }
 }
