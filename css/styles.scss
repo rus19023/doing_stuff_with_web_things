@@ -8,7 +8,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    padding: 0 4vw;
+    padding: 2vw;
     max-width: 100%;
     font-family: $fontsecond;
     background: black;
@@ -42,20 +42,19 @@ ul li {
 
 ol li {
     color: $secondary;
-    background: $primary;
 }
 
 a {
     color: $accent;
+    text-decoration: none;
 }
 
 a:visited {
     color: $accent;
-    text-decoration: none;
 }
 
 a:hover {
-    color: white;
+    color: $contrast;
 }
 
 img {
@@ -67,11 +66,16 @@ img {
     cursor: pointer;
     background: black;
     border: $buttonborder;
-    padding: 2vw;
-    width: 25%;
+    padding: 1vw;
+    width: 100%;
+    max-width: 25%;
     margin: 0 auto;
-    height: 6vh;
+    height: 10vh;
     border-radius: 10px;
+    color: $secondary;
+    font-family: $fontsecond;
+    font-weight: bold;
+    font-size: $font4;
     & a {
         text-decoration: none;
         color: $secondary;
@@ -80,10 +84,14 @@ img {
 }
 
 .inputs {
-    background-color: rgb(255, 224, 241);
-  border-radius: 5px;
-  margin: 1vw;
-  border: 2px solid hotpink;
+    max-width: 50%;
+}
+
+.textarea, .inputs {
+    background: $primary;
+    border-radius: 5px;
+    border: $inputborder;
+    margin: 1vw;
 }
 
 textarea {
@@ -91,20 +99,19 @@ textarea {
     height: 25vh;
 }
 
-.navbar {
+.tab-bar {
     overflow: hidden;
-    background-color: $primary;
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
-
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+    border-radius: 0;
+    height: 6vh;
+    a {
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $nav;
+        padding: 1vw 2vw;
+      }
   }

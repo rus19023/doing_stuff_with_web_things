@@ -3,9 +3,10 @@ $primary: #ffccae;
 $secondary: #ffffff;
 $accent: adjust-hue($primary, 90deg);
 $contrast: adjust-hue($accent, 180deg);
+$primaryborder: darken($primary, 20%);
 $warning: darken($contrast, 50%);
 $valid: adjust-hue($accent, 270deg);
-$checkcolor: #fff0ae;
+$nav: adjust-hue($accent, 210deg);
 
 $debug: rgb(190, 255, 60);
 
@@ -23,6 +24,7 @@ $border: 2px solid $dkgrey;
 $borderwarn: 4px solid $warning;
 $bordervalid: 4px solid $valid;
 $buttonborder: 4px solid $contrast;
+$inputborder: 4px solid $primaryborder;
 $legendborder: 4px solid $mdgrey;
 
 // Fonts

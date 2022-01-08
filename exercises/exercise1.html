@@ -4,42 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
   <title>Story Editor</title>
-
-  
 </head>
 
 	<body>
+		<h5 class="tab-bar">
+		  <a href="/">Menu</a>
+		  <a href="#story">Story Editor</a>
+		  <a href="#exercises">Exercises</a>
+		</h5>
 		<h1>Week 01</h1>
-		<section id="storyPage">
-			<h2>Story Editor</h2>
-			Story Title:
-			<input class="inputs" id=name_input type='text' value="The Teddy Bear"></input>
-			<button class="buttons" onclick="loadStory()">Find and Edit It</button>
-			<button class="buttons" onclick="saveStory()">Save It</button>
-			<button class="buttons" onclick="displayStory()">Display It</button>
-		<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-		<div id="story_display"></div>
-		</section>
-		<section id="Exercises">
+
+		<section id="exercises">
 			<h2>Exercises</h2>
 			<form action="">
 				<p>
 					Write a JavaScript function that reverses a number. Example x = 32243; Expected Output : 34223
 				</p>
-				<label for="">Reverse Number
-					<input type="text" name="number_input" id="number_input" placeholder="Enter number here">
-				</label>
+				<label class="labels" for="">Reverse Number <br>
+					<input class="inputs" type="text" name="number_input" id="number_input" placeholder="Enter number here" value="32243">
+				</label> <br>
 				<button class="buttons" onclick="reverseNumber()">Run</button>
 			</form>
 			<div id="reverse_output">Output here</div>
 		</section>
-		<footer>
-		  <h5 class="buttons">
-			<a href="/">Menu</a>
-		  </h5>
-		</footer>
+
+		<section id="storyPage">
+			<h2>Story Editor</h2>
+			Story Title: <br>
+			<input class="inputs" id=name_input type='text' value="The Teddy Bear"></input> <br>
+			<button id="load" class="buttons" onclick="loadStory()">Find and Edit It</button>
+			<button id="save" class="buttons" onclick="saveStory()">Save It</button>
+			<button id="showit" class="buttons" onclick="showStory()">Show It</button>
+		<textarea class="textarea" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+		<div id="story_show"></div>
+		</section>
 		<script src="https://rus19023.github.io/myportfolio/js/main.js"></script>
 	</body>
 </html>
