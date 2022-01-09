@@ -15,13 +15,19 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2vw auto;
 }
 
-div, img {
+div, form {
   font-family: "Nunito", sans-serif;
   background: black;
   padding: 2vw;
   max-width: 100%;
   margin: 2vw;
   border-radius: 10px;
+}
+
+.center-image {
+  display: block;
+  width: 95%;
+  margin: auto;
 }
 
 h1 {
