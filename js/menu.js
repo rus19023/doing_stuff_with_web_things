@@ -1,25 +1,50 @@
 const navlist = [
-    {
-        "name": "Week 01 Notes",
-        "url": "week01/ "
-    },
-    {
-        "name": "Week 01 Exercises",
-        "url": "exercises/exercise1.html"
-    },
-    {
-        "name": "Week 02 Notes",
-        "url": "week02/"
-    },
-    {
-        "name": "Week 02 Exercises",
-        "url": "exercises/exercise2.html"
-    },
-    {
-        "name": "Week 02 Challenges",
-        "url": "challenges/challenge2.html"
-    }
+  {
+      "name": "Week 01 Notes",
+      "url": "week01/ "
+  },
+  {
+      "name": "Week 01 Exercises",
+      "url": "exercises/exercise1.html"
+  },
+  {
+      "name": "Week 02 Notes",
+      "url": "week02/"
+  },
+  {
+      "name": "Week 02 Exercises",
+      "url": "exercises/exercise2.html"
+  },
+  {
+      "name": "Week 02 Challenges",
+      "url": "challenges/challenge2.html"
+  }
 ]
+
+function createNav(array) {
+    // create link list container element
+    const container = document.getElementById("container");
+    // create link list element
+    let ol = "<ol>";
+    let baseurl = "https://rus19023.github.io/myportfolio/";
+    //let baseurl = "/";
+    // get list of files to create links for each week number
+    array.forEach(element => {
+        ol += `<li><a href="${baseurl}${element.url}">${element.name}</a></li>`;
+    });
+    ol += "</ol>";
+    container.innerHTML = ol;
+}
+createNav(navlist);
+
+
+
+
+
+
+
+
+/*
 
 function fileExists(url) {
   var http = new XMLHttpRequest();
@@ -80,20 +105,5 @@ function createMenu() {
   container.innerHTML = ol;
   console.log(`container: ${container.innerHTML}`);
 }
-
-function createNav(array) {
-    // create link list container element
-    const container = document.getElementById("container");
-    // create link list element
-    let ol = "<ol>";
-    //let baseurl = "https://rus19023.github.io/myportfolio/";
-    let baseurl = "/";
-    // get list of files to create links for each week number
-    array.forEach(element => {
-        ol += `<li><a href="${baseurl}${element.url}">${element.name}</a></li>`;
-    });
-    ol += "</ol>";
-    container.innerHTML = ol;
-}
-createNav(navlist);
-//createMenu();
+createMenu();
+*/
