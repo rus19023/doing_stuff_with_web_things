@@ -59,7 +59,7 @@ h6 {
   width: 75%;
 }
 
-p {
+.normal-text {
   color: #ffccae;
   font-family: "Nunito", sans-serif;
   font-size: 3.5vh;
