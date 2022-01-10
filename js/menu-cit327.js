@@ -62,7 +62,7 @@ function createNav(array) {
   const container = document.getElementById("container");
   // create link list element
   let ol = "<ol>";
-  let baseurl = "https://rus19023.github.io/myportfolio/CIT327/";
+  let baseurl = "/cit327/";
   //let baseurl = "/";
   // get list of files to create links for each week number
   array.forEach((element) => {
