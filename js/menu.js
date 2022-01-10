@@ -6,6 +6,18 @@ const navlist = [
   {
       "name": "Week 01 Exercises",
       "url": "exercises/exercise1.html"
+  },
+  {
+      "name": "Week 02 Notes",
+      "url": "week2/"
+  },
+  {
+      "name": "Week 02 Exercises",
+      "url": "exercises/exercise2.html"
+  },
+  {
+      "name": "Week 05 Challenge 1",
+      "url": "challenges/challenge5.html"
   }
 ]
 
