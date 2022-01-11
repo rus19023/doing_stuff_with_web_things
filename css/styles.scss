@@ -1,13 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap');
 @import "variables";
+@import "large";
+
+
 html {
-    color: #fff;
+    color: $accent;
     background: $background;
     font-size: 16px;
 }
 
+footer {
+    padding: 16px;
+    margin-bottom: 4vh;
+    width: 94%;
+}
+
+.tab-bar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 4vh;
+    a {
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $nav;
+        padding: 1vw 2vw;
+      }
+  }
+
 h1, h2, h3, h4, h5, h6 {
+    color: $accent;
     padding: 2vw;
     max-width: 100%;
     font-family: $fontsecond;
@@ -25,7 +52,7 @@ div, form, footer, p {
     border-radius: 10px;
 }
 
-.center-image {
+.centerimg {
     display: block;
     width: 95%;
     margin: auto;
@@ -35,8 +62,8 @@ h1 { font-size: 6vh; }
 h2 { font-size: 5vh; width: 95%; }
 h3 { font-size: 4vh; width: 90%; }
 h4 { font-size: 3vh; width: 85%; }
-h5 { font-size: 2vh; width: 80%; }
-h6 { font-size: 2vh; width: 75%; }
+h5 { font-size: 2vh; width: 80%; font-weight: bold; }
+h6 { font-size: 2vh; width: 75%; font-weight: bold; }
 
 .normal-text {
     color: $primary;
@@ -52,7 +79,7 @@ ul li {
 }
 
 ol li {
-    color: $secondary;
+    color: $accent;
 }
 
 a {
@@ -77,7 +104,7 @@ img {
     cursor: pointer;
     background: black;
     border: $buttonborder;
-    padding: 1vw;
+    padding: 2vw;
     width: 100%;
     max-width: 25%;
     margin: 0 auto;
@@ -109,20 +136,3 @@ textarea {
     width: 90%;
     height: 25vh;
 }
-
-.tab-bar {
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-radius: 0;
-    height: 4vh;
-    a {
-        float: left;
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: $nav;
-        padding: 1vw 2vw;
-      }
-  }

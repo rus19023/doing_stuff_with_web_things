@@ -9,42 +9,25 @@
 </head>
 
 	<body>
-		<h5 class="tab-bar">
-		  <a href="/">Menu</a>
-		  <a href="#story">Story Editor</a>
-		  <a href="#exercises">Exercises</a>
-		</h5>
-		<h1>Week 01</h1>
+		<main>
+			<h5 class="tab-bar">
+			<a href="/">Menu</a>
+			<a href="#story">Story Editor</a>
+			</h5>
+			<h1>Week 01</h1>
 
-		<section id="exercises">
-			<h2>Exercises</h2>
-			<div>
-				<h3><a href="">Source</a></h3>
-				<form action="">
-					<p>
-						Write a JavaScript function that reverses a number. <br> Example x = 32243. Expected Output : 34223
-					</p>
-					<label class="labels" for="">Reverse Number <br>
-						<input class="inputs" type="text" name="number_input" id="number_input" placeholder="Enter number here" value="32243">
-					</label> <br>
-					<button class="buttons" onclick="reverseNumber()">Run</button>
-				</form>
-				<div>
-					<p id="reverse_output">Output here</p>
-				</div>
-			</div>
-		</section>
-
-		<section id="storyPage">
-			<h2>Story Editor</h2>
-			Story Title: <br>
-			<input class="inputs" id=name_input type='text' value="The Teddy Bear"></input> <br>
-			<button id="load" class="buttons" onclick="loadStory()">Find and Edit It</button>
-			<button id="save" class="buttons" onclick="saveStory()">Save It</button>
-			<button id="showit" class="buttons" onclick="showStory()">Show It</button>
-		<textarea class="textarea" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-		<div id="story_show"></div>
-		</section>
+			<section id="storyPage">
+				<h2>Story Editor</h2>
+				Story Title: <br>
+				<input class="inputs" id=name_input type='text' value="The Teddy Bear"></input> <br>
+				<button id="load" class="buttons" onclick="loadStory()">Find and Edit It</button>
+				<button id="save" class="buttons" onclick="saveStory()">Save It</button>
+				<button id="showit" class="buttons" onclick="showStory()">Show It</button>
+				<textarea class="textarea" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+				<div id="story_show"></div>
+			</section>
+		</main>
+		<footer id="footer"></footer>
 		<script src="../js/main.js"></script>
 	</body>
 </html>

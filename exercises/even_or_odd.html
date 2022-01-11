@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
   <title>Even or Odd</title>
   <script>
-	function checkNumber(){
+	function checkNumber() {
   		var numberAsText = document.getElementById("number_input").value
   		var aNumber = parseInt(numberAsText)
   		if(numberAsText != "" && !isNaN(aNumber)){
@@ -49,10 +49,13 @@
   </style>
 </head>
 
-<body>
-	<h1>Even or Odd???</h1>
-	Enter a Number: <input id="number_input"></input>
-	<button onclick="checkNumber()">Check It!</button>
-	<section id="result_display"></section>
-</body>
+	<body>
+		<main>
+			<h1>Even or Odd???</h1>
+			Enter a Number: <input id="number_input"></input>
+			<button onclick="checkNumber()">Check It!</button>
+			<section id="result_display"></section>
+		</main>
+		<footer id="footer"></footer>
+	</body>
 </html>

@@ -1,7 +1,7 @@
 // Colors
-$primary: #ffccae;
-$secondary: #ffffff;
-$accent: adjust-hue($primary, 90deg);
+$primary: #ffb88f;
+$accent: lighten($primary, 20%);
+$headings: $accent;
 $contrast: adjust-hue($accent, 180deg);
 $primaryborder: darken($primary, 20%);
 $warning: darken($contrast, 50%);

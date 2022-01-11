@@ -1,12 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 html {
-  color: #fff;
+  color: #fff9f5;
   background: #a87300;
   font-size: 16px;
 }
 
+footer {
+  padding: 16px;
+  margin-bottom: 4vh;
+  width: 94%;
+}
+
+.tab-bar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  height: 4vh;
+}
+.tab-bar a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #8f9eff;
+  padding: 1vw 2vw;
+}
+
 h1, h2, h3, h4, h5, h6 {
+  color: #fff9f5;
   padding: 2vw;
   max-width: 100%;
   font-family: "Dosis", sans-serif;
@@ -15,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2vw auto;
 }
 
-div, form {
+div, form, footer, p {
   font-family: "Nunito", sans-serif;
   background: black;
   padding: 2vw;
@@ -24,7 +48,7 @@ div, form {
   border-radius: 10px;
 }
 
-.center-image {
+.centerimg {
   display: block;
   width: 95%;
   margin: auto;
@@ -52,15 +76,17 @@ h4 {
 h5 {
   font-size: 2vh;
   width: 80%;
+  font-weight: bold;
 }
 
 h6 {
   font-size: 2vh;
   width: 75%;
+  font-weight: bold;
 }
 
 .normal-text {
-  color: #ffccae;
+  color: #ffb88f;
   font-family: "Nunito", sans-serif;
   font-size: 3.5vh;
   padding: 2vw;
@@ -73,20 +99,20 @@ ul li {
 }
 
 ol li {
-  color: #ffffff;
+  color: #fff9f5;
 }
 
 a {
-  color: #b9ffae;
+  color: #fff9f5;
   text-decoration: none;
 }
 
 a:visited {
-  color: #b9ffae;
+  color: #fff9f5;
 }
 
 a:hover {
-  color: #f5aeff;
+  color: #f5fbff;
 }
 
 img {
@@ -97,21 +123,21 @@ img {
   text-align: center;
   cursor: pointer;
   background: black;
-  border: 4px solid #f5aeff;
-  padding: 1vw;
+  border: 4px solid #f5fbff;
+  padding: 2vw;
   width: 100%;
   max-width: 25%;
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
-  color: #b9ffae;
+  color: #fff9f5;
   font-family: "Dosis", sans-serif;
   font-weight: bold;
   font-size: max(4vh);
 }
 .buttons a {
   text-decoration: none;
-  color: #b9ffae;
+  color: #fff9f5;
   font-size: 4vh;
 }
 
@@ -120,30 +146,13 @@ img {
 }
 
 .textarea, .inputs {
-  background: #ffccae;
+  background: #ffb88f;
   border-radius: 10px;
-  border: 4px solid #ff8c48;
+  border: 4px solid #ff7729;
   margin: 1vw;
 }
 
 textarea {
   width: 90%;
   height: 25vh;
-}
-
-.tab-bar {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  border-radius: 0;
-  height: 4vh;
-}
-.tab-bar a {
-  float: left;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #aeb9ff;
-  padding: 1vw 2vw;
 }/*# sourceMappingURL=styles.css.map */

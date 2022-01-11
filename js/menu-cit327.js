@@ -1,6 +1,7 @@
+const weekno = getWeekno();
 const navlist = [
   {
-    name: "Week 01: Data Mart vs. Data Warehouse",
+    name: "Week 01 Paper: Data Mart vs. Data Warehouse",
     url: "week01.html ",
   },
   {
@@ -61,14 +62,14 @@ function createNav(array) {
   // create link list container element
   const container = document.getElementById("container");
   // create link list element
-  let ol = "<ol>";
+  let ul = "<ul>";
   //let baseurl = "https://rus19023.github.io/myportfolio/cit327/";
   let baseurl = "/";
   // get list of files to create links for each week number
   array.forEach((element) => {
-    ol += `<li><a href="${baseurl}${element.url}">${element.name}</a></li>`;
+    ul += `<li><a href="${baseurl}${element.url}">${element.name}</a></li>`;
   });
-  ol += "</ol>";
-  container.innerHTML = ol;
+  ul += "</ul>";
+  container.innerHTML = ul;
 }
 createNav(navlist);
