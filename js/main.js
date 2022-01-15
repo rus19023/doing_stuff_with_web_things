@@ -1,22 +1,38 @@
-// functions
+// set page title for WDD330 weekly pages
+if (isElement("wdd330pagetitle") && (substr(0, 4, getFilename()) === "week")) {
+  document.getElementById("wdd330pagetitle").innerHTML = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
+}
 
-function getIndexPageTitle(element, page) {
-  let weekNo = getWeeknumber();
-  // set head and page title for index pages
-  if (isElement(`${element}`)) {
-    let pageTitle = `${page} | Week ${weekNo}`;
-    let headTitle = document.querySelector(`#${element}`);
-    console.log(`headTitle: ${headTitle}`);
-    let pageHeader = document.querySelector(`.${element}`);
-    console.log(`pageHeader: ${pageHeader}`);
-    headTitle.innerHTML = pageTitle;
-    pageHeader.innerHTML = pageTitle;
+function setNav(term, coursecode, coursename) {
+  // set nav for CIT327 index page
+  if (isElement("mainNav") && (getFilename() === "index.html")) {
+    const navdoc = document.getElementById("mainNav");
+    let navContent = `<ul><li><a href="${getBase()}">${term}, ${coursecode} - ${coursename} </a></li></ul>`;
+    navdoc.innerHTML = navContent;
   }
 }
+setNav ("Winter 2022", "CIT327", "Data Warehousing");
+setNav ("Winter 2022", "WDD330", "Web Frontend II");
+
+// set weekly page title for CIT327
+getWeekPageTitle("cit327weekpagetitle", "My CIT327 Portfolio ");
+
+// set weekly page title for WDD330
+getWeekPageTitle("wdd330weekpagetitle", "My WDD330 Portfolio ");
+
+function getIndexPageTitle(element, coursecode) {
+  // set head and page title for index pages
+  if (isElement(`${element}`)) {
+    document.querySelector(`#${element}`).innerHTML = `My ${coursecode} Portfolio `;
+    document.querySelector(`.${element}`).innerHTML = `My ${coursecode} Portfolio `;
+  }
+}
+getIndexPageTitle("cit327pagetitle", "CIT327");
+getIndexPageTitle("wdd330pagetitle", "WDD330");
 
 function getWeekPageTitle(element, page) {
   let weekNo = getWeeknum(getFilename());
-  // set page title for CIT327 weekly notes page
+  // set page title for weekly pages
   if (isElement(`${element}`)) {
     let pageTitle = `${page} | Week ${weekNo}`;
     document.querySelector(`#${element}`).innerHTML = pageTitle;
@@ -25,9 +41,9 @@ function getWeekPageTitle(element, page) {
 }
 
 function isElement(element) { // check if element exists
-  document.getElementById(element);
-  if (typeof(element) != 'undefined' && element != null) {
-    return element.nodeType === 1;
+  const myelement = document.getElementById(element);
+  if (typeof(myelement) != 'undefined' && myelement != null) {
+    return myelement.nodeType === 1;
   }
 }
 
@@ -40,45 +56,46 @@ function setTitle(course) {
 
 function getBase() {
   //return window.location.href.replace(/\/[^\/]*$/, '/');
-  var href = location.href; //returns the entire url
-  var host = location.hostname; //returns just the hostname of the url
-  console.log(`href: ${href}`);
-  console.log(`host: ${host}`);
-  if ((host === "127.0.0.1") || (host === "localhost")) {  // development
-    var baseurl = "/";
-  } else {  // production
-    var baseurl = "/myportfolio/";
-  }
-  return baseurl;
+  // var href = location.href; //returns the entire url
+  // var host = location.hostname; //returns just the hostname of the url
+  console.log(`href: ${location.href}`);
+  //console.log(`host: ${location.hostname}`);
+  // var baseurl = href;
+  // if ((host === "127.0.0.1") || (href.includes("http://127.0.0.1:5500/")) || (host === "localhost")) {  // development
+  //   var baseurl = href;
+  // } else {  // production
+  // }
+  return location.href;
 }
 
 function getWeeknum(filenamee) {
-	console.log(`filenamee: ${filenamee}`);
+	//console.log(`filenamee: ${filenamee}`);
 	let weekno = "";
-	let weeek = "no";
 	console.log(`filenamee: ${filenamee}`);
-	weeek = filenamee.substr(0, 1);
-	if (weeek === "wk") {
-		weekno = filenamee.substr(2, 4);
+	if (filenamee.substr(0, 4) === "week") {
+		weekno = filenamee.substr(4, 2);
 		console.log(`weekno: ${weekno}`);
 	}
 	return weekno;
 }
-let page1 = "wk01.html";
-getWeeknum(page1);
+// let page1 = "wk01.html";
+// getWeeknum(page1);
 
 function getFilename() {
   var path = window.location.pathname;
   var page = path.split("/").pop();
-  console.log(page);
+  //console.log(path);
+  //console.log(page);
   return page;
 }
 
-function fileExists(url) {
-  var http = new XMLHttpRequest();
-  http.open("HEAD", url, false);
-  http.send();
-  return http.status != 404;
+function urlExists(url) {
+  if (url.includes(getBase())) {
+    var http = new XMLHttpRequest();
+    http.open("HEAD", url, false);
+    http.send();
+    return http.status != 404;
+  }
 }
 
 function weeknumber() {
@@ -93,13 +110,31 @@ function weeknumber() {
     let seconds = today.getTime() - termdate.getTime();
     // add 1 to weeks to account for rounding down
     let weeknumber = Math.floor(seconds / secondsPerWeek) + 1;
-    console.log(`termdate: ${termdate}`);
-    console.log(`today: ${today}`);
-    console.log(`seconds: ${seconds}`);
-    console.log(`secondsPerWeek: ${secondsPerWeek}`);
-    console.log(`weeknumber: ${weeknumber}`);
+    // console.log(`termdate: ${termdate}`);
+    // console.log(`today: ${today}`);
+    // console.log(`seconds: ${seconds}`);
+    // console.log(`secondsPerWeek: ${secondsPerWeek}`);
+    // console.log(`weeknumber: ${weeknumber}`);
     // return week number
     return weeknumber;
+}
+
+// set footer
+if (isElement("footerclass")) {
+  document.getElementById("footerclass").innerHTML = "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology";
+  //console.log("footer exists");
+}
+
+const base = getBase();
+//console.log(`base: ${base}`);
+const cit327title = setTitle("cit327pagetitle");
+
+const page = getFilename();
+//console.log(`page: ${page}`);
+const weeknum = getWeeknum(page);
+
+if (isElement("filename")) {
+  document.getElementById("filename").innerHTML = getWeeknum(page);
 }
 
 // Week 01

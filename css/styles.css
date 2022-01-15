@@ -75,11 +75,6 @@ html {
   font-size: 16px;
 }
 
-footer {
-  padding: 16px;
-  margin-bottom: 4vh;
-}
-
 .tab-bar {
   overflow: hidden;
   position: fixed;
@@ -97,20 +92,29 @@ footer {
   padding: 1vw 2vw;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #d6ff8f;
-  padding: 2vw;
-  max-width: 95%;
+  max-width: 90%;
   font-family: "Dosis", sans-serif;
   background: black;
   border-radius: 10px;
+  padding: 2vw;
   margin: 2vw auto;
 }
 
-div, form, footer, p, header {
+div,
+form,
+footer,
+p,
+header {
   font-family: "Nunito", sans-serif;
+  padding: 3vw;
   background: black;
-  padding: 2vw;
   max-width: 100%;
   margin: 2vw;
   border-radius: 10px;
@@ -221,7 +225,8 @@ img {
   max-width: 90%;
 }
 
-.textarea, .inputs {
+.textarea,
+.inputs {
   background: #ffb88f;
   color: black;
   border-radius: 10px;
@@ -241,4 +246,21 @@ textarea {
   float: left;
   margin: 0 2vw;
   padding: 2vw;
+}
+
+footer#footerclass {
+  font-family: "Dosis", sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  color: #d6ff8f;
+  text-align: center;
+  margin-bottom: 6vh;
+}
+
+.code {
+  background: #ffb88f;
+  color: black;
+  font-size: max(3vh);
+  border-radius: 10px;
+  padding: 1.5vw;
 }/*# sourceMappingURL=styles.css.map */

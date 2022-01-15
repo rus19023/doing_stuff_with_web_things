@@ -4,22 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="../css/styles.css"
-    />
+    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
     <title id="wdd330weekpagetitle">My WDD330 Weekly Notes | Title</title>
   </head>
 
   <body>
     <header id="header">
-      <nav id="nav"></nav>
+      <nav id="nav">
+        <h4 class="tabbar"><a href="/330/">Back to Index</a></h4>
+      </nav>
       <h1 class="wdd330weekpagetitle">Notes for this week</h1>
     </header>
     <main>
-      <h5 class="tab-bar">
-        <a href="./">Menu</a>
-      </h5>
       <ul>
         <li>
           <div>
@@ -31,11 +27,11 @@
             </h2>
             <h3>localStorage</h3>
             <p class="normal-text">
-              JavaScript’s local storage uses what techies call ‘key-value pairs.’
-              That’s fancy talk for ‘description-stuff pairs.’ If you’ve ever seen
-              an old fashioned phone book you’ve seen this in action. The ‘key’
-              would be the name of the person and the ‘value’ would be their
-              address and phone number.
+              JavaScript’s local storage uses what techies call ‘key-value
+              pairs.’ That’s fancy talk for ‘description-stuff pairs.’ If you’ve
+              ever seen an old fashioned phone book you’ve seen this in action.
+              The ‘key’ would be the name of the person and the ‘value’ would be
+              their address and phone number.
               <br />
               With this example your app should be able to remember, in other
               words read and write, information gathered from the user. Use this
@@ -66,10 +62,10 @@
             <h3>Keep Layers Separate</h3>
             <p class="normal-text">
               "It is widely considered best practice to separate the concerns of
-              each layer, so each layer is only responsible for one thing. Putting
-              them altogether can lead to very complicated pages where all of the
-              code is mixed up together in one file, causing ‘tag soup’ or ‘code
-              spaghetti’".
+              each layer, so each layer is only responsible for one thing.
+              Putting them altogether can lead to very complicated pages where
+              all of the code is mixed up together in one file, causing ‘tag
+              soup’ or ‘code spaghetti’".
             </p>
           </div>
         </li>
@@ -92,11 +88,11 @@
             <h3>Speed</h3>
             <p class="normal-text">
               Sometimes you can't use an SVG image, as they don't convert well
-              from other image types, so be sure to optimize it and lazy load it.
-              .webp files are very small files, yet great quality images.
+              from other image types, so be sure to optimize it and lazy load
+              it. .webp files are very small files, yet great quality images.
               pixlr.com/x is a great site to convert many image types to .webp
-              type. I don't recall this being mentioned in this course, but I have
-              used this principle before in web design classes. <br />
+              type. I don't recall this being mentioned in this course, but I
+              have used this principle before in web design classes. <br />
               <img
                 src="https://rus19023.github.io/myportfolio/images/speed-matters.jpg"
                 alt="screenshot about speed in mobile first ux"
@@ -113,10 +109,10 @@
             </p>
             <h3>Forms</h3>
             <p class="normal-text">
-              Float labels, taller inputs, bigger checkbox/radio button, only get
-              the contact info for preferred: email or phone, with phone, only
-              need number, email, need textarea to collect the info you need, such
-              as quote for what?
+              Float labels, taller inputs, bigger checkbox/radio button, only
+              get the contact info for preferred: email or phone, with phone,
+              only need number, email, need textarea to collect the info you
+              need, such as quote for what?
               <br /><br />
               Enable autocomplete, save prior inputs, Show passwords, but give
               “eye” option to hide it.
@@ -169,16 +165,16 @@
             </p>
             <h3>Tap Bar Hybrid</h3>
             <p class="normal-text">
-              "It might seem like the tap bar is the perfect solution, but it has
-              its problems too. ... It does not work with secondary navigation
-              items. To solve this problem, a hamburger/tap bar hybrid was born.
-              If you pay attention to the Samsung app, you’ll see that the last
-              item on the menu is the “More” button which calls up the hamburger
-              menu. <br />
+              "It might seem like the tap bar is the perfect solution, but it
+              has its problems too. ... It does not work with secondary
+              navigation items. To solve this problem, a hamburger/tap bar
+              hybrid was born. If you pay attention to the Samsung app, you’ll
+              see that the last item on the menu is the “More” button which
+              calls up the hamburger menu. <br />
 
-              In essence, the bottom navigation pattern integrates quite well into
-              the tap bar pattern if you want to combine both of them. The best
-              place to look for good examples is in the mobile app world.
+              In essence, the bottom navigation pattern integrates quite well
+              into the tap bar pattern if you want to combine both of them. The
+              best place to look for good examples is in the mobile app world.
               <br />
               <img
                 src="../images/tapbarhybrid.png"
@@ -189,7 +185,8 @@
         </li>
       </ul>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footerclass"></footer>
     <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
   </body>
 </html>

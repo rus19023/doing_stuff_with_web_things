@@ -4,26 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
   <title>Story Editor</title>
-  <script>
-  	function loadStory() {
-  		var storyName = document.getElementById("name_input").value
-  		var storyHTML = localStorage.getItem(storyName)
-  		document.getElementById("story_editor").value = storyHTML
-  	}
-
-  	function saveStory() {
-  		var storyName = document.getElementById("name_input").value
-  		var storyHTML = document.getElementById("story_editor").value
-  		localStorage.setItem(storyName,storyHTML)
-  	}
-
-  	function displayStory() {
-  		var storyHTML = document.getElementById("story_editor").value
-  		document.getElementById("story_display").innerHTML = storyHTML
-  	}
-  </script>
 
   <style>
 	.inputs {
@@ -60,6 +42,8 @@
 			<textarea class="inputs" id="story_editor" placeholder="Write a totally awesome story here."></textarea>
 			<section id="story_display"></section>
 		</main>
-		<footer id="footer"></footer>
+		<footer id="footerclass"></footer>
+		<script src="../../js/main.js"></script>
+		<script src="../../js/menu.js"></script>
 	</body>
 </html>
