@@ -1,15 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
+@media screen and (min-width: 992px) {
+  .color3 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  p {
+    font-size: max(3vh);
+  }
+}
+.primary {
+  background: black;
+  color: #ffb88f;
+}
+
+.p30 {
+  background: black;
+  color: #fff08f;
+}
+
+.p60 {
+  background: black;
+  color: #d6ff8f;
+}
+
+.p90 {
+  background: black;
+  color: #9eff8f;
+}
+
+.p120 {
+  background: black;
+  color: #8fffb8;
+}
+
+.p150 {
+  background: black;
+  color: #8ffff0;
+}
+
+.p180 {
+  background: black;
+  color: #8fd6ff;
+}
+
+.p-150 {
+  background: black;
+  color: #8f9eff;
+}
+
+.p-120 {
+  background: black;
+  color: #b88fff;
+}
+
+.p-90 {
+  background: black;
+  color: #f08fff;
+}
+
+.p-60 {
+  background: black;
+  color: #ff8fd6;
+}
+
+.p-30 {
+  background: black;
+  color: #ff8f9e;
+}
+
 html {
-  color: #fff9f5;
-  background: #a87300;
+  color: #d6ff8f;
+  background: #7e5201;
   font-size: 16px;
 }
 
 footer {
   padding: 16px;
   margin-bottom: 4vh;
-  width: 94%;
 }
 
 .tab-bar {
@@ -25,21 +93,21 @@ footer {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #8f9eff;
+  color: #ff8fd6;
   padding: 1vw 2vw;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #fff9f5;
+  color: #d6ff8f;
   padding: 2vw;
-  max-width: 100%;
+  max-width: 95%;
   font-family: "Dosis", sans-serif;
   background: black;
   border-radius: 10px;
   margin: 2vw auto;
 }
 
-div, form, footer, p {
+div, form, footer, p, header {
   font-family: "Nunito", sans-serif;
   background: black;
   padding: 2vw;
@@ -56,6 +124,7 @@ div, form, footer, p {
 
 h1 {
   font-size: 6vh;
+  color: #d6ff8f;
 }
 
 h2 {
@@ -99,20 +168,27 @@ ul li {
 }
 
 ol li {
-  color: #fff9f5;
+  color: #d6ff8f;
+}
+ol li a {
+  font-size: max(5vh);
+  color: #8ffff0;
+}
+ol li a:hover {
+  color: #8ffff0;
 }
 
 a {
-  color: #fff9f5;
+  color: #d6ff8f;
   text-decoration: none;
 }
 
 a:visited {
-  color: #fff9f5;
+  color: #9eff8f;
 }
 
 a:hover {
-  color: #f5fbff;
+  color: #8fd6ff;
 }
 
 img {
@@ -123,21 +199,21 @@ img {
   text-align: center;
   cursor: pointer;
   background: black;
-  border: 4px solid #f5fbff;
+  border: 4px solid #8fd6ff;
   padding: 2vw;
   width: 100%;
   max-width: 25%;
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
-  color: #fff9f5;
+  color: #d6ff8f;
   font-family: "Dosis", sans-serif;
   font-weight: bold;
   font-size: max(4vh);
 }
 .buttons a {
   text-decoration: none;
-  color: #fff9f5;
+  color: #d6ff8f;
   font-size: 4vh;
 }
 
@@ -147,12 +223,22 @@ img {
 
 .textarea, .inputs {
   background: #ffb88f;
+  color: black;
   border-radius: 10px;
   border: 4px solid #ff7729;
-  margin: 1vw;
+  margin: 2vw;
 }
 
 textarea {
   width: 90%;
   height: 25vh;
+}
+
+.color3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 25%;
+  float: left;
+  margin: 0 2vw;
+  padding: 2vw;
 }/*# sourceMappingURL=styles.css.map */

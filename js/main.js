@@ -1,9 +1,42 @@
-document.getElementById("footer").innerHTML =
-"&copy; 2019-2022 | Doris Rush-Lopez, Candidate for Bachelor of Science in Applied Technology at BYU-Idaho";
+// functions
 
-document.getElementById("wdd330pagetitle").innerHTML = `My WDD330 Portfolio: BYU-Idaho, Winter 2022, WDD330 - Web Frontend II | Week ${getWeekno()}`;
+function getIndexPageTitle(element, page) {
+  let weekNo = getWeeknumber();
+  // set head and page title for index pages
+  if (isElement(`${element}`)) {
+    let pageTitle = `${page} | Week ${weekNo}`;
+    let headTitle = document.querySelector(`#${element}`);
+    console.log(`headTitle: ${headTitle}`);
+    let pageHeader = document.querySelector(`.${element}`);
+    console.log(`pageHeader: ${pageHeader}`);
+    headTitle.innerHTML = pageTitle;
+    pageHeader.innerHTML = pageTitle;
+  }
+}
 
-document.getElementById("cit327pagetitle").innerHTML = `My CIT327 Portfolio | Paper: Week${getWeekno()}`;
+function getWeekPageTitle(element, page) {
+  let weekNo = getWeeknum(getFilename());
+  // set page title for CIT327 weekly notes page
+  if (isElement(`${element}`)) {
+    let pageTitle = `${page} | Week ${weekNo}`;
+    document.querySelector(`#${element}`).innerHTML = pageTitle;
+    document.querySelector(`.${element}`).innerHTML = pageTitle;
+  }
+}
+
+function isElement(element) { // check if element exists
+  document.getElementById(element);
+  if (typeof(element) != 'undefined' && element != null) {
+    return element.nodeType === 1;
+  }
+}
+
+function setTitle(course) {
+  if (isElement(course)) {
+    let title = document.getElementById(course).innerHTML;
+    document.getElementById(course).innerHTML = title;
+  }
+}
 
 function getBase() {
   //return window.location.href.replace(/\/[^\/]*$/, '/');
@@ -11,14 +44,28 @@ function getBase() {
   var host = location.hostname; //returns just the hostname of the url
   console.log(`href: ${href}`);
   console.log(`host: ${host}`);
-  if (host == "localhost") {  // development
-  var baseurl = "/";
+  if ((host === "127.0.0.1") || (host === "localhost")) {  // development
+    var baseurl = "/";
   } else {  // production
-  var baseurl = "/myportfolio/";
+    var baseurl = "/myportfolio/";
   }
   return baseurl;
 }
-const base = getBase();
+
+function getWeeknum(filenamee) {
+	console.log(`filenamee: ${filenamee}`);
+	let weekno = "";
+	let weeek = "no";
+	console.log(`filenamee: ${filenamee}`);
+	weeek = filenamee.substr(0, 1);
+	if (weeek === "wk") {
+		weekno = filenamee.substr(2, 4);
+		console.log(`weekno: ${weekno}`);
+	}
+	return weekno;
+}
+let page1 = "wk01.html";
+getWeeknum(page1);
 
 function getFilename() {
   var path = window.location.pathname;
@@ -26,21 +73,6 @@ function getFilename() {
   console.log(page);
   return page;
 }
-const page = getFilename();
-
-function getWeekno(page) {
-  let weekno = "";
-  let wk = page.slice(0,1);
-  if (wk = "wk") {
-    weekno = page.slice(2,4);
-    console.log(`weekno: ${weekno}`);
-  }
-  return weekno;
-}
-const weeknum = getWeekno(page);
-
-
-document.getElementById("filename").innerHTML = getWeekno();
 
 function fileExists(url) {
   var http = new XMLHttpRequest();
@@ -96,6 +128,8 @@ function reverseNumber() {
   console.log(`rnumber: ${rnumber}`);
   document.getElementById("reverse_output").innerHTML = rnumber;
 }
+
+// Week 02
 
 function loopingTriangle() {
     var base = '#';

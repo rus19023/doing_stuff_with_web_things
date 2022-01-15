@@ -1,13 +1,28 @@
 // Colors
 $primary: #ffb88f;
-$accent: lighten($primary, 20%);
+$p30: adjust-hue($primary, 30deg);
+$p60: adjust-hue($primary, 60deg);
+$p90: adjust-hue($primary, 90deg);
+$p120: adjust-hue($primary, 120deg);
+$p150: adjust-hue($primary, 150deg);
+$p180: adjust-hue($primary, 180deg);
+$p-150: adjust-hue($primary, -150deg);
+$p-120: adjust-hue($primary, -120deg);
+$p-90: adjust-hue($primary, -90deg);
+$p-60: adjust-hue($primary, -60deg);
+$p-30: adjust-hue($primary, -30deg);
+
+$accent: lighten($primary, 10%);
+$accent: $p60;
 $headings: $accent;
-$contrast: adjust-hue($accent, 180deg);
+$contrast: $p180;
 $primaryborder: darken($primary, 20%);
 $warning: darken($contrast, 50%);
-$nav: adjust-hue($primary, 210deg);
-$valid: adjust-hue($accent, 270deg);
-$background: #a87300;
+$nav: $p-60;
+$valid: $p-90;
+$background: $p-120;
+//$background: darken($primary, 0%);
+$background: #7e5201;
 
 $debug: rgb(190, 255, 60);
 

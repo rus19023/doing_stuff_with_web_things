@@ -8,9 +8,9 @@ function start(quiz) {
     let score = 0;
 
     // main game loop
-    for(const [question,answer] of quiz) {
+    for (const [question, answer] of quiz) {
         const response = ask(question);
-        check(response,answer);
+        check(response, answer);
     }
     // end of main game loop
 
@@ -21,7 +21,7 @@ function start(quiz) {
         return prompt(question);
     }
 
-    function check(response,answer) {
+    function check(response, answer) {
         if(response === answer){
         alert('Correct!');
         score++;

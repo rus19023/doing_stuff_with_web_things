@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap');
 @import "variables";
 @import "large";
+@import "colors";
 
 
 html {
@@ -13,7 +14,6 @@ html {
 footer {
     padding: 16px;
     margin-bottom: 4vh;
-    width: 94%;
 }
 
 .tab-bar {
@@ -30,20 +30,20 @@ footer {
         text-decoration: none;
         color: $nav;
         padding: 1vw 2vw;
-      }
-  }
+    }
+}
 
 h1, h2, h3, h4, h5, h6 {
     color: $accent;
     padding: 2vw;
-    max-width: 100%;
+    max-width: 95%;
     font-family: $fontsecond;
     background: black;
     border-radius: 10px;
     margin: 2vw auto;
 }
 
-div, form, footer, p {
+div, form, footer, p, header {
     font-family: $fontprimary;
     background: black;
     padding: 2vw;
@@ -58,7 +58,7 @@ div, form, footer, p {
     margin: auto;
 }
 
-h1 { font-size: 6vh; }
+h1 { font-size: 6vh; color: $accent; }
 h2 { font-size: 5vh; width: 95%; }
 h3 { font-size: 4vh; width: 90%; }
 h4 { font-size: 3vh; width: 85%; }
@@ -80,6 +80,13 @@ ul li {
 
 ol li {
     color: $accent;
+    & a {
+        font-size: $font5;
+        color: $p150;
+    }
+    & a:hover {
+        color: $p150;
+    }
 }
 
 a {
@@ -88,11 +95,11 @@ a {
 }
 
 a:visited {
-    color: $accent;
+    color: $p90;
 }
 
 a:hover {
-    color: $contrast;
+    color: $p180;
 }
 
 img {
@@ -127,12 +134,22 @@ img {
 
 .textarea, .inputs {
     background: $primary;
+    color: black;
     border-radius: 10px;
     border: $inputborder;
-    margin: 1vw;
+    margin: 2vw;
 }
 
 textarea {
     width: 90%;
     height: 25vh;
+}
+
+.color3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 25%;
+    float: left;
+    margin: 0 2vw;
+    padding: 2vw;
 }

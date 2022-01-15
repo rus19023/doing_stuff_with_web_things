@@ -7,6 +7,13 @@
 
 
 @media screen and (min-width: 992px) {
+    .color3 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    p   {
+        font-size: $font3;
+    }
 }
 
 
