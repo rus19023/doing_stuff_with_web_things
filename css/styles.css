@@ -104,7 +104,6 @@ h6 {
   background: black;
   border-radius: 10px;
   padding: 2vw;
-  margin: 2vw auto;
 }
 
 div,
@@ -169,6 +168,10 @@ h6 {
 
 ul li {
   list-style: none;
+}
+
+ul li.normal-text {
+  list-style: circle;
 }
 
 ol li {
@@ -263,4 +266,8 @@ footer#footerclass {
   font-size: max(3vh);
   border-radius: 10px;
   padding: 1.5vw;
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  max-width: 90%;
+  margin: 0 auto;
 }/*# sourceMappingURL=styles.css.map */

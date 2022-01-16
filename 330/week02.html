@@ -11,49 +11,328 @@
   <body>
     <header id="header">
       <nav id="nav">
+        <h1 class="wdd330weekpagetitle">Notes for this week</h1>
         <h4 class="tabbar"><a href="/330/">Back to Index</a></h4>
       </nav>
-      <h1 class="wdd330weekpagetitle">Notes for this week</h1>
     </header>
     <main>
         <ul>
 
           <li>
             <div>
-                <h2><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b">Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION-</a></h2>
+                <h2>
+                  <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b">
+                    Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+                  </a>
+                </h2>
                 <h3>Section 2: Programming Basics</h3>
-                <p class="normal-text">
-                  <img class="centerimg" src="../images/" alt="">
-                  <br>
-                  compound assignment operator, <span class="code">+=</span>
-                </p>
                 <p class="code">
                   Reserved words: <br>
                   abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield
                 </p>
+                <p class="normal-text">
+                  JavaScript has seven different data types. Six of them are primitive data types and are listed below:
+                  <ul>
+                    <li class="normal-text">String</li>
+                    <li class="normal-text">Symbol (The symbol primitive data type was only introduced in ES6.)</li>
+                    <li class="normal-text">Number</li>
+                    <li class="normal-text">Boolean</li>
+                    <li class="normal-text">Undefined</li>
+                    <li class="normal-text">Null</li>
+                  </ul>
+                </p>
+                <p class="normal-text">Any value that isn’t one of the primitive data types listed above is an object. These include arrays, functions and object literals
+                </p>
+                <p class="normal-text">Using const prevents you from reassigning a variable to another object, as it will produce an error, as illustrated below:</p>
+                <pre class="code">// declare object
+                  const name = { value: 'Alexa' };
+
+                  // attempt to reassign to another object
+                  name = { value: 'Siri' }
+                  << TypeError: Assignment to constant variable.</pre>
+                <p class="">
+                  ***It may seem like a restriction to use const, but it actually helps make your programs more predictable if the assignment to variables can't change. For this reason, you should try to use const to declare most variables. This helps to avoid any bugs caused by unexpected changes in assignment.
+
+                </p>
+                <p class="normal-text">
+                  Any variable declared outside of a block is said to have global scope. This means it is accessible everywhere in the program. While this may seem to be a good idea at first, it is not considered good practice. A ninja programmer will try to keep the number of global variables to a minimum, because any variables that share the same name will clash and potentially overwrite each other’s values.[1]
+                </p>
+                <p class="normal-text">
+                  If let or const are not used, the variable will have global scope and be available outside the block. This can be demonstrated in the following example, where the variable a can have two different values depending on whether it is defined inside or outside a block:
+                </p>
+                <p class="normal-text">
+                  In ES6, blocks can be used to create a local scope. This means that any variables defined inside a block using the let or const will only be available inside that block and not be accessible outside of that block. This is known as having local scope, as the variable is only visible in the locality of the block.
+                </p>
+                <pre class="code">
+                  const a = 1;
+
+                  { const a = 3; a; }
+                  << 3</pre>
+                <p>
+                  Constant and variable names can start with any upper or lower-case letter, an underscore, _, or dollar character, $. They can also contain numbers, but cannot start with them. <br>
+                  Here are some valid examples:
+                </p>
+                <pre class="code">
+                  $name
+                  _answer
+                  firstName
+                  last_name
+                  address_line1
+                </pre>
+                </p>
+                <p class="normal-text">
+                  <br>
+                  Variables that start with an underscore generally refer to private properties and methods, so it's best to not follow this convention for your own variable names. <br><br>
+                  The $ character is also used by the popular jQuery library, so using this in your variable names may also cause problems.
+                </p>
+                <p class="normal-text">
+                  When you assign a primitive value to a variable, any changes you make are made directly to that value:
+                </p>
+                <pre class="code">
+                  const a = 1;
+                  let b = a;
+                  // a = 1, b = 1
+
+                  b = 2;
+                  // a = 1, b = 2
+                </pre>
+
+                <h3>Questions</h3>
+                <p class="normal-text">
+                  <ul>
+                    <li>[1] I don't understand the concept of global variables inside a block, if globals are made outside blocks. What's the point or use for this??</li>
+                    <li>Are blocks "{}" only used for functions and logic?</li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </p>
+
+                <p class="normal-text">The backslash is used to escape special characters in strings such as:
+                  <ul>
+                    <li class="normal-text">Single quote marks \'</li>
+                    <li class="normal-text">Double quote marks \"</li>
+                    <li class="normal-text">End of line \n</li>
+                    <li class="normal-text">Carriage return \r</li>
+                    <li class="normal-text">Tab \t</li>
+                  </ul>
+                </p>
+                <p class="normal-text">
+                  If you want to actually write a backslash, you need to escape it with another backslash:
+                </p>
+                <pre class="code">
+                  "This is a backslash \\"
+                  << "This is a backslash \"
+                </pre>
+                <p class="normal-text">
+                  The backslash is also used to escape the newline character, which is used to separate lines in a string.
+                </p>
+                <pre class="code">
+                  const name = 'Alexa'; // declare and assign a variable
+                  << 'Alexa'
+                  name.length; // retrieve the name variable's length property
+                  << 5
+                </pre>
+                <p class="normal-text">
+                  All properties of primitive data types are immutable, meaning they’re unable to be changed.
+                </p>
+                <pre class="code">
+                  name.toUpperCase();
+                  << 'ALEXA'
+                  name.toLowerCase();
+                  << 'alexa'
+                  name.charAt(1);
+                  << 'l'
+                  name.indexOf('A');
+                  << 0
+                  name.includes('a');
+                  << true
+
+                  name.includes('z');
+                  << false
+                  name.startsWith('A');
+                  << true
+
+                  name.startsWith('a');
+                  << false
+                  name.endsWith('A');
+                  << false
+
+                  name.endsWith('a');
+                  << true'
+                  JavaScript'.concat('Ninja');
+                  << 'JavaScriptNinja'
+
+                  'Hello'.concat(' ','World','!');
+                  << 'Hello World!'
+                  '    Hello World     '.trim(); // the space in the middle will be preserved
+                  << 'Hello World'
+
+                  '   \t\t  JavaScript Ninja! \r'.trim(); // escaped tabs and carriage returns are also removed
+                  << 'JavaScript Ninja!'
+                  'Hello'.repeat(2);
+                  << 'HelloHello'
+                  `She said, "It's Me!"`  // Template literals
+                  const age = 39;
+                  `I will be ${ age + 1 } next year`;
+                  << 'I will be 40 next year'
+                  `This is the start ...
+
+
+                  .... and this is the end`
+                  << 'This is the start ...\n\n\n.... and this is the end'
+                  `This character, \`, is a backtick`
+                  << 'This character, `, is a backtick'
+                </pre>
+                <p class="normal-text">
+                  Symbols were introduced as a new primitive value in ES6. They can be used to create unique values, which helps to avoid any naming collisions.
+                  <br>
+                  Symbols are the only primitives that don't have a literal form. The only way to create them is to use the Symbol() function:
+                </p>
+                <pre class="code">
+                  const uniqueID = Symbol('this is a unique ID');
+                  const A = Symbol.for('shared symbol');
+                  const B = Symbol.for('shared symbol');
+                </pre>
+                <p class="normal-text">
+                  It is possible for two variables to point to the same symbol if the for() method is used when the symbol is created:
+                </p>
+                <pre class="code">
+                  const uniqueID = Symbol('this is a unique ID');
+                  const A = Symbol.for('shared symbol');
+                  const B = Symbol.for('shared symbol');
+                </pre>
+                <p class="normal-text">
+                  <a href="https://www.sitepoint.com/es6-symbols-uses/">More info about Symbols</a>
+                </p>
               </div>
           </li>
-
-
-          <h2><a href="https://github.com/yenrab/doing_stuff_with_web_things/blob/master/doing_stuff_with_web_things.pdf">Source: Doing Stuff With Web Things</a></h2>
-          parseInt function tries to convert any text to an integer. If it can't, it returns NaN.
 
           <li>
               <div>
-                  <h3>Arrays</h3>
-                  <p class="normal-text">
-                      notes here
-                      <br />
-                      <h4>image caption</h4>
-                      <img class="centerimg" src="/images/serverRoom.jpg" alt="test">
-                      <br />
-                  </p>
+                <h2>
+                  <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b">
+                    Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+                  </a>
+                </h2>
+                <h3>Section 3: Arrays, Logic, Loops</h3>
+                <p class="normal-text">
+                    Initializing an Array:
+                </p>
+                <pre class="code">
+                  const heroes = [];
+                </pre>
+                <p class="normal-text">
+                  Delete: remove item from array, but not its space! (leaves it as undefined)
+                </p>
+                <pre class="code">
+                  delete heroes[3];
+                </pre>
+                <p class="normal-text">
+                    Destructuring an array is the concept of taking values out of an array and presenting them as individual values.
+                    <br>
+                    Destructuring allows us to assign multiple values at the same time, using arrays:
+                </p>
+                <pre class="code">const [x,y] = [1,2];</pre>
+                <p class="normal-text">
+                  Destructuring also works on objects, e.g.
+                </p>
+                <pre class="code">
+                    var myObject = {
+                      one:   'a',
+                      two:   'b',
+                      three: 'c'
+                    };
+
+                    // ES5 exampl
+                    var
+                      one   = myObject.one,
+                      two   = myObject.two,
+                      three = myObject.three;
+
+                      // one = 'a', two = 'b', three = 'c'
+
+                      // ES6 destructuring example
+                      const {one, two, three} = myObject;
+
+                      // one = 'a', two = 'b', three = 'c'
+                  </pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+
                   <h3>Questions</h3>
                   <p class="normal-text">
-                      question?
+                    <ul>
+                      <li></li>
+                      <li></li>
+                    </ul>
                   </p>
               </div>
           </li>
+
+          <li>
+              <div>
+                  <h2>
+                    <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b">
+                      Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+                    </a>
+                  </h2>
+                  <h3>Section 4: Functions</h3>
+                  <p class="normal-text">
+                    Function Expressions <br>
+                    Another way of defining a function literal is to create a function expression. This assigns an anonymous function to a variable:
+
+                  </p>
+                  <pre class="code">
+                    const goodbye = function() {
+                      console.log('Goodbye World!');
+                    };
+                  </pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+                  <p class="normal-text"></p>
+                  <pre class="code"></pre>
+
+                  <h3>Questions</h3>
+                  <p class="normal-text">
+                    <ul>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </p>
+              </div>
+          </li>
+
+          <br />
+          <h4>image caption</h4>
+          <img class="centerimg" src="/images/" alt="test">
+          <br />
+          <p class="normal-text"></p>
+          <pre class="code"></pre>
+
         </ul>
     </main>
     <footer id="footerclass"></footer>
