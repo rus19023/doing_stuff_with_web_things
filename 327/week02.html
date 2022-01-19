@@ -20,11 +20,17 @@
         <div>
           <h3>Inmon Methodology</h3>
           <p class="normal-text">
-            
+            Bill Inmon's ideas for data warehouses work on a "bottom-up" principle. His model starts with the enterprise's data model, specifically what is most important for the business to run. The structure of the data from varied sources will be integrated and normalized to avoid duplication of data, help identify and prevent data anomalies. Once the infrastructure is in place, the data will be collected, analyzed, and stored in data marts built for each business purpose needed, possibly denormalized to facilitate reporting for decision-making. The warehouse is the only source of data for the data marts.
+          </p>
+          <p class="normal-text">
+            Inmon's methodologies are best for large-scale data warehouses. These data warehouses take many months to design and build, so they are not suitable for a quickly done project. It will be an expensive, long-term investment, but worth it in the long run. It should be more secure, as there are no external or non-standardized data collections. There will be costs in the future upkeep, as the data will grow and more employees will be needed to support the data warehouse.
           </p>
           <h3>Kimball Methodology</h3>
           <p class="normal-text">
-
+            Ralph Kimball had different thoughts about big data storage and analysis. He was concerned that if the data was normalized, it would be difficult to analyze. He begins with finding the purpose for each main business purpose, and builds the marts for each of these purposes. The data warehouse is a conglomerate of these data marts built around the central repository of raw data, which comes from varies sources. Each of these marts becomes a point in the "star" pattern of the data warehouse. 
+          </p>
+          <p class="normal-text">
+            Kimball's methodologies are best for small-scale data warehouses. These data warehouses are designed to be done quickly, and are suitable for a quick project. It will be less expensive and completed much faster. There will be minimal costs for future upkeep.
           </p>
           <h3>OLTP-Online Transactional Processing</h3>
           <p class="normal-text">
@@ -42,8 +48,8 @@
           </p>
             <br>
               Sources: <br> <br>
-              <a href=""></a>
-              <a href=""></a>
+              <a href="https://panoply.io/data-warehouse-guide/data-mart-vs-data-warehouse/">"Data Marts vs. Data Warehouses", Panoply.io</a> <br>
+              <a href="https://tdan.com/data-warehouse-design-inmon-versus-kimball/20300">Seiner, Robert S., "Data Warehouse Design – Inmon versus Kimball", The Data Administration Newsletter</a> <br>
               <a href=""></a>
           </p>
         </div>

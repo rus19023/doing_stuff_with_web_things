@@ -58,7 +58,7 @@ function getBase() {
   //return window.location.href.replace(/\/[^\/]*$/, '/');
   // var href = location.href; //returns the entire url
   // var host = location.hostname; //returns just the hostname of the url
-  console.log(`href: ${location.href}`);
+  //console.log(`href: ${location.href}`);
   //console.log(`host: ${location.hostname}`);
   // var baseurl = href;
   // if ((host === "127.0.0.1") || (href.includes("http://127.0.0.1:5500/")) || (host === "localhost")) {  // development
