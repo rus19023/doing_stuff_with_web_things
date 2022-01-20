@@ -121,7 +121,7 @@ const presentationslist = [
 // Functions
 
 function createNavItem(array) {
-
+  console.log(`createNavItem: ${array}`);
 }
 
 function createNav(array, id) {
@@ -138,7 +138,10 @@ function createNav(array, id) {
         console.log(`element.url: ${element.url} is not found`);
         return;
       } else {
-        menu += `<li><a href="${element.url}">${element.name}</a></li>`;
+        if (element.term.length > 0) {
+          menu += `<li><a href="${element.url}">${element.term}, ${element.code} - ${element.name}, (${element.tech})</a></li>`;
+        } else {
+          menu += `<li><a href="${element.url}">${element.name}</a></li>`;
       }
     });
     menu += "</ol>";
