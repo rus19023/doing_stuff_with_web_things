@@ -7,7 +7,7 @@ const mainNav = [,
     tech: "Python"
   },
   {
-    url: `${getBase()}/327/`,
+    url: `${getBase()}327/`,
     term: "Winter 2022",
     code: "CIT327",
     name: "Data Warehousing",
@@ -127,7 +127,7 @@ const paperslist = [
   }
 ];
 
-const presentationslist = [
+const presentations = [
   {
     name: "Week 01: Data Analysis: Data Marts and Warehouses",
     url: "https://docs.google.com/presentation/d/15pcCC7TgYBYADt-GCUH3Z2PBmvRGabU173_DxFrfDTM/edit#slide=id.g65a5c374d8_0_208",
@@ -137,8 +137,8 @@ const presentationslist = [
     url: "https://docs.google.com/presentation/d/e/2PACX-1vSmsQEfdjs7kauZoXWd4oqFNkwVR6ykmo83GPylSiWiKAH-arkbtY6u66kazQhtrDRZ8ItA5GC1fPOc/pub?start=true&loop=false&delayms=30000",
   },
   {
-    name: "",
-    url: ""
+    name: "template",
+    url: "template.html"
   }
 ];
 
@@ -158,7 +158,9 @@ function createNav(array, id) {
     let menu = "<ol>";
     // get list of files to create links for each week number
     array.forEach((element) => {
-      if (!urlExists(element.url)) {
+      let len = element.url.length;
+      console.log(`element.url.len: ${len}`);
+      if ((!urlExists(element.url)) && (len < 100)) {
         console.log(`element.url: ${element.url} is not found`);
         return;
       } else {
@@ -178,7 +180,7 @@ createNav(mainNav, "main-nav");
 createNav(noteslist, "notes");
 createNav(exerciseslist, "exercises");
 createNav(paperslist, "papers");
-createNav(presentationslist, "presentations");
+createNav(presentations, "presentations");
 
 /*
 
