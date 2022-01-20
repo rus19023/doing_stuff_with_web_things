@@ -280,4 +280,8 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+}
+
+.italic {
+  font-style: italic;
 }/*# sourceMappingURL=styles.css.map */
