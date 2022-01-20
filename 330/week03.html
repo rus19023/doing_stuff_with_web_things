@@ -22,14 +22,127 @@
           <div>
             <h2>
               <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b">
-                Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION
+                Source: JAVASCRIPT: NOVICE TO NINJA, 2ND EDITION, Chapter 5: Objects
               </a>
             </h2>
-            <h3></h3>
+            <h3>Objects</h3>
             <p class="normal-text">
-              <img class="centerimg" src="/images/" alt="">
-              <br>
-              </p>
+                An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}. Object literals are a distinguishing feature of the JavaScript language, as they allow objects to be created quickly without the need for defining a class. They also provide a useful way of organizing your code without polluting the global namespace. <br>
+                Here is an example of an object literal that describes the Man of Steel:
+            </p>
+            <pre>
+                const superman = {
+                name: 'Superman',
+                'real name': 'Clark Kent',
+                height: 75,
+                weight: 235,
+                hero: true,
+                villain: false,
+                allies: ['Batman','Supergirl','Superboy'],
+                    fly() {
+                        return 'Up, up and away!';
+                    }
+                };
+            </pre>
+            <p class="normal-text">
+                Each property is a key-value pair, separated by commas. In the example, the first property is called name and its value is 'Superman', while the fly() property is a method, as its value is a function, signified by the parentheses placed after it. If there were further methods after this, they would be comma-separated as well.
+                <br>
+                If a property’s name doesn’t follow the rules for naming variables described in Chapter 2, it needs to be quoted. The property 'real name' in the example above needs to be quoted because it contains a space.
+                <br>
+                It’s very uncommon to use property and method names that don’t follow the rules for naming variables. In a real-world app, it's likely the "real name" property would actually be named real_name or realName.
+                <br>
+                All objects are mutable at any time when a program is running. This means that its properties and methods can be changed or removed, and new properties and methods can be added to the object, even if it was declared using const.
+            </p>
+            <pre>
+                const spiderman = {};
+                const spiderman = new Object();
+                const name = 'Iron Man';
+                const realName = 'Tony Stark';
+
+                // long way
+                const ironMan = ( name: name, realName: realName };
+
+                // short ES6 way
+                const ironMan = { name, realName };
+
+                superman.name
+                << 'Superman' 
+                
+                superman['name']
+                << 'Superman' 
+                
+                superman.fly()
+                << 'Up, up and away!'
+                
+                superman['fly']()
+                << 'Up, up and away!'
+            </pre>
+            <p class="normal-text">
+                The in operator can be used to check whether an object has a particular property. So, for example, we can check if the superman object has a property called city using this code:
+            </p>
+            <pre>
+                'city' in superman;
+                << false 
+                
+                superman.city !== undefined;
+                << false 
+                
+                superman.hasOwnProperty('city');
+                << false
+                
+                superman.hasOwnProperty('name');
+                << true
+            </pre>
+            <p class="normal-text">
+                The keyword this refers to the object that it is within. It can be used inside methods to gain access to the object’s properties.
+                <br>
+                To demonstrate using this, we'll create a dice object that has a sides property and a roll() method that returns a number between 1 and the number of sides.
+                <br>
+                Here’s the code to create our dice object:                
+            </p>
+            <pre>
+                const dice = {
+                sides: 6,
+                roll() {
+                    return Math.floor(this.sides * Math.random()) + 1;
+                }
+            } 
+            
+            dice.roll();
+            << 5
+            
+            dice.roll();
+            << 3 
+            
+            dice.roll();
+            << 12
+            
+            dice.roll();
+            << 18
+            
+            dice.sides = 20;
+            << 20
+            </pre>
+            <p class="normal-text">
+                
+            </p>
+            <pre></pre>
+            <p class="normal-text">
+                
+            </p>
+            <pre></pre>
+            <p class="normal-text">
+                
+            </p>
+            <pre></pre>
+            <p class="normal-text">
+                
+            </p>
+            <pre></pre>
+            <p class="normal-text">
+                
+            </p>
+            <pre></pre>
             </div>
           </li>
 
@@ -41,11 +154,11 @@
                 </a>
               </h2>
               <div>
-                  <h3>Parsing</h3>
+                  <h3></h3>
                   <p class="normal-text">
-                    parseInt function tries to convert any text to an integer. If it can't, it returns NaN.
+                    
                   </p>
-                  <h3>Arrays</h3>
+                  <h3></h3>
                   <p class="normal-text">
                       notes here
                       <br />
@@ -79,7 +192,7 @@
 
       </ul>
   </main>
-  <footer id="footerclass"></footer>
+  <footer id="autofooter"></footer>
   <script src="../js/main.js"></script>
 </body>
 </html>

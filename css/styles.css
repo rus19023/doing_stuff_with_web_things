@@ -8,6 +8,12 @@
   p {
     font-size: max(3vh);
   }
+
+  #gridcontainer {
+    grid-area: gridcontainer;
+    display: grid;
+    grid-template-areas: "left right";
+  }
 }
 .primary {
   background: black;
@@ -110,6 +116,8 @@ h6 {
 div,
 form,
 footer,
+ul,
+ol,
 p,
 header {
   font-family: "Nunito", sans-serif;
@@ -167,7 +175,7 @@ h6 {
   background: black;
 }
 
-ul li {
+.nostyle {
   list-style: none;
 }
 
@@ -208,6 +216,7 @@ img {
   cursor: pointer;
   background: black;
   border: 4px solid #8fd6ff;
+  box-shadow: #ffb88f;
   padding: 2vw;
   width: 100%;
   max-width: 25%;
@@ -252,7 +261,7 @@ textarea {
   padding: 2vw;
 }
 
-footer#footerclass {
+footer#autofooter {
   font-family: "Dosis", sans-serif;
   font-size: 3vh;
   font-weight: bold;
@@ -284,4 +293,20 @@ pre {
 
 .italic {
   font-style: italic;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+#left {
+  grid-area: left;
+  max-width: 92%;
+}
+
+#right {
+  grid-area: right;
+  max-width: 92%;
+}
+
+#gridcontainer {
+  grid-area: gridcontainer;
+  display: grid;
+  grid-template-areas: "left" "right";
+} /*# sourceMappingURL=styles.css.map */

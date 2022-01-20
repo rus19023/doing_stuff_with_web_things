@@ -13,15 +13,19 @@
       <nav id="nav">
         <h4 class="tabbar"><a href="/327/">Back to Index</a></h4>
       </nav>
-      <h1 class="cit327pagetitle"></h1>
-      <h2>Kimball and Inmon Methodologies</h2>
+      <h1 class="cit327pagetitle">page title displays here</h1>
     </header>
     <main>
         <div>
+          <h2 id="paperTitle">paper title displays here</h2>
           <h3>Inmon Methodology</h3>
           <p class="normal-text">
-            Bill Inmon says<pre class="code"> “one of the great appeals of the data warehousing concept is there is a single version of the truth”. </pre>
-            <p class="normal-text">
+            Bill Inmon says
+          </p>
+          <pre class="code"> 
+            “one of the great appeals of the data warehousing concept is there is a single version of the truth”. 
+          </pre>
+          <p class="normal-text">
             Mr. Inmon's ideas for data warehouses work on a "bottom-up" principle. His model starts with the enterprise's data model, specifically what is most important for the business to run. The structure of the data from varied sources will be integrated and normalized to avoid duplication of data, help identify and prevent data anomalies. Once the infrastructure is in place, the data will be collected, analyzed, and stored in data marts built for each business purpose needed, possibly denormalized to facilitate reporting for decision-making. The warehouse is the only source of data for the data marts.
           </p>
           <p class="normal-text">
@@ -46,24 +50,26 @@
 
           <h3>OLAP-Online Analytical Processing</h3>
           <p class="normal-text">
-            Online Analytical Processing (OLAP) is very different than OLAP. It is more the use case for specific data marts. Data is generally normalized less than in OLTP, or not at all. Redundancy abounds, with multiple sets of the same data that are sorted by different criteria, used to create reports more efficiently than can happen in relational models.
+            Online Analytical Processing (OLAP) is very different than OLTP. It is more the use case for specific data marts. Data is generally normalized less than in OLTP, or not at all. Redundancy abounds, with multiple sets of the same data that are sorted by different criteria, used to create reports more efficiently than can happen in relational models.
           </p>
           <p class="normal-text">
             There are also hybrid systems that combine these two with additional layers of applications. This type of system can support either Inmon's or Kimball's models.
           </p>
             <br>
+            <p class="sources">
               Sources: <br> <br>
               <a href="https://panoply.io/data-warehouse-guide/data-mart-vs-data-warehouse/">"Data Marts vs. Data Warehouses", Panoply.io</a> <br>
-              
+
               <a href="https://tdan.com/data-warehouse-design-inmon-versus-kimball/20300">Seiner, Robert S., "Data Warehouse Design – Inmon versus Kimball", The Data Administration Newsletter</a> <br>
-              
+
               <a href="https://learning.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/ch03.html#idm45085121800192">Kleppmann, Martin, "Designing Data-Intensive Applications", <span class="italic">Section 3. </span>  </a> <br>
-              
+
               <a href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f">Strengholt, Piethein, "The Extinction of Enterprise Data Warehousing"</a>
-          </p>
+            </p>
+
         </div>
     </main>
-    <footer id="footerclass"></footer>
+    <footer id="autofooter"></footer>
     <script src="../js/main.js"></script>
     <script src="../js/menu.js"></script>
   </body>

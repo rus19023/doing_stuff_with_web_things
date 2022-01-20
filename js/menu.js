@@ -118,7 +118,7 @@ const paperslist = [
     url: `${getBase()}week13.html`,
   },
   {
-    name: "Week 14, Final Paper: MEAN Stack Integration into the Data Warehouse",
+    name: "Week 14: Final Paper - MEAN Stack Integration into the Data Warehouse",
     url: `${getBase()}week14.html`,
   },
   {
@@ -147,6 +147,22 @@ const presentations = [
 function createNavItem(array) {
   console.log(`createNavItem: ${array}`);
 }
+
+function getWeekPaperTitle(array) {
+  let weekFile = `week${getWeeknum(getFilename())}`;
+  // get paper title from menu array where filename is the week number
+  array.forEach(element => {
+    // console.warn(element.url.substr(-11, 6));
+    // console.warn(weekFile);
+    // console.warn(element.url.substr(-11, 6) === weekFile);
+    if (element.url.substr(-11, 6) === weekFile) {
+      document.getElementById("paperTitle").innerHTML = element.name;
+      return;
+    }
+  });
+  console.clear;
+}
+getWeekPaperTitle(paperslist);
 
 function createNav(array, id) {
   // create link list container element

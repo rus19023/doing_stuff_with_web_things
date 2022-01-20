@@ -14,6 +14,13 @@
     p   {
         font-size: $font3;
     }
+
+    #gridcontainer {
+      grid-area: gridcontainer;
+      display: grid;
+      grid-template-areas: 
+      "left right";
+    }
 }
 
 

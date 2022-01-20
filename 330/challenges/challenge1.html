@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
+    <title>WDD330 - Web Frontend Development II | Challenge 1: To Do App</title>
+  </head>
+
+  <body>
+    <h1>WDD330 - Web Frontend Development II | Challenge 1: To Do App</h1>
+    <h2 class="tabbar">
+      <a href="../">Back to Menu</a>
+    </h2>
+    <h3>Week 02</h3>
+    <main id="gridcontainer">
+      <section id="right">
+        <h2></h2>
+        <h3><a href=""></a></h3>
+        <ul>
+          <li class="normal-text">
+            <form action="">
+              <p></p>
+              <label class="labels" for="">
+                <br />
+                <input
+                  class="inputs"
+                  type="text"
+                  name="number_input"
+                  id="number_input"
+                  placeholder=""
+                  value=""
+                />
+              </label>
+              <br />
+              <button class="buttons" onclick="">Run</button>
+            </form>
+            <div>
+              <p id="reverse_output">Output here</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="left">
+        <ol>
+          <li class="normal-text nostyle">Details</li>
+          <li class="normal-text nostyle">
+            Description: Build a simple web app to manage a ToDo list. It should
+            allow the creation of new tasks, the viewing of tasks, a process to
+            mark tasks as complete, ability to remove tasks, and the ability to
+            filter by complete/not complete.
+          </li>
+          <li class="normal-text nostyle">
+            Wireframes for each view:
+            <div class="fig-bloc">
+              <figure>
+                <img
+                  src="../../images/todo-wireframe.png"
+                  alt="Todo app wireframe"
+                />
+              </figure>
+            </div>
+          </li>
+          <li class="normal-text nostyle">
+            UI actions
+            <ol>
+              <li class="normal-text">Show a list of tasks</li>
+              <li class="normal-text">Add a new task</li>
+              <li class="normal-text">Complete a task</li>
+              <li class="normal-text">Remove a task</li>
+              <li class="normal-text">Filter tasks (complete/incomplete)</li>
+            </ol>
+          </li>
+          <li class="normal-text nostyle">
+            Data sources: localStorage
+            <ol>
+              <li class="normal-text">
+                todo: { id : timestamp, content: string, completed: bool }
+              </li>
+              <li class="normal-text">toDoList = [toDo];</li>
+            </ol>
+          </li>
+          <li class="normal-text nostyle">
+            Initial Module list: ToDos.js, localStorage helpers (ls.js),
+            utilities.js
+          </li>
+          <li class="normal-text">
+            Colors/Typography/specific Element styling: Student to determine
+          </li>
+          <li class="normal-text">
+            Schedule to provide yourself mile markers along the way to help you
+            stay on target.
+            <ul>
+              <li class="normal-text">
+                Review this
+                <a
+                  href="https://trello.com/b/94QLblUO/todo-project"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Trello board</a
+                >. If you want to follow those steps, create a Trello account
+                and copy the board to your account.
+              </li>
+              <li class="normal-text">
+                There are no dates assigned to the board. Assign yourself some
+                due dates to make sure you complete the project in the allotted
+                time.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+    </main>
+    <footer id="autofooter"></footer>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/menu.js"></script>
+  </body>
+</html>

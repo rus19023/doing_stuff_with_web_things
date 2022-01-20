@@ -45,6 +45,8 @@ h6 {
 div,
 form,
 footer,
+ul,
+ol,
 p,
 header {
   font-family: $fontprimary;
@@ -102,12 +104,12 @@ h6 {
   background: black;
 }
 
-ul li {
+.nostyle {
   list-style: none;
 }
 
 ul li.normal-text {
-    list-style: circle;
+  list-style: circle;
 }
 
 ol li {
@@ -143,6 +145,7 @@ img {
   cursor: pointer;
   background: black;
   border: $buttonborder;
+  box-shadow: $primary;
   padding: 2vw;
   width: 100%;
   max-width: 25%;
@@ -187,7 +190,7 @@ textarea {
   padding: 2vw;
 }
 
-footer#footerclass {
+footer#autofooter {
   font-family: $fontsecond;
   font-size: 3vh;
   font-weight: bold;
@@ -209,14 +212,32 @@ footer#footerclass {
 }
 
 pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
- }
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
 
- .italic {
-   font-style: italic;
- }
+.italic {
+  font-style: italic;
+}
+
+#left {
+  grid-area: left;
+  max-width: 92%;
+}
+
+#right {
+  grid-area: right;
+  max-width: 92%;
+}
+
+#gridcontainer {
+  grid-area: gridcontainer;
+  display: grid;
+  grid-template-areas:
+    "left"
+    "right";
+}
