@@ -1,19 +1,27 @@
-const mainNav = [
+const mainNav = [,
   {
-    url: `${getBase()}/327/index.html`,
+    url: `${getBase()}101/`,
+    term: "Fall 2019",
+    code: "CIT101",
+    name: "Intro to Programming",
+    tech: "Python"
+  },
+  {
+    url: `${getBase()}/327/`,
     term: "Winter 2022",
     code: "CIT327",
     name: "Data Warehousing",
     tech: "MySQl, "
   },
   {
-    url: `${getBase()}330/index.html1`,
+    url: `${getBase()}330/`,
     term: "Winter 2022",
     code: "WDD330",
     name: "Web Frontend Development II",
     tech: "HTML/CSS/JavaScript"
   }
 ];
+
 const noteslist = [
   {
     name: "Week 01 Notes",
@@ -27,6 +35,10 @@ const noteslist = [
     name: "Week 03 Notes",
     url: `${getBase()}week03.html`,
   },
+  {
+    name: "",
+    url: ""
+  }
 ];
 
 const exerciseslist = [
@@ -46,6 +58,10 @@ const exerciseslist = [
     name: "Week 05 Challenge 1",
     url: `${getBase()}challenges/challenge1.html`,
   },
+  {
+    name: "",
+    url: ""
+  }
 ];
 
 const paperslist = [
@@ -105,6 +121,10 @@ const paperslist = [
     name: "Week 14, Final Paper: MEAN Stack Integration into the Data Warehouse",
     url: `${getBase()}week14.html`,
   },
+  {
+    name: "",
+    url: ""
+  }
 ];
 
 const presentationslist = [
@@ -116,6 +136,10 @@ const presentationslist = [
     name: "Week 02: Data Models, Methodologies and Analysis",
     url: "https://docs.google.com/presentation/d/e/2PACX-1vSmsQEfdjs7kauZoXWd4oqFNkwVR6ykmo83GPylSiWiKAH-arkbtY6u66kazQhtrDRZ8ItA5GC1fPOc/pub?start=true&loop=false&delayms=30000",
   },
+  {
+    name: "",
+    url: ""
+  }
 ];
 
 // Functions
@@ -138,18 +162,19 @@ function createNav(array, id) {
         console.log(`element.url: ${element.url} is not found`);
         return;
       } else {
-        if (element.term.length > 0) {
+        if ((element.term) && (element.term.length > 0)) {
           menu += `<li><a href="${element.url}">${element.term}, ${element.code} - ${element.name}, (${element.tech})</a></li>`;
         } else {
           menu += `<li><a href="${element.url}">${element.name}</a></li>`;
+        }
       }
     });
     menu += "</ol>";
     container.innerHTML = menu;
-  } else {
     return;
   }
 }
+createNav(mainNav, "main-nav");
 createNav(noteslist, "notes");
 createNav(exerciseslist, "exercises");
 createNav(paperslist, "papers");

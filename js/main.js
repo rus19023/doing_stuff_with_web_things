@@ -3,16 +3,21 @@ if (isElement("wdd330pagetitle") && (substr(0, 4, getFilename()) === "week")) {
   document.getElementById("wdd330pagetitle").innerHTML = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
 }
 
-function setNav(term, coursecode, coursename) {
+function setNav(term, code, name, tech) {
   // set nav for CIT327 index page
   if (isElement("mainNav") && (getFilename() === "index.html")) {
-    const navdoc = document.getElementById("mainNav");
-    let navContent = `<ul><li><a href="${getBase()}">${term}, ${coursecode} - ${coursename} </a></li></ul>`;
-    navdoc.innerHTML = navContent;
+    if (tech.length > 0) {
+      let techContent = "(" + tech + ")";
+    } else {
+      let techContent = "";
+    }
+    let techContent = "";
+    let navContent = `<ul><li><a href="${getBase()}">${term}, ${code} - ${name} ${techContent} </a></li></ul>`;
+    document.getElementById("mainNav").innerHTML = navContent;
   }
 }
-setNav ("Winter 2022", "CIT327", "Data Warehousing");
-setNav ("Winter 2022", "WDD330", "Web Frontend II");
+//setNav ("Winter 2022", "CIT327", "Data Warehousing", "");
+//setNav ("Winter 2022", "WDD330", "Web Frontend II", "HTML, CSS, JavaScript");
 
 // set weekly page title for CIT327
 getWeekPageTitle("cit327weekpagetitle", "My CIT327 Portfolio ");
@@ -59,12 +64,7 @@ function getBase() {
   var href = location.href; //returns the entire url
   var host = location.hostname; //returns just the hostname of the url
   console.log(`href: ${location.href}`);
-  console.log(`host: ${location.hostname}`);
-  var baseurl = href;
-  // if ((host === "127.0.0.1") || (href.includes("http://127.0.0.1:5500/")) || (host === "localhost")) {  // development
-  //   var baseurl = href;
-  // } else {  // production
-  // }
+  //console.log(`host: ${location.hostname}`);
   return location.href;
 }
 
