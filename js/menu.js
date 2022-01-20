@@ -1,3 +1,19 @@
+const mainNav = [
+  {
+    url: `${getBase()}/327/index.html`,
+    term: "Winter 2022",
+    code: "CIT327",
+    name: "Data Warehousing",
+    tech: "MySQl, "
+  },
+  {
+    url: `${getBase()}330/index.html1`,
+    term: "Winter 2022",
+    code: "WDD330",
+    name: "Web Frontend Development II",
+    tech: "HTML/CSS/JavaScript"
+  }
+];
 const noteslist = [
   {
     name: "Week 01 Notes",
@@ -21,6 +37,10 @@ const exerciseslist = [
   {
     name: "Week 02 Exercises",
     url: `${getBase()}exercises/week02.html`,
+  },
+  {
+    name: "Week 03 Exercises",
+    url: `${getBase()}exercises/week03.html`,
   },
   {
     name: "Week 05 Challenge 1",
@@ -100,6 +120,10 @@ const presentationslist = [
 
 // Functions
 
+function createNavItem(array) {
+
+}
+
 function createNav(array, id) {
   // create link list container element
   // console.log(`createNav: ${id}`);
@@ -107,18 +131,18 @@ function createNav(array, id) {
   if (isElement(id)) {
     const container = document.getElementById(id);
     // create link list element
-    let ol = "<ol>";
+    let menu = "<ol>";
     // get list of files to create links for each week number
     array.forEach((element) => {
       if (!urlExists(element.url)) {
         console.log(`element.url: ${element.url} is not found`);
         return;
       } else {
-        ol += `<li><a href="${element.url}">${element.name}</a></li>`;
+        menu += `<li><a href="${element.url}">${element.name}</a></li>`;
       }
     });
-    ol += "</ol>";
-    container.innerHTML = ol;
+    menu += "</ol>";
+    container.innerHTML = menu;
   } else {
     return;
   }
