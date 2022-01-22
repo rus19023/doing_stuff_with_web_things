@@ -13,15 +13,15 @@
   		if(numberAsText != "" && !isNaN(aNumber)){
 	  		var remainder = Math.abs(aNumber % 2)
 	  		if(aNumber != 0 && remainder == 0){
-			document.getElementById("result_display").innerHTML = 
+			document.getElementById("result_display").innerText = 
 				aNumber + " is even."
 			}
 	 		else if(aNumber != 0 && remainder == 1){
-				document.getElementById("result_display").innerHTML = 
+				document.getElementById("result_display").innerText = 
 					aNumber + " is odd."
 			}
 	 		else{
-				document.getElementById("result_display").innerHTML = 
+				document.getElementById("result_display").innerText = 
 					"0 is neither even nor odd."
 			}
 		}

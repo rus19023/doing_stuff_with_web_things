@@ -27,6 +27,18 @@ html {
   }
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vh;
+  a {
+    text-decoration: none;
+    padding: 1vw 2vw;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -48,13 +60,20 @@ footer,
 ul,
 ol,
 p,
-header {
+header,
+section {
   font-family: $fontprimary;
   padding: 3vw;
   background: black;
   max-width: 100%;
   margin: 2vw;
   border-radius: 10px;
+}
+
+.exercise {
+  border: $border;
+  border-radius: 10px;
+  margin: 2vw;
 }
 
 .centerimg {
@@ -148,14 +167,14 @@ img {
   box-shadow: $primary;
   padding: 2vw;
   width: 100%;
-  max-width: 25%;
+  max-width: 45%;
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
   color: $accent;
   font-family: $fontsecond;
   font-weight: bold;
-  font-size: $font4;
+  font-size: $font3;
   & a {
     text-decoration: none;
     color: $accent;
@@ -248,4 +267,57 @@ h4.indent, p.indenth4 {
 
 h5.indent, p.indenth5, p ul li.indent {
   padding-left: 8vw;
+}
+
+.dojo{
+  background: url(https://gistcdn.githack.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/635810bd1a925c06b5c0bc0c861d62fe53597078/dojo.svg) no-repeat;
+  width: 90%;
+  height: 800px;
+  background-size: 100% auto;
+  padding-top: 10px;
+}
+
+.quiz-body {
+  width: 50%;
+  background: rgba(255,255,255,1);
+  margin: 0 auto;
+  padding: 10px 20px 50px 20px;
+  -webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+-moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+}
+
+#question {
+ font-size: 24px;
+}
+
+#result{
+  color: #fff;
+  margin: 0.2em 0;
+  text-align: center;
+}
+
+#info, #question, #result {  
+  width: 90%;
+  margin: 2vh auto;
+}
+
+.correct {
+    background-color: #0c0;
+}
+
+.wrong {
+  color: #fff;
+  background-color: #c00;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #611BBD;
+  border-color: #130269;
+  border-radius: 4px;
+  margin: 0.2em 0;
+  display: block;
+  width: 100%;
+  font-size: 24px;
 }

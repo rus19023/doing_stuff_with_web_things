@@ -11,7 +11,7 @@
   <body>
     <header id="header">
       <nav id="nav">
-        <h4 class="tabbar"><a href="/330/">Back to Index</a></h4>
+        <h4 class="tabbar"><a href="./">Back to Index</a></h4>
       </nav>
       <h1 class="wdd330weekpagetitle">Notes for this week</h1>
     </header>
@@ -46,11 +46,11 @@
             </pre>
             <p class="normal-text">
                 Each property is a key-value pair, separated by commas. In the example, the first property is called name and its value is 'Superman', while the fly() property is a method, as its value is a function, signified by the parentheses placed after it. If there were further methods after this, they would be comma-separated as well.
-                <br>
+                <br><br>
                 If a property’s name doesn’t follow the rules for naming variables described in Chapter 2, it needs to be quoted. The property 'real name' in the example above needs to be quoted because it contains a space.
-                <br>
+                <br><br>
                 It’s very uncommon to use property and method names that don’t follow the rules for naming variables. In a real-world app, it's likely the "real name" property would actually be named real_name or realName.
-                <br>
+                <br><br>
                 All objects are mutable at any time when a program is running. This means that its properties and methods can be changed or removed, and new properties and methods can be added to the object, even if it was declared using const.
             </p>
             <pre>
@@ -102,39 +102,220 @@
             </p>
             <pre>
                 const dice = {
-                sides: 6,
-                roll() {
+                    sides: 6,
+                    roll() {
                     return Math.floor(this.sides * Math.random()) + 1;
-                }
-            } 
-            
-            dice.roll();
-            << 5
-            
-            dice.roll();
-            << 3 
-            
-            dice.roll();
-            << 12
-            
-            dice.roll();
-            << 18
-            
-            dice.sides = 20;
-            << 20
+                    }
+                } 
+                
+                dice.roll();
+                << 5
+                
+                dice.roll();
+                << 3 
+                
+                dice.roll();
+                << 12
+                
+                dice.roll();
+                << 18
+                
+                dice.sides = 20;
+                << 20
             </pre>
             <p class="normal-text">
-                
+                Naming collisions occur when the same variable or function name is used for different purposes by code sharing the same scope. This might not seem likely, but imagine if you have lots of code that has been created over time – you might end up reusing a variable name without realizing. The problem becomes more likely if you use code libraries from other developers or work on code in teams, as you might choose the same name for a function as another member of the 
+                <br>
+                A solution to this problem is to use the object literal pattern to create a namespace for groups of related functions. This is done by creating an object literal that serves as the namespace, then adding any values as properties of that object, and any functions as methods.
             </p>
-            <pre></pre>
+            <pre>
+                const myMaths = {
+
+                    square(x) {
+                        return x * x;
+                    },
+                    mean(array,callback) {
+                        if (callback) {
+                        array.map( callback );
+                        }
+                        const total = array.reduce((a, b) => a + b);
+                        return total/array.length;
+                    }
+                }
+
+                myMaths.square(3)
+                << 9
+
+                myStats.mean([1,2,3])
+                << 2
+            </pre>
             <p class="normal-text">
-                
+                JSON is a string representation of the object literal notation that we have just seen. There are, however, a couple of key differences:
+                <ol>
+                    <li>
+                        Property names must be double-quoted
+                    </li>
+                    <li>
+                        Permitted values are double-quoted strings, numbers, true, false, null, arrays and objects
+                    </li>
+                    <li>
+                        Functions are not permitted values
+                    </li>
+                </ol>
+                A JSON string representation the Caped Crusader is shown below:
             </p>
-            <pre></pre>
+            <pre>
+                const batman = '{"name": "Batman","real name": "Bruce Wayne","height": 74, "weight": 210, "hero": true, "villain": false, "allies": ["Robin","Batgirl","Superman"]}'
+
+                JSON.parse(batman);
+                << { name: 'Batman',
+                    'real name': 'Bruce Wayne',
+                    height: 74,
+                    weight: 210,
+                    hero: true,
+                    villain: false,
+                    allies: [ 'Robin', 'Batgirl', 'Superman' ] } 
+
+                    const wonderWoman = {
+                        name: 'Wonder Woman',
+                        'real name': 'Diana Prince',
+                        height: 72,
+                        weight: 165,
+                        hero: true,
+                        villain: false,
+                        allies: ['Wonder Girl','Donna Troy','Superman'],
+                        lasso: function(){
+                            console.log('You will tell the truth!');
+                        }
+                    }
+
+                    JSON.stringify(wonderWoman);
+                    << '{"name":"Wonder Woman","real name":"Diana Prince","height":72,
+                    "weight":165,"hero":true,"villain":false,"allies":["Wonder Girl",
+                    "Donna Troy","Superman"]}'
+
+                    JSON.stringify(wonderWoman, null, " ");
+                    <<  '{\n "name": "Wonder Woman",\n "real name": "Diana Prince",\n "height": 72,\n "weight": 165,\n "hero": true,\n "villain": false,\n "allies": [\n  "Wonder Girl",\n  "Donna Troy",\n  "Superman"\n ]\n}'
+            </pre>
             <p class="normal-text">
-                
+                Math Object
             </p>
-            <pre></pre>
+            <pre>
+                Math.PI // The ratio of the circumference and diameter of a circle
+                << 3.141592653589793
+
+                Math.SQRT2 // The square root of 2
+                << 1.4142135623730951
+
+                Math.SQRT1_2 // The reciprocal of the square root of 2
+                << 0.7071067811865476
+
+                Math.E // Euler's constant
+                << 2.718281828459045
+
+                Math.LN2 // The natural logarithm of 2
+                << 0.6931471805599453
+
+                Math.LN10 // The natural logarithm of 10
+                << 2.302585092994046
+
+                Math.LOG2E // Log base 2 of Euler's constant
+                << 1.4426950408889634
+
+                Math.LOG10E // Log base 10 of Euler's constant
+                << 0.4342944819032518  
+                
+                Math.abs(3);
+                << 3
+                
+                Math.abs(-4.6);
+                << 4.6  
+                
+                Math.ceil(4.2);
+                << 5
+                
+                Math.ceil(8);
+                << 8
+                
+                Math.ceil(-4.2);
+                << -4  
+                
+                Math.floor(4.2);
+                << 4
+                
+                Math.floor(8);
+                << 8
+                
+                Math.floor(-4.2);
+                << -5  
+                
+                Math.round(4.5);
+                << 5
+                
+                Math.round(4.499);
+                << 4
+                
+                Math.round(-4.2);
+                << -4  
+                
+                Math.trunc(4.9);
+                << 4
+                
+                Math.trunc(-4.2);
+                << -4  
+                
+                Math.exp(1); // This is Euler's constant
+                << 2.718281828459045
+                
+                Math.exp(0); // Any number to the power of 0 is 1
+                << 1
+                
+                Math.exp(-3);
+                << 0.049787068367863944  
+                
+                Math.pow(3, 2); // 3 squared
+                << 9
+                
+                Math.pow(4.5, 0); // Any number to the power of 0 is 1
+                << 1
+                
+                Math.pow(27, 1/3); // A nice way to do cube roots
+                << 3  
+                
+                Math.sqrt(121);
+                << 11
+                
+                Math.sqrt(2); // same as Math.SQRT2
+                << 1.4142135623730951
+                
+                Math.sqrt(-1); // imaginary numbers aren't supported!
+                << NaN  
+                
+                // cube root
+                Math.cbrt(8);
+                << 2
+                
+                Math.cbrt(-1000);
+                << -10  
+                
+                Math.hypot(3,4); // returns the square root of 3 squared + 4 squared
+                << 5
+                
+                Math.hypot(2,3,6); // more than 2 arguments can be used
+                << 7  
+                
+                Math.log(Math.E); // Natural logs have a base of Euler's constant
+                << 1
+                
+                Math.log(1); // log of 1 is zero
+                << 0
+                
+                Math.log(0); // You can't take the log of zero
+                << -Infinity
+                
+                Math.log(-2); // You can't take logs of negative numbers
+                << NaN  
+            </pre>
             <p class="normal-text">
                 
             </p>

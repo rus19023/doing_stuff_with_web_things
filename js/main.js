@@ -1,9 +1,9 @@
 function writeById(output, input) {
-  document.getElementById(output).innerHTML = input;
+  document.getElementById(output).innerText = input;
 }
 
 function writeByQuery(output, input) {
-  document.querySelector(output).innerHTML = input;
+  document.querySelector(output).innerText = input;
 }
 
 // set page title for WDD330 weekly pages
@@ -11,13 +11,13 @@ const header330 = `WDD330 - Web Frontend II | Week ${getWeeknum(
   getFilename()
 )}`;
 if (isElement("wdd330pagetitle") && substr(0, 4, getFilename()) === "week") {
-  document.getElementById("wdd330pagetitle").innerHTML = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
+  document.getElementById("wdd330pagetitle").innerText = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
 }
 
 function getIndexPageTitle(element, coursecode) {
   // set head and page title for index pages
   if (isElement(`${element}`)) {
-    console.log(`${element}`);
+    //console.log(`${element}`);
     writeByQuery(`#${element}`, `My ${coursecode} Portfolio`);
     writeByQuery(`.${element}`, `My ${coursecode} Portfolio `);
   }
@@ -28,17 +28,21 @@ getIndexPageTitle("wdd330indexpagetitle", "WDD330");
 
 function getWeekPageTitle(element, page) {
   let weekNo = getWeeknum(getFilename());
-  //// console.log(`weekNo: ${weekNo}`);
   // set page title for weekly pages
   if (isElement(`${element}`)) {
     let pageTitle = `${page} | Week ${weekNo}`;
-    document.querySelector(`#${element}`).innerHTML = pageTitle;
-    document.querySelector(`.${element}`).innerHTML = pageTitle;
+    if (isElement(`#${element}`)) {
+    document.querySelector(`#${element}`).innerText = pageTitle;
+    }
+    if (isElement(`.${element}`)) {
+    document.querySelector(`.${element}`).innerText = pageTitle;
+    }
   }
 }
 getWeekPageTitle("cs101pagetitle", "CS101");
 getWeekPageTitle("cit327pagetitle", "CIT327");
 getWeekPageTitle("wdd330pagetitle", "WDD330");
+getWeekPageTitle("wdd330weekexercisetitle", "Exercises");
 
 function isElement(element) {
   // check if element exists
@@ -50,8 +54,7 @@ function isElement(element) {
 
 function setTitle(course) {
   if (isElement(course)) {
-    let title = document.getElementById(course).innerHTML;
-    document.getElementById(course).innerHTML = title;
+    document.getElementById(course).innerText = `My ${course} Portfolio`;
   }
 }
 
@@ -59,29 +62,20 @@ function getBase() {
   //return window.location.href.replace(/\/[^\/]*$/, '/');
   var href = location.href; //returns the entire url
   var host = location.hostname; //returns just the hostname of the url
-  // console.log(`href: ${location.href}`);
-  //// console.log(`host: ${location.hostname}`);
   return location.href;
 }
 
 function getWeeknum(filenamee) {
-  //// console.log(`filenamee: ${filenamee}`);
-  let weekno = "";
-  // console.log(`filenamee: ${filenamee}`);
+  let weekno;
   if (filenamee.substr(0, 4) === "week") {
     weekno = filenamee.substr(4, 2);
-    // console.log(`weekno: ${weekno}`);
   }
   return weekno;
 }
-// let page1 = "wk01.html";
-// getWeeknum(page1);
 
 function getFilename() {
   var path = window.location.pathname;
   var page = path.split("/").pop();
-  //// console.log(path);
-  //// console.log(page);
   return page;
 }
 
@@ -106,12 +100,6 @@ function weeknumber() {
   let seconds = today.getTime() - termdate.getTime();
   // add 1 to weeks to account for rounding down
   let weeknumber = Math.floor(seconds / secondsPerWeek) + 1;
-  // // console.log(`termdate: ${termdate}`);
-  // // console.log(`today: ${today}`);
-  // // console.log(`seconds: ${seconds}`);
-  // // console.log(`secondsPerWeek: ${secondsPerWeek}`);
-  // // console.log(`weeknumber: ${weeknumber}`);
-  // return week number
   return weeknumber;
 }
 
@@ -119,19 +107,16 @@ function weeknumber() {
 if (isElement("autofooter")) {
   document.getElementById("autofooter").innerHTML =
     "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology";
-  //// console.log("footer exists");
 }
 
 const base = getBase();
-//// console.log(`base: ${base}`);
 const cit327title = setTitle("cit327pagetitle");
 
 const page = getFilename();
-//// console.log(`page: ${page}`);
 const weeknum = getWeeknum(page);
 
 if (isElement("filename")) {
-  document.getElementById("filename").innerHTML = getWeeknum(page);
+  document.getElementById("filename").innerText = getWeeknum(page);
 }
 
 // Week 01
@@ -150,15 +135,14 @@ function saveStory() {
 
 function showStory() {
   let storyHTML = document.getElementById("story_editor").value;
-  document.getElementById("story_show").innerHTML = storyHTML;
+  document.getElementById("story_show").innerText = storyHTML;
 }
 
 function reverseNumber() {
   var number = document.getElementById("number_input").value;
   // console.log(`number: ${number}`);
   let rnumber = "Number reversed: " + number.split("").reverse().join("");
-  // console.log(`rnumber: ${rnumber}`);
-  document.getElementById("reverse_output").innerHTML = rnumber;
+  document.getElementById("reverse_output").innerText = rnumber;
 }
 
 // Week 02
@@ -170,5 +154,5 @@ function loopingTriangle() {
     base += "#";
     triangle += "\n" + base;
   }
-  document.getElementById("triangle_output").innerHTML = base;
+  document.getElementById("triangle_output").innerText = base;
 }

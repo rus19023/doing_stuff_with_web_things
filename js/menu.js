@@ -144,6 +144,10 @@ const presentations = [
 
 // Functions
 
+const siteTitle = () => {
+  document.getElementById("siteTitle").innerText = "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio";
+}
+
 function createNavItem(array) {
   console.log(`createNavItem: ${array}`);
 }
@@ -152,22 +156,16 @@ function getWeekPaperTitle(array) {
   let weekFile = `week${getWeeknum(getFilename())}`;
   // get paper title from menu array where filename is the week number
   array.forEach(element => {
-    // console.warn(element.url.substr(-11, 6));
-    // console.warn(weekFile);
-    // console.warn(element.url.substr(-11, 6) === weekFile);
-    if (element.url.substr(-11, 6) === weekFile) {
-      document.getElementById("paperTitle").innerHTML = element.name;
+    if ((element.url.substr(-11, 6) === weekFile) && (isElement("paperTitle"))) {
+      document.getElementById("paperTitle").innerText = element.name;
       return;
     }
   });
-  console.clear;
 }
 getWeekPaperTitle(paperslist);
 
 function createNav(array, id) {
   // create link list container element
-  // console.log(`createNav: ${id}`);
-  // console.log(`isElement ${id}: ${isElement(id)}`);
   if (isElement(id)) {
     const container = document.getElementById(id);
     // create link list element
@@ -175,9 +173,7 @@ function createNav(array, id) {
     // get list of files to create links for each week number
     array.forEach((element) => {
       let len = element.url.length;
-      console.log(`element.url.len: ${len}`);
       if ((!urlExists(element.url)) && (len < 100)) {
-        console.log(`element.url: ${element.url} is not found`);
         return;
       } else {
         if ((element.term) && (element.term.length > 0)) {
@@ -197,39 +193,3 @@ createNav(noteslist, "notes");
 createNav(exerciseslist, "exercises");
 createNav(paperslist, "papers");
 createNav(presentations, "presentations");
-
-/*
-
-function createMenu() {
-  // create link list container element
-  const container = document.getElementById("container");
-  // create link list element
-  let ol = "<ol>";
-  let baseurl = "getBase()";
-  //let baseurl = "/";
-  // get list of files to create links for each week number
-  let weekno = weeknumber();
-  for (let i = 1; i <= weekno; i++) {
-    //let folderString = `/${folder}${i}/${file}`;
-    //let folderString = `${baseurl}${folder}${i}/${file}`;
-    let n1 = `${baseurl}week${i}/`;
-    let e1 = `${baseurl}exercises/exercise${i}.html`;
-    let c1 = `${baseurl}challenges/challenge${i}.html`;
-    //console.log(`folderString: ${folderString}`);
-    console.log(`e1: ${e1}`);
-    console.log(`c1: ${c1}`);
-    ol += `<li><a href="${n1}">Week ${i} Notes</a></li>`;
-    console.log(`container: ${container.innerHTML}`);
-    if (urlExists(e1)) {
-      ol += `<li><a href="${e1}">Exercise ${i}</a></li>`;
-    }
-    if (urlExists(c1)) {
-      ol += `<li><a href="${c1}">Challenge ${i}</a></li>`;
-    }
-  }
-  ol += "</ol>";
-  container.innerHTML = ol;
-  console.log(`container: ${container.innerHTML}`);
-}
-createMenu();
-*/
