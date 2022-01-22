@@ -66,59 +66,59 @@ const exerciseslist = [
 
 const paperslist = [
   {
-    name: "Week 01: Data Mart vs. Data Warehouse",
+    name: "Data Mart vs. Data Warehouse",
     url: `${getBase()}week01.html`,
   },
   {
-    name: "Week 02: Kimball and Inmon Methodologies",
+    name: "Kimball and Inmon Methodologies",
     url: `${getBase()}week02.html`,
   },
   {
-    name: "Week 03: ETL Processes",
+    name: "ETL Processes",
     url: `${getBase()}week03.html`,
   },
   {
-    name: "Week 04: Data Warehouse Granularity",
+    name: "Data Warehouse Granularity",
     url: `${getBase()}week04.html`,
   },
   {
-    name: "Week 05: ERD Model",
+    name: "ERD Model",
     url: `${getBase()}week05.html`,
   },
   {
-    name: "Week 06: Cassandra, Map Reduce, and CSQL",
+    name: "Cassandra, Map Reduce, and CSQL",
     url: `${getBase()}week06.html`,
   },
   {
-    name: "Week 07: Vertical vs. Horizontal Scale",
+    name: "Vertical vs. Horizontal Scale",
     url: `${getBase()}week07.html`,
   },
   {
-    name: "Week 08: MongoDB",
+    name: "MongoDB",
     url: `${getBase()}week08.html`,
   },
   {
-    name: "Week 09: Schemaless Collections in MongoDB",
+    name: "Schemaless Collections in MongoDB",
     url: `${getBase()}week09.html`,
   },
   {
-    name: "Week 10: XSLT with XML Documents",
+    name: "XSLT with XML Documents",
     url: `${getBase()}week10.html`,
   },
   {
-    name: "Week 11: XQuery",
+    name: "XQuery",
     url: `${getBase()}week11.html`,
   },
   {
-    name: "Week 12: Final Paper - Outline",
+    name: "MEAN Stack Integration into the Data Warehouse - Outline",
     url: `${getBase()}week12.html`,
   },
   {
-    name: "Week 13: Final Paper - Draft",
+    name: "MEAN Stack Integration into the Data Warehouse - Draft",
     url: `${getBase()}week13.html`,
   },
   {
-    name: "Week 14: Final Paper - MEAN Stack Integration into the Data Warehouse",
+    name: "MEAN Stack Integration into the Data Warehouse",
     url: `${getBase()}week14.html`,
   },
   {

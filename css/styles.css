@@ -309,4 +309,12 @@ pre {
   grid-area: gridcontainer;
   display: grid;
   grid-template-areas: "left" "right";
-} /*# sourceMappingURL=styles.css.map */
+}
+
+h4.indent, p.indenth4 {
+  padding-left: 4vw;
+}
+
+h5.indent, p.indenth5 {
+  padding-left: 8vw;
+}/*# sourceMappingURL=styles.css.map */
