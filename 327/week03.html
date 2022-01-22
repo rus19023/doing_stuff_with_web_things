@@ -21,17 +21,17 @@
 
           <h3>What is ETL?</h3>
           <p class="normal-text">
-            ETL is an acronym for Extract, Transform, Load. It is the process used to Extract data from one or more sources, Transform it to match the standards needed for the repository, and Load it into said data warehouse repository.
+            ETL is an acronym for Extract, Transform, Load. It is the process used to Extract data from one or more sources, Transform it to match the standards needed for the repository, and Load it into said data warehouse repository. A newer take on ETL is ELT, which stands for Extract, Load, Transform. This is a similar process, only the data is loaded first, then transformed. The purpose is to mitigate coding error, migration speed and server scaling issues during the transformation procedure.
           </p>
 
             <h4 class="indent">Extract</h4>
             <p class="normal-text indenth4">
-              As there may be many differently formatted data sources, extraction can be a difficult task. First, the data must be profiled to determine the data types and the structure of the data. Any changes in the data between sessions of exportation must be tracked and adjusted accordingly.
+              As there may be many differently formatted data sources, extraction can be a difficult task. First, the data must be profiled to determine the data types and the structure of the data. Version control helps monitor for changes in the data between sessions of exportation.
             </p>
 
             <h4 class="indent">Transform</h4>
             <p class="normal-text indenth4">
-              Data extracted must now be "cleaned up", removing duplicates and reformatting to make it uniform for reporting and analysis.
+              Extracted data that is considered "dirty", or detracting from the integrity of the data, must now be "cleaned up", removing duplicate, poorly parsed and/or inconsistent data, correcting misspellings. Data changes tracked can be adjusted as needed, then the data is reformatted to make it uniform for reporting and analysis.
             </p>
 
             <h4 class="indent">Load</h4>
@@ -39,65 +39,47 @@
               Data collected and structured can now be inserted into fact and dimension tables where it is stored in data cubes that can be "sliced and diced" for reports and analysis as needed.
             </p>
 
-              <h5 class="indent">Context</h5>
-              <p class="normal-text indenth5"></p>
-
-              <h5 class="indent">Consolidation</h5>
-              <p class="normal-text indenth5"></p>
-
-              <h5 class="indent">Productivity</h5>
-              <p class="normal-text indenth5"></p>
-
-              <h5 class="indent">Accuracy</h5>
-              <p class="normal-text indenth5"></p>
-            
-          <h3>How does ETL work?</h3>
+          <h3>What programming tools does ETL use?</h3>
           <p class="normal-text">
-            
-          </p>
-          <h3>What programming method(s) or language(s) does ETL use?</h3>
-          <p class="normal-text">
-
-          </p>
-          <h3></h3>
-          <p class="normal-text">
-
+            There are many different programming languages and methods used to perform ETL. This is not a comprehensive list.
             <ul>
-              <li class="normal-text">
-
+              <li class="normal-text indent">
+                Amazon Redshift: Part of AWS, a column-oriented DBMS, up to 16 PB (petabytes) of data can be stored in a single cluster.
               </li>
-              <li class="normal-text">
-
+              <li class="normal-text indent">
+                Apache Kudu: Part of Apache's Hadoop, a column-oriented data store, optimized for OLAP, open-source.
               </li>
-              <li class="normal-text">
-
+              <li class="normal-text indent">
+                Oracle Data Integration: 
               </li>
-              <li class="normal-text">
 
+
+              <li class="normal-text indent">
+                Snowflake, Inc.:  
               </li>
-              <li class="normal-text">
-
+              <li class="normal-text indent">
+                Teradata: 
               </li>
-              <li class="normal-text">
-
+              <li class="normal-text indent">
+                Microsoft Analysis Services: 
               </li>
-              <li class="normal-text">
-
+              <li class="normal-text indent">
+                Oracle Exadata: 
               </li>
             </ul>
           </p>
           <h3></h3>
           <p class="normal-text">
-
           </p>
-          <p class="normal-text">
-            <br>
           <p class="sources">
               Sources: <br> <br>
               <a href="https://en.wikipedia.org/wiki/Extract,_transform,_load"> "Extract, transform, load", Wikipedia</a>
               <a href="https://www.informatica.com/resources/articles/what-is-etl.html">"ETL (Extract Transform Load): What You Need to Know", Informatica.com</a>
               <a href="https://www.kimballgroup.com/2007/10/subsystems-of-etl-revisited/">Becker, Bob, "Subsystems of ETL Revisited", Kimball Group</a>
               <a href="https://www.ibm.com/cloud/blog/elt-vs-etl-whats-the-difference">"ELT vs. ETL: What’s the Difference?", IBM Cloud Education</a>
+              <a href="https://towardsdatascience.com/what-is-dirty-data-d96abbdf254e">Wu, Jun, "What is Dirty Data?", Towards Data Science</a>
+              <a href="https://en.wikipedia.org/wiki/Category:Data_warehousing_products">Wikipedia Category: "Data Warehousing Products"</a>
+              <a href="https://docs.oracle.com/cd/E11882_01/owb.112/e10581/intro.htm#WBCON04360">"Introduction to Oracle Warehouse Builder", Oracle</a>
           </p>
         </div>
     </main>
