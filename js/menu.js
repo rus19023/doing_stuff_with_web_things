@@ -56,7 +56,7 @@ const exerciseslist = [
   },
   {
     name: "Week 05 Challenge 1",
-    url: `${getBase()}challenges/challenge1.html`,
+    url: `${getBase()}challenges/week05.html`,
   },
   {
     name: "",
@@ -216,6 +216,9 @@ getWeekPageTitle("cs101weekpagetitle", "CS101");
 getWeekPageTitle("cit327weekpagetitle", "CIT327 Paper");
 getWeekPageTitle("wdd330weekpagetitle", "WDD330 Notes");
 getWeekPageTitle("wdd330weekexercisetitle", "Exercises");
+getWeekPageTitle("wdd330weekexercisetitle2", "Exercises");
+getWeekPageTitle("wdd330challengetitle", "Challenges");
+getWeekPageTitle("wdd330challengetitle2", "Challenges");
 getWeekPageTitle("wdd330weekpageheading", "WDD330 Notes");
 
 function getWeekPaperTitle(array) {
