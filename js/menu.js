@@ -2,7 +2,7 @@ const mainNav = [,
   {
     url: `${getBase()}101/`,
     term: "Fall 2019",
-    code: "CIT101",
+    code: "CS101",
     name: "Intro to Programming",
     tech: "Python"
   },
@@ -11,7 +11,7 @@ const mainNav = [,
     term: "Winter 2022",
     code: "CIT327",
     name: "Data Warehousing",
-    tech: "MySQl, "
+    tech: "MySQL, ETL, MongoDB"
   },
   {
     url: `${getBase()}330/`,
@@ -144,13 +144,79 @@ const presentations = [
 
 // Functions
 
-const siteTitle = () => {
-  document.getElementById("siteTitle").innerText = "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio";
+// set footer
+if (isElement("autofooter")) {
+  writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
 }
+
+// set header
+if (isElement("autoheader")) {
+  writeById("autoheader", `<h1 id="siteTitle">site title</h1>
+  <h2 class="tabbar"><a href="../">Back to Index</a></h2>`);
+}
+
+// set header2
+if (isElement("autoheader2")) {
+  writeById("autoheader2", `<h1 id="siteTitle">site title</h1>
+  <h2 class="tabbar"><a href="../../">Back to Index</a></h2>`);
+}
+
+function getIndexPageTitle(id) {
+  let array = mainNav;
+  let spot;
+  let title;
+  // get paper title from menu array where filename is the week number
+  array.forEach(element => {
+    spot = id.indexOf("-");
+    //console.log(`spot: ${spot}`);
+    //console.log(element.code === id.substr(0, spot));
+    if ((element.code.toLowerCase() === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
+      title = `${element.code} - ${element.name} (${element.tech})`;
+      //console.log(`title: ${title}`);
+      writeByQuery(`#${id}`, title);
+      writeByQuery(`.${id}`, title);
+    }
+  });
+}
+getIndexPageTitle("cs101-indexpagetitle");
+getIndexPageTitle("cit327-indexpagetitle");
+getIndexPageTitle("wdd330-indexpagetitle");
+
+const siteTitle = () => {
+  writeById("siteTitle", "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio");
+}
+siteTitle();
 
 function createNavItem(array) {
   console.log(`createNavItem: ${array}`);
 }
+
+// set page title for WDD330 weekly pages
+const header330 = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
+if (isElement("wdd330pagetitle") && substr(0, 4, getFilename()) === "week") {
+  document.getElementById("wdd330pagetitle").innerText = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
+}
+
+function setTitle(course) {
+  if (isElement(course)) {
+    writeById(course, `My ${course} Portfolio`);
+  }
+}
+
+function getWeekPageTitle(id, page) {
+  let weekNo = getWeeknum(getFilename());
+  // set page title for weekly pages
+  if (isElement(`${id}`)) {
+    let pageTitle = `${page} | Week ${weekNo}`;
+    if (isElement(`${id}`)) {
+    writeById(`${id}`, pageTitle);
+    }
+  }
+}
+getWeekPageTitle("cs101weekpagetitle", "CS101");
+getWeekPageTitle("cit327weekpagetitle", "CIT327 Paper");
+getWeekPageTitle("wdd330weekpagetitle", "WDD330");
+getWeekPageTitle("wdd330weekexercisetitle", "Exercises");
 
 function getWeekPaperTitle(array) {
   let weekFile = `week${getWeeknum(getFilename())}`;
