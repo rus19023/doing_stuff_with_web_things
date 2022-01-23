@@ -206,17 +206,17 @@ function setTitle(course) {
 function getWeekPageTitle(id, page) {
   let weekNo = getWeeknum(getFilename());
   // set page title for weekly pages
-  if (isElement(`${id}`)) {
+  if (isElement(id)) {
     let pageTitle = `${page} | Week ${weekNo}`;
-    if (isElement(`${id}`)) {
-    writeById(`${id}`, pageTitle);
-    }
+    console.log(`pageTitle: ${pageTitle}`);
+    writeById(id, pageTitle);
   }
 }
 getWeekPageTitle("cs101weekpagetitle", "CS101");
 getWeekPageTitle("cit327weekpagetitle", "CIT327 Paper");
-getWeekPageTitle("wdd330weekpagetitle", "WDD330");
+getWeekPageTitle("wdd330weekpagetitle", "WDD330 Notes");
 getWeekPageTitle("wdd330weekexercisetitle", "Exercises");
+getWeekPageTitle("wdd330weekpageheading", "WDD330 Notes");
 
 function getWeekPaperTitle(array) {
   let weekFile = `week${getWeeknum(getFilename())}`;

@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
-    <title id="wdd330weekpagetitle">My WDD330 Weekly Notes | Title</title>
+    <title id="wdd330weekpagetitle">week page title</title>
   </head>
 
   <body>
     <header id="autoheader">auto header</header>
     <main>
-      <h1 class="wdd330weekpagetitle">Notes for this week</h1>
-        <ul>
-
-          <li>
+      <h1 id="wdd330weekpageheading">Notes for this week</h1>
+      <ul>
+        <li>
             <div>
                 <h2>
                   <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2/k01nwt6b">
@@ -28,24 +27,26 @@
                 </p>
                 <p class="normal-text">
                   JavaScript has seven different data types. Six of them are primitive data types and are listed below:
-                  <ul>
-                    <li class="normal-text">String</li>
-                    <li class="normal-text">Symbol (The symbol primitive data type was only introduced in ES6.)</li>
-                    <li class="normal-text">Number</li>
-                    <li class="normal-text">Boolean</li>
-                    <li class="normal-text">Undefined</li>
-                    <li class="normal-text">Null</li>
-                  </ul>
                 </p>
+                <ul>
+                  <li class="normal-text">String</li>
+                  <li class="normal-text">Symbol (The symbol primitive data type was only introduced in ES6.)</li>
+                  <li class="normal-text">Number</li>
+                  <li class="normal-text">Boolean</li>
+                  <li class="normal-text">Undefined</li>
+                  <li class="normal-text">Null</li>
+                </ul>
                 <p class="normal-text">Any value that isn’t one of the primitive data types listed above is an object. These include arrays, functions and object literals
                 </p>
                 <p class="normal-text">Using const prevents you from reassigning a variable to another object, as it will produce an error, as illustrated below:</p>
-                <pre class="code">// declare object
+                <pre class="code">
+                  // declare object
                   const name = { value: 'Alexa' };
 
                   // attempt to reassign to another object
                   name = { value: 'Siri' }
-                  << TypeError: Assignment to constant variable.</pre>
+                  << TypeError: Assignment to constant variable.
+                </pre>
                 <p class="">
                   ***It may seem like a restriction to use const, but it actually helps make your programs more predictable if the assignment to variables can't change. For this reason, you should try to use const to declare most variables. This helps to avoid any bugs caused by unexpected changes in assignment.
 
