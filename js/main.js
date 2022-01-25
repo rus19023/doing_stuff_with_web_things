@@ -24,7 +24,7 @@ function urlExists(url) {
 function isElement(element) {
   // check if element exists
   const myelement = document.getElementById(element);
-  if (typeof myelement != "undefined" && myelement != null) {
+  if ((typeof myelement != "undefined") && (myelement != null)) {
     return myelement.nodeType === 1;
   }
 }

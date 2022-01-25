@@ -3,6 +3,7 @@
 @import "variables";
 @import "large";
 @import "colors";
+@import "todo";
 
 html {
   color: $accent;
@@ -163,8 +164,7 @@ img {
   text-align: center;
   cursor: pointer;
   background: black;
-  border: $buttonborder;
-  box-shadow: $primary;
+  box-shadow: $formshadow;
   padding: 2vw;
   width: 100%;
   max-width: 45%;

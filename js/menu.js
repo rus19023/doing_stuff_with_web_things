@@ -1,21 +1,21 @@
 const mainNav = [,
   {
     url: `${getBase()}101/`,
-    term: "Fall 2019",
+    term: "2019 04-Fall",
     code: "CS101",
     name: "Intro to Programming",
     tech: "Python"
   },
   {
     url: `${getBase()}327/`,
-    term: "Winter 2022",
+    term: "2022 01-Winter",
     code: "CIT327",
     name: "Data Warehousing",
     tech: "MySQL, ETL, MongoDB"
   },
   {
     url: `${getBase()}330/`,
-    term: "Winter 2022",
+    term: "2022 01-Winter",
     code: "WDD330",
     name: "Web Frontend Development II",
     tech: "HTML/CSS/JavaScript"
@@ -36,8 +36,8 @@ const noteslist = [
     url: `${getBase()}week03.html`,
   },
   {
-    name: "",
-    url: ""
+    name: "Week 04 Notes",
+    url: `${getBase()}week04.html`,
   }
 ];
 
@@ -55,12 +55,12 @@ const exerciseslist = [
     url: `${getBase()}exercises/week03.html`,
   },
   {
-    name: "Week 05 Challenge 1",
-    url: `${getBase()}challenges/week05.html`,
+    name: "Week 04 Exercises",
+    url: `${getBase()}exercises/week04.html`,
   },
   {
-    name: "",
-    url: ""
+    name: "Week 05 Challenge 1: To Do App",
+    url: `${getBase()}challenges/week05.html`,
   }
 ];
 
@@ -149,15 +149,15 @@ if (isElement("autofooter")) {
   writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
 }
 
-// set header
+// set head title
 if (isElement("autoheader")) {
   writeById("autoheader", `<h1 id="siteTitle">site title</h1>
   <h2 class="tabbar"><a href="../">Back to Index</a></h2>`);
 }
 
-// set header2
+// set header
 if (isElement("autoheader2")) {
-  writeById("autoheader2", `<h1 id="siteTitle">site title</h1>
+  writeByQuery(".autoheader2", `<h1 id="siteTitle">site title</h1>
   <h2 class="tabbar"><a href="../../">Back to Index</a></h2>`);
 }
 
@@ -184,12 +184,9 @@ getIndexPageTitle("wdd330-indexpagetitle");
 
 const siteTitle = () => {
   writeById("siteTitle", "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio");
+  writeByQuery(".siteTitle", "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio");
 }
 siteTitle();
-
-function createNavItem(array) {
-  console.log(`createNavItem: ${array}`);
-}
 
 // set page title for WDD330 weekly pages
 const header330 = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
