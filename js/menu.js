@@ -1,4 +1,4 @@
-const mainNav = [,
+const mainNav = [
   {
     url: `${getBase()}101/`,
     term: "2019 04-Fall",
@@ -34,10 +34,6 @@ const noteslist = [
   {
     name: "Week 03 Notes",
     url: `${getBase()}week03.html`,
-  },
-  {
-    name: "Week 04 Notes",
-    url: `${getBase()}week04.html`,
   }
 ];
 
@@ -144,21 +140,15 @@ const presentations = [
 
 // Functions
 
+// set head title
+if (isElement("autoheader")) {
+  writeById("autoheader", `<h1 id="siteTitle2">site title</h1>
+  <h2 class="tabbar">${createLink("../", "Back to Index")}</h2>`);
+}
+
 // set footer
 if (isElement("autofooter")) {
   writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
-}
-
-// set head title
-if (isElement("autoheader")) {
-  writeById("autoheader", `<h1 id="siteTitle">site title</h1>
-  <h2 class="tabbar"><a href="../">Back to Index</a></h2>`);
-}
-
-// set header
-if (isElement("autoheader2")) {
-  writeByQuery(".autoheader2", `<h1 id="siteTitle">site title</h1>
-  <h2 class="tabbar"><a href="../../">Back to Index</a></h2>`);
 }
 
 function getIndexPageTitle(id) {
@@ -173,8 +163,8 @@ function getIndexPageTitle(id) {
     if ((element.code.toLowerCase() === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
       title = `${element.code} - ${element.name} (${element.tech})`;
       //console.log(`title: ${title}`);
-      writeByQuery(`#${id}`, title);
-      writeByQuery(`.${id}`, title);
+      writeById(`${id}`, title);
+      writeById(`${id}2`, title);
     }
   });
 }
@@ -182,17 +172,27 @@ getIndexPageTitle("cs101-indexpagetitle");
 getIndexPageTitle("cit327-indexpagetitle");
 getIndexPageTitle("wdd330-indexpagetitle");
 
-const siteTitle = () => {
-  writeById("siteTitle", "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio");
-  writeByQuery(".siteTitle", "Doris Rush-Lopez, My BYU-Idaho Applied Tech Portfolio");
+const siteTitle = (element) => {// set head title
+  if (isElement("autoheader")) {
+      writeById("autoheader", `<h1 id="siteTitle2"></h1>
+      <h2 class="tabbar"><a href="../">Back to Index</a></h2>`);
+  }
+  const siteTitle = "Doris Rush-Lopez <br> My BYU-Idaho Portfolio | Major: Applied Technology";
+      if (isElement(element)) {
+        //console.log(`${element} is an id on this page.`);
+      writeById(element, siteTitle);
+      const element2 = `${element}2`;
+      writeById(element2, siteTitle);
+    }
 }
-siteTitle();
+siteTitle("siteTitle");
 
 // set page title for WDD330 weekly pages
-const header330 = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
+const header330 = `WDD330 - Web Frontend II | Week ${ getWeeknum(getFilename()) }`;
 if (isElement("wdd330pagetitle") && substr(0, 4, getFilename()) === "week") {
-  document.getElementById("wdd330pagetitle").innerText = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename())}`;
+  document.getElementById("wdd330pagetitle").innerText = header330;
 }
+
 
 function setTitle(course) {
   if (isElement(course)) {
@@ -238,14 +238,15 @@ function createNav(array, id) {
     let menu = "<ol>";
     // get list of files to create links for each week number
     array.forEach((element) => {
-      let len = element.url.length;
-      if ((!urlExists(element.url)) && (len < 100)) {
+      if ((!urlExists(element.url)) && (element.url.length < 100)) {
         return;
       } else {
         if ((element.term) && (element.term.length > 0)) {
-          menu += `<li><a href="${element.url}">${element.term}, ${element.code} - ${element.name}, (${element.tech})</a></li>`;
+          const url = element.url;
+          const linktext = `${element.term}, ${element.code} - ${element.name}, (${element.tech})`;
+          menu += `<li>${createLink(url, linktext)}</li>`;
         } else {
-          menu += `<li><a href="${element.url}">${element.name}</a></li>`;
+          menu += `<li>${createLink(element.url, element.name)}</li>`;
         }
       }
     });

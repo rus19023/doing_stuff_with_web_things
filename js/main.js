@@ -2,8 +2,12 @@ function writeById(output, input) {
   document.getElementById(output).innerHTML = input;
 }
 
-function writeByQuery(output, input) {
+function writeByClass(output, input) {
   document.querySelector(output).innerHTML = input;
+}
+
+const createLink = (url, text) => {
+  return `<a href="${url}">${text}</a>`;
 }
 
 function getFilename() {
@@ -22,10 +26,18 @@ function urlExists(url) {
 }
 
 function isElement(element) {
-  // check if element exists
-  const myelement = document.getElementById(element);
-  if ((typeof myelement != "undefined") && (myelement != null)) {
-    return myelement.nodeType === 1;
+  // check if id exists
+  const myId = document.getElementById(element);
+  if ((typeof myId != "undefined") && (myId != null)) {
+    return myId.nodeType === 1;
+  }
+}
+
+function isClass(element) {
+  // check if class exists
+  const myClass = document.getElementsByClassName(element);
+  if ((typeof myClass != "undefined") && (myClass != null)) {
+    return myClass.nodeType === 1;
   }
 }
 

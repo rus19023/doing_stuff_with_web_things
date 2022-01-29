@@ -27,6 +27,7 @@
             grid-area: listitem;
             display: grid;
             border: $border;
+            height: 6vw;
             border-radius: 10px;
             padding: 1vh;
             grid-template-areas:
@@ -36,12 +37,13 @@
                 border: $border;
                 border-radius: 3px;
                 width: 3vw;
-                height: 3vw;
+                height: 6vw;
                 font-size: $font4;
             }
             & .itemtext {
                 grid-area: itemtext;
                 border: $border;
+                height: 6vw;
                 border-radius: 10px;
             }
             & .delbtn {
@@ -49,7 +51,7 @@
                 border: $border;
                 border-radius: 3px;
                 width: 3vw;
-                height: 3vw;
+                height: 6vw;
                 font-size: $font4;
             }
         }
