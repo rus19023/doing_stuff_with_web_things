@@ -162,14 +162,15 @@ function getIndexPageTitle(id) {
     // get paper title from menu array where filename is the week number
     array.forEach(course => {
       spot = id.indexOf("-");
-      console.log(`course: ${course.code}`);
-      console.log(`spot: ${spot}`);
-      console.log('course.code: ' + course.code === id.substr(0, spot));
+      // console.log(`course: ${course.code}`);
+      // console.log(`spot: ${spot}`);
+      // console.log('course.code: ' + course.code === id.substr(0, spot));
       if ((course.code === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
         title = `${course.code} - ${course.name} (${course.tech})`;
         //console.log(`title: ${title}`);
         writeById(id, title);
         let id2 = `${id}2`;
+        //console.log(`id2: ${id2}`);
         writeById(id2, title);
       }
     });
@@ -198,8 +199,11 @@ function getWeekPageTitle(id, page) {
   // set page title for weekly pages
   if (isElement(id)) {
     let pageTitle = `${page} | Week ${weekNo}`;
-    console.log(`pageTitle: ${pageTitle}`);
+    //console.log(`pageTitle: ${pageTitle}`);
     writeById(id, pageTitle);
+    let id2 = `${id}2`;
+    //console.log(`id2: ${id2}`);
+    writeById(id2, pageTitle);
   }
 }
 getWeekPageTitle("cs101weekpagetitle", "CS101");

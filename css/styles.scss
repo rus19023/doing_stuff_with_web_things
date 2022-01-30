@@ -156,10 +156,6 @@ a:hover {
   color: $p180;
 }
 
-img {
-  width: 50%;
-}
-
 .buttons {
   text-align: center;
   cursor: pointer;
@@ -167,7 +163,7 @@ img {
   box-shadow: $formshadow;
   padding: 2vw;
   width: 100%;
-  max-width: 45%;
+  max-width: 50%;
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
@@ -216,6 +212,24 @@ footer#autofooter {
   color: $accent;
   text-align: center;
   margin-bottom: 6vh;
+}
+
+.source {
+  text-align: center;
+  color: $p-90;
+}
+
+.sources {
+  text-align: left;
+  color: $p120;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: 2vh auto;
+  & a {
+    text-decoration: none;
+    color: $p120;
+    font-size: 3vh;
+  }
 }
 
 .code {

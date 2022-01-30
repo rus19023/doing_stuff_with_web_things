@@ -101,6 +101,7 @@
   grid-area: listitem;
   display: grid;
   border: 2px solid #ffb88f;
+  height: 6vw;
   border-radius: 10px;
   padding: 1vh;
   grid-template-areas: "markbtn itemtext delbtn";
@@ -110,12 +111,13 @@
   border: 2px solid #ffb88f;
   border-radius: 3px;
   width: 3vw;
-  height: 3vw;
+  height: 6vw;
   font-size: max(4vh);
 }
 #todocontainer #list .listitem .itemtext {
   grid-area: itemtext;
   border: 2px solid #ffb88f;
+  height: 6vw;
   border-radius: 10px;
 }
 #todocontainer #list .listitem .delbtn {
@@ -123,7 +125,7 @@
   border: 2px solid #ffb88f;
   border-radius: 3px;
   width: 3vw;
-  height: 3vw;
+  height: 6vw;
   font-size: max(4vh);
 }
 #todocontainer #footer {
@@ -305,10 +307,6 @@ a:hover {
   color: #8fd6ff;
 }
 
-img {
-  width: 50%;
-}
-
 .buttons {
   text-align: center;
   cursor: pointer;
@@ -316,7 +314,7 @@ img {
   box-shadow: 0 0 10px #ffb88f;
   padding: 2vw;
   width: 100%;
-  max-width: 45%;
+  max-width: 50%;
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
@@ -365,6 +363,24 @@ footer#autofooter {
   color: #d6ff8f;
   text-align: center;
   margin-bottom: 6vh;
+}
+
+.source {
+  text-align: center;
+  color: #f08fff;
+}
+
+.sources {
+  text-align: left;
+  color: #8fffb8;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: 2vh auto;
+}
+.sources a {
+  text-decoration: none;
+  color: #8fffb8;
+  font-size: 3vh;
 }
 
 .code {
