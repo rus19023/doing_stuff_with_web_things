@@ -144,16 +144,8 @@ const presentations = [
 const siteTitle = (element) => {
   // set header
   if (isElement("autoheader")) {
-      writeById("autoheader", `<h1 id="siteTitle2">site title</h1><h2 class="tabbar">${createLink("../", "Back to Index")}</h2>`);
+      writeById("autoheader", `<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio | Major: Applied Technology</h1><h2 class="tabbar">${createLink("../", "Back to Index")}</h2>`);
   }
-  const sitehead = 'Doris Rush-Lopez - My BYU-Idaho Portfolio | Major: Applied Technology';
-      if (isElement(element)) {
-        console.log(`${element} is an id on this page.`);
-      writeById(element, sitehead);
-      const element2 = `${element}2`;
-      console.log(`element2: ${element2}`);
-      writeById(element2, sitehead);
-    }
 }
 siteTitle("siteTitle");
 
@@ -163,22 +155,25 @@ if (isElement("autofooter")) {
 }
 
 function getIndexPageTitle(id) {
-  const array = mainNav;
-  let spot;
-  let title;
-  // get paper title from menu array where filename is the week number
-  array.forEach(element => {
-    spot = id.indexOf("-");
-    //console.log(`spot: ${spot}`);
-    //console.log(element.code === id.substr(0, spot));
-    if ((element.code.toLowerCase() === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
-      title = `${element.code} - ${element.name} (${element.tech})`;
-      //console.log(`title: ${title}`);
-      writeById(id, title);
-      let id2 = `${id}2`;
-      writeById(id2, title);
-    }
-  });
+  if (isElement(id)) {
+    const array = mainNav;
+    let spot;
+    let title;
+    // get paper title from menu array where filename is the week number
+    array.forEach(element => {
+      spot = id.indexOf("-");
+      console.log(`element: ${element.code}`);
+      console.log(`spot: ${spot}`);
+      console.log('element.code: ' + element.code.toLowerCase() === id.substr(0, spot));
+      if ((element.code.toLowerCase() === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
+        title = `${element.code} - ${element.name} (${element.tech})`;
+        //console.log(`title: ${title}`);
+        writeById(id, title);
+        let id2 = `${id}2`;
+        writeById(id2, title);
+      }
+    });
+  }
 }
 getIndexPageTitle("cs101-indexpagetitle");
 getIndexPageTitle("cit327-indexpagetitle");
