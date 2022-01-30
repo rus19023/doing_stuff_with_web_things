@@ -51,7 +51,7 @@ const exerciseslist = [
     url: `${getBase()}exercises/week03.html`,
   },
   {
-    name: "Week 04 Exercises",
+    name: "Week 04 Exercises: Further work on team project - Tic Tac Toe game",
     url: `${getBase()}exercises/week04.html`,
   },
   {

@@ -9,14 +9,15 @@ writeById('msg', '<button type="button" id="reset-button">Reset</button>');
 // Core 2  - Done
  let count = 1;
  const onTap = (event) => {
+    const cellId = event.target.id;
     if ((count % 2 == 0) && (count < 10)) {
-       // O goes first, take turns on change of even/odd count
-       if (event.target.id.innerText === '') {
-          document.getElementById(event.target.id).innerText = 'X';
+       // X goes first, take turns on change of even/odd count
+       if (cellId.innerText === '') {
+          document.getElementById(cellId).innerText = 'X';
        }
      } else {
-        if (event.target.id.innerText === '') {
-            document.getElementById(event.target.id).innerText = 'O';
+        if (cellId.innerText === '') {
+            document.getElementById(cellId).innerText = 'O';
         }
     count++;
     checkForWin(boardArray);
@@ -36,7 +37,7 @@ resetButton.addEventListener('click', () => {
 
  // Stretch 2
  function checkForDraw() {
-     let winner = checkForWin();
+    let winner = checkForWin();
     const cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
       if ((cell.innerText === '') && (!winner)) {
