@@ -138,13 +138,24 @@ const presentations = [
   }
 ];
 
+
 // Functions
 
-// set head title
-if (isElement("autoheader")) {
-  writeById("autoheader", `<h1 id="siteTitle2">site title</h1>
-  <h2 class="tabbar">${createLink("../", "Back to Index")}</h2>`);
+const siteTitle = (element) => {
+  // set header
+  if (isElement("autoheader")) {
+      writeById("autoheader", `<h1 id="siteTitle2">site title</h1><h2 class="tabbar">${createLink("../", "Back to Index")}</h2>`);
+  }
+  const sitehead = 'Doris Rush-Lopez - My BYU-Idaho Portfolio | Major: Applied Technology';
+      if (isElement(element)) {
+        console.log(`${element} is an id on this page.`);
+      writeById(element, sitehead);
+      const element2 = `${element}2`;
+      console.log(`element2: ${element2}`);
+      writeById(element2, sitehead);
+    }
 }
+siteTitle("siteTitle");
 
 // set footer
 if (isElement("autofooter")) {
@@ -152,7 +163,7 @@ if (isElement("autofooter")) {
 }
 
 function getIndexPageTitle(id) {
-  let array = mainNav;
+  const array = mainNav;
   let spot;
   let title;
   // get paper title from menu array where filename is the week number
@@ -163,8 +174,9 @@ function getIndexPageTitle(id) {
     if ((element.code.toLowerCase() === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
       title = `${element.code} - ${element.name} (${element.tech})`;
       //console.log(`title: ${title}`);
-      writeById(`${id}`, title);
-      writeById(`${id}2`, title);
+      writeById(id, title);
+      let id2 = `${id}2`;
+      writeById(id2, title);
     }
   });
 }
@@ -172,20 +184,6 @@ getIndexPageTitle("cs101-indexpagetitle");
 getIndexPageTitle("cit327-indexpagetitle");
 getIndexPageTitle("wdd330-indexpagetitle");
 
-const siteTitle = (element) => {// set head title
-  if (isElement("autoheader")) {
-      writeById("autoheader", `<h1 id="siteTitle2"></h1>
-      <h2 class="tabbar"><a href="../">Back to Index</a></h2>`);
-  }
-  const siteTitle = "Doris Rush-Lopez <br> My BYU-Idaho Portfolio | Major: Applied Technology";
-      if (isElement(element)) {
-        //console.log(`${element} is an id on this page.`);
-      writeById(element, siteTitle);
-      const element2 = `${element}2`;
-      writeById(element2, siteTitle);
-    }
-}
-siteTitle("siteTitle");
 
 // set page title for WDD330 weekly pages
 const header330 = `WDD330 - Web Frontend II | Week ${ getWeeknum(getFilename()) }`;

@@ -17,32 +17,15 @@
 
           <h3>What is granularity?</h3>
           <p class="normal-text">
-            Let's compare building a data warehouse to a bakery. There can be many different items in the bakery: cakes, breads, cookies, etc. If you don't include all the ingredients, in the correct measurements, and follow each recipe's instructions using the correct utensils, the baked goods will fail to rise, or taste bad, or look ugly. Every day the baker makes many baked goods. He or she would need to calculate the quantity of each ingredient at scale needed for each of the completed goods, baked into differently shaped pans. The basic recipes would be the granularity, each having the correct measurements, ingredients and instructions for a perfect product, no matter what shape or size it might end up.
+            Let's compare building a data warehouse to a bakery. There can be many different items in the bakery: cakes, breads, cookies, etc. If you don't include all the ingredients, in the correct measurements, and follow each recipe's instructions using the correct utensils, the baked goods will fail to rise, or taste bad, or look ugly. Every day the baker makes many baked goods. He or she would need to calculate the quantity of each ingredient at scale needed for each of the completed goods, baked into differently shaped pans. The basic recipes would define the granularity, the least amount of each ingredient, each having the correct measurement, specific, ordered instructions to create a perfect product, no matter what shape or size it might end up.
           </p>
 
           <p class="normal-text">
-            "Recipes" are needed to design each OLAP cube or data mart, which are like the individual finished baked products. If you don't include all the ingredients (fact tables) in the right measurements(dimensions) and follow the instructions (use appropriate ETL Tools), the cubes will also fail to rise (not have all the layers, rows and columns), taste bad (not have the needed totals and subtotals) or just look ugly (have holes in the slices and/or dices). As many bakers have experimented with different variables, a data mart recipe would need to be developed before the database is designed, since making changes in bulk is almost always difficult, time consuming and expensive.
+            "Recipes" are needed to design each OLAP cube or data mart, which are like the individual finished baked products. If you don't include all the ingredients (fact tables) in the right measurements (dimensions) and follow the instructions (use appropriate ETL Tools), the cubes will also fail to rise (not have all the layers, rows and columns), taste bad (not have the needed totals and subtotals) or just look ugly (have holes in the data slices and/or dices).
           </p>
-
           <p class="normal-text">
-            
+            Bakers will have experimented with different variables: measurements, similar ingredients, bake times, etc, to come up with their perfect version. They have spent many hours, used many ingredients, and thrown away many finished products before that perfect version. Similarly, a data mart recipe would need to be developed before the database is baked (filled with data). Just as the baker, the database developer will need to find the correct instructions for their data store recipe to avoid wasted time and money, for it is almost always difficult, time consuming, wasteful and expensive. The ETL tools available today help to not need to "reinvent the wheel" when it comes to designing a data warehouse.
             <ul>
-              <li class="normal-text indent">
-                
-              </li>
-              <li class="normal-text indent">
-                
-              </li>
-              <li class="normal-text indent">
-                
-              </li>
-              <li class="normal-text indent">
-                
-              </li>
-              <li class="normal-text indent">
-                
-              </li>
-              </li>
               <li class="normal-text indent">
                 
               </li>
@@ -54,7 +37,7 @@
             <ol>
               Sources:
               <li class="normal-text">
-                
+              
               </li>
               <li class="normal-text">
                 <a href="https://www.youtube.com/watch?v=el2bRZjgVEE">"06 Understanding Granularity", Data Warehouse channel on YouTube</a>
