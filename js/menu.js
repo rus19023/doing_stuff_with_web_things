@@ -160,13 +160,13 @@ function getIndexPageTitle(id) {
     let spot;
     let title;
     // get paper title from menu array where filename is the week number
-    array.forEach(element => {
+    array.forEach(course => {
       spot = id.indexOf("-");
-      console.log(`element: ${element.code}`);
+      console.log(`course: ${course.code}`);
       console.log(`spot: ${spot}`);
-      console.log('element.code: ' + element.code.toLowerCase() === id.substr(0, spot));
-      if ((element.code.toLowerCase() === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
-        title = `${element.code} - ${element.name} (${element.tech})`;
+      console.log('course.code: ' + course.code === id.substr(0, spot));
+      if ((course.code === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
+        title = `${course.code} - ${course.name} (${course.tech})`;
         //console.log(`title: ${title}`);
         writeById(id, title);
         let id2 = `${id}2`;
@@ -175,9 +175,9 @@ function getIndexPageTitle(id) {
     });
   }
 }
-getIndexPageTitle("cs101-indexpagetitle");
-getIndexPageTitle("cit327-indexpagetitle");
-getIndexPageTitle("wdd330-indexpagetitle");
+getIndexPageTitle("CS101-indexpagetitle");
+getIndexPageTitle("CIT327-indexpagetitle");
+getIndexPageTitle("WDD330-indexpagetitle");
 
 
 // set page title for WDD330 weekly pages
