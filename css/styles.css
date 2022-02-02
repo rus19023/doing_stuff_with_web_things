@@ -104,6 +104,7 @@
   height: 6vw;
   border-radius: 10px;
   padding: 1vh;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: "markbtn itemtext delbtn";
 }
 #todocontainer #list .listitem .markbtn {
@@ -124,7 +125,7 @@
   grid-area: delbtn;
   border: 2px solid #ffb88f;
   border-radius: 3px;
-  width: 3vw;
+  width: 100%;
   height: 6vw;
   font-size: max(4vh);
 }
@@ -143,7 +144,7 @@
 #todocontainer #addbar #addinput {
   grid-area: addinput;
 }
-#todocontainer #addbar #addbutton {
+#todocontainer #addbar #addbtn {
   grid-area: addbtn;
   width: 3vw;
   height: 3vw;
@@ -178,7 +179,6 @@
 
 #result {
   color: #fff;
-  margin: 0.2em 0;
   text-align: center;
 }
 

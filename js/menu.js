@@ -1,24 +1,230 @@
+const courses = [
+  {
+    cert: "01",
+    certname: "Computer Programming",
+    certdate: "2020-07-22"
+  },
+  {
+    cert: "02",
+    certname: "Databases",
+    certdate: "Anticipated 2022-04-15"
+  },
+  {
+    cert: "03",
+    certname: "Sys",
+    certdate: "Anticipated 2022-04-15"
+  },
+  {
+    cert: "04",
+    cert: "Database",
+    certdate: "Anticipated 2022-04-15"
+  },
+  {
+    cert: "05",
+    certname: "Web Backend Development",
+    certdate: "Anticipated 2022-07-22"
+  }
+]
+
+
 const mainNav = [
   {
     url: `${getBase()}101/`,
     term: "2019 04-Fall",
     code: "CS101",
     name: "Intro to Programming",
-    tech: "Python"
+    tech: "Python",
+    instructor: "Travis Christiansen",
+    cert: "01"
   },
   {
     url: `${getBase()}327/`,
     term: "2022 01-Winter",
     code: "CIT327",
     name: "Data Warehousing",
-    tech: "MySQL, ETL, MongoDB"
+    tech: "ETL Tools, MongoDB, XQuery",
+    instructor: "Troy Hiltbrand",
+    cert: "04"
   },
   {
     url: `${getBase()}330/`,
     term: "2022 01-Winter",
     code: "WDD330",
     name: "Web Frontend Development II",
-    tech: "HTML/CSS/JavaScript"
+    tech: "HTML, CSS, JavaScript, Node.js, Express.js, Deno, MongoDB, MySQL",
+    instructor: "Nathan Birch",
+    cert: "05"
+  },
+  {
+    url: `${getBase()}331/`,
+    term: "2020 04-Fall",
+    code: "WDD331",
+    name: "Advanced CSS",
+    tech: "HTML, CSS, Bootstrap, GitHub, SASS",
+    instructor: "",
+    cert: "02"
+  },
+  {
+    url: `${getBase()}111/`,
+    term: "2019 03-Fall",
+    code: "CIT111",
+    name: "Introduction to Databases",
+    tech: "MySQL",
+    instructor: "Leon Tidwell",
+    cert: "01"
+  },
+  {
+    url: `${getBase()}225/`,
+    term: "2021 01-Winter",
+    code: "CIT225",
+    name: "Database Design and Development",
+    tech: "MySQL",
+    instructor: "Tanner Crook",
+    cert: "04"
+  },
+  {
+    url: `${getBase()}325/`,
+    term: "2021 02-Spring",
+    code: "CIT325",
+    name: "Database Programming",
+    tech: "PL/SQL, OracleDB",
+    instructor: "Kent Hinckley",
+    cert: "04"
+  },
+  {
+    url: `${getBase()}160/`,
+    term: "2019 04-Fall",
+    code: "CIT160",
+    name: "Introduction to Programming",
+    tech: "HTML, CSS, JavaScript",
+    instructor: "Nathan Birch",
+    cert: "01"
+  },
+  {
+    url: `${getBase()}171/`,
+    term: "2021 01-Winter",
+    code: "CIT171",
+    name: "Introduction to Cybersecurity",
+    tech: "Cybersecurity, Social engineering, Ethical hacking",
+    instructor: "David Snider",
+    cert: ""
+  },
+  {
+    url: `${getBase()}270/`,
+    term: "2021 02-Spring",
+    code: "CIT270",
+    name: "Systems Security I",
+    tech: "System hardening, Server security, Network security, Firewalls, Ethical hacking, Linux CLI",
+    instructor: "Kevin Hendricks",
+    cert: "03"
+  },
+  {
+    url: `${getBase()}352/`,
+    term: "2021 02-Spring",
+    code: "CIT352",
+    name: "Operating Systems I",
+    tech: "Linux, Ubuntu Server 14.04, Ubuntu Server 18.04, Ubuntu 18.04, Fedora v34, Bash scripting",
+    instructor: "Brian King",
+    cert: "03"
+  },
+  {
+    url: `${getBase()}353/`,
+    term: "2021 03-Fall",
+    code: "CIT353",
+    name: "Operating Systems II",
+    tech: "Windows Server versions from 2008-2020, PowerShell",
+    instructor: "Craig Lindstrom",
+    cert: "03"
+  },
+  {
+    url: `${getBase()}341/`,
+    term: "2021 04-Fall",
+    code: "WDD341",
+    name: "Web Backend Development II",
+    tech: "HTML, CSS, JavaScript, Node.js, Express.js, Deno, MongoDB, MySQL, GitHub, Heroku, SASS",
+    instructor: "Nathan Birch",
+    cert: "05"
+  },
+  {
+    url: `${getBase()}340/`,
+    term: "2021 04-Fall",
+    code: "WDD340",
+    name: "Backend Development I",
+    tech: "HTML, CSS, JavaScript, PHP, MySQL, MVC",
+    instructor: "Bonnie Woods",
+    cert: "05"
+  },
+  {
+    url: `${getBase()}100/`,
+    term: "2019 03-Fall",
+    code: "WDD100",
+    name: "Introduction to Web Design and Development",
+    tech: "HTML, CSS",
+    instructor: "Tracey Johnson",
+    cert: "01"
+  },
+  {
+    url: `${getBase()}241-2/`,
+    term: "2021 02-Spring",
+    code: "CIT241",
+    name: "Networking Design I",
+    tech: "Advanced Networking: Routers, Switches, Firewalls, Subnetting, DNS, DHCP, TCP/IP",
+    instructor: "Paul Stokes",
+    cert: "03"
+  },
+  {
+    url: `${getBase()}240/`,
+    term: "2021 01-Winter",
+    code: "CIT240",
+    name: "Networking",
+    tech: "Routers, Switches, Firewalls, Subnetting, DNS, DHCP, TCP/IP",
+    instructor: "Sheila Force",
+    cert: "03"
+  },
+  {
+    url: `${getBase()}246/`,
+    term: "2020 02-Spring",
+    code: "CS246",
+    name: "Software Design and Development",
+    tech: "Java, IntelliJ, Android Studio, GitHub",
+    instructor: "Dario Gonzalez-Suarez",
+    cert: "01"
+  },
+  {
+    url: `${getBase()}241/`,
+    term: "2020 01-Winter",
+    code: "CS241",
+    name: "Survey Object-Oriented Programming/Data Structures",
+    tech: "Python 3, Thonny, PyCharm, GitHub",
+    instructor: "Nathan Parrish",
+    cert: "01"
+  },
+  {
+    url: `${getBase()}213/`,
+    term: "2020 02-Spring",
+    code: "CS213",
+    name: "Web Engineering I",
+    tech: "HTML, CSS, JavaScript, AJAX, JSON, GitHub, Linux CLI",
+    instructor: "Jason Rice",
+    cert: "02"
+  },
+  {
+    url: `${getBase()}130/`,
+    term: "2020 04-Fall",
+    code: "COMM130",
+    name: "Visual Media",
+    tech: "Illustrator, Photoshop, InDesign",
+    instructor: "Sara Tranberg",
+    cert: "02"
+  },
+  {
+    url: `${getBase()}230/`,
+    term: "2020 01-Winter",
+    code: "WDD230",
+    name: "Web Frontend Development",
+    tech: "HTML, CSS, JavaScript, GitHub",
+    instructor: "Mike Odom",
+    cert: "02"
   }
 ];
 
@@ -155,18 +361,26 @@ if (isElement("autofooter")) {
 }
 
 function getIndexPageTitle(id) {
+  //console.table(`mainNav.sort: ${mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1)}`);
+  const array = mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1);
+  console.table(array);
   if (isElement(id)) {
-    const array = mainNav;
     let spot;
     let title;
-    // get paper title from menu array where filename is the week number
+    // get info for each menu item
+    courses.forEach() {
+
+    }
     array.forEach(course => {
+      console.log(`course.term: ${course.term}`);
       spot = id.indexOf("-");
       // console.log(`course: ${course.code}`);
       // console.log(`spot: ${spot}`);
       // console.log('course.code: ' + course.code === id.substr(0, spot));
-      if ((course.code === id.substr(0, spot)) && (isElement(id)) && (isElement(`${id}`))) {
-        title = `${course.code} - ${course.name} (${course.tech})`;
+      if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
+        title = `${course.code} - ${course.name}`
+        title += "<br>";
+        title += `Technology learned: ${course.tech}`;
         //console.log(`title: ${title}`);
         writeById(id, title);
         let id2 = `${id}2`;
