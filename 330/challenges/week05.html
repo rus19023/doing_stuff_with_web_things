@@ -12,23 +12,25 @@
 		<header id="autoheader">auto header</header>
     <main>
       <section>
-        <h1 id="wdd330challengetitle2">Challenges title</h1>
+        <h2 id="wdd330challengetitle2">Challenges title</h2>
             <legend id="todocontainer">
-              <h2>To Do List</h2>
-
-              <div >
+              <h3>To Do List</h3>
                 <ul id="list">
                   <li class="listitem">
                     <input type="checkbox" ontouchend="markDone()" class="markbtn">
                     <label class="itemtext">sample task</label>
-                    <button ontouchend="removeItem()" id="delbtn" class="delbtn" id="">X</button>
+                    <button ontouchend="removeItem()" id="delbtn"> X</button>
                   </li>
                 </ul>
-              </div>
-
+                <div >
+                  <label id="tasks" class="normal-text "></label>
+                  <button ontouchend="showAll()" id="allbtn"> All.</button>
+                  <button ontouchend="showActive()" id="actbtn"> Active.</button>
+                  <button ontouchend="showDone()" id="donbtn"> Done.</button>
+                </div>
               <form id="addbar" action="">
                   <input id="addinput" class="" type="text" name="addinput" placeholder="" value="test item">
-                <button id="addbtn" class="buttons" ontouchend=""">+</button>
+                <button id="addbtn" class="buttons" ontouchend="">+</button>
               </form>
             </legend>
       </section>
@@ -44,7 +46,7 @@
           </li>
           <li class="normal-text nostyle">
             Wireframes for each view:
-            <div class="fig-bloc">
+            <div class="fig-block">
               <figure>
                 <img
                   src="../../images/todo-wireframe.png"

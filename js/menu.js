@@ -405,7 +405,7 @@ function getIndexPageTitle(id) {
     let title;
     courses.forEach(course => {
       const termtext = getTerm(course.term);
-      const term = `${term}: 20${course.year}-${termtext}`;
+      const term = `${course.term}: 20${course.year}-${termtext}`;
       spot = id.indexOf("-");
       console.log(`course: ${course.code}`);
       // console.log(`spot: ${spot}`);

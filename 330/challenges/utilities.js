@@ -32,7 +32,7 @@ const displayItems = () => {
         item.appendChild(markbtn);
         item.appendChild(itemtext);
         item.appendChild(delbtn);
-    
+
     //append list items to list
     document.getElementById("list").appendChild(item);
 }
@@ -48,4 +48,15 @@ const removeItem = (id) => {
     console.log(`removeItem: ${id}`);
 }
 
-// Filter list by done/not done
+// Filter list by done/not done, show outline border of button when tapped/clicked
+
+// function to show how many items are left undone in the to do   list
+function itemsLeft(id) {
+    let items = document.getElementById("list").children.length;
+    if ((items < 2) && (items > 0)) {
+    document.getElementById(id).innerText = items + ' task left';
+    } else {
+    document.getElementById(id).innerText = items + ' tasks left';
+    }
+}
+itemsLeft('tasks');

@@ -6,8 +6,6 @@ const getLastId = () => { return localStorage.getItem(lastItemId.value)};
 // save new last item id to localStorage
 const setLastId = (lastId) => { localStorage.setItem(lastItemId, lastId)};
 
-
-
 // get last item id from localStorage
 const getListItems = () => { return localStorage.getItem(listItems)};
 

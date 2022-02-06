@@ -79,10 +79,7 @@
   display: grid;
   grid-area: todocontainer;
   text-align: center;
-  width: 70%;
   margin: 0 auto;
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
   grid-template-areas: "header" "list" "footer" "addbar";
 }
 #todocontainer #header {
@@ -92,18 +89,20 @@
 }
 #todocontainer #list {
   grid-area: list;
+  padding: 0;
+  margin: 0;
   display: grid;
+  width: 100%;
   grid-template-areas: "listitem";
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
 }
 #todocontainer #list .listitem {
   grid-area: listitem;
   display: grid;
   border: 2px solid #ffb88f;
+  width: 100%;
+  margin: 0 auto;
   height: 6vw;
   border-radius: 10px;
-  padding: 1vh;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: "markbtn itemtext delbtn";
 }
@@ -112,19 +111,19 @@
   border: 2px solid #ffb88f;
   border-radius: 3px;
   width: 3vw;
-  height: 6vw;
+  height: 100%;
   font-size: max(4vh);
 }
 #todocontainer #list .listitem .itemtext {
   grid-area: itemtext;
-  border: 2px solid #ffb88f;
   height: 6vw;
-  border-radius: 10px;
 }
-#todocontainer #list .listitem .delbtn {
+#todocontainer #list .listitem #delbtn {
   grid-area: delbtn;
-  border: 2px solid #ffb88f;
-  border-radius: 3px;
+  background: transparent;
+  color: #ffb88f;
+  padding: 0;
+  border: none;
   width: 100%;
   height: 6vw;
   font-size: max(4vh);
@@ -137,6 +136,9 @@
 #todocontainer #addbar {
   border: 2px solid #ffb88f;
   border-radius: 10px;
+  width: 100%;
+  padding: 0;
+  margin: auto;
   grid-area: addbar;
   grid-template-columns: 9fr 1fr;
   grid-template-areas: "input addbtn";
@@ -146,9 +148,9 @@
 }
 #todocontainer #addbar #addbtn {
   grid-area: addbtn;
-  width: 3vw;
-  height: 3vw;
-  font-size: max(3vh);
+  width: 5vw;
+  height: 5vw;
+  font-size: max(5vh);
 }
 #todocontainer h2 {
   background: black;
@@ -230,16 +232,12 @@ html {
   padding: 1vw 2vw;
 }
 
-nav {
+#main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 4vh;
-}
-nav a {
-  text-decoration: none;
-  padding: 1vw 2vw;
 }
 
 h1,
@@ -338,11 +336,11 @@ ol li {
   color: #d6ff8f;
 }
 ol li a {
-  font-size: max(5vh);
-  color: #8ffff0;
+  font-size: max(2vh);
+  color: #8f9eff;
 }
 ol li a:hover {
-  color: #8ffff0;
+  color: #b88fff;
 }
 
 a {
