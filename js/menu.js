@@ -26,20 +26,21 @@ const courses = [
   }
 ]
 
-
 const mainNav = [
   {
     url: `${getBase()}101/`,
-    term: "2019 04-Fall",
+    term: "04",
+    year: "19",
     code: "CS101",
-    name: "Intro to Programming",
-    tech: "Python",
+    name: "Introduction to Programming",
+    tech: "Python, Trinket.io",
     instructor: "Travis Christiansen",
     cert: "01"
   },
   {
     url: `${getBase()}327/`,
-    term: "2022 01-Winter",
+    term: "01",
+    year: "22",
     code: "CIT327",
     name: "Data Warehousing",
     tech: "ETL Tools, MongoDB, XQuery",
@@ -48,7 +49,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}330/`,
-    term: "2022 01-Winter",
+    term: "01",
+    year: "22",
     code: "WDD330",
     name: "Web Frontend Development II",
     tech: "HTML, CSS, JavaScript, Node.js, Express.js, Deno, MongoDB, MySQL",
@@ -57,7 +59,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}331/`,
-    term: "2020 04-Fall",
+    term: "04",
+    year: "20",
     code: "WDD331",
     name: "Advanced CSS",
     tech: "HTML, CSS, Bootstrap, GitHub, SASS",
@@ -66,43 +69,48 @@ const mainNav = [
   },
   {
     url: `${getBase()}111/`,
-    term: "2019 03-Fall",
+    term: "04",
+    year: "19",
     code: "CIT111",
     name: "Introduction to Databases",
-    tech: "MySQL",
+    tech: "MySQL, MySQL Workbench",
     instructor: "Leon Tidwell",
     cert: "01"
   },
   {
     url: `${getBase()}225/`,
-    term: "2021 01-Winter",
+    term: "01",
+    year: "21",
     code: "CIT225",
     name: "Database Design and Development",
-    tech: "MySQL",
+    tech: "MySQL CLI, MySQL Workbench",
     instructor: "Tanner Crook",
     cert: "04"
   },
   {
     url: `${getBase()}325/`,
-    term: "2021 02-Spring",
+    term: "02",
+    year: "21",
     code: "CIT325",
     name: "Database Programming",
-    tech: "PL/SQL, OracleDB",
+    tech: "PL/SQL, Oracle DB",
     instructor: "Kent Hinckley",
     cert: "04"
   },
   {
     url: `${getBase()}160/`,
-    term: "2019 04-Fall",
+    term: "04",
+    year: "19",
     code: "CIT160",
     name: "Introduction to Programming",
-    tech: "HTML, CSS, JavaScript",
+    tech: "JavaScript, HTML, CSS",
     instructor: "Nathan Birch",
     cert: "01"
   },
   {
     url: `${getBase()}171/`,
-    term: "2021 01-Winter",
+    term: "01",
+    year: "21",
     code: "CIT171",
     name: "Introduction to Cybersecurity",
     tech: "Cybersecurity, Social engineering, Ethical hacking",
@@ -111,7 +119,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}270/`,
-    term: "2021 02-Spring",
+    term: "02",
+    year: "21",
     code: "CIT270",
     name: "Systems Security I",
     tech: "System hardening, Server security, Network security, Firewalls, Ethical hacking, Linux CLI",
@@ -120,25 +129,28 @@ const mainNav = [
   },
   {
     url: `${getBase()}352/`,
-    term: "2021 02-Spring",
+    term: "02",
+    year: "21",
     code: "CIT352",
     name: "Operating Systems I",
-    tech: "Linux, Ubuntu Server 14.04, Ubuntu Server 18.04, Ubuntu 18.04, Fedora v34, Bash scripting",
+    tech: "Linux CLI, Ubuntu Server 14.04, Ubuntu Server 18.04, Ubuntu 18.04, Fedora v.34, Bash scripting",
     instructor: "Brian King",
     cert: "03"
   },
   {
     url: `${getBase()}353/`,
-    term: "2021 03-Fall",
+    term: "04",
+    year: "21",
     code: "CIT353",
     name: "Operating Systems II",
-    tech: "Windows Server versions from 2008-2020, PowerShell",
+    tech: "Windows Server versions from 2008, PowerShell",
     instructor: "Craig Lindstrom",
     cert: "03"
   },
   {
     url: `${getBase()}341/`,
-    term: "2021 04-Fall",
+    term: "04",
+    year: "21",
     code: "WDD341",
     name: "Web Backend Development II",
     tech: "HTML, CSS, JavaScript, Node.js, Express.js, Deno, MongoDB, MySQL, GitHub, Heroku, SASS",
@@ -147,7 +159,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}340/`,
-    term: "2021 04-Fall",
+    term: "04",
+    year: "21",
     code: "WDD340",
     name: "Backend Development I",
     tech: "HTML, CSS, JavaScript, PHP, MySQL, MVC",
@@ -156,7 +169,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}100/`,
-    term: "2019 03-Fall",
+    term: "04",
+    year: "19",
     code: "WDD100",
     name: "Introduction to Web Design and Development",
     tech: "HTML, CSS",
@@ -165,25 +179,28 @@ const mainNav = [
   },
   {
     url: `${getBase()}241-2/`,
-    term: "2021 02-Spring",
+    term: "02",
+    year: "21",
     code: "CIT241",
     name: "Networking Design I",
-    tech: "Advanced Networking: Routers, Switches, Firewalls, Subnetting, DNS, DHCP, TCP/IP",
+    tech: "Advanced Topics: Subnetting, Routers, Switches, Firewalls, DNS, DHCP, TCP/IP",
     instructor: "Paul Stokes",
     cert: "03"
   },
   {
     url: `${getBase()}240/`,
-    term: "2021 01-Winter",
+    term: "01",
+    year: "21",
     code: "CIT240",
     name: "Networking",
-    tech: "Routers, Switches, Firewalls, Subnetting, DNS, DHCP, TCP/IP",
+    tech: "Subnetting, Routers, Switches, Firewalls,  DNS, DHCP, TCP/IP",
     instructor: "Sheila Force",
     cert: "03"
   },
   {
     url: `${getBase()}246/`,
-    term: "2020 02-Spring",
+    term: "02",
+    year: "20",
     code: "CS246",
     name: "Software Design and Development",
     tech: "Java, IntelliJ, Android Studio, GitHub",
@@ -192,7 +209,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}241/`,
-    term: "2020 01-Winter",
+    term: "01",
+    year: "20",
     code: "CS241",
     name: "Survey Object-Oriented Programming/Data Structures",
     tech: "Python 3, Thonny, PyCharm, GitHub",
@@ -201,7 +219,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}213/`,
-    term: "2020 02-Spring",
+    term: "02",
+    year: "20",
     code: "CS213",
     name: "Web Engineering I",
     tech: "HTML, CSS, JavaScript, AJAX, JSON, GitHub, Linux CLI",
@@ -210,7 +229,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}130/`,
-    term: "2020 04-Fall",
+    term: "04",
+    year: "20",
     code: "COMM130",
     name: "Visual Media",
     tech: "Illustrator, Photoshop, InDesign",
@@ -219,7 +239,8 @@ const mainNav = [
   },
   {
     url: `${getBase()}230/`,
-    term: "2020 01-Winter",
+    term: "01",
+    year: "20",
     code: "WDD230",
     name: "Web Frontend Development",
     tech: "HTML, CSS, JavaScript, GitHub",
@@ -284,7 +305,7 @@ const paperslist = [
     url: `${getBase()}week04.html`,
   },
   {
-    name: "ERD Model",
+    name: "ERD Model for Snowflake Schema",
     url: `${getBase()}week05.html`,
   },
   {
@@ -322,10 +343,6 @@ const paperslist = [
   {
     name: "MEAN Stack Integration into the Data Warehouse",
     url: `${getBase()}week14.html`,
-  },
-  {
-    name: "",
-    url: ""
   }
 ];
 
@@ -360,27 +377,44 @@ if (isElement("autofooter")) {
   writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
 }
 
+function getTerm(term) {
+  switch (term) {
+    case "01":
+      return "Fall";
+      break;
+    case "02":
+      return "Winter";
+      break;
+    case "03":
+      return "Spring";
+      break;
+    case "04":
+      return "Summer";
+      break;
+    default:
+      return "";
+  }
+}
+
 function getIndexPageTitle(id) {
   //console.table(`mainNav.sort: ${mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1)}`);
-  const array = mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1);
-  console.table(array);
+  const courses = mainNav.sort((a, b) => ((a.cert + a.year + a.term) > (b.cert + b.year + b.term)) ? 1 : -1);
+  //console.table(courses);
   if (isElement(id)) {
     let spot;
     let title;
-    // get info for each menu item
-    courses.forEach() {
-
-    }
-    array.forEach(course => {
-      console.log(`course.term: ${course.term}`);
+    courses.forEach(course => {
+      const termtext = getTerm(course.term);
+      const term = `${term}: 20${course.year}-${termtext}`;
       spot = id.indexOf("-");
-      // console.log(`course: ${course.code}`);
+      console.log(`course: ${course.code}`);
       // console.log(`spot: ${spot}`);
       // console.log('course.code: ' + course.code === id.substr(0, spot));
       if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
-        title = `${course.code} - ${course.name}`
+        title = `${course.code} - ${course.name}`;
         title += "<br>";
         title += `Technology learned: ${course.tech}`;
+        title += "<br><br>";
         //console.log(`title: ${title}`);
         writeById(id, title);
         let id2 = `${id}2`;
@@ -447,7 +481,7 @@ function createNav(array, id) {
     const container = document.getElementById(id);
     // create link list element
     let menu = "<ol>";
-    // get list of files to create links for each week number
+    // get list of files to create links for each menu entry
     array.forEach((element) => {
       if ((!urlExists(element.url)) && (element.url.length < 100)) {
         return;
@@ -455,9 +489,9 @@ function createNav(array, id) {
         if ((element.term) && (element.term.length > 0)) {
           const url = element.url;
           const linktext = `${element.term}, ${element.code} - ${element.name}, (${element.tech})`;
-          menu += `<li>${createLink(url, linktext)}</li>`;
+          menu += `<li class="nav">${createLink(url, linktext)}</li>`;
         } else {
-          menu += `<li>${createLink(element.url, element.name)}</li>`;
+          menu += `<li class="nav">${createLink(element.url, element.name)}</li>`;
         }
       }
     });
@@ -471,3 +505,30 @@ createNav(noteslist, "notes");
 createNav(exerciseslist, "exercises");
 createNav(paperslist, "papers");
 createNav(presentations, "presentations");
+
+
+  // //console.table(`mainNav.sort: ${mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1)}`);
+  // //console.table(courses);
+  // if (isElement(id)) {
+  //   let spot;
+  //   let title;
+  //   courses.forEach(course => {
+  //     const termtext = getTerm(course.term);
+  //     const term = `${term}: 20${course.year}-${termtext}`;
+  //     spot = id.indexOf("-");
+  //     console.log(`course: ${course.code}`);
+  //     // console.log(`spot: ${spot}`);
+  //     // console.log('course.code: ' + course.code === id.substr(0, spot));
+  //     if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
+  //       title = `${course.code} - ${course.name}`;
+  //       title += "<br>";
+  //       title += `Technology learned: ${course.tech}`;
+  //       title += "<br><br>";
+  //       //console.log(`title: ${title}`);
+  //       writeById(id, title);
+  //       let id2 = `${id}2`;
+  //       //console.log(`id2: ${id2}`);
+  //       writeById(id2, title);
+  //     }
+  //   });
+  //}

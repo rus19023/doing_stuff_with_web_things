@@ -29,16 +29,12 @@ html {
   }
 }
 
-nav {
+#main-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 4vh;
-  a {
-    text-decoration: none;
-    padding: 1vw 2vw;
-  }
 }
 
 h1,
@@ -136,11 +132,11 @@ ul li.normal-text {
 ol li {
   color: $accent;
   & a {
-    font-size: $font5;
-    color: $p150;
+    font-size: $font2;
+    color: $-p150;
   }
   & a:hover {
-    color: $p150;
+    color: $p-120;
   }
 }
 
