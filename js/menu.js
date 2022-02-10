@@ -11,8 +11,8 @@ const courses = [
   },
   {
     cert: "03",
-    certname: "Sys",
-    certdate: "Anticipated 2022-04-15"
+    certname: "System Administration",
+    certdate: "2021-12-15"
   },
   {
     cert: "04",
@@ -133,7 +133,7 @@ const mainNav = [
     year: "21",
     code: "CIT352",
     name: "Operating Systems I",
-    tech: "Linux CLI, Ubuntu Server 14.04, Ubuntu Server 18.04, Ubuntu 18.04, Fedora v.34, Bash scripting",
+    tech: "Linux CLI, Ubuntu Server, Ubuntu Desktop, Fedora, Bash scripting",
     instructor: "Brian King",
     cert: "03"
   },
@@ -412,7 +412,9 @@ function getIndexPageTitle(id) {
       spot = id.indexOf("-");
       if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
         title = `${course.code} - ${course.name}
-        Technology learned: ${course.tech}
+
+        Technology learned:
+        ${course.tech}
 
         `;
         writeById(id, title);
