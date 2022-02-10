@@ -1,7 +1,51 @@
-#todocontainer {
+
+
+.todo-buttons {
+    margin: none;
+    padding: 0 auto;
+    border-radius: 0.5vh;
+    background: black;
+    color: $primary;
+    border: $border;
+    &:hover {
+        // border: none;
+    }
+}
+
+ul li {
+    list-style-type: none;
+}
+
+#addbtn, #delbtn {
+    font-size: $font6;
+}
+
+#allbtn, #actbtn, #donbtn, #delbtn {
+    border: none;
+}
+
+#allbtn, #actbtn, #donbtn, #addinput, #addbtn {
+    color: $primary;
+    background: black;
+    border: $border;
+    height: 6vh;
+    padding: 1vh;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+ul#todocontainer {
     display: grid;
     grid-area: todocontainer;
     text-align: center;
+    background-image: $accent;
+    width: 300px;
     margin: 0 auto;
     grid-template-areas:
         "header"
@@ -21,28 +65,32 @@
         width: 100%;
         grid-template-areas:
         "listitem";
-        & .listitem {
+        & #listitem {
             grid-area: listitem;
             display: grid;
+            list-style-type: none;
             border: $border;
-            width: 100%;
-            margin: 0 auto;
-            height: 6vw;
+            max-width: 300px;
+            margin: 0;
+            height: 9vw;
+            padding: .5vw;
             border-radius: 10px;
             grid-template-columns: 1fr 5fr 1fr;
             grid-template-areas:
-            "markbtn itemtext delbtn";
-            & .markbtn {
-                grid-area: markbtn;
+            "donebtn itemtext delbtn";
+            & #donebtn {
+                grid-area: donebtn;
                 border: $border;
-                border-radius: 3px;
-                width: 3vw;
-                height: 100%;
-                font-size: $font4;
+                border-radius: 10px;
+                width: 7vw;
+                height: 7vw;
+                padding: .25vw;
+                margin: 0;
             }
-            & .itemtext {
+            & #itemtext {
                 grid-area: itemtext;
-                height: 6vw;
+                padding: 2vw;
+                height: 8vw;
             }
             & #delbtn {
                 grid-area: delbtn;
@@ -51,17 +99,17 @@
                 padding: 0;
                 border: none;
                 width: 100%;
-                height: 6vw;
+                height: 8vw;
                 font-size: $font4;
             }
         }
     }
-    & #footer {
+    & div#footer {
         border: $border;
         border-radius: 10px;
         grid-area: footer;
     }
-    & #addbar {
+    & form {
         border: $border;
         border-radius: 10px;
         width: 100%;
@@ -71,13 +119,15 @@
         grid-template-columns: 9fr 1fr;
         grid-template-areas:
             "input addbtn";
-        & #addinput {
+        & input {
             grid-area: addinput;
+            height: 5vw;
+            background: $accent;
         }
         & #addbtn {
             grid-area: addbtn;
-            width: 5vw;
-            height: 5vw;
+            width: 10vw;
+            height: 5vh;
             font-size: $font5;
         }
     }

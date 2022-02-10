@@ -1,3 +1,30 @@
+// 1. Create DOM manipulation helper functions in utilities.js
+//Two here for starters should be good as well...may add more later
+// do a querySelector lookup @param {string} selector The selector passed to querySelector
+
+// @return {element} The matching element or null if not found /
+function qs(selector) {
+    return document.querySelector(selector);
+}
+
+/*
+add a touchend event listener to an element for mobile with a click event fallback for desktops @param {string} elementSelector The selector for the element to attach the listener to
+* @param {function} callback The callback function to run
+
+*/
+function onTouch(elementSelector, callback) {
+    let element = document.querySelector(elementSelector);
+    console.log(`element.addEventListener, ${element.addeventlistener}`);
+    if (element.addEventListener) {
+        element.addEventListener('touchend', callback, false);
+    } else if (element.attachEvent) {
+        element.attachEvent('ontouchend', callback);
+    }
+}
+
+
+
+
 // Create new to do task
 const createItem = () => {
     const itemId = getItemId();
@@ -39,7 +66,7 @@ const displayItems = () => {
 
 // Mark item done
 const markDone = (id) => {
-
+    
 }
 
 // Delete to do item
@@ -60,3 +87,32 @@ function itemsLeft(id) {
     }
 }
 itemsLeft('tasks');
+
+function showAll() {
+    let items = document.getElementById("list").children;
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.display = 'list-item';
+    }
+}
+
+function showActive() {
+    let items = document.getElementById("list").children;
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].className === 'done') {
+            items[i].style.display = 'none';
+        } else {
+            items[i].style.display = 'list-item';
+        }
+    }
+}
+
+function showDone() {
+    let items = document.getElementById("list").children;
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].className === 'done') {
+            items[i].style.display = 'list-item';
+        } else {
+            items[i].style.display = 'none';
+        }
+    }
+}

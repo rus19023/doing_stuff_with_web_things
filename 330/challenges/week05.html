@@ -11,40 +11,39 @@
   <body>
 		<header id="autoheader">auto header</header>
     <main>
-      <section>
+      <section id="">
         <h2 id="wdd330challengetitle2">Challenges title</h2>
-            <legend id="todocontainer">
-              <h3>To Do List</h3>
-                <ul id="list">
-                  <li class="listitem">
-                    <input type="checkbox" ontouchend="markDone()" class="markbtn">
-                    <label class="itemtext">sample task</label>
-                    <button ontouchend="removeItem()" id="delbtn"> X</button>
+            <legend id="todocontainer" class="bordered">
+              <h3 class="centered">To Do List</h3>
+                <ul id="list" class="row">
+                  <li id="listitem" class="bordered row">
+                    <div class="bordered">
+                      <label id="markbtn" for="checkbox">
+                        <input type="checkbox" id="checkbox" ontouchend="markDone()" class="checkbox">
+                      </label>
+                    </div>
+                    <label id="itemtext">
+                      sample task text goes here
+                    </label>
+                    <button id="delbtn" class="todo-buttons" ontouchend="removeItem()">
+                      X
+                    </button>
                   </li>
                 </ul>
-                <div >
+                <div id="footer">
                   <label id="tasks" class="normal-text "></label>
                   <button ontouchend="showAll()" id="allbtn"> All.</button>
                   <button ontouchend="showActive()" id="actbtn"> Active.</button>
                   <button ontouchend="showDone()" id="donbtn"> Done.</button>
                 </div>
-              <form id="addbar" action="">
+              <form id="addbar" action="" class="bordered">
                   <input id="addinput" class="" type="text" name="addinput" placeholder="" value="test item">
-                <button id="addbtn" class="buttons" ontouchend="">+</button>
+                <button id="addbtn" ontouchend="">+</button>
               </form>
             </legend>
       </section>
 
       <section id="left">
-        <ol>
-          <li class="normal-text nostyle">Details</li>
-          <li class="normal-text nostyle">
-            Description: Build a simple web app to manage a ToDo list. It should
-            allow the creation of new tasks, the viewing of tasks, a process to
-            mark tasks as complete, ability to remove tasks, and the ability to
-            filter by complete/not complete.
-          </li>
-          <li class="normal-text nostyle">
             Wireframes for each view:
             <div class="fig-block">
               <figure>
@@ -54,52 +53,6 @@
                 />
               </figure>
             </div>
-          </li>
-          <li class="normal-text nostyle">
-            UI actions
-            <ol>
-              <li class="normal-text">Show a list of tasks</li>
-              <li class="normal-text">Add a new task</li>
-              <li class="normal-text">Complete a task</li>
-              <li class="normal-text">Remove a task</li>
-              <li class="normal-text">Filter tasks (complete/incomplete)</li>
-            </ol>
-          </li>
-          <li class="normal-text nostyle">
-            Data sources: localStorage
-            <ol>
-              <li class="normal-text">
-                todo: { id : timestamp, content: string, completed: bool }
-              </li>
-              <li class="normal-text">toDoList = [toDo];</li>
-            </ol>
-          </li>
-          <li class="normal-text nostyle">
-            Initial Module list: ToDos.js, localStorage helpers (ls.js),
-            utilities.js
-          </li>
-          <li class="normal-text">
-            Colors/Typography/specific Element styling: Student to determine
-          </li>
-          <li class="normal-text">
-            Schedule to provide yourself mile markers along the way to help you
-            stay on target.
-            <ul>
-              <li class="normal-text">
-                <a href="https://trello.com/b/94QLblUO/todo-project" target="_blank" rel="noreferrer">
-                  My Trello board
-                </a>
-                If you want to follow those steps, create a Trello account
-                and copy the board to your account.
-              </li>
-              <li class="normal-text">
-                There are no dates assigned to the board. Assign yourself some
-                due dates to make sure you complete the project in the allotted
-                time.
-              </li>
-            </ul>
-          </li>
-        </ol>
       </section>
     </main>
     <footer id="autofooter"></footer>

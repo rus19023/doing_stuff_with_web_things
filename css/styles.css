@@ -75,19 +75,57 @@
   color: #ff8f9e;
 }
 
-#todocontainer {
+.todo-buttons {
+  margin: none;
+  padding: 0 auto;
+  border-radius: 0.5vh;
+  background: black;
+  color: #ffb88f;
+  border: 2px solid #ffb88f;
+}
+ul li {
+  list-style-type: none;
+}
+
+#addbtn, #delbtn {
+  font-size: max(6vh);
+}
+
+#allbtn, #actbtn, #donbtn, #delbtn {
+  border: none;
+}
+
+#allbtn, #actbtn, #donbtn, #addinput, #addbtn {
+  color: #ffb88f;
+  background: black;
+  border: 2px solid #ffb88f;
+  height: 6vh;
+  padding: 1vh;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+ul#todocontainer {
   display: grid;
   grid-area: todocontainer;
   text-align: center;
+  background-image: #d6ff8f;
+  width: 300px;
   margin: 0 auto;
   grid-template-areas: "header" "list" "footer" "addbar";
 }
-#todocontainer #header {
+ul#todocontainer #header {
   grid-area: header;
   border: 2px solid #ffb88f;
   border-radius: 10px;
 }
-#todocontainer #list {
+ul#todocontainer #list {
   grid-area: list;
   padding: 0;
   margin: 0;
@@ -95,45 +133,49 @@
   width: 100%;
   grid-template-areas: "listitem";
 }
-#todocontainer #list .listitem {
+ul#todocontainer #list #listitem {
   grid-area: listitem;
   display: grid;
+  list-style-type: none;
   border: 2px solid #ffb88f;
-  width: 100%;
-  margin: 0 auto;
-  height: 6vw;
+  max-width: 300px;
+  margin: 0;
+  height: 9vw;
+  padding: 0.5vw;
   border-radius: 10px;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-areas: "markbtn itemtext delbtn";
+  grid-template-areas: "donebtn itemtext delbtn";
 }
-#todocontainer #list .listitem .markbtn {
-  grid-area: markbtn;
+ul#todocontainer #list #listitem #donebtn {
+  grid-area: donebtn;
   border: 2px solid #ffb88f;
-  border-radius: 3px;
-  width: 3vw;
-  height: 100%;
-  font-size: max(4vh);
+  border-radius: 10px;
+  width: 7vw;
+  height: 7vw;
+  padding: 0.25vw;
+  margin: 0;
 }
-#todocontainer #list .listitem .itemtext {
+ul#todocontainer #list #listitem #itemtext {
   grid-area: itemtext;
-  height: 6vw;
+  padding: 2vw;
+  height: 8vw;
 }
-#todocontainer #list .listitem #delbtn {
+ul#todocontainer #list #listitem #delbtn {
   grid-area: delbtn;
   background: transparent;
   color: #ffb88f;
   padding: 0;
   border: none;
   width: 100%;
-  height: 6vw;
+  height: 8vw;
   font-size: max(4vh);
 }
-#todocontainer #footer {
+ul#todocontainer div#footer {
   border: 2px solid #ffb88f;
   border-radius: 10px;
   grid-area: footer;
 }
-#todocontainer #addbar {
+ul#todocontainer form {
   border: 2px solid #ffb88f;
   border-radius: 10px;
   width: 100%;
@@ -143,16 +185,18 @@
   grid-template-columns: 9fr 1fr;
   grid-template-areas: "input addbtn";
 }
-#todocontainer #addbar #addinput {
+ul#todocontainer form input {
   grid-area: addinput;
-}
-#todocontainer #addbar #addbtn {
-  grid-area: addbtn;
-  width: 5vw;
   height: 5vw;
+  background: #d6ff8f;
+}
+ul#todocontainer form #addbtn {
+  grid-area: addbtn;
+  width: 10vw;
+  height: 5vh;
   font-size: max(5vh);
 }
-#todocontainer h2 {
+ul#todocontainer h2 {
   background: black;
   color: #d6ff8f;
   text-align: center;
@@ -209,21 +253,114 @@
   font-size: 24px;
 }
 
+label#markbtn {
+  cursor: pointer;
+}
+
+.bordered {
+  border: 1px solid #ffb88f;
+  border-radius: 10px;
+}
+
+input#checkbox {
+  border: 1px solid #ffb88f;
+}
+
+.checkbox {
+  display: inline-block;
+  position: relative;
+  top: 0.5vh;
+  height: 0;
+  background: inherit;
+  /*
+   * The X is made by separately rotating and intersecting
+   * the :before and :after borders of the checkbox.
+   * In order to get an X three sides of each border
+   * are hidden.
+   */
+  /*
+   * A note on the rotations below: It may take a lot
+   * of editing and testing to get the X to look just
+   * right. Every little change in the styling can throw
+   * it off including changing fonts, border widths, etc.
+   */
+}
+.checkbox:before, .checkbox:after {
+  border: 1px solid #ffb88f;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.2rem;
+  transition: 400ms ease-in-out;
+}
+.checkbox:before {
+  transform: rotate(-45deg) translateX(0.3rem) translateY(0.35rem);
+}
+.checkbox:after {
+  transform: rotate(45deg) translateX(-0.25rem) translateY(0.3rem);
+}
+.checkbox:checked:before {
+  top: -15px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.checkbox:checked:after {
+  border: 0px;
+}
+@-webkit-keyframes checked {
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-225deg);
+    opacity: 1;
+  }
+}
+@keyframes checked {
+  0% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-225deg);
+    opacity: 1;
+  }
+}
+
+.center {
+  transform: translate(-50%, -50%);
+}
+
 html {
   color: #d6ff8f;
   background: #7e5201;
-  font-size: 16px;
+  font-size: 12px;
 }
 
-.tab-bar {
+.centered {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: max(5vh);
+}
+
+h2#tab-bar {
   overflow: hidden;
-  position: fixed;
+  margin-left: 4vw;
   bottom: 0;
   width: 100%;
   border-radius: 0;
   height: 4vh;
 }
-.tab-bar a {
+h2#tab-bar a {
   float: left;
   display: block;
   text-align: center;
@@ -233,10 +370,9 @@ html {
 }
 
 #main-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-area: main-nav;
+  align-items: stretch;
   height: 4vh;
 }
 
@@ -251,7 +387,6 @@ h6 {
   font-family: "Dosis", sans-serif;
   background: black;
   border-radius: 10px;
-  padding: 2vw;
   margin: 2vh auto;
 }
 
@@ -284,33 +419,33 @@ section {
 }
 
 h1 {
-  font-size: 6vh;
+  font-size: max(4vh);
   color: #d6ff8f;
 }
 
 h2 {
-  font-size: 5vh;
+  font-size: max(4vh);
   width: 95%;
 }
 
 h3 {
-  font-size: 4vh;
+  font-size: max(3vh);
   width: 90%;
 }
 
 h4 {
-  font-size: 3.75vh;
+  font-size: max(3vh);
   width: 85%;
 }
 
 h5 {
-  font-size: 3.5vh;
+  font-size: max(2vh);
   width: 80%;
   font-weight: bold;
 }
 
 h6 {
-  font-size: 3vh;
+  font-size: max(2vh);
   width: 75%;
   font-weight: bold;
 }
@@ -318,7 +453,7 @@ h6 {
 .normal-text {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
-  font-size: 3.5vh;
+  font-size: 2.5vw;
   padding: 2vw;
   margin: 0 2vw;
   background: black;
@@ -328,7 +463,7 @@ h6 {
   list-style: none;
 }
 
-ul li.normal-text {
+ul li {
   list-style: circle;
 }
 
@@ -376,6 +511,17 @@ a:hover {
   text-decoration: none;
   color: #d6ff8f;
   font-size: 4vh;
+}
+
+#siteTitle2 {
+  font-size: max(4vh);
+  color: #d6ff8f;
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50%;
 }
 
 .inputs {

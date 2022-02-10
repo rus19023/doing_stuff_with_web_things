@@ -367,7 +367,9 @@ const presentations = [
 const siteTitle = (element) => {
   // set header
   if (isElement("autoheader")) {
-      writeById("autoheader", `<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio | Major: Applied Technology</h1><h2 class="tabbar">${createLink("../", "Back to Index")}</h2>`);
+      writeById("autoheader", `<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio
+      
+       Major: Applied Technology</h1><h2 id="tabbar">${createLink("../", "Back to Index")}</h2>`);
   }
 }
 siteTitle("siteTitle");
@@ -376,6 +378,9 @@ siteTitle("siteTitle");
 if (isElement("autofooter")) {
   writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
 }
+
+const footerText = footer => `Hello ${footer}`;
+const footertext = footerText("Ada");
 
 function getTerm(term) {
   switch (term) {
@@ -411,10 +416,10 @@ function getIndexPageTitle(id) {
       // console.log(`spot: ${spot}`);
       // console.log('course.code: ' + course.code === id.substr(0, spot));
       if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
-        title = `${course.code} - ${course.name}`;
-        title += "<br>";
-        title += `Technology learned: ${course.tech}`;
-        title += "<br><br>";
+        title = `${course.code} - ${course.name}
+        Technology learned: ${course.tech}
+
+        `;
         //console.log(`title: ${title}`);
         writeById(id, title);
         let id2 = `${id}2`;
@@ -458,9 +463,7 @@ getWeekPageTitle("cs101weekpagetitle", "CS101");
 getWeekPageTitle("cit327weekpagetitle", "CIT327 Paper");
 getWeekPageTitle("wdd330weekpagetitle", "WDD330 Notes");
 getWeekPageTitle("wdd330weekexercisetitle", "Exercises");
-getWeekPageTitle("wdd330weekexercisetitle2", "Exercises");
 getWeekPageTitle("wdd330challengetitle", "Challenges");
-getWeekPageTitle("wdd330challengetitle2", "Challenges");
 getWeekPageTitle("wdd330weekpageheading", "WDD330 Notes");
 
 function getWeekPaperTitle(array) {
