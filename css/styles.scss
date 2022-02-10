@@ -40,11 +40,28 @@ h2#tab-bar {
   }
 }
 
-#main-nav {
-  display: grid;
-  grid-area: main-nav;
-  align-items: stretch;
-  height: 4vh;
+body {
+  & header 
+  & #main-nav {
+    display: grid;
+    grid-area: main-nav;
+    align-items: stretch;
+    height: 4vh;
+    grid-template-areas:
+      "list";
+    & ol {
+      display: grid;
+      grid-area: list;
+      grid-template-areas:
+        "list-item";
+      & li {
+        display: grid;
+        & a {
+          grid-area: list-item;
+        }
+      }
+    }
+  }
 }
 
 h1,
@@ -134,8 +151,8 @@ h6 {
   list-style: none;
 }
 
-ul li {
-  list-style: circle;
+li.nav a {
+  font-size: $font3;
 }
 
 ol li {
@@ -184,6 +201,10 @@ a:hover {
   }
 }
 
+.padit {
+  padding: 2vw;
+}
+
 #siteTitle2 {
   font-size: $font4;
   color: $accent;
@@ -192,7 +213,6 @@ a:hover {
   text-align: center;
   margin: 0 auto;
   width: 100%;
-  max-width: 50%;
 }
 
 .inputs {

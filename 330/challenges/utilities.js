@@ -66,19 +66,21 @@ const displayItems = () => {
 
 // Mark item done
 const markDone = (id) => {
-    
+    // TODO: change checkbox to show X (CSS, checkbox hack)
+    // TODO: line through item text (CSS, text decoration?)
 }
 
 // Delete to do item
-const removeItem = (id) => {
-    // TODO: make this work
-    console.log(`removeItem: ${id}`);
+const removeItem = (key) => {
+    // TODO: use ls utility to remove item from localStorage
+    console.log(`removeItem: ${key}`);
+    storage.removeItem(key);
 }
 
 // Filter list by done/not done, show outline border of button when tapped/clicked
 
 // function to show how many items are left undone in the to do   list
-function itemsLeft(id) {
+function itemsLeft(list) {
     let items = document.getElementById("list").children.length;
     if ((items < 2) && (items > 0)) {
     document.getElementById(id).innerText = items + ' task left';

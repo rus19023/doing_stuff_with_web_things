@@ -11,3 +11,5 @@ const getListItems = () => { return localStorage.getItem(listItems)};
 
 // save new last item id to localStorage
 const setNewItem = (itemId, itemText) => { localStorage.setItem(itemId, itemText)};
+
+const lsHelpers = () => {}

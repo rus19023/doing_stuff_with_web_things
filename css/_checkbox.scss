@@ -1,6 +1,12 @@
 // label is clickable
 label#markbtn {
     cursor: pointer;
+    border-radius: 0;
+    width: 6vw;
+}
+
+#boxborder {
+
 }
 
 .bordered {
@@ -10,102 +16,9 @@ label#markbtn {
 
 input#checkbox {
     border: 1px solid $primary;
+    padding: 0;
+    margin: 0;
+    & ::after {
+        content: '✕';
+    }
 }
-
-  // Animates checkbox from X to circle
-  .checkbox {
-    // ensure animations work
-    display: inline-block;
-
-    // place next to text
-    position: relative;
-    top: .5vh;
-
-    // hide default checkbox style
-    height: 0;
-    background: inherit;
-
-    /*
-     * The X is made by separately rotating and intersecting
-     * the :before and :after borders of the checkbox.
-     * In order to get an X three sides of each border
-     * are hidden.
-     */
-    &:before,
-    &:after {
-      // color the X
-      border: 1px solid $primary;
-
-      // hide 3 sides so we can get two lines
-      // intersecting to make the X
-      border-bottom-style: none;
-      border-left-style: none;
-      border-right-style: none;
-
-      // enforce styling
-      content: "";
-      position: absolute;
-      cursor: pointer;
-      width: 1.5rem;
-      height: 1.2rem;
-
-      // enable uncheck animation
-      transition: 400ms ease-in-out;
-    }
-
-    /*
-     * A note on the rotations below: It may take a lot
-     * of editing and testing to get the X to look just
-     * right. Every little change in the styling can throw
-     * it off including changing fonts, border widths, etc.
-     */
-
-    // rotate the :before border to create one side of X
-    &:before {
-      transform: rotate(-45deg) translateX(0.30rem) translateY(0.35rem);
-    }
-
-    // rotate the :after border to create other side of X
-    &:after {
-      transform: rotate(45deg) translateX(-0.25rem) translateY(0.30rem);
-    }
-
-    // turn into circle when checked
-    &:checked {
-      &:before {
-        // enable animation
-        //animation: checked 400ms ease-in-out;
-
-        // smooth unchecking animation
-        //transform: rotate(-225deg);
-
-        // align it a little
-        top: -15px;
-
-        // turn the :before border of the X into a circle as it rotates
-        border-radius: 50%;
-        border: 1px solid black;
-      }
-
-      // hide the :after border when checked
-      &:after {
-        border: 0px;
-      }
-    }
-
-    // rotate circle animation
-    @keyframes checked {
-      0% {
-        transform: rotate(-45deg);
-        opacity: 0;
-      }
-      100% {
-        transform: rotate(-225deg);
-        opacity: 1;
-      }
-    }
-  }
-
-  .center {
-    transform: translate(-50%, -50%);
-  }

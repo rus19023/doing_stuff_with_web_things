@@ -367,9 +367,7 @@ const presentations = [
 const siteTitle = (element) => {
   // set header
   if (isElement("autoheader")) {
-      writeById("autoheader", `<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio
-      
-       Major: Applied Technology</h1><h2 id="tabbar">${createLink("../", "Back to Index")}</h2>`);
+      writeById("autoheader", '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink("../", "Back to Index")}</h2>`);
   }
 }
 siteTitle("siteTitle");
@@ -412,18 +410,13 @@ function getIndexPageTitle(id) {
       const termtext = getTerm(course.term);
       const term = `${course.term}: 20${course.year}-${termtext}`;
       spot = id.indexOf("-");
-      console.log(`course: ${course.code}`);
-      // console.log(`spot: ${spot}`);
-      // console.log('course.code: ' + course.code === id.substr(0, spot));
       if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
         title = `${course.code} - ${course.name}
         Technology learned: ${course.tech}
 
         `;
-        //console.log(`title: ${title}`);
         writeById(id, title);
         let id2 = `${id}2`;
-        //console.log(`id2: ${id2}`);
         writeById(id2, title);
       }
     });
@@ -450,12 +443,12 @@ function setTitle(course) {
 function getWeekPageTitle(id, page) {
   let weekNo = getWeeknum(getFilename());
   // set page title for weekly pages
-  if (isElement(id)) {
     let pageTitle = `${page} | Week ${weekNo}`;
-    //console.log(`pageTitle: ${pageTitle}`);
+  if (isElement(id)) {
     writeById(id, pageTitle);
-    let id2 = `${id}2`;
-    //console.log(`id2: ${id2}`);
+  }
+    let id2 = id + "2";
+    if (isElement(id2)) {
     writeById(id2, pageTitle);
   }
 }

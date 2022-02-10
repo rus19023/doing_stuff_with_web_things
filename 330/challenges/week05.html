@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
+    <!--
+      <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    -->
     <title id="wdd330challengetitle">challenges title</title>
   </head>
 
@@ -12,14 +15,14 @@
 		<header id="autoheader">auto header</header>
     <main>
       <section id="">
-        <h2 id="wdd330challengetitle2">Challenges title</h2>
+        <h2 id="wdd330challengetitle2" class="padit">Challenges title</h2>
             <legend id="todocontainer" class="bordered">
               <h3 class="centered">To Do List</h3>
                 <ul id="list" class="row">
                   <li id="listitem" class="bordered row">
-                    <div class="bordered">
-                      <label id="markbtn" for="checkbox">
-                        <input type="checkbox" id="checkbox" ontouchend="markDone()" class="checkbox">
+                    <div id="boxborder" class="bordered">
+                      <label id="markbtn" for="checkbox" class="bordered">
+                        <input type="checkbox" id="checkbox" ontouchend="markDone()" class="bordered">
                       </label>
                     </div>
                     <label id="itemtext">
