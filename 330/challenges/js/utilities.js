@@ -10,10 +10,10 @@ function qs(selector) {
 /*
 add a touchend event listener to an element for mobile with a click event fallback for desktops @param {string} elementSelector The selector for the element to attach the listener to
 * @param {function} callback The callback function to run
-
 */
+
 function onTouch(elementSelector, callback) {
-    let element = document.querySelector(elementSelector);
+    let element = qs(elementSelector);
     console.log(`element.addEventListener, ${element.addeventlistener}`);
     if (element.addEventListener) {
         element.addEventListener('touchend', callback, false);
@@ -21,8 +21,6 @@ function onTouch(elementSelector, callback) {
         element.attachEvent('ontouchend', callback);
     }
 }
-
-
 
 
 // Create new to do task
@@ -68,6 +66,7 @@ const displayItems = () => {
 const markDone = (id) => {
     // TODO: change checkbox to show X (CSS, checkbox hack)
     // TODO: line through item text (CSS, text decoration?)
+    // TODO: change itemDone to true
 }
 
 // Delete to do item
@@ -80,7 +79,7 @@ const removeItem = (key) => {
 // Filter list by done/not done, show outline border of button when tapped/clicked
 
 // function to show how many items are left undone in the to do   list
-function itemsLeft(list) {
+function itemsLeft(id) {
     let items = document.getElementById("list").children.length;
     if ((items < 2) && (items > 0)) {
     document.getElementById(id).innerText = items + ' task left';

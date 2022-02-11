@@ -1,14 +1,11 @@
-
-
 .todo-buttons {
     margin: none;
-    padding: 0 auto;
+    padding: 0 ;
     border-radius: 0.5vh;
     background: black;
-    color: $primary;
-    border: $border;
-    &:hover {
-        // border: none;
+    border: 1px solid $p-30;
+    & :hover {
+        border: 1px solid $p150;
     }
 }
 
@@ -18,17 +15,17 @@ ul li {
 
 #addbtn, #delbtn {
     font-size: $font6;
+    color: $p150;
 }
 
-#allbtn, #actbtn, #donbtn, #delbtn {
+#allbtn, #actbtn, #donbtn, #delbtn  {
     border: none;
 }
 
 #allbtn, #actbtn, #donbtn, #addinput, #addbtn {
-    color: $primary;
+    color: $p150;
     background: black;
-    border: $border;
-    height: 6vh;
+    height: 8vh;
     padding: 1vh;
     margin: 0;
 }
@@ -40,11 +37,10 @@ ul li {
     margin: 0 auto;
 }
 
-ul#todocontainer {
+#todocontainer {
     display: grid;
     grid-area: todocontainer;
     text-align: center;
-    background-image: $accent;
     width: 300px;
     margin: 0 auto;
     grid-template-areas:
@@ -105,36 +101,39 @@ ul#todocontainer {
         }
     }
     & div#footer {
-        border: $border;
-        border-radius: 10px;
+        display: grid;
         grid-area: footer;
+        padding: .5vw;
+        grid-template-columns: 4fr 2fr 2fr 2fr;
+        justify-content: space-evenly;
     }
-    & form {
-        border: $border;
-        border-radius: 10px;
-        width: 100%;
+    & #addbar {
+        height: 9vh;
         padding: 0;
-        margin: 0 auto;
+        margin: 0;
         display: grid;
         grid-area: addbar;
-        grid-template-columns: 12fr 1fr;
+        grid-template-columns: 8fr 1fr;
         grid-template-areas:
-            "input addbtn";
-        & input {
+            "addinput addbtn";
+        & #addinput {
             grid-area: addinput;
-            height: 5vw;
-            background: $accent;
+            color: $p-60;
+            height: 6vh;
+            margin: 2vw;
         }
         & #addbtn {
             grid-area: addbtn;
-            width: 10vw;
-            height: 5vh;
-            font-size: $font5;
+            width: 9vh;
+            height: 9vh;
+            margin: 2vw;
+            font-size: $font6;
         }
     }
-    & h2 {
+    & h3 {
         background: black;
         color: $accent;
+        padding: 1vh;
         text-align: center;
         font-weight: bolder;
     }

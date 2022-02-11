@@ -16,34 +16,21 @@
     <main>
       <section id="">
         <h2 id="wdd330challengetitle2" class="padit">Challenges title</h2>
-            <legend id="todocontainer" class="bordered">
-              <h3 class="centered">To Do List</h3>
+            <div id="todocontainer" class="bordered">
+              <h1 class="centered">To Do List</h1>
                 <ul id="list" class="row">
-                  <li id="listitem" class="bordered row">
-                    <div id="boxborder" class="bordered">
-                      <label id="markbtn" for="checkbox" class="bordered">
-                        <input type="checkbox" id="checkbox" ontouchend="markDone()" class="bordered">
-                      </label>
-                    </div>
-                    <label id="itemtext">
-                      sample task text goes here
-                    </label>
-                    <button id="delbtn" class="todo-buttons" ontouchend="removeItem()">
-                      X
-                    </button>
-                  </li>
                 </ul>
-                <div id="footer">
+                <div id="footer" ontouchend="onTap()" class="bordered">
                   <label id="tasks" class="normal-text "></label>
-                  <button ontouchend="showAll()" id="allbtn"> All.</button>
-                  <button ontouchend="showActive()" id="actbtn"> Active.</button>
-                  <button ontouchend="showDone()" id="donbtn"> Done.</button>
+                  <button id="allbtn"> All.</button>
+                  <button id="actbtn"> Active.</button>
+                  <button id="donbtn"> Done.</button>
                 </div>
-              <form id="addbar" action="" class="bordered">
-                  <input id="addinput" class="" type="text" name="addinput" placeholder="" value="test item">
-                <button id="addbtn" ontouchend="">+</button>
+              <form id="addbar" class="" class="bordered">
+                  <input id="addinput" type="text" name="addinput" placeholder="" value="test item" class="bordered">
+                <button id="addbtn" class="bordered">+</button>
               </form>
-            </legend>
+            </div>
       </section>
 
       <section id="left">
@@ -61,8 +48,6 @@
     <footer id="autofooter"></footer>
     <script src="../../js/main.js"></script>
     <script src="../../js/menu.js"></script>
-    <script src="ToDos.js"></script>
-    <script src="ls.js"></script>
-    <script src="utilities.js"></script>
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>

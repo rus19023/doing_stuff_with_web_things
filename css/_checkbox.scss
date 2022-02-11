@@ -6,11 +6,15 @@ label#markbtn {
 }
 
 #boxborder {
-
+    border: $border;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .bordered {
-    border: 1px solid $primary;
+    border: 2px solid $p150;
     border-radius: 10px;
 }
 

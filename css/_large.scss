@@ -25,4 +25,16 @@
 
 
 @media screen and (min-width: 451px) {
+    #todocontainer {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    #todocontainer {
+        max-width: 50%;
+        margin: 0 auto;
+    }
 }

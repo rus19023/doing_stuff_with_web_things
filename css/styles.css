@@ -16,6 +16,27 @@
     grid-template-areas: "left right";
   }
 }
+@media screen and (min-width: 451px) {
+  #todocontainer {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 700px) {
+  #todocontainer {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+.color3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+  margin: 0 2vw;
+  padding: 1vw;
+  font-size: max(5vh);
+}
+
 .primary {
   background: black;
   color: #ffb88f;
@@ -78,18 +99,22 @@
 
 .todo-buttons {
   margin: none;
-  padding: 0 auto;
+  padding: 0;
   border-radius: 0.5vh;
   background: black;
-  color: #ffb88f;
-  border: 2px solid #ffb88f;
+  border: 1px solid #ff8f9e;
 }
+.todo-buttons :hover {
+  border: 1px solid #8ffff0;
+}
+
 ul li {
   list-style-type: none;
 }
 
 #addbtn, #delbtn {
   font-size: max(6vh);
+  color: #8ffff0;
 }
 
 #allbtn, #actbtn, #donbtn, #delbtn {
@@ -97,10 +122,9 @@ ul li {
 }
 
 #allbtn, #actbtn, #donbtn, #addinput, #addbtn {
-  color: #ffb88f;
+  color: #8ffff0;
   background: black;
-  border: 2px solid #ffb88f;
-  height: 6vh;
+  height: 8vh;
   padding: 1vh;
   margin: 0;
 }
@@ -112,21 +136,20 @@ ul li {
   margin: 0 auto;
 }
 
-ul#todocontainer {
+#todocontainer {
   display: grid;
   grid-area: todocontainer;
   text-align: center;
-  background-image: #d6ff8f;
   width: 300px;
   margin: 0 auto;
   grid-template-areas: "header" "list" "footer" "addbar";
 }
-ul#todocontainer #header {
+#todocontainer #header {
   grid-area: header;
   border: 2px solid #ffb88f;
   border-radius: 10px;
 }
-ul#todocontainer #list {
+#todocontainer #list {
   grid-area: list;
   padding: 0;
   margin: 0 auto;
@@ -134,7 +157,7 @@ ul#todocontainer #list {
   width: 100%;
   grid-template-areas: "listitem";
 }
-ul#todocontainer #list #listitem {
+#todocontainer #list #listitem {
   display: grid;
   grid-area: listitem;
   list-style-type: none;
@@ -147,7 +170,7 @@ ul#todocontainer #list #listitem {
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: "donebtn itemtext delbtn";
 }
-ul#todocontainer #list #listitem #donebtn {
+#todocontainer #list #listitem #donebtn {
   grid-area: donebtn;
   border: 2px solid #ffb88f;
   border-radius: 10px;
@@ -156,12 +179,12 @@ ul#todocontainer #list #listitem #donebtn {
   padding: 0.25vw;
   margin: 0;
 }
-ul#todocontainer #list #listitem #itemtext {
+#todocontainer #list #listitem #itemtext {
   grid-area: itemtext;
   padding: 2vw;
   height: 8vw;
 }
-ul#todocontainer #list #listitem #delbtn {
+#todocontainer #list #listitem #delbtn {
   grid-area: delbtn;
   background: transparent;
   color: #ffb88f;
@@ -171,36 +194,39 @@ ul#todocontainer #list #listitem #delbtn {
   height: 8vw;
   font-size: max(4vh);
 }
-ul#todocontainer div#footer {
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
+#todocontainer div#footer {
+  display: grid;
   grid-area: footer;
+  padding: 0.5vw;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
+  justify-content: space-evenly;
 }
-ul#todocontainer form {
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
-  width: 100%;
+#todocontainer #addbar {
+  height: 9vh;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   display: grid;
   grid-area: addbar;
-  grid-template-columns: 12fr 1fr;
-  grid-template-areas: "input addbtn";
+  grid-template-columns: 8fr 1fr;
+  grid-template-areas: "addinput addbtn";
 }
-ul#todocontainer form input {
+#todocontainer #addbar #addinput {
   grid-area: addinput;
-  height: 5vw;
-  background: #d6ff8f;
+  color: #ff8fd6;
+  height: 6vh;
+  margin: 2vw;
 }
-ul#todocontainer form #addbtn {
+#todocontainer #addbar #addbtn {
   grid-area: addbtn;
-  width: 10vw;
-  height: 5vh;
-  font-size: max(5vh);
+  width: 9vh;
+  height: 9vh;
+  margin: 2vw;
+  font-size: max(6vh);
 }
-ul#todocontainer h2 {
+#todocontainer h3 {
   background: black;
   color: #d6ff8f;
+  padding: 1vh;
   text-align: center;
   font-weight: bolder;
 }
@@ -261,8 +287,16 @@ label#markbtn {
   width: 6vw;
 }
 
+#boxborder {
+  border: 2px solid #ffb88f;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .bordered {
-  border: 1px solid #ffb88f;
+  border: 2px solid #8ffff0;
   border-radius: 10px;
 }
 
@@ -279,6 +313,23 @@ html {
   color: #d6ff8f;
   background: #7e5201;
   font-size: 12px;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
 
 .centered {
@@ -494,15 +545,6 @@ a:hover {
 textarea {
   width: 90%;
   height: 25vh;
-}
-
-.color3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 25%;
-  float: left;
-  margin: 0 2vw;
-  padding: 2vw;
 }
 
 footer#autofooter {

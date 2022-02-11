@@ -13,6 +13,18 @@ html {
   font-size: 12px;
 }
 
+body {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer" ;
+}
+
+header {  grid-area: header; }
+main {  grid-area: main; }
+footer {  grid-area: footer; }
+
 .centered {
   text-align: center;
   width: 100%;
@@ -231,15 +243,6 @@ a:hover {
 textarea {
   width: 90%;
   height: 25vh;
-}
-
-.color3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 25%;
-  float: left;
-  margin: 0 2vw;
-  padding: 2vw;
 }
 
 footer#autofooter {
