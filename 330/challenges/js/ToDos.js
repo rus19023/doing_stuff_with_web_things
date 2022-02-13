@@ -7,10 +7,11 @@ export default class ToDos {
     this.todoList = getTodos('items');
     this.addbtn = util.createLMNT("button", "button", "addbtn", "+", "");
     util.onTouch('#addbtn', this.addTodo);
+    this.parentElement = document.getElementById(parentId);
   }
 
   listTodos() {
-    renderTodoList(parentId, this.todoList);
+    renderTodoList(this.parentElement, this.todoList);
     todolist.forEach((todo) => {
       markbtn.onTouch("markbtn", this.markDone(todo.id));
       delbtn.onTouch("delbtn", this.removeTodo(todo.id));
@@ -76,20 +77,20 @@ In the Todo.js module, but not in the Todos class, create the following function
 A todo should look like this: { id : timestamp, content: string, completed: bool }
 */
 
-let mytasks = getTodos('items');
 
 function saveTodo(task, lskey) {
-  mytasks = getTodos('items');
+  let mytasks = getTodos('items') || [];
   console.log('mytasks: ' + mytasks);
   // build todo object
   const todo = { id: Date.now(), task: task, done: false };
   console.log('todo: ' + todo);
   // add obj to todoList
   mytasks.push(todo);
-  console.log('mytasks: ' + mytasks);
+  mytasklist = JSON.stringify(mytasks);
+  console.log('mytasks: ' + mytasklist);
   // save JSON.stringified list to ls
-  console.log(ls.writeToLS(lskey, JSON.stringify(mytasks)));
-  ls.writeToLS(lskey, JSON.stringify(mytasks));
+  //console.log(ls.writeToLS(lskey, mytasklist));
+  //ls.writeToLS(lskey, JSON.stringify(mytasklist));
 }
 
 function renderTodoList(parentId, todolist) {
@@ -102,9 +103,9 @@ function renderTodoList(parentId, todolist) {
     // createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
     const markbtn = util.createLMNT("button", "", "markbtn", "✕", "");
     const delbtn = util.createLMNT("button", "", "delbtn", "X", "");
-    //item.append(markbtn);
+    item.append(markbtn);
     item.append(itemtext);
-    //item.append(delbtn);
+    item.append(delbtn);
     console.log(parentId);
     parentId.append(item);
   });
@@ -120,8 +121,7 @@ function getTodo(lskey) {
 }
 
 function getTodos(lskey) {
-
-  let mytasks = Array.from(JSON.parse(ls.readFromLS(lskey)));
+  let mytasks = Array.from(JSON.parse(ls.readFromLS(lskey))) || [];
   return mytasks;
 }
 
