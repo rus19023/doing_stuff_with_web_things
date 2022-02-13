@@ -17,17 +17,18 @@
       <section id="">
         <h2 id="wdd330challengetitle2" class="padit">Challenges title</h2>
             <div id="todocontainer" class="bordered">
-              <h1 class="centered">To Do List</h1>
+              <h1 id="todos" class="centered">To Do List</h1>
                 <ul id="list" class="row">
                 </ul>
-                <div id="footer" ontouchend="onTap()" class="bordered">
-                  <label id="tasks" class="normal-text "></label>
-                  <button id="allbtn"> All.</button>
-                  <button id="actbtn"> Active.</button>
-                  <button id="donbtn"> Done.</button>
+                <div id="footer" class="bordered">
+                  <label id="tasks" class="todo-text"> _ tasks done.
+                    <button id="allbtn"> All.</button>
+                    <button id="actbtn"> Active.</button>
+                    <button id="donbtn"> Done.</button>
+                  </label>
                 </div>
               <form id="addbar" class="" class="bordered">
-                  <input id="addinput" type="text" name="addinput" placeholder="" value="test item" class="bordered">
+                <input id="addinput" type="text" name="addinput" placeholder="" value="test item" class="bordered">
                 <button id="addbtn" class="bordered">+</button>
               </form>
             </div>
@@ -48,6 +49,6 @@
     <footer id="autofooter"></footer>
     <script src="../../js/main.js"></script>
     <script src="../../js/menu.js"></script>
-    <script src="/js/main.js" type="module"></script>
+    <script src="./js/todosmain.js" type="module"></script>
   </body>
 </html>

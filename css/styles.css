@@ -30,71 +30,82 @@
 }
 .color3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   max-width: 100%;
-  margin: 0 2vw;
-  padding: 1vw;
-  font-size: max(5vh);
+  font-size: max(4vh);
+  padding: 0.25vw;
 }
 
 .primary {
   background: black;
   color: #ffb88f;
+  margin: 0;
 }
 
 .p30 {
   background: black;
   color: #fff08f;
+  margin: 0;
 }
 
 .p60 {
   background: black;
   color: #d6ff8f;
+  margin: 0;
 }
 
 .p90 {
   background: black;
   color: #9eff8f;
+  margin: 0;
 }
 
 .p120 {
   background: black;
   color: #8fffb8;
+  margin: 0;
 }
 
 .p150 {
   background: black;
   color: #8ffff0;
+  margin: 0;
 }
 
 .p180 {
   background: black;
   color: #8fd6ff;
+  margin: 0;
 }
 
 .p-150 {
   background: black;
   color: #8f9eff;
+  margin: 0;
 }
 
 .p-120 {
   background: black;
   color: #b88fff;
+  margin: 0;
 }
 
 .p-90 {
   background: black;
   color: #f08fff;
+  margin: 0;
 }
 
 .p-60 {
   background: black;
   color: #ff8fd6;
+  margin: 0;
 }
 
 .p-30 {
   background: black;
   color: #ff8f9e;
+  margin: 0;
 }
 
 .todo-buttons {
@@ -108,6 +119,10 @@
   border: 1px solid #8ffff0;
 }
 
+.scratch {
+  text-decoration: line-through;
+}
+
 ul li {
   list-style-type: none;
 }
@@ -117,15 +132,37 @@ ul li {
   color: #8ffff0;
 }
 
-#allbtn, #actbtn, #donbtn, #delbtn {
+#actbtn, #donbtn, #delbtn {
   border: none;
+  width: 50%;
 }
 
-#allbtn, #actbtn, #donbtn, #addinput, #addbtn {
+#todos, #tasks {
+  color: #ff8fd6;
+}
+
+#todos {
+  height: 5vh;
+  margin-bottom: 2vw;
+}
+
+.todo-text {
+  color: #8ffff0;
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5vw;
+}
+
+#allbtn {
+  border: 2px solid #8ffff0;
+  border-radius: 10px;
+  width: 90%;
+}
+
+#allbtn, #actbtn, #donbtn, #addinput {
   color: #8ffff0;
   background: black;
   height: 8vh;
-  padding: 1vh;
+  padding: 1vh 3vw;
   margin: 0;
 }
 
@@ -140,7 +177,9 @@ ul li {
   display: grid;
   grid-area: todocontainer;
   text-align: center;
-  width: 300px;
+  height: 100vh;
+  width: 270px;
+  max-width: 90%;
   margin: 0 auto;
   grid-template-areas: "header" "list" "footer" "addbar";
 }
@@ -195,16 +234,25 @@ ul li {
   font-size: max(4vh);
 }
 #todocontainer div#footer {
+  margin: 0 auto 5vh auto;
+  padding: 0;
+}
+#todocontainer div#footer label#tasks {
+  margin-top: 4vw;
+  padding: 1vw;
   display: grid;
   grid-area: footer;
-  padding: 0.5vw;
-  grid-template-columns: 4fr 2fr 2fr 2fr;
+  text-align: center;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
   justify-content: space-evenly;
 }
 #todocontainer #addbar {
   height: 9vh;
+  /*position: absolute;
+  bottom: 0vh;*/
+  width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 4vw 0 0 0;
   display: grid;
   grid-area: addbar;
   grid-template-columns: 8fr 1fr;
@@ -214,13 +262,14 @@ ul li {
   grid-area: addinput;
   color: #ff8fd6;
   height: 6vh;
-  margin: 2vw;
+  margin: 0 1vw 0 0;
 }
 #todocontainer #addbar #addbtn {
   grid-area: addbtn;
+  background: black;
   width: 9vh;
   height: 9vh;
-  margin: 2vw;
+  margin: 0;
   font-size: max(6vh);
 }
 #todocontainer h3 {
@@ -307,8 +356,62 @@ input#checkbox {
 }
 input#checkbox ::after {
   content: "✕";
+  border: 2px solid #ffb88f;
+  border-radius: 10px;
 }
 
+/* Custom Icons For Checkbox */
+label {
+  cursor: pointer;
+  color: #c0392b;
+  margin: 5px 0;
+  padding-left: 40px;
+  position: relative;
+  font-size: 30px;
+  transition: 0.2s linear;
+}
+
+label:before, label:after {
+  content: "";
+  left: 11px;
+  width: 3px;
+  bottom: 0;
+  background: #ff8fd6;
+  position: absolute;
+  top: 0;
+}
+
+label:before {
+  transform: rotate(45deg);
+  transform-origin: 0 14px;
+  height: 0;
+  transition: 0.2s linear;
+}
+
+label:after {
+  transform: rotate(-45deg);
+  transform-origin: 0 20px;
+  height: 0;
+  transition: 0.2s linear 0.2s;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + label:after, input[type=checkbox]:checked + label:before {
+  height: 100%;
+}
+
+input[type=checkbox]:checked + label {
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  div.wrapper[style] {
+    width: 60% !important;
+  }
+}
 html {
   color: #d6ff8f;
   background: #7e5201;
@@ -404,7 +507,7 @@ section {
   padding: 3vw;
   background: black;
   max-width: 100%;
-  margin: 2vw;
+  margin: 2vw 0;
   border-radius: 10px;
 }
 
