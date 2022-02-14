@@ -119,6 +119,7 @@
   margin: 1vw;
   padding: 1vw;
   color: #8ffff0;
+  font-size: max(2vh);
   background: black;
   border: 2px solid #8ffff0;
   border-radius: 8px;
@@ -140,9 +141,24 @@ ul li {
   list-style-type: none;
 }
 
-.todo-text {
+.todo-text, p.todo-text {
+  text-align: left;
   color: #8ffff0;
   font-family: "Nunito", sans-serif;
+  font-size: max(2vh);
+}
+
+.del-text {
+  color: #ff8f9e;
+  font-family: "Nunito", sans-serif;
+  background: black;
+  border: none;
+  height: 6vh;
+  padding: 2vw;
+  font-size: max(3vh);
+}
+
+.markbtn {
   font-size: max(3vh);
 }
 
@@ -150,6 +166,12 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: 0 auto;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
 }
 
 #todocontainer {
@@ -165,42 +187,44 @@ ul li {
   grid-area: header;
   color: #ff8f9e;
 }
-#todocontainer #list {
+#todocontainer #todos {
   grid-area: list;
   padding: 0;
   margin: 0 auto;
+  height: 6vh;
   display: grid;
   width: 100%;
   grid-template-areas: "listitem";
 }
-#todocontainer #list .listitem {
+#todocontainer #todos li .listitem {
   display: grid;
   grid-area: listitem;
   list-style-type: none;
   border: 2px solid #8ffff0;
-  max-width: 300px;
   margin: 0;
-  height: 9vw;
-  padding: 0.5vw;
+  background: hotpink;
+  height: 6vh;
+  padding: 1vw;
   border-radius: 10px;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: "markbtn itemtext delbtn";
 }
-#todocontainer #list .listitem #markbtn {
+#todocontainer #todos li .listitem #markbtn {
   grid-area: markbtn;
   border: 2px solid #ffb88f;
   border-radius: 10px;
-  width: 7vw;
-  height: 7vw;
-  padding: 0.25vw;
-  margin: 0;
+  width: 8vh;
+  height: 8vh;
+  padding: 2vw;
+  margin: auto;
+  padding: 2vw;
 }
-#todocontainer #list .listitem #itemtext {
+#todocontainer #todos li .listitem #itemtext {
   grid-area: itemtext;
   padding: 2vw;
-  height: 8vw;
+  height: 6vw;
 }
-#todocontainer #list .listitem #delbtn {
+#todocontainer #todos li .listitem #delbtn {
   grid-area: delbtn;
   background: transparent;
   color: #ffb88f;
@@ -214,6 +238,7 @@ ul li {
   height: 8vh;
   grid-area: footer;
   text-align: center;
+  margin-top: 0;
 }
 #todocontainer #footer #tasks {
   grid-area: tasks;
@@ -250,15 +275,16 @@ ul li {
   background: black;
   color: #ff8fd6;
   height: 8vh;
+  width: 90%;
   margin: 0 1vw 0 0;
-  padding: 1vw;
+  padding: 0 0 0 1vw;
 }
 #todocontainer #addbar #addbtn {
   grid-area: addbtn;
   background: black;
   color: #8ffff0;
-  width: 11vh;
-  height: 11vh;
+  width: 8vh;
+  height: 8vh;
   margin: 0;
   font-size: max(6vh);
 }

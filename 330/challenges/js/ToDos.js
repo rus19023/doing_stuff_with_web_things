@@ -87,14 +87,14 @@ function saveTodo(task, lskey) {
   let mytasks = getTodos('items') || [];
   console.log('mytasks: ' + mytasks);
   // build todo object
-  const todo = { id: Date.now(), task: task, done: false };
-  console.log('todo: ' + todo);
+  const todo = { id: Date.now(), task: task, done: true };
+  //console.log('todo: ' + todo);
   // add obj to todoList
   mytasks.push(todo);
   let mytasklist = JSON.stringify(mytasks);
-  console.log('mytasks: ' + mytasklist);
+  //console.log('mytasks: ' + mytasklist);
   // save JSON.stringified list to ls
-  console.log(ls.writeToLS(lskey, mytasklist));
+  //console.log(ls.writeToLS(lskey, mytasklist));
   ls.writeToLS(lskey, mytasklist);
 }
 
@@ -104,24 +104,24 @@ function renderTodoList(parentId, renderlist) {
       console.log(renderlist);
       console.log(field.id, field.task, field.done);
       //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-      let list = util.createLMNT('ul', '', 'list', '', 'row');
-      let item = util.createLMNT('li', '', field.id, field.task, 'listitem');
-      let itemtext = util.createLMNT("p", "", field.id, field.task, "todo-text");
-      let markbtn = util.createLMNT("button", "", "markbtn", "✕", "bordered");
+      let item = util.createLMNT('li', '', field.id, '', 'listitem bordered item-row');
+      let itemtext = util.createLMNT("p", "", '', field.task, "todo-text");
+      let markbox = util.createLMNT('div', '', '', '', '');
+      let markbtn = util.createLMNT("input", "checkbox", `markbtn${field.id}`, "", "bordered todo-buttons markbtn");
         if (field.done === true) {
           itemtext.classList.add("scratch");
           markbtn.innerText = "✕";
         }
-      let delbtn = util.createLMNT("button", "", "delbtn", "X", "");
+      let delbtn = util.createLMNT("button", "", "delbtn", "X", " del-text");
       //delbtn.onTouch("delbtn", this.removeTodo(todo.id));
       //markbtn.onTouch("markbtn", this.markDone(todo.id));
       //let footer = util.createLMNT("footer", "", "footer", "", "footer");
-      item.appendChild(markbtn);
+      markbox.appendChild(markbtn);
+      item.appendChild(markbox);
       item.appendChild(itemtext);
       item.appendChild(delbtn);
       console.log(parentId);
-      list.appendChild(item);
-      parentId.appendChild(list);
+      parentId.appendChild(item);
     });
 }
 
