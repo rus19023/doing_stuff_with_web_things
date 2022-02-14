@@ -1,35 +1,4 @@
-// label is clickable
-label#markbtn {
-    cursor: pointer;
-    border-radius: 0;
-    width: 6vw;
-}
-
-#boxborder {
-    border: $border;
-    border-radius: 10px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.bordered {
-border: 2px solid $p150;
-    border-radius: 10px;
-}
-
-input#checkbox {
-    border: 1px solid $primary;
-    padding: 0;
-    margin: 0;
-    & ::after {
-        content: '✕';
-        border: $border;
-        border-radius: 10px;
-    }
-}
-
-/* Custom Icons For Checkbox */
+/* markbtn */
 label {
     cursor: pointer;
     color: #c0392b;
@@ -48,41 +17,41 @@ label:before, label:after {
     left: 11px;
     width: 3px;
     bottom: 0;
-    background: $p-60;
-    position:absolute;
-    top:0
+    background: #fcff00;
+    position: absolute;
+    top: 0
 }
 
 label:before {
-    transform:rotate(45deg);
-    transform-origin:0 14px;
-    height:0;
-    -webkit-transition:.2s linear;
-    -moz-transition:.2s linear;
-    -o-transition:.2s linear;
-    transition:.2s linear
+    transform: rotate(45deg);
+    transform-origin: 0 14px;
+    height: 0;
+    -webkit-transition: .2s linear;
+    -moz-transition: .2s linear;
+    -o-transition: .2s linear;
+    transition: .2s linear
 }
 
 label:after {
-    transform:rotate(-45deg);
-    transform-origin:0 20px;
-    height:0;
-    -webkit-transition:.2s linear .2s;
-    -moz-transition:.2s linear .2s;
-    -o-transition:.2s linear .2s;
-    transition:.2s linear .2s
+    transform: rotate(-45deg);
+    transform-origin: 0 20px;
+    height: 0;
+    -webkit-transition: .2s linear .2s;
+    -moz-transition: .2s linear .2s;
+    -o-transition: .2s linear .2s;
+    transition: .2s linear .2s
 }
 
 input[type="checkbox"] {
-    display:none
+    display: none
 }
 
-input[type="checkbox"]:checked + label:after,input[type="checkbox"]:checked + label:before {
-    height:100%
+input[type="checkbox"]:checked + label:after, input[type="checkbox"]:checked + label:before {
+    height: 100%
 }
 
 input[type="checkbox"]:checked + label {
-    color:#fff
+    color: #fff
 }
 
 

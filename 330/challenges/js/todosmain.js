@@ -1,7 +1,6 @@
 import ToDos from "./ToDos.js";
 
 window.addEventListener("load", () => {
-    const myTodos = new ToDos('list');
+    const myTodos = new ToDos('todos');
     myTodos.listTodos();
-    myTodos.itemsLeft();
 });

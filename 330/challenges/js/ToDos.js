@@ -1,34 +1,37 @@
 import * as ls from "./ls.js";
 import * as util from "./utilities.js";
 
-const todoList = getTodos('items');
+var todoList = null;
 
 export default class ToDos {
   // a class needs a constructor
   constructor(parentId) {
     this.addbtn = util.createLMNT("button", "button", "addbtn", "+", "");
     util.onTouch('#addbtn', this.addTodo);
-    this.parentElement = document.getElementById(parentId);
+    this.parentElement = util.qs(`#${parentId}`);
+    //markbtn.onTouch("markbtn", this.markDone(lskey));
   }
 
   listTodos() {
     // get list of todos from local storage and send them to the render function
+    todoList = getTodos('items');
     console.log(todoList);
-    renderTodoList(this.parentElement, todoList);
-    console.log(todo);
-    todolist.forEach((todo) => {
-      console.log(todo.lskey[0]);
-      markbtn.onTouch("markbtn", this.markDone(todo.id));
-      delbtn.onTouch("delbtn", this.removeTodo(todo.id));
+    let mytask = [];
+    todoList.forEach((todo) => {
+      console.log(todo.id, todo.task, todo.done);
+      mytask.push(todo);
     });
+    renderTodoList(this.parentElement, todoList);
+    this.itemsLeft();
   }
 
   addTodo() {
     // grab task from input field
-    console.log(util.qs("#addinput").innerText);
+    //console.log(util.qs("#addinput").innerText);
     const task = util.qs("#addinput").value;
-    console.log(task);
+    //console.log(task);
     saveTodo(task, 'items');
+    this.listTodos();
   }
 
   removeTodo(id) {
@@ -36,17 +39,16 @@ export default class ToDos {
     this.listTodos();
   }
 
-  // Mark item done
-  markDone(id) {
-    // get key from document id element
-    const lskey = document.getElementById(id);
-    // ls.markDone(id);
-    // TODO: change checkbox to show X (CSS, checkbox hack)
-    // TODO: line through item text (CSS, text decoration?)
-    document.getElementById(id).classList.add("scratch");
-    // TODO: change itemDone to true
-    ls.markItemDone(lskey, id);
-  }
+    // Mark selected item as completed
+    markItemDone = (lskey, id) => {
+      let list = getTodos(lskey);
+      list.forEach(item => {
+          if (item.id === id) {
+          item.done = true;
+          }
+      });
+      writeToLS(key, list);
+    };
 
   filterTodos(list, filterstring) {
     //   console.log(numbers.filter(x => x%2 === 0 ));
@@ -65,11 +67,11 @@ export default class ToDos {
 
   // function to show how many items are left undone in the todo list
   itemsLeft() {
-    let items = document.getElementById("list").children.length;
+    let items = getTodos('items').length;
     if (items === 1) {
-      document.getElementById("tasks").innerText = items + " task left";
+      util.qs("#tasks").innerText = items + " task left";
     } else if (items < 2 && items > 0) {
-      document.getElementById("tasks").innerText = items + " tasks left";
+      util.qs("#tasks").innerText = items + " tasks left";
     }
   }
 }
@@ -80,7 +82,6 @@ In the Todo.js module, but not in the Todos class, create the following function
 @param {string} key The key under which the value is stored under in LS @param {string} task The text of the task to be saved.
 A todo should look like this: { id : timestamp, content: string, completed: bool }
 */
-
 
 function saveTodo(task, lskey) {
   let mytasks = getTodos('items') || [];
@@ -97,25 +98,31 @@ function saveTodo(task, lskey) {
   ls.writeToLS(lskey, mytasklist);
 }
 
-function renderTodoList(parentId, todolist) {
-  console.log(todolist);
-  todolist.forEach((todo) => {
-    todo.forEach((field) => {
+function renderTodoList(parentId, renderlist) {
+    renderlist.forEach((field) => {
       // create new list item
+      console.log(renderlist);
       console.log(field.id, field.task, field.done);
-      const item = document.createElement("li");
-      const itemtext = util.createLMNT("p", "", field.id, field.task, "listitem");
-      itemtext.setAttribute("id", field.id);
-      // createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-      const markbtn = util.createLMNT("button", "", "markbtn", "✕", "");
-      const delbtn = util.createLMNT("button", "", "delbtn", "X", "");
-      item.append(markbtn);
-      item.append(itemtext);
-      item.append(delbtn);
+      //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
+      let list = util.createLMNT('ul', '', 'list', '', 'row');
+      let item = util.createLMNT('li', '', field.id, field.task, 'listitem');
+      let itemtext = util.createLMNT("p", "", field.id, field.task, "todo-text");
+      let markbtn = util.createLMNT("button", "", "markbtn", "✕", "bordered");
+        if (field.done === true) {
+          itemtext.classList.add("scratch");
+          markbtn.innerText = "✕";
+        }
+      let delbtn = util.createLMNT("button", "", "delbtn", "X", "");
+      //delbtn.onTouch("delbtn", this.removeTodo(todo.id));
+      //markbtn.onTouch("markbtn", this.markDone(todo.id));
+      //let footer = util.createLMNT("footer", "", "footer", "", "footer");
+      item.appendChild(markbtn);
+      item.appendChild(itemtext);
+      item.appendChild(delbtn);
       console.log(parentId);
-      parentId.append(item);
+      list.appendChild(item);
+      parentId.appendChild(list);
     });
-  });
 }
 
 /*
@@ -123,14 +130,12 @@ In the Todos.js module, but not in the Todos class create the following function
 / check the contents of todoList, a local variable containing a list of ToDos. If it is null then pull the list of todos from localstorage, update the local variable, and return it
 @param {string} key The key under which the value is stored under in LS @return {array} The value as an array of objects */
 
-function getTodo(lskey) {
-  return ls.readFromLS(lskey);
+function getTodo(id) {
+  //return ls.readFromLS(id);
 }
 
 function getTodos(lskey) {
-  let mytasks = JSON.parse(ls.readFromLS(lskey)) || [];
-  //console.log('mytasks: ' + mytasks);
-  return mytasks;
+  return JSON.parse(ls.readFromLS(lskey)) || [];
 }
 
 export { saveTodo, renderTodoList, getTodos, getTodo };

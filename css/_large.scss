@@ -3,6 +3,9 @@
 
 
 @media screen and (min-width: 1200px) {
+    #todocontainer {
+        max-width: 50%;
+    }
 }
 
 
@@ -21,20 +24,19 @@
       grid-template-areas: 
       "left right";
     }
-}
-
-
-@media screen and (min-width: 451px) {
     #todocontainer {
         max-width: 75%;
-        margin: 0 auto;
     }
 }
 
-
 @media screen and (min-width: 700px) {
     #todocontainer {
-        max-width: 50%;
-        margin: 0 auto;
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 451px) {
+    #todocontainer {
+        max-width: 80%;
     }
 }

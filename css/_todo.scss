@@ -1,12 +1,21 @@
+$todoborder: 2px solid $p150;
+
 .todo-buttons {
-    margin: none;
-    padding: 0 ;
-    border-radius: 0.5vh;
+    height: 6vh;
+    margin: 1vw;
+    padding: 1vw;
+    color: $p150;
     background: black;
-    border: 1px solid $p-30;
+    border: $todoborder;
+    border-radius: 8px;
     & :hover {
-        border: 1px solid $p150;
+        border: 2px solid $p150;
     }
+}
+
+.bordered {
+border: 2px solid $p150;
+    border-radius: 10px;
 }
 
 .scratch {
@@ -17,40 +26,16 @@ ul li {
     list-style-type: none;
 }
 
-#addbtn, #delbtn {
-    font-size: $font6;
-    color: $p150;
-}
-
-#actbtn, #donbtn, #delbtn  {
-    border: none;
-    width: 50%;
-}
-
-#todos, #tasks { color: $p-60; }
-#todos { height: 5vh; margin-bottom: 2vw; }
-
 .todo-text {
     color: $p150;
     font-family: $fontprimary;
-    font-size: 2.5vw;
-}
-
-#allbtn { border: 2px solid $p150; border-radius: 10px; width: 90%; }
-
-#allbtn, #actbtn, #donbtn, #addinput {
-    color: $p150;
-    background: black;
-    height: 8vh;
-    padding: 1vh 3vw;
-    margin: 0;
+    font-size: $font3;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0 auto;
 }
 
 #todocontainer {
@@ -58,7 +43,7 @@ ul li {
     grid-area: todocontainer;
     text-align: center;
     height: 100vh;
-    width: 270px; max-width: 90%;
+    max-width: 90%;
     margin: 0 auto;
     grid-template-areas:
         "header"
@@ -67,8 +52,7 @@ ul li {
         "addbar";
     & #header {
         grid-area: header;
-        border: $border;
-        border-radius: 10px;
+        color: $p-30;
     }
     & #list {
         grid-area: list;
@@ -78,11 +62,11 @@ ul li {
         width: 100%;
         grid-template-areas:
         "listitem";
-        & #listitem {
+        & .listitem {
             display: grid;
             grid-area: listitem;
             list-style-type: none;
-            border: $border;
+            border: $todoborder;
             max-width: 300px;
             margin: 0;
             height: 9vw;
@@ -90,9 +74,9 @@ ul li {
             border-radius: 10px;
             grid-template-columns: 1fr 5fr 1fr;
             grid-template-areas:
-            "donebtn itemtext delbtn";
-            & #donebtn {
-                grid-area: donebtn;
+            "markbtn itemtext delbtn";
+            & #markbtn {
+                grid-area: markbtn;
                 border: $border;
                 border-radius: 10px;
                 width: 7vw;
@@ -117,21 +101,31 @@ ul li {
             }
         }
     }
-    & div#footer {
-        margin: 0 auto 5vh auto;
-        padding: 0;
-        & label#tasks {
-            margin-top: 4vw;
-            padding: 1vw;
-            display: grid;
-            grid-area: footer;
+    & #footer {
+        height: 8vh;
+        grid-area: footer;
+        text-align: center;
+        & #tasks {
+            grid-area: tasks;
             text-align: center;
-            grid-template-columns: 4fr 1fr 1fr 1fr;
-            justify-content: space-evenly;
+            margin: 0 auto;
+            width: 60%;
+        }
+        & #allbtn {
+            grid-area: allbtn;
+            text-align: center;
+        }
+        & #actbtn {
+            grid-area: actbtn;
+            text-align: center;
+        }
+        & #donebtn {
+            grid-area: donebtn;
+            text-align: center;
         }
     }
     & #addbar {
-        height: 9vh;
+        height: 8vh;
         /*position: absolute;
         bottom: 0vh;*/
         width: 100%;
@@ -144,15 +138,18 @@ ul li {
             "addinput addbtn";
         & #addinput {
             grid-area: addinput;
+            background: black;
             color: $p-60;
-            height: 6vh;
+            height: 8vh;
             margin: 0 1vw 0 0;
+            padding: 1vw;
         }
         & #addbtn {
             grid-area: addbtn;
             background: black;
-            width: 9vh;
-            height: 9vh;
+            color: $p150;
+            width: 11vh;
+            height: 11vh;
             margin: 0;
             font-size: $font6;
         }

@@ -7,6 +7,10 @@ const qs = selector => {
     return document.querySelector(selector);
 }
 
+const sa = (el, selector, name) => {
+    return el.setAttribute(selector, name);
+}
+
 /*
 add a touchend event listener to an element for mobile with a click event fallback for desktops @param {string} elementSelector The selector for the element to attach the listener to
 * @param {function} callback The callback function to run
@@ -30,11 +34,4 @@ function createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass) {
     lmnt.setAttribute('class', LMNTclass);
     return lmnt;
 }
-
-// Delete to do item
-const removeItem = (key) => {
-    // TODO: use ls utility to remove item from localStorage
-    console.log(`removeItem: ${key}`);
-    ls.removeFromLS(id);
-}
-export { qs, onTouch, createLMNT, removeItem };
+export { qs, onTouch, createLMNT };

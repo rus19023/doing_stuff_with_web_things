@@ -1,6 +1,10 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
+@media screen and (min-width: 1200px) {
+  #todocontainer {
+    max-width: 50%;
+  }
+}
 @media screen and (min-width: 992px) {
   .color3 {
     grid-template-columns: repeat(6, 1fr);
@@ -15,17 +19,19 @@
     display: grid;
     grid-template-areas: "left right";
   }
-}
-@media screen and (min-width: 451px) {
+
   #todocontainer {
     max-width: 75%;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 700px) {
   #todocontainer {
-    max-width: 50%;
-    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 451px) {
+  #todocontainer {
+    max-width: 80%;
   }
 }
 .color3 {
@@ -109,14 +115,21 @@
 }
 
 .todo-buttons {
-  margin: none;
-  padding: 0;
-  border-radius: 0.5vh;
+  height: 6vh;
+  margin: 1vw;
+  padding: 1vw;
+  color: #8ffff0;
   background: black;
-  border: 1px solid #ff8f9e;
+  border: 2px solid #8ffff0;
+  border-radius: 8px;
 }
 .todo-buttons :hover {
-  border: 1px solid #8ffff0;
+  border: 2px solid #8ffff0;
+}
+
+.bordered {
+  border: 2px solid #8ffff0;
+  border-radius: 10px;
 }
 
 .scratch {
@@ -127,50 +140,16 @@ ul li {
   list-style-type: none;
 }
 
-#addbtn, #delbtn {
-  font-size: max(6vh);
-  color: #8ffff0;
-}
-
-#actbtn, #donbtn, #delbtn {
-  border: none;
-  width: 50%;
-}
-
-#todos, #tasks {
-  color: #ff8fd6;
-}
-
-#todos {
-  height: 5vh;
-  margin-bottom: 2vw;
-}
-
 .todo-text {
   color: #8ffff0;
   font-family: "Nunito", sans-serif;
-  font-size: 2.5vw;
-}
-
-#allbtn {
-  border: 2px solid #8ffff0;
-  border-radius: 10px;
-  width: 90%;
-}
-
-#allbtn, #actbtn, #donbtn, #addinput {
-  color: #8ffff0;
-  background: black;
-  height: 8vh;
-  padding: 1vh 3vw;
-  margin: 0;
+  font-size: max(3vh);
 }
 
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 auto;
 }
 
 #todocontainer {
@@ -178,15 +157,13 @@ ul li {
   grid-area: todocontainer;
   text-align: center;
   height: 100vh;
-  width: 270px;
   max-width: 90%;
   margin: 0 auto;
   grid-template-areas: "header" "list" "footer" "addbar";
 }
 #todocontainer #header {
   grid-area: header;
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
+  color: #ff8f9e;
 }
 #todocontainer #list {
   grid-area: list;
@@ -196,21 +173,21 @@ ul li {
   width: 100%;
   grid-template-areas: "listitem";
 }
-#todocontainer #list #listitem {
+#todocontainer #list .listitem {
   display: grid;
   grid-area: listitem;
   list-style-type: none;
-  border: 2px solid #ffb88f;
+  border: 2px solid #8ffff0;
   max-width: 300px;
   margin: 0;
   height: 9vw;
   padding: 0.5vw;
   border-radius: 10px;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-areas: "donebtn itemtext delbtn";
+  grid-template-areas: "markbtn itemtext delbtn";
 }
-#todocontainer #list #listitem #donebtn {
-  grid-area: donebtn;
+#todocontainer #list .listitem #markbtn {
+  grid-area: markbtn;
   border: 2px solid #ffb88f;
   border-radius: 10px;
   width: 7vw;
@@ -218,12 +195,12 @@ ul li {
   padding: 0.25vw;
   margin: 0;
 }
-#todocontainer #list #listitem #itemtext {
+#todocontainer #list .listitem #itemtext {
   grid-area: itemtext;
   padding: 2vw;
   height: 8vw;
 }
-#todocontainer #list #listitem #delbtn {
+#todocontainer #list .listitem #delbtn {
   grid-area: delbtn;
   background: transparent;
   color: #ffb88f;
@@ -233,21 +210,31 @@ ul li {
   height: 8vw;
   font-size: max(4vh);
 }
-#todocontainer div#footer {
-  margin: 0 auto 5vh auto;
-  padding: 0;
-}
-#todocontainer div#footer label#tasks {
-  margin-top: 4vw;
-  padding: 1vw;
-  display: grid;
+#todocontainer #footer {
+  height: 8vh;
   grid-area: footer;
   text-align: center;
-  grid-template-columns: 4fr 1fr 1fr 1fr;
-  justify-content: space-evenly;
+}
+#todocontainer #footer #tasks {
+  grid-area: tasks;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+}
+#todocontainer #footer #allbtn {
+  grid-area: allbtn;
+  text-align: center;
+}
+#todocontainer #footer #actbtn {
+  grid-area: actbtn;
+  text-align: center;
+}
+#todocontainer #footer #donebtn {
+  grid-area: donebtn;
+  text-align: center;
 }
 #todocontainer #addbar {
-  height: 9vh;
+  height: 8vh;
   /*position: absolute;
   bottom: 0vh;*/
   width: 100%;
@@ -260,15 +247,18 @@ ul li {
 }
 #todocontainer #addbar #addinput {
   grid-area: addinput;
+  background: black;
   color: #ff8fd6;
-  height: 6vh;
+  height: 8vh;
   margin: 0 1vw 0 0;
+  padding: 1vw;
 }
 #todocontainer #addbar #addbtn {
   grid-area: addbtn;
   background: black;
-  width: 9vh;
-  height: 9vh;
+  color: #8ffff0;
+  width: 11vh;
+  height: 11vh;
   margin: 0;
   font-size: max(6vh);
 }
@@ -330,37 +320,7 @@ ul li {
   font-size: 24px;
 }
 
-label#markbtn {
-  cursor: pointer;
-  border-radius: 0;
-  width: 6vw;
-}
-
-#boxborder {
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.bordered {
-  border: 2px solid #8ffff0;
-  border-radius: 10px;
-}
-
-input#checkbox {
-  border: 1px solid #ffb88f;
-  padding: 0;
-  margin: 0;
-}
-input#checkbox ::after {
-  content: "✕";
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
-}
-
-/* Custom Icons For Checkbox */
+/* markbtn */
 label {
   cursor: pointer;
   color: #c0392b;
@@ -376,7 +336,7 @@ label:before, label:after {
   left: 11px;
   width: 3px;
   bottom: 0;
-  background: #ff8fd6;
+  background: #fcff00;
   position: absolute;
   top: 0;
 }
@@ -419,7 +379,6 @@ html {
 }
 
 body {
-  display: grid;
   grid-template-areas: "header" "main" "footer";
 }
 
@@ -506,7 +465,6 @@ section {
   font-family: "Nunito", sans-serif;
   padding: 3vw;
   background: black;
-  max-width: 100%;
   margin: 2vw 0;
   border-radius: 10px;
 }
