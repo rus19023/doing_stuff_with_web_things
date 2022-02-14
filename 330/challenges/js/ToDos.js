@@ -1,18 +1,23 @@
 import * as ls from "./ls.js";
 import * as util from "./utilities.js";
 
+const todoList = getTodos('items');
+
 export default class ToDos {
   // a class needs a constructor
   constructor(parentId) {
-    this.todoList = getTodos('items');
     this.addbtn = util.createLMNT("button", "button", "addbtn", "+", "");
     util.onTouch('#addbtn', this.addTodo);
     this.parentElement = document.getElementById(parentId);
   }
 
   listTodos() {
-    renderTodoList(this.parentElement, this.todoList);
+    // get list of todos from local storage and send them to the render function
+    console.log(todoList);
+    renderTodoList(this.parentElement, todoList);
+    console.log(todo);
     todolist.forEach((todo) => {
+      console.log(todo.lskey[0]);
       markbtn.onTouch("markbtn", this.markDone(todo.id));
       delbtn.onTouch("delbtn", this.removeTodo(todo.id));
     });
@@ -44,7 +49,6 @@ export default class ToDos {
   }
 
   filterTodos(list, filterstring) {
-    //   const numbers = [ 2, 7, 6, 5, 11, 23, 12 ];
     //   console.log(numbers.filter(x => x%2 === 0 ));
     console.log(`filterTodos list before filtering: ${list}`);
     console.log(list.filter((item) => item.lskey === filterstring));
@@ -86,28 +90,31 @@ function saveTodo(task, lskey) {
   console.log('todo: ' + todo);
   // add obj to todoList
   mytasks.push(todo);
-  mytasklist = JSON.stringify(mytasks);
+  let mytasklist = JSON.stringify(mytasks);
   console.log('mytasks: ' + mytasklist);
   // save JSON.stringified list to ls
-  //console.log(ls.writeToLS(lskey, mytasklist));
-  //ls.writeToLS(lskey, JSON.stringify(mytasklist));
+  console.log(ls.writeToLS(lskey, mytasklist));
+  ls.writeToLS(lskey, mytasklist);
 }
 
 function renderTodoList(parentId, todolist) {
+  console.log(todolist);
   todolist.forEach((todo) => {
-    // create new list item
-    console.log(todo.id, todo.task, todo.done);
-    const item = document.createElement("li");
-    const itemtext = util.createLMNT("p", "", todo.id, todo.task, "listitem");
-    itemtext.setAttribute("id", todo.id);
-    // createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-    const markbtn = util.createLMNT("button", "", "markbtn", "✕", "");
-    const delbtn = util.createLMNT("button", "", "delbtn", "X", "");
-    item.append(markbtn);
-    item.append(itemtext);
-    item.append(delbtn);
-    console.log(parentId);
-    parentId.append(item);
+    todo.forEach((field) => {
+      // create new list item
+      console.log(field.id, field.task, field.done);
+      const item = document.createElement("li");
+      const itemtext = util.createLMNT("p", "", field.id, field.task, "listitem");
+      itemtext.setAttribute("id", field.id);
+      // createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
+      const markbtn = util.createLMNT("button", "", "markbtn", "✕", "");
+      const delbtn = util.createLMNT("button", "", "delbtn", "X", "");
+      item.append(markbtn);
+      item.append(itemtext);
+      item.append(delbtn);
+      console.log(parentId);
+      parentId.append(item);
+    });
   });
 }
 
@@ -121,7 +128,8 @@ function getTodo(lskey) {
 }
 
 function getTodos(lskey) {
-  let mytasks = Array.from(JSON.parse(ls.readFromLS(lskey))) || [];
+  let mytasks = JSON.parse(ls.readFromLS(lskey)) || [];
+  //console.log('mytasks: ' + mytasks);
   return mytasks;
 }
 
