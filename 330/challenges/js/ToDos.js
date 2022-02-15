@@ -9,16 +9,13 @@ export default class ToDos {
     this.addbtn = util.createLMNT("button", "button", "addbtn", "+", "");
     util.onTouch('#addbtn', this.addTodo);
     this.parentElement = util.qs(`#${parentId}`);
-    //markbtn.onTouch("markbtn", this.markDone(lskey));
   }
 
   listTodos() {
     // get list of todos from local storage and send them to the render function
     todoList = getTodos('items');
-    console.log(todoList);
     let mytask = [];
     todoList.forEach((todo) => {
-      console.log(todo.id, todo.task, todo.done);
       mytask.push(todo);
     });
     renderTodoList(this.parentElement, todoList);
@@ -27,15 +24,13 @@ export default class ToDos {
 
   addTodo() {
     // grab task from input field
-    //console.log(util.qs("#addinput").innerText);
     const task = util.qs("#addinput").value;
-    //console.log(task);
     saveTodo(task, 'items');
     this.listTodos();
   }
 
   removeTodo(id) {
-    ls.removeFromLS(id);
+    deleteItem(id);
     this.listTodos();
   }
 
@@ -87,7 +82,7 @@ function saveTodo(task, lskey) {
   let mytasks = getTodos('items') || [];
   console.log('mytasks: ' + mytasks);
   // build todo object
-  const todo = { id: Date.now(), task: task, done: true };
+  const todo = { id: Date.now(), task: task, done: false };
   //console.log('todo: ' + todo);
   // add obj to todoList
   mytasks.push(todo);
@@ -101,8 +96,6 @@ function saveTodo(task, lskey) {
 function renderTodoList(parentId, renderlist) {
     renderlist.forEach((field) => {
       // create new list item
-      console.log(renderlist);
-      console.log(field.id, field.task, field.done);
       //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
       let item = util.createLMNT('li', '', field.id, '', 'listitem bordered item-row');
       let itemtext = util.createLMNT("p", "", '', field.task, "todo-text");
@@ -120,10 +113,26 @@ function renderTodoList(parentId, renderlist) {
       item.appendChild(markbox);
       item.appendChild(itemtext);
       item.appendChild(delbtn);
-      console.log(parentId);
       parentId.appendChild(item);
     });
 }
+
+function deleteItem(id) {
+  // get list of tasks from localStorage
+  let mytasks = getTodos("items");
+  console.log("mytasks: " + mytasks);
+  // get the index of the item with this id
+  const gotindex = mytasks.findIndex((todo) => todo.id === id);
+  // set the boolean to true for this list item
+  mytasks[gotindex] = { id: todo.id, task: todo.task, done: true };
+  // add obj to todoList
+  mytasks.push(todo);
+  // serialize the list for sending to localStorage
+  let mytasklist = JSON.stringify(mytasks);
+  // save JSON.stringified list to ls
+  ls.writeToLS(lskey, mytasklist);
+}
+
 
 /*
 In the Todos.js module, but not in the Todos class create the following function

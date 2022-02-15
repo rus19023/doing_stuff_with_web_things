@@ -64,3 +64,17 @@ function onTap(event) {
 
                       //                                \/
 let markbtn = util.createLMNT("button", "", "markbtn", "✕", "bordered todo-buttons");
+
+
+
+
+  // Mark selected item as completed
+  markDone = (lskey, id) => {
+    todoList = getTodos(lskey);
+    list.forEach(item => {
+        if (item.id === id) {
+        item.done = true;
+        }
+    });
+    writeToLS(key, list);
+  };

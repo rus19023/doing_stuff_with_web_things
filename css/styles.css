@@ -1,5 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+body {
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
+}
+body header #main-nav {
+  display: grid;
+  grid-area: main-nav;
+  align-items: stretch;
+  height: 4vh;
+  grid-template-areas: "list";
+}
+body header #main-nav ol {
+  display: grid;
+  grid-area: list;
+  grid-template-areas: "list-item";
+}
+body header #main-nav ol li {
+  display: grid;
+}
+body header #main-nav ol li a {
+  grid-area: list-item;
+}
+
+#gridcontainer {
+  grid-area: gridcontainer;
+  display: grid;
+  grid-template-areas: "left" "right";
+}
+#gridcontainer #left {
+  grid-area: left;
+  max-width: 92%;
+}
+#gridcontainer #right {
+  grid-area: right;
+  max-width: 92%;
+  grid-template-areas: "todocontainer";
+}
+#gridcontainer #right #todocontainer {
+  display: grid;
+  grid-template-areas: "header" "todos" "footer" "addbar";
+}
+
 @media screen and (min-width: 1200px) {
   #todocontainer {
     max-width: 50%;
@@ -169,30 +221,32 @@ ul li {
   margin: 0 auto;
 }
 
+.foot-row {
+  display: grid;
+  grid-template-areas: "tasks allbtn actbtn donebtn";
+}
+
 .item-row {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
 }
 
 #todocontainer {
-  display: grid;
   grid-area: todocontainer;
   text-align: center;
-  height: 100vh;
   max-width: 90%;
   margin: 0 auto;
-  grid-template-areas: "header" "list" "footer" "addbar";
+  grid-template-columns: 1fr;
 }
 #todocontainer #header {
   grid-area: header;
   color: #ff8f9e;
 }
 #todocontainer #todos {
-  grid-area: list;
+  display: grid;
+  grid-area: todos;
   padding: 0;
   margin: 0 auto;
-  height: 6vh;
-  display: grid;
   width: 100%;
   grid-template-areas: "listitem";
 }
@@ -200,6 +254,7 @@ ul li {
   display: grid;
   grid-area: listitem;
   list-style-type: none;
+  max-width: 100%;
   border: 2px solid #8ffff0;
   margin: 0;
   background: hotpink;
@@ -259,6 +314,7 @@ ul li {
   text-align: center;
 }
 #todocontainer #addbar {
+  grid-area: addbar;
   height: 8vh;
   /*position: absolute;
   bottom: 0vh;*/
@@ -266,7 +322,6 @@ ul li {
   padding: 0;
   margin: 4vw 0 0 0;
   display: grid;
-  grid-area: addbar;
   grid-template-columns: 8fr 1fr;
   grid-template-areas: "addinput addbtn";
 }
@@ -404,22 +459,6 @@ html {
   font-size: 12px;
 }
 
-body {
-  grid-template-areas: "header" "main" "footer";
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
 .centered {
   text-align: center;
   width: 100%;
@@ -445,25 +484,6 @@ h2#tab-bar a {
   text-decoration: none;
   color: #ff8fd6;
   padding: 1vw 2vw;
-}
-
-body header body #main-nav {
-  display: grid;
-  grid-area: main-nav;
-  align-items: stretch;
-  height: 4vh;
-  grid-template-areas: "list";
-}
-body header body #main-nav ol {
-  display: grid;
-  grid-area: list;
-  grid-template-areas: "list-item";
-}
-body header body #main-nav ol li {
-  display: grid;
-}
-body header body #main-nav ol li a {
-  grid-area: list-item;
 }
 
 h1,
@@ -684,22 +704,6 @@ pre {
 
 .italic {
   font-style: italic;
-}
-
-#left {
-  grid-area: left;
-  max-width: 92%;
-}
-
-#right {
-  grid-area: right;
-  max-width: 92%;
-}
-
-#gridcontainer {
-  grid-area: gridcontainer;
-  display: grid;
-  grid-template-areas: "left" "right";
 }
 
 h4.indent, p.indenth4 {

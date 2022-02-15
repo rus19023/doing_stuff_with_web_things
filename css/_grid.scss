@@ -1,0 +1,59 @@
+main {  grid-area: main; }
+footer {  grid-area: footer; }
+
+
+body {
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+    & header {
+        grid-area: header;
+        & #main-nav {
+        display: grid;
+        grid-area: main-nav;
+        align-items: stretch;
+        height: 4vh;
+        grid-template-areas:
+        "list";
+        & ol {
+            display: grid;
+            grid-area: list;
+            grid-template-areas:
+            "list-item";
+            & li {
+            display: grid;
+            & a {
+                grid-area: list-item;
+          }
+        }
+      }
+    }
+  }
+}
+
+  #gridcontainer {
+    grid-area: gridcontainer;
+    display: grid;
+    grid-template-areas:
+      "left"
+      "right";
+    & #left {
+        grid-area: left;
+        max-width: 92%;
+    }
+    & #right {
+        grid-area: right;
+        max-width: 92%;
+        grid-template-areas:
+        "todocontainer";
+        & #todocontainer {
+            display: grid;
+            grid-template-areas:
+            "header"
+            "todos"
+            "footer"
+            "addbar";
+        }
+    }
+  }

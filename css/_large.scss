@@ -21,9 +21,10 @@
     #gridcontainer {
       grid-area: gridcontainer;
       display: grid;
-      grid-template-areas: 
+      grid-template-areas:
       "left right";
     }
+
     #todocontainer {
         max-width: 75%;
     }

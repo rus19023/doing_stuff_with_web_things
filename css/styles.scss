@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 @import "variables";
+@import "grid";
 @import "large";
 @import "colors";
 @import "todo";
@@ -12,18 +13,6 @@ html {
   background: $background;
   font-size: 12px;
 }
-
-body {
-  grid-template-areas:
-  "header"
-  "main"
-  "footer" ;
-}
-
-header {  grid-area: header;  }
-main {  grid-area: main; }
-footer {  grid-area: footer; }
-
 .centered {
   text-align: center;
   width: 100%;
@@ -48,30 +37,6 @@ h2#tab-bar {
     text-decoration: none;
     color: $nav;
     padding: 1vw 2vw;
-  }
-}
-
-body {
-  & header 
-  & #main-nav {
-    display: grid;
-    grid-area: main-nav;
-    align-items: stretch;
-    height: 4vh;
-    grid-template-areas:
-      "list";
-    & ol {
-      display: grid;
-      grid-area: list;
-      grid-template-areas:
-        "list-item";
-      & li {
-        display: grid;
-        & a {
-          grid-area: list-item;
-        }
-      }
-    }
   }
 }
 
@@ -293,24 +258,6 @@ pre {
 
 .italic {
   font-style: italic;
-}
-
-#left {
-  grid-area: left;
-  max-width: 92%;
-}
-
-#right {
-  grid-area: right;
-  max-width: 92%;
-}
-
-#gridcontainer {
-  grid-area: gridcontainer;
-  display: grid;
-  grid-template-areas:
-    "left"
-    "right";
 }
 
 h4.indent, p.indenth4 {

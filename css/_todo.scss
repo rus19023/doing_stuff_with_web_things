@@ -55,33 +55,31 @@ ul li {
     margin: 0 auto;
 }
 
+.foot-row {
+    display: grid;
+    grid-template-areas:
+    "tasks allbtn actbtn donebtn";
+}
+
 .item-row {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
 }
-
 #todocontainer {
-    display: grid;
     grid-area: todocontainer;
     text-align: center;
-    height: 100vh;
     max-width: 90%;
     margin: 0 auto;
-    grid-template-areas:
-        "header"
-        "list"
-        "footer"
-        "addbar";
+    grid-template-columns: 1fr;
     & #header {
         grid-area: header;
         color: $p-30;
     }
     & #todos {
-        grid-area: list;
+        display: grid;
+        grid-area: todos;
         padding: 0;
         margin: 0 auto;
-        height: 6vh;
-        display: grid;
         width: 100%;
         grid-template-areas:
         "listitem";
@@ -89,6 +87,7 @@ ul li {
             display: grid;
             grid-area: listitem;
             list-style-type: none;
+            max-width: 100%;
             border: $todoborder;
             margin: 0;
             background: hotpink;
@@ -150,6 +149,7 @@ ul li {
         }
     }
     & #addbar {
+        grid-area: addbar;
         height: 8vh;
         /*position: absolute;
         bottom: 0vh;*/
@@ -157,7 +157,6 @@ ul li {
         padding: 0;
         margin: 4vw 0 0 0;
         display: grid;
-        grid-area: addbar;
         grid-template-columns: 8fr 1fr;
         grid-template-areas:
             "addinput addbtn";
