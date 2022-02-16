@@ -1,13 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
-main {
-  grid-area: main;
-}
-
-footer {
-  grid-area: footer;
-}
-
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -17,8 +10,6 @@ body header {
 body header #main-nav {
   display: grid;
   grid-area: main-nav;
-  align-items: stretch;
-  height: 4vh;
   grid-template-areas: "list";
 }
 body header #main-nav ol {
@@ -40,11 +31,9 @@ body header #main-nav ol li a {
 }
 #gridcontainer #left {
   grid-area: left;
-  max-width: 92%;
 }
 #gridcontainer #right {
   grid-area: right;
-  max-width: 92%;
   grid-template-areas: "todocontainer";
 }
 #gridcontainer #right #todocontainer {
@@ -67,18 +56,17 @@ body header #main-nav ol li a {
   }
 
   #gridcontainer {
-    grid-area: gridcontainer;
-    display: grid;
+    gap: 2vw;
     grid-template-areas: "left right";
   }
 
   #todocontainer {
-    max-width: 75%;
+    max-width: 60%;
   }
 }
 @media screen and (min-width: 700px) {
   #todocontainer {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 @media screen and (min-width: 451px) {
@@ -166,6 +154,12 @@ body header #main-nav ol li a {
   margin: 0;
 }
 
+#error {
+  font-size: max(4vh);
+  font-weight: bold;
+  color: #ff8f9e;
+}
+
 .todo-buttons {
   height: 6vh;
   margin: 1vw;
@@ -183,6 +177,7 @@ body header #main-nav ol li a {
 .bordered {
   border: 2px solid #8ffff0;
   border-radius: 10px;
+  padding: 1vh;
 }
 
 .scratch {
@@ -197,21 +192,23 @@ ul li {
   text-align: left;
   color: #8ffff0;
   font-family: "Nunito", sans-serif;
-  font-size: max(2vh);
-}
-
-.del-text {
-  color: #ff8f9e;
-  font-family: "Nunito", sans-serif;
-  background: black;
-  border: none;
-  height: 6vh;
-  padding: 2vw;
   font-size: max(3vh);
+  margin: 1vw;
+  padding: 1vw;
+  height: 4vw;
 }
 
 .markbtn {
-  font-size: max(3vh);
+  border: 2px solid #8ffff0;
+  border-radius: 10px;
+  margin: 1vh;
+  padding: 0;
+  width: 6vh;
+  height: 6vh;
+}
+
+.markbtnX::after {
+  content: "✕";
 }
 
 .row {
@@ -241,65 +238,58 @@ ul li {
 #todocontainer #header {
   grid-area: header;
   color: #ff8f9e;
+  margin-bottom: 5vw;
 }
 #todocontainer #todos {
-  display: grid;
   grid-area: todos;
   padding: 0;
   margin: 0 auto;
   width: 100%;
   grid-template-areas: "listitem";
 }
-#todocontainer #todos li .listitem {
-  display: grid;
+#todocontainer #todos li.listitem {
   grid-area: listitem;
   list-style-type: none;
   max-width: 100%;
   border: 2px solid #8ffff0;
   margin: 0;
-  background: hotpink;
-  height: 6vh;
-  padding: 1vw;
+  height: 8vh;
   border-radius: 10px;
-  grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas: "markbtn itemtext delbtn";
 }
-#todocontainer #todos li .listitem #markbtn {
+#todocontainer #todos li.listitem .markbtn {
   grid-area: markbtn;
-  border: 2px solid #ffb88f;
-  border-radius: 10px;
-  width: 8vh;
-  height: 8vh;
-  padding: 2vw;
+  width: 4vw;
+  height: 4vw;
+  padding: 1vw;
   margin: auto;
-  padding: 2vw;
 }
-#todocontainer #todos li .listitem #itemtext {
+#todocontainer #todos li.listitem #itemtext {
   grid-area: itemtext;
-  padding: 2vw;
-  height: 6vw;
 }
-#todocontainer #todos li .listitem #delbtn {
+#todocontainer #todos li.listitem .delbtn {
   grid-area: delbtn;
-  background: transparent;
-  color: #ffb88f;
-  padding: 0;
-  border: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
   width: 100%;
   height: 8vw;
-  font-size: max(4vh);
+  color: #ff8f9e;
+  background: black;
+  padding: 1vh;
+  font-size: max(5vh);
 }
 #todocontainer #footer {
   height: 8vh;
   grid-area: footer;
   text-align: center;
-  margin-top: 0;
+  margin: 0;
 }
 #todocontainer #footer #tasks {
   grid-area: tasks;
   text-align: center;
   margin: 0 auto;
-  width: 60%;
+  padding: 1vw;
+  width: 95%;
 }
 #todocontainer #footer #allbtn {
   grid-area: allbtn;
@@ -320,7 +310,7 @@ ul li {
   bottom: 0vh;*/
   width: 100%;
   padding: 0;
-  margin: 4vw 0 0 0;
+  margin: 10vh 0 2vw 0;
   display: grid;
   grid-template-columns: 8fr 1fr;
   grid-template-areas: "addinput addbtn";
@@ -331,7 +321,7 @@ ul li {
   color: #ff8fd6;
   height: 8vh;
   width: 90%;
-  margin: 0 1vw 0 0;
+  margin: 0;
   padding: 0 0 0 1vw;
 }
 #todocontainer #addbar #addbtn {
@@ -340,6 +330,7 @@ ul li {
   color: #8ffff0;
   width: 8vh;
   height: 8vh;
+  padding: 0;
   margin: 0;
   font-size: max(6vh);
 }

@@ -1,7 +1,3 @@
-main {  grid-area: main; }
-footer {  grid-area: footer; }
-
-
 body {
     grid-template-areas:
     "header"
@@ -12,8 +8,6 @@ body {
         & #main-nav {
         display: grid;
         grid-area: main-nav;
-        align-items: stretch;
-        height: 4vh;
         grid-template-areas:
         "list";
         & ol {
@@ -40,11 +34,9 @@ body {
       "right";
     & #left {
         grid-area: left;
-        max-width: 92%;
     }
     & #right {
         grid-area: right;
-        max-width: 92%;
         grid-template-areas:
         "todocontainer";
         & #todocontainer {

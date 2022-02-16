@@ -7,6 +7,7 @@
       this.donebtn.onTouch('donebtn', this.listDone());
 
 
+    //   console.log(numbers.filter(x => x%2 === 0 ));
 
 const footerText = (footer) => `Hello ${footer}`;
 const footertext = footerT("Ada");

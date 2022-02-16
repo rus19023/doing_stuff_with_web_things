@@ -1,23 +1,25 @@
 import * as ls from "./ls.js";
 import * as util from "./utilities.js";
 
-var todoList = null;
+let todoList = [];
 
 export default class ToDos {
   // a class needs a constructor
   constructor(parentId) {
-    this.addbtn = util.createLMNT("button", "button", "addbtn", "+", "");
     util.onTouch('#addbtn', this.addTodo);
+    util.onTouch('#allbtn', this.listTodos);
+    util.onTouch('#actbtn', this.listActive);
+    util.onTouch('#donebtn', this.listDone);
     this.parentElement = util.qs(`#${parentId}`);
   }
 
   listTodos() {
-    // get list of todos from local storage and send them to the render function
+    // // get list of todos from local storage and send them to the render function
+    // let mytask = [];
+    // todoList.forEach((todo) => {
+    //   mytask.push(todo);
+    // });
     todoList = getTodos('items');
-    let mytask = [];
-    todoList.forEach((todo) => {
-      mytask.push(todo);
-    });
     renderTodoList(this.parentElement, todoList);
     this.itemsLeft();
   }
@@ -25,8 +27,12 @@ export default class ToDos {
   addTodo() {
     // grab task from input field
     const task = util.qs("#addinput").value;
-    saveTodo(task, 'items');
-    this.listTodos();
+    if (task.length > 0) {
+      saveTodo(task, 'items');
+      this.listTodos();
+    } else {
+      util.qs("#error").innerText = 'Item cannot be blank, please enter your task.'
+    }
   }
 
   removeTodo(id) {
@@ -34,40 +40,43 @@ export default class ToDos {
     this.listTodos();
   }
 
-    // Mark selected item as completed
-    markItemDone = (lskey, id) => {
-      let list = getTodos(lskey);
-      list.forEach(item => {
-          if (item.id === id) {
-          item.done = true;
-          }
-      });
-      writeToLS(key, list);
-    };
+  // Mark selected item as completed
+  markItemDone = (lskey, id) => {
+    let list = getTodos(lskey);
+    list.forEach(item => {
+      if (item.id === id) {
+      item.done = true;
+      }
+    });
+    ls.writeToLS(lskey, JSON.stringify(list));
+  };
 
-  filterTodos(list, filterstring) {
-    //   console.log(numbers.filter(x => x%2 === 0 ));
+  filterTodos(filterstring) {
+    //todoList = getTodos('items');
     console.log(`filterTodos list before filtering: ${list}`);
-    console.log(list.filter((item) => item.lskey === filterstring));
-    return list.filter((item) => item.lskey === filterstring);
+    console.log(list.filter((item) => item.done === filterstring));
+    return todoList.filter(item => item.done === filterstring);
   }
 
-  listActive(list) {
-    renderTodoList(this.parentElement, filterTodos(list, false));
+  listActive() {
+    let filtered = todoList.filter(item => item.done === false);
+    renderTodoList(this.parentElement, filtered);
   }
 
-  listDone(list) {
-    renderTodoList(this.parentElement, filterTodos(list, true));
+  listDone() {
+    renderTodoList(this.parentElement, this.filterTodos(true));
   }
 
   // function to show how many items are left undone in the todo list
   itemsLeft() {
-    let items = getTodos('items').length;
-    if (items === 1) {
-      util.qs("#tasks").innerText = items + " task left";
-    } else if (items < 2 && items > 0) {
-      util.qs("#tasks").innerText = items + " tasks left";
+    let itemcount = todoList.length;
+    let t;
+    if (itemcount === 1) {
+      t = ' task ';
+    } else if (itemcount > 1) {
+      t = ' tasks '
     }
+    util.qs("#tasks").innerHTML = `${itemcount}${t}left`;
   }
 }
 
@@ -78,37 +87,41 @@ In the Todo.js module, but not in the Todos class, create the following function
 A todo should look like this: { id : timestamp, content: string, completed: bool }
 */
 
-function saveTodo(task, lskey) {
-  let mytasks = getTodos('items') || [];
-  console.log('mytasks: ' + mytasks);
+function saveTodo(task) {
+  console.log('todoList: ' + todoList);
   // build todo object
   const todo = { id: Date.now(), task: task, done: false };
-  //console.log('todo: ' + todo);
   // add obj to todoList
-  mytasks.push(todo);
-  let mytasklist = JSON.stringify(mytasks);
-  //console.log('mytasks: ' + mytasklist);
+  todoList.push(todo);
+  console.log('todoList: ' + todoList);
   // save JSON.stringified list to ls
-  //console.log(ls.writeToLS(lskey, mytasklist));
-  ls.writeToLS(lskey, mytasklist);
+  //console.log(ls.writeToLS(lskey, mysavelist));
+  ls.writeToLS('items', JSON.stringify(todoList));
+  console.log('todo added!');
 }
 
 function renderTodoList(parentId, renderlist) {
+    // start with clean slate for todo items display
+    parentId.innerHTML = '';
+    // build new display
     renderlist.forEach((field) => {
       // create new list item
       //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
       let item = util.createLMNT('li', '', field.id, '', 'listitem bordered item-row');
-      let itemtext = util.createLMNT("p", "", '', field.task, "todo-text");
-      let markbox = util.createLMNT('div', '', '', '', '');
-      let markbtn = util.createLMNT("input", "checkbox", `markbtn${field.id}`, "", "bordered todo-buttons markbtn");
-        if (field.done === true) {
-          itemtext.classList.add("scratch");
-          markbtn.innerText = "✕";
-        }
-      let delbtn = util.createLMNT("button", "", "delbtn", "X", " del-text");
-      //delbtn.onTouch("delbtn", this.removeTodo(todo.id));
-      //markbtn.onTouch("markbtn", this.markDone(todo.id));
-      //let footer = util.createLMNT("footer", "", "footer", "", "footer");
+      let itemtext = util.createLMNT("p", "", "", field.task, "todo-text");
+      let markbox = util.createLMNT('label', `label${field.id}`, '', '', 'bordered markbtn');
+      markbox.setAttribute('name', `label${field.id}`);
+      let markbtn = util.createLMNT("input", "checkbox", `mark${field.id}`, "", "markbtn");
+      let delbtn = util.createLMNT("button", "", `del${field.id}`, "X", "delbtn");
+      console.log(`#del${field.id}`);
+      console.log(field.id);
+      //util.onTouch(`#del${field.id}`, deleteItem(field.id));
+      //util.onTouch(`#mark${field.id}`, markDone(field.id));
+
+      if (field.done === true) {
+        itemtext.classList.add("scratch");
+        markbtn.classList.add('markbtnX');
+      }
       markbox.appendChild(markbtn);
       item.appendChild(markbox);
       item.appendChild(itemtext);
@@ -117,20 +130,26 @@ function renderTodoList(parentId, renderlist) {
     });
 }
 
+function markDone(id) {
+  todoList.forEach(item => {
+    if (item.id === id) {
+    item.done = true;
+    }
+  });
+  ls.writeToLS('items', JSON.stringify(todoList));
+  //markItemDone('items', id);
+}
+
 function deleteItem(id) {
-  // get list of tasks from localStorage
-  let mytasks = getTodos("items");
-  console.log("mytasks: " + mytasks);
+  //console.log("todoList: " + todoList);
   // get the index of the item with this id
-  const gotindex = mytasks.findIndex((todo) => todo.id === id);
+  const gotindex = todoList.findIndex((todo) => todo.id === id);
   // set the boolean to true for this list item
-  mytasks[gotindex] = { id: todo.id, task: todo.task, done: true };
+  //todoList[gotindex] = { id: todo.id, task: todo.task, done: true };
   // add obj to todoList
-  mytasks.push(todo);
-  // serialize the list for sending to localStorage
-  let mytasklist = JSON.stringify(mytasks);
+  todoList.splice( gotindex, 1 );
   // save JSON.stringified list to ls
-  ls.writeToLS(lskey, mytasklist);
+  ls.writeToLS('items', JSON.stringify(todoList));
 }
 
 
@@ -139,12 +158,9 @@ In the Todos.js module, but not in the Todos class create the following function
 / check the contents of todoList, a local variable containing a list of ToDos. If it is null then pull the list of todos from localstorage, update the local variable, and return it
 @param {string} key The key under which the value is stored under in LS @return {array} The value as an array of objects */
 
-function getTodo(id) {
-  //return ls.readFromLS(id);
-}
 
 function getTodos(lskey) {
   return JSON.parse(ls.readFromLS(lskey)) || [];
 }
 
-export { saveTodo, renderTodoList, getTodos, getTodo };
+export { saveTodo, renderTodoList, getTodos, markDone, deleteItem };

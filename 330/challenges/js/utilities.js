@@ -7,22 +7,19 @@ const qs = selector => {
     return document.querySelector(selector);
 }
 
-const sa = (el, selector, name) => {
-    return el.setAttribute(selector, name);
-}
-
 /*
 add a touchend event listener to an element for mobile with a click event fallback for desktops @param {string} elementSelector The selector for the element to attach the listener to
 * @param {function} callback The callback function to run
 */
 
-function onTouch(elementSelector, callback) {
-    const element = qs(elementSelector);
-    //console.log(`element.addEventListener, ${element.addeventlistener}`);
-    if (element.addEventListener) {
-        element.addEventListener('touchend', callback, false);
-    } else if (element.attachEvent) {
-        element.attachEvent('click', callback);
+function onTouch(elSelector, callback) {
+    const el = qs(elSelector);
+    console.log(elSelector);
+    console.log(el);
+    if (el.addEventListener) {
+        el.addEventListener('touchend', callback, false);
+    } else if (el.attachEvent) {
+        el.attachEvent('click', callback);
     }
 }
 

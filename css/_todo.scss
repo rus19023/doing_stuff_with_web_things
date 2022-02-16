@@ -1,5 +1,11 @@
 $todoborder: 2px solid $p150;
 
+#error {
+    font-size: $font4;
+    font-weight: bold;
+    color: $p-30;
+}
+
 .todo-buttons {
     height: 6vh;
     margin: 1vw;
@@ -17,6 +23,7 @@ $todoborder: 2px solid $p150;
 .bordered {
     border: 2px solid $p150;
     border-radius: 10px;
+    padding: 1vh;
 }
 
 .scratch {
@@ -31,21 +38,23 @@ ul li {
     text-align: left;
     color: $p150;
     font-family: $fontprimary;
-    font-size: $font2;
-}
-
-.del-text {
-    color: $p-30;
-    font-family: $fontprimary;
-    background: black;
-    border: none;
-    height: 6vh;
-    padding: 2vw;
     font-size: $font3;
+    margin: 1vw;
+    padding: 1vw;
+    height: 4vw;
 }
 
 .markbtn {
-    font-size: $font3;
+    border: $todoborder;
+    border-radius: 10px;
+    margin: 1vh;
+    padding: 0;
+    width: 6vh;
+    height: 6vh;
+}
+
+.markbtnX::after {
+    content: "✕";
 }
 
 .row {
@@ -74,53 +83,45 @@ ul li {
     & #header {
         grid-area: header;
         color: $p-30;
+        margin-bottom: 5vw;
     }
     & #todos {
-        display: grid;
         grid-area: todos;
         padding: 0;
         margin: 0 auto;
         width: 100%;
         grid-template-areas:
         "listitem";
-        & li .listitem {
-            display: grid;
+        & li.listitem {
             grid-area: listitem;
             list-style-type: none;
             max-width: 100%;
             border: $todoborder;
             margin: 0;
-            background: hotpink;
-            height: 6vh;
-            padding: 1vw;
+            height: 8vh;
             border-radius: 10px;
-            grid-template-columns: 1fr 5fr 1fr;
             grid-template-areas:
             "markbtn itemtext delbtn";
-            & #markbtn {
+            & .markbtn {
                 grid-area: markbtn;
-                border: $border;
-                border-radius: 10px;
-                width: 8vh;
-                height: 8vh;
-                padding: 2vw;
+                width: 4vw;
+                height: 4vw;
+                padding: 1vw;
                 margin: auto;
-                padding: 2vw;
             }
             & #itemtext {
                 grid-area: itemtext;
-                padding: 2vw;
-                height: 6vw;
             }
-            & #delbtn {
+            & .delbtn {
                 grid-area: delbtn;
-                background: transparent;
-                color: $primary;
-                padding: 0;
-                border: none;
+                border: 2px solid transparent;
+                border-radius: 10px;
                 width: 100%;
                 height: 8vw;
-                font-size: $font4;
+                color: $p-30;
+                background: black;
+                padding: 1vh;
+                font-size: $font5;
             }
         }
     }
@@ -128,12 +129,13 @@ ul li {
         height: 8vh;
         grid-area: footer;
         text-align: center;
-        margin-top: 0;
+        margin: 0;
         & #tasks {
             grid-area: tasks;
             text-align: center;
             margin: 0 auto;
-            width: 60%;
+            padding: 1vw;
+            width: 95%;
         }
         & #allbtn {
             grid-area: allbtn;
@@ -155,7 +157,7 @@ ul li {
         bottom: 0vh;*/
         width: 100%;
         padding: 0;
-        margin: 4vw 0 0 0;
+        margin: 10vh 0 2vw 0;
         display: grid;
         grid-template-columns: 8fr 1fr;
         grid-template-areas:
@@ -166,7 +168,7 @@ ul li {
             color: $p-60;
             height: 8vh;
             width: 90%;
-            margin: 0 1vw 0 0;
+            margin: 0;
             padding: 0 0 0 1vw;
         }
         & #addbtn {
@@ -175,6 +177,7 @@ ul li {
             color: $p150;
             width: 8vh;
             height: 8vh;
+            padding: 0;
             margin: 0;
             font-size: $font6;
         }
