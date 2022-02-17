@@ -4,6 +4,7 @@
 
 // @return {element} The matching element or null if not found /
 const qs = selector => {
+    //console.log('(from qs) document.querySelector(selector): ' + document.querySelector(selector));
     return document.querySelector(selector);
 }
 
@@ -13,13 +14,15 @@ add a touchend event listener to an element for mobile with a click event fallba
 */
 
 function onTouch(elSelector, callback) {
+    let event = 'touchend';
+    //let event = 'click';
     const el = qs(elSelector);
-    console.log(elSelector);
-    console.log(el);
+    //console.log(elSelector);
+    //console.log(el);
     if (el.addEventListener) {
-        el.addEventListener('touchend', callback, false);
+        el.addEventListener(event, callback, false);
     } else if (el.attachEvent) {
-        el.attachEvent('click', callback);
+        el.attachEvent(event, callback);
     }
 }
 
