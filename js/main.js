@@ -1,14 +1,22 @@
+function cleanInput(input) {
+  console.log(input);
+  // todo: strip out and/or replace and/or escape any offensive parts of the input
+  // trim and escape the input
+  let cleaned = input.trim().replace(/\/[^\/]*$/, "/");
+  console.log(cleaned);
+}
+
 function writeById(output, input) {
-  document.getElementById(output).innerHTML = input;
+  qs(`#${output}`).innerHTML = input;
 }
 
 function writeByClass(output, input) {
-  document.querySelector(output).innerHTML = input;
+  qs(`.${output}`).innerHTML = input;
 }
 
 const createLink = (url, text) => {
   return `<a href="${url}">${text}</a>`;
-}
+};
 
 function getFilename() {
   var path = window.location.pathname;
@@ -25,18 +33,23 @@ function urlExists(url) {
   }
 }
 
+// @return {element} The matching element or null if not found /
+const qs = (selector) => {
+  return document.querySelector(selector);
+};
+
 function isElement(element) {
   // check if id exists
-  const myId = document.getElementById(element);
-  if ((typeof myId != "undefined") && (myId != null)) {
+  const myId = qs(`#${element}`);
+  if (typeof myId != "undefined" && myId != null) {
     return myId.nodeType === 1;
   }
 }
 
 function isClass(element) {
   // check if class exists
-  const myClass = document.getElementsByClassName(element);
-  if ((typeof myClass != "undefined") && (myClass != null)) {
+  const myClass = qs(`.${element}`);
+  if (typeof myClass != "undefined" && myClass != null) {
     return myClass.nodeType === 1;
   }
 }

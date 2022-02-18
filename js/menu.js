@@ -443,7 +443,7 @@ function setTitle(course) {
 }
 
 function getWeekPageTitle(id, page) {
-  let weekNo = getWeeknum(getFilename());
+  let weekNo = getWeeknum(getFilename()) || '5';
   // set page title for weekly pages
     let pageTitle = `${page} | Week ${weekNo}`;
   if (isElement(id)) {

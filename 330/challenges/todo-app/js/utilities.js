@@ -24,7 +24,18 @@ function onTouch(elSelector, callback) {
     } else if (el.attachEvent) {
         el.attachEvent(event, callback);
     }
+    // prevent page from reloading when form is submitted
+    //event.preventDefault(); 
 }
+
+/*
+
+document.getElementById("link").addEventListener('click', function(e) {
+   e.preventDefault(); // Cancel the native event
+   e.stopPropagation();// Don't bubble/capture the event any further
+});
+
+*/
 
 function createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass) {
     let lmnt = document.createElement(LMNT);
