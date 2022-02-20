@@ -51,7 +51,7 @@ body header #main-nav ol li a {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  p {
+  .normal-text, p.normal-text {
     font-size: max(3vh);
   }
 
@@ -195,7 +195,7 @@ ul li {
   font-size: max(3vh);
   margin: 1vw;
   padding: 1vw;
-  height: 4vw;
+  height: 4vh;
 }
 
 .markbtn {
@@ -205,10 +205,6 @@ ul li {
   padding: 0;
   width: 6vh;
   height: 6vh;
-}
-
-.markbtnX::after {
-  content: "✕";
 }
 
 .row {
@@ -259,8 +255,8 @@ ul li {
 }
 #todocontainer #todos li.listitem .markbtn {
   grid-area: markbtn;
-  width: 4vw;
-  height: 4vw;
+  width: 4vh;
+  height: 4vh;
   padding: 1vw;
   margin: auto;
 }
@@ -284,11 +280,12 @@ ul li {
   text-align: center;
   margin: 0;
 }
-#todocontainer #footer #tasks {
+#todocontainer #footer p#tasks {
   grid-area: tasks;
   text-align: center;
   margin: 0 auto;
-  padding: 1vw;
+  padding: 1vh 0 0 0;
+  max-height: 4vh;
   width: 95%;
 }
 #todocontainer #footer #allbtn {
@@ -392,58 +389,12 @@ ul li {
   font-size: 24px;
 }
 
-/* markbtn */
-label {
-  cursor: pointer;
-  color: #c0392b;
-  margin: 5px 0;
-  padding-left: 40px;
-  position: relative;
-  font-size: 30px;
-  transition: 0.2s linear;
+input[type=checkbox].markbtnX {
+  content: "✕";
+  color: #ff8f9e;
+  font-size: max(6vh);
 }
 
-label:before, label:after {
-  content: "";
-  left: 11px;
-  width: 3px;
-  bottom: 0;
-  background: #fcff00;
-  position: absolute;
-  top: 0;
-}
-
-label:before {
-  transform: rotate(45deg);
-  transform-origin: 0 14px;
-  height: 0;
-  transition: 0.2s linear;
-}
-
-label:after {
-  transform: rotate(-45deg);
-  transform-origin: 0 20px;
-  height: 0;
-  transition: 0.2s linear 0.2s;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-
-input[type=checkbox]:checked + label:after, input[type=checkbox]:checked + label:before {
-  height: 100%;
-}
-
-input[type=checkbox]:checked + label {
-  color: #fff;
-}
-
-@media screen and (max-width: 480px) {
-  div.wrapper[style] {
-    width: 60% !important;
-  }
-}
 html {
   color: #d6ff8f;
   background: #7e5201;
@@ -512,9 +463,13 @@ section {
   margin: 2vw;
 }
 
+.morespc {
+  line-height: 1.5;
+}
+
 .centerimg {
   display: block;
-  width: 95%;
+  width: 65%;
   margin: auto;
 }
 
@@ -524,8 +479,7 @@ h1 {
 }
 
 h2 {
-  font-size: max(4vh);
-  width: 95%;
+  font-size: max(3vh);
 }
 
 h3 {
@@ -614,7 +568,8 @@ a:hover {
 }
 
 .padit {
-  padding: 2vw;
+  padding: 4vw;
+  width: 100%;
 }
 
 #siteTitle2 {

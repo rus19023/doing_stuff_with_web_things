@@ -41,7 +41,7 @@ ul li {
     font-size: $font3;
     margin: 1vw;
     padding: 1vw;
-    height: 4vw;
+    height: 4vh;
 }
 
 .markbtn {
@@ -51,10 +51,6 @@ ul li {
     padding: 0;
     width: 6vh;
     height: 6vh;
-}
-
-.markbtnX::after {
-    content: "✕";
 }
 
 .row {
@@ -104,8 +100,8 @@ ul li {
             "markbtn itemtext delbtn";
             & .markbtn {
                 grid-area: markbtn;
-                width: 4vw;
-                height: 4vw;
+                width: 4vh;
+                height: 4vh;
                 padding: 1vw;
                 margin: auto;
             }
@@ -130,11 +126,12 @@ ul li {
         grid-area: footer;
         text-align: center;
         margin: 0;
-        & #tasks {
+        & p#tasks {
             grid-area: tasks;
             text-align: center;
             margin: 0 auto;
-            padding: 1vw;
+            padding: 1vh 0 0 0;
+            max-height: 4vh;
             width: 95%;
         }
         & #allbtn {

@@ -14,7 +14,7 @@
         grid-template-columns: repeat(6, 1fr);
     }
 
-    p   {
+    .normal-text, p.normal-text  {
         font-size: $font3;
     }
 

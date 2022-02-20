@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../css/styles.css" />
+    <title id="cit327weekpagetitle">page title</title>
+  </head>
+
+  <body>
+    <header id="autoheader">auto header</header>
+    <main>
+      <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
+      <h2 id="paperTitle" class="padit">paper title</h2>
+      <div>
+        <p class="normal-text">
+          The scaling limit of a data warehouse is when it can no longer function correctly with the current resources. Scaling can be done up (vertically) by adding more resources to the current machine, or out (horizontally) by adding more nodes or clusters of nodes to the current system. Scaling up is needed when the computing power of the current machine has reached its scaling limit.
+        </p>
+
+        <h3> Vertical Scaling</h3>
+        <p class="normal-text">
+          Implementation of scaling up is easy for software since the logic doesn't need to be broken up and put back together. There is a lower cost for total hardware, and lower energy use. However, vertical scaling is very limited when it comes to big data: there is no partitioning of data, there is only a single node. There is only so much RAM, CPU power and storage space that can go into one machine. Once that is used up, a multi-node architecture model is needed. 
+        </p>
+
+        <p class="normal-text">
+          When scaling up, besides the physical limits, the downside includes: downtime to install new hardware and probably new software to take advantage of the new hardwares' benefits,  
+          
+          When a company chooses a platform that uses vertical scaling, what are the trade-offs?
+        </p>
+
+        <h3> Horizontal scaling</h3>
+        <p class="normal-text">
+           Performance, redundancy and consistency are the main benefits of scaling out.  Using cloud-based distributed systems can be less expensive, both in time and money, as most of the configuration and security is part of the deal. Downtime due to upgrades is almost non-existent due to the redundancy factor inherent in distributed data. Processing is more consistent because of the computing resources being shared between nodes.
+        </p>
+        <p class="normal-text">
+          While the software licencing, technician salaries and hardware costs may be prohibitive for small to medium businesses, for the megacorporation, federal government agencies or other huge enterprises, the cost is bearable, even unavoidable, there are other limitations to scaling out also:
+          <ul>
+            <li class="padit morespc">Utility costs will be higher if servers are onsite, due to heating and cooling necessary for the multitude of servers.</li>
+            <li class="padit morespc">There are more requirements for space, networking equipment and </li>
+            <li class="padit morespc">Planning, implementing, configuring and maintaining all this equipment and software is extremely complicated.</li>
+            <li class="padit morespc">The configuration, security, manpower time and dollar costs, space requirements and heating/cooling issues can be mitigated by using cloud services, but the financial cost may be even more than onsite.</li>
+            <li class="padit morespc">Although it rarely happens, cloud systems can go down, which causes frustrating downtime with no other option than to wait until it comes back online.</li>
+          </ul>
+
+        </p>
+        <h3>Hadoop: A Distributed System</h3>
+        <p class="normal-text">
+          Hadoop has four main components:
+        </p>
+          <ul>
+            <li class="padit">HDFS, Hadoop Distributed File System, which handles file management </li>
+            <li class="padit">YARN, "Yet Another Resource Negotiator", which handles cluster management and job scheduling
+            </li>
+            <li class="padit">MapReduce, which distributes the data among the nodes by its keys, allows functions to be processed on these partitions, then regathers the analyses, all while allowing for redundancy to avoid lost data and downtime</li>
+            <li class="padit">Hadoop Common, also known as Core, which is a framework of utilities and libraries to assist in connecting all the system's layers</li>
+          </ul>
+          <p class="normal-text">
+          All of these components work together to provide almost infinite scaling capabilities for huge data warehouses or lakes.
+        </p>
+
+        <h3>Recommendation:</h3>
+        <p class="normal-text">
+          Due to the gigantic needs of massively concurrent application spaces, the requirements are: distribution of data along many nodes with the highest levels of physical resources, along with threaded programming and distributed messaging to handle the huge volume of data and computing power necessary for processing functions and analytics. Bottlenecks in any point of the system must be avoided to have the least amount of downtime possible. This can be achieved using Hadoop or a similar system. See Figure 1 below.
+          <figure>
+            <img src="../images/end-to-end-distributed-computing.png" alt="alt text here" class="centerimg" />
+            <figcaption class="source">
+               Figure 1: End to end distributed computing<br> &nbsp; Image Source:
+              <a href="https://www.techferry.com/articles/massively-scalable-applications.html">Tech Ferry - Massively Scalable Applications </a>
+            </figcaption>
+          </figure>
+        </p>
+        <ol class="sources">
+          Sources:
+          <li class="normal-text">
+            <a href="https://www.section.io/blog/scaling-horizontally-vs-vertically/">"Scaling Horizontally vs. Scaling Vertically", July 24, 2020, Section.io </a>
+          </li>
+          <li class="normal-text">
+            <a href="https://touchstonesecurity.com/horizontal-vs-vertical-scaling-what-you-need-to-know/">"Horizontal vs Vertical Scaling", Touchstone Security</a>
+          </li>
+          <li class="normal-text">
+            <a href="https://www.redswitches.com/blog/difference-between-horizontal-vertical-scaling/">"The Difference Between Horizontal vs Vertical Scaling", December 10, 2019, RedSwitches</a>
+          </li>
+          <li class="normal-text">
+            <a href="https://www.techferry.com/articles/massively-scalable-applications.html">"Massively Scalable Applications", Tech Ferry</a>
+          </li>
+        </ol>
+      </div>
+    </main>
+    <footer id="autofooter"></footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

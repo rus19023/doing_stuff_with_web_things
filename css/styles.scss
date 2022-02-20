@@ -75,9 +75,11 @@ section {
   margin: 2vw;
 }
 
+.morespc { line-height: 1.5; }
+
 .centerimg {
   display: block;
-  width: 95%;
+  width: 65%;
   margin: auto;
 }
 
@@ -87,8 +89,7 @@ h1 {
 }
 
 h2 {
-  font-size: $font4;
-  width: 95%;
+  font-size: $font3;
 }
 
 h3 {
@@ -177,7 +178,8 @@ a:hover {
 }
 
 .padit {
-  padding: 2vw;
+  padding: 4vw;
+  width: 100%;
 }
 
 #siteTitle2 {

@@ -1,13 +1,4 @@
-
-      this.allbtn = createLMNT('button', 'button', 'allbtn', 'All.', '');
-      this.allbtn.onTouch('allbtn', this.listTodos());
-      this.actbtn = createLMNT('button', 'button', 'actbtn', 'Active.', '');
-      this.actbtn.onTouch('actbtn', this.listActive());
-      this.donebtn = createLMNT('button', 'button', 'donbtn', 'Done.', '');
-      this.donebtn.onTouch('donebtn', this.listDone());
-
-
-    //   console.log(numbers.filter(x => x%2 === 0 ));
+//   console.log(numbers.filter(x => x%2 === 0 ));
 
 const footerText = (footer) => `Hello ${footer}`;
 const footertext = footerT("Ada");
@@ -67,6 +58,12 @@ function onTap(event) {
 let markbtn = util.createLMNT("button", "", "markbtn", "✕", "bordered todo-buttons");
 
 
+  // get the index of the item with this id
+  const gotindex = todoList.findIndex((todo) => todo.id === id);
+  // set the boolean to true for this list item
+  //todoList[gotindex] = { id: todo.id, task: todo.task, done: true };
+  // add obj to todoList
+  todoList.splice( gotindex, 1 );
 
 
   // Mark selected item as completed
@@ -79,3 +76,40 @@ let markbtn = util.createLMNT("button", "", "markbtn", "✕", "bordered todo-but
     });
     writeToLS(key, list);
   };
+
+
+  
+    // get the item's checked status
+    let checkitem = util.qs(`#${id}`);
+    console.log(checkitem);
+    let isChecked = checkitem.value;
+    console.log(isChecked);
+    if ((checkitem.isChecked) && checkitem.done === false) {
+      console.log(checkitem.done);
+      checkitem.done = true;
+      console.log(checkitem.done);
+    }
+    if ((!checkitem.isChecked) && checkitem.done === true) {
+      console.log(checkitem.done);
+      checkitem.done = false;
+      console.log(checkitem.done);
+    }
+
+
+    
+    console.log(`#mark${currentTarget.getAttribute("id")}btn`);
+
+    
+    util.onTouch(`#${this.parentId}`, this.checkBtn);
+  
+  util.onTouch(`#${markbtn.getAttribute("id")}`, markDone(field.id));
+  util.onTouch(`#${delbtn.getAttribute("id")}`, deleteItem(field.id));
+
+  /*
+
+document.getElementById("link").addEventListener('click', function(e) {
+   e.preventDefault(); // Cancel the native event
+   e.stopPropagation();// Don't bubble/capture the event any further
+});
+
+*/
