@@ -313,7 +313,7 @@ const paperslist = [
     url: `${getBase()}week06.html`,
   },
   {
-    name: "Vertical vs. Horizontal Scale",
+    name: "Vertical vs. Horizontal Scaling",
     url: `${getBase()}week07.html`,
   },
   {
