@@ -72,7 +72,7 @@ export default class ToDos {
     this.listAll;
   }
 
-  deleteItem(id) {
+  deleteTodo(id) {
       this.todoList = getTodos(lskey);
       this.todoList = todoList.filter(function(item) {
         // use != not !==, because here types are different. One is number and other is string
