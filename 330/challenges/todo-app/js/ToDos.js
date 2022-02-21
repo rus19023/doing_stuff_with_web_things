@@ -51,7 +51,7 @@ export default class ToDos {
         saveTodo(task.value, lskey);
         task.value = '';
     }
-    this.itemsLeft;
+    this.listAll;
   }
 
   renderTodoList(renderlist, elId) {
