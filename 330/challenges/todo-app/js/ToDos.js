@@ -11,29 +11,33 @@ export default class ToDos {
     this.todoList = [];
     this.error = error;
     util.onTouch('#addbtn', this.addTodo);
-    util.onTouch('#allbtn', this.listAll);
+    //util.onTouch('#allbtn', this.listAll);
     util.onTouch('#actbtn', this.listActive);
     util.onTouch('#donebtn', this.listDone);
   }
 
   listAll() {
+    //debugger;
+    //this.todoList = getTodos(lskey);
     this.todoList = getTodos(lskey);
+    console.log(this.todoList);
+    console.log(this.parentId);
     this.renderTodoList(this.todoList, this.parentId);
-    this.itemsLeft;
+    this.itemsLeft();
   }
 
-  checkBtn() {
-    console.log(checkBtn);
-  }
-
-  toggle(id) {
-    todoList.forEach(function(item) {
-      // use == not ===, because here types are different. One is number and other is string
-      if (item.id == id) {
-        // toggle the value
-        item.done = !item.done;
-      }
-    });
+  // function to show how many items are left undone in the todo list
+  itemsLeft() {
+    this.todoList = getTodos(lskey);
+    console.log(this.todoList.length);
+    let itemcount = this.todoList.length;
+    let t;
+    if (itemcount === 1) {
+      t = ' task ';
+    } else if ((itemcount > 1) || (itemcount === 0)) {
+      t = ' tasks ';
+    }
+    util.qs("#tasks").innerHTML = `${itemcount} ${t} left`;
   }
 
   addTodo() {
@@ -51,30 +55,55 @@ export default class ToDos {
         saveTodo(task.value, lskey);
         task.value = '';
     }
-    this.itemsLeft;
+    this.listAll;
+  }
+
+  markDone(id) {
+      this.todoList = getTodos(lskey);
+      this.todoList.forEach(function(item) {
+        // use == not ===, because here types are different. One is number and other is string
+        console.log(id);
+        console.log(item);
+        if (item.id == id) {
+          // toggle the value
+          item.done = !item.done;
+        }
+    });
+    this.listAll;
+  }
+
+  deleteItem(id) {
+      this.todoList = getTodos(lskey);
+      this.todoList = todoList.filter(function(item) {
+        // use != not !==, because here types are different. One is number and other is string
+        return item.id != id;
+      });
+      console.log(this.todoList);
+      // save JSON.stringified list to ls
+      //ls.writeToLS('items', JSON.stringify(todoList));
+      this.listAll;
   }
 
   renderTodoList(renderlist, elId) {
       // build new display
-      //console.log(elId);
       const parentEl = util.qs(`#${elId}`);
       parentEl.innerText = '';
       renderlist.forEach((field) => {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-        let item = util.createLMNT('li', '', `item${field.id}`, '', 'listitem bordered item-row');
+        let item = util.createLMNT('li', '', field.id, '', 'listitem bordered item-row');
         let itemtext = util.createLMNT("p", "", "", field.task , "todo-text");
         let markbox = util.createLMNT('label', `label${field.id}`, '', '', 'bordered markbtn');
         markbox.setAttribute('name', `label${field.id}`);
-        let markbtn = util.createLMNT("input", "checkbox", field.id, "", "markbtn chkbtn");
+        let markbtn = util.createLMNT("input", "checkbox", `mark${field.id}`, "", "markbtn chkbtn");
         let delbtn = util.createLMNT("button", "", `del${field.id}`, "X", "delbtn chkbtn");
         //debugger;
         if (field.done === true) {
           itemtext.classList.add("scratch");
           markbtn.classList.add('markbtnX');
-          //markbtn.checked = true;
+          markbtn.checked = true;
         } else {
-          //markbtn.checked = false;
+          markbtn.checked = false;
           markbtn.classList.remove('markbtnX');
           itemtext.classList.remove("scratch");
         }
@@ -83,60 +112,58 @@ export default class ToDos {
         item.appendChild(itemtext);
         item.appendChild(delbtn);
         parentEl.appendChild(item);
+        //console.log(`#mark${field.id}`);
+        // util.onTouch(`#mark${field.id}`, this.markDone(`mark${field.id}`));
+        // util.onTouch(`#del${field.id}`, this.deleteItem(`del${field.id}`));
       });
-      let listitems = document.querySelectorAll('.chkbtn');
-      listitems.forEach(function (item) {
+      let btnitems = Array.from(document.querySelectorAll('.chkbtn'));
+      //console.log(btnitems);
+      btnitems.forEach(function (item) {
           item.addEventListener('click', function(e) {
+            // check if the event is on checkbox
+            if (e.target.type === 'checkbox') {
+              console.log(e.target.getAttribute('id'));
+              // toggle the state
+              this.markDone(e.target.getAttribute('id'));
+            }
+
+            // check if that is a delete-button
+            if (e.target.classList.contains('delbtn')) {
+              console.log(e.target.getAttribute('id'));
+              // get id from data-key attribute's value of parent <li> where the delete-button is present
+              this.deleteTodo(e.target.getAttribute('id'));
+            }
           console.log(item);
-          // go through list of items, if id matches and markbtn is checked, set item.done to true
-          console.log(listitems);
-          this.toggle(e.target.getAttribute('id'));
-          console.log(listitems);
-          // get the updated list
-          this.todoList = getTodos(lskey);
+          //this.todoList = getTodos(lskey);
           // write the updated list to localStorage
           ls.writeToLS(lskey, JSON.stringify(todoList));
         });
       });
-      this.itemsLeft;
+      this.listAll;
   }
 
     listActive() {
+
       this.todoList = getTodos(lskey);
-      this.renderTodoList(this.todoList.filter(el => el.done === false, this.parentId));
+      //console.log(this.todoList.filter(el => el.done === true));
+      let donelist = this.todoList.filter(el => el.done === false);
+      console.log(donelist);
+      console.log(this.parentId);
+      this.renderTodoList(donelist, this.parentId);
     }
 
     listDone() {
       this.todoList = getTodos(lskey);
-      this.renderTodoList(this.todoList.filter(el => el.done === true, this.parentId));
-    }
-
-    // function to show how many items are left undone in the todo list
-    itemsLeft() {
-      let itemcount = this.todoList.length;
-      let t;
-      if (itemcount === 1) {
-        t = ' task ';
-      } else if ((itemcount > 1) || (itemcount === 0)) {
-        t = ' tasks ';
-      }
-      util.qs("#tasks").innerHTML = `${itemcount} ${t} left`;
-      this.listAll;
-    }
-
-    deleteItem(id) {
-        todoList = getTodos(lskey, id);
-        todoList = todoList.filter(function(item) {
-          // use != not !==, because here types are different. One is number and other is string
-          return item.id != id;
-        });
-        console.log(todoList);
-        // save JSON.stringified list to ls
-        //ls.writeToLS('items', JSON.stringify(todoList));
+      let parent = 'todos';
+      //console.log(this.todoList.filter(el => el.done === true));
+      let donelist = this.todoList.filter(el => el.done === true);
+      console.log(donelist);
+      console.log(parent);
+      this.renderTodoList(donelist, parent);
     }
 }
 
-/***** END OF CLASS *****/
+/***** END OF ToDos CLASS *****/
 
 /*
 In the Todos.js module, but not in the Todos class create the following function
@@ -149,9 +176,6 @@ function getTodos(lskey) {
     let tasklist = JSON.parse(ls.readFromLS(lskey)) || [];
   return tasklist;
 }
-
-// toggle the value to done and not done
-
 
 /*
 In the Todo.js module, but not in the Todos class, create the following function
@@ -168,66 +192,4 @@ function saveTodo(task, lskey) {
   todoList.push(todo);
   // save JSON.stringified list to ls
   ls.writeToLS(lskey, JSON.stringify(todoList));
-
 }
-
-
-
-
-// $(document).on("ready",function() {
-
-//   // 0 = hidden, 1 = visible
-
-//   var menuState = 0;
-
-//   //if($(".mini-menu-options").is(":hidden")) {
-
-//     /* Add a listener to the Click even for btn-select */
-
-//     $(".btn-select").on("click",function() {
-
-//       if(menuState === 0) {
-
-//         $(".mini-menu-options").slideDown("slow");
-
-//         menuState = 1;
-
-//       } else {
-
-//         $(".mini-menu-options").slideUp("slow");
-
-//         menuState = 0;
-
-//       }
-
-//     });
-
-//   //}
-
-//   // If the link has more than 1 child, it means there is a submenu
-
-//   $(".mini-menu-options li").on("click", function() {
-
-//     var numChildren = $(this).children().length;
-
-//     if(numChildren < 2) {
-
-//       // hide the menu
-
-//       $(".mini-menu-options").hide("fast");
-
-//       // get the text from the selected element
-
-//       var text = $(this).text();
-
-//       // and add it to the menubar
-
-//       $(".menu-select .menu-actual").text(text);
-
-//     }
-
-//     menuState = 0; // reset the menu variable
-
-//   });
-
-// });

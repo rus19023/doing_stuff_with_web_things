@@ -113,3 +113,62 @@ document.getElementById("link").addEventListener('click', function(e) {
 });
 
 */
+
+
+// $(document).on("ready",function() {
+
+//   // 0 = hidden, 1 = visible
+
+//   var menuState = 0;
+
+//   //if($(".mini-menu-options").is(":hidden")) {
+
+//     /* Add a listener to the Click even for btn-select */
+
+//     $(".btn-select").on("click",function() {
+
+//       if(menuState === 0) {
+
+//         $(".mini-menu-options").slideDown("slow");
+
+//         menuState = 1;
+
+//       } else {
+
+//         $(".mini-menu-options").slideUp("slow");
+
+//         menuState = 0;
+
+//       }
+
+//     });
+
+//   //}
+
+//   // If the link has more than 1 child, it means there is a submenu
+
+//   $(".mini-menu-options li").on("click", function() {
+
+//     var numChildren = $(this).children().length;
+
+//     if(numChildren < 2) {
+
+//       // hide the menu
+
+//       $(".mini-menu-options").hide("fast");
+
+//       // get the text from the selected element
+
+//       var text = $(this).text();
+
+//       // and add it to the menubar
+
+//       $(".menu-select .menu-actual").text(text);
+
+//     }
+
+//     menuState = 0; // reset the menu variable
+
+//   });
+
+// });

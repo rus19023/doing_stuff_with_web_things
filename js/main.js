@@ -21,6 +21,7 @@ const createLink = (url, text) => {
 function getFilename() {
   var path = window.location.pathname;
   var page = path.split("/").pop();
+  //console.log(page);
   return page;
 }
 
@@ -61,10 +62,10 @@ function getBase() {
   return location.href;
 }
 
-function getWeeknum(filenamee) {
+function getWeeknum(menuweek) {
   let weekno;
-  if (filenamee.substr(0, 4) === "week") {
-    weekno = filenamee.substr(4, 2);
+  if (menuweek.substr(0, 4) === "week") {
+    weekno = menuweek.substr(5, 2);
   }
   return weekno;
 }

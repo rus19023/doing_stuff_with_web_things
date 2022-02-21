@@ -1,30 +1,35 @@
-const courses = [
+const certs = [
   {
     cert: "01",
-    certname: "Computer Programming",
-    certdate: "2020-07-22"
-  },
-  {
-    cert: "02",
-    certname: "Databases",
-    certdate: "Anticipated 2022-04-15"
-  },
-  {
-    cert: "03",
-    certname: "System Administration",
-    certdate: "2021-12-15"
+    certname: "Certificate: Computer Programming",
+    certdate: "2020-07-22",
   },
   {
     cert: "04",
-    cert: "Database",
-    certdate: "Anticipated 2022-04-15"
+    certname: "Certificate: Databases",
+    certdate: "2022-04-15 (Anticipated)",
+  },
+  {
+    cert: "03",
+    certname: "Certificate: System Administration",
+    certdate: "2021-12-15",
+  },
+  {
+    cert: "02",
+    certname: "Certificate: Web Frontend Development",
+    certdate: "2020-12-16",
   },
   {
     cert: "05",
-    certname: "Web Backend Development",
-    certdate: "Anticipated 2022-07-22"
-  }
-]
+    certname: "Certificate: Web Backend Development",
+    certdate: "2022-07-22 (Anticipated)",
+  },
+  {
+    cert: "06",
+    certname: "Degree: Bachelor of Science in Applied Technology",
+    certdate: "2024-04-22 (Anticipated)",
+  },
+];
 
 const mainNav = [
   {
@@ -35,7 +40,7 @@ const mainNav = [
     name: "Introduction to Programming",
     tech: "Python, Trinket.io",
     instructor: "Travis Christiansen",
-    cert: "01"
+    cert: "01",
   },
   {
     url: `${getBase()}327/`,
@@ -45,7 +50,7 @@ const mainNav = [
     name: "Data Warehousing",
     tech: "ETL Tools, MongoDB, XQuery",
     instructor: "Troy Hiltbrand",
-    cert: "04"
+    cert: "04",
   },
   {
     url: `${getBase()}330/`,
@@ -55,7 +60,7 @@ const mainNav = [
     name: "Web Frontend Development II",
     tech: "HTML, CSS, JavaScript, Node.js, Express.js, Deno, MongoDB, MySQL",
     instructor: "Nathan Birch",
-    cert: "05"
+    cert: "05",
   },
   {
     url: `${getBase()}331/`,
@@ -65,7 +70,7 @@ const mainNav = [
     name: "Advanced CSS",
     tech: "HTML, CSS, Bootstrap, GitHub, SASS",
     instructor: "",
-    cert: "02"
+    cert: "02",
   },
   {
     url: `${getBase()}111/`,
@@ -75,7 +80,17 @@ const mainNav = [
     name: "Introduction to Databases",
     tech: "MySQL, MySQL Workbench",
     instructor: "Leon Tidwell",
-    cert: "01"
+    cert: "04",
+  },
+  {
+    url: `${getBase()}111/`,
+    term: "04",
+    year: "19",
+    code: "CIT111",
+    name: "Introduction to Databases",
+    tech: "MySQL, MySQL Workbench",
+    instructor: "Leon Tidwell",
+    cert: "01",
   },
   {
     url: `${getBase()}225/`,
@@ -85,7 +100,7 @@ const mainNav = [
     name: "Database Design and Development",
     tech: "MySQL CLI, MySQL Workbench",
     instructor: "Tanner Crook",
-    cert: "04"
+    cert: "04",
   },
   {
     url: `${getBase()}325/`,
@@ -95,7 +110,7 @@ const mainNav = [
     name: "Database Programming",
     tech: "PL/SQL, Oracle DB",
     instructor: "Kent Hinckley",
-    cert: "04"
+    cert: "04",
   },
   {
     url: `${getBase()}160/`,
@@ -105,7 +120,7 @@ const mainNav = [
     name: "Introduction to Programming",
     tech: "JavaScript, HTML, CSS",
     instructor: "Nathan Birch",
-    cert: "01"
+    cert: "01",
   },
   {
     url: `${getBase()}171/`,
@@ -115,7 +130,7 @@ const mainNav = [
     name: "Introduction to Cybersecurity",
     tech: "Cybersecurity, Social engineering, Ethical hacking",
     instructor: "David Snider",
-    cert: ""
+    cert: "06",
   },
   {
     url: `${getBase()}270/`,
@@ -125,7 +140,7 @@ const mainNav = [
     name: "Systems Security I",
     tech: "System hardening, Server security, Network security, Firewalls, Ethical hacking, Linux CLI",
     instructor: "Kevin Hendricks",
-    cert: "03"
+    cert: "03",
   },
   {
     url: `${getBase()}352/`,
@@ -135,7 +150,7 @@ const mainNav = [
     name: "Operating Systems I",
     tech: "Linux CLI, Ubuntu Server, Ubuntu Desktop, Fedora, Bash scripting",
     instructor: "Brian King",
-    cert: "03"
+    cert: "03",
   },
   {
     url: `${getBase()}353/`,
@@ -145,7 +160,7 @@ const mainNav = [
     name: "Operating Systems II",
     tech: "Windows Server versions from 2008, PowerShell",
     instructor: "Craig Lindstrom",
-    cert: "03"
+    cert: "03",
   },
   {
     url: `${getBase()}341/`,
@@ -155,7 +170,7 @@ const mainNav = [
     name: "Web Backend Development II",
     tech: "HTML, CSS, JavaScript, Node.js, Express.js, Deno, MongoDB, MySQL, GitHub, Heroku, SASS",
     instructor: "Nathan Birch",
-    cert: "05"
+    cert: "05",
   },
   {
     url: `${getBase()}340/`,
@@ -165,7 +180,7 @@ const mainNav = [
     name: "Backend Development I",
     tech: "HTML, CSS, JavaScript, PHP, MySQL, MVC",
     instructor: "Bonnie Woods",
-    cert: "05"
+    cert: "05",
   },
   {
     url: `${getBase()}100/`,
@@ -175,7 +190,7 @@ const mainNav = [
     name: "Introduction to Web Design and Development",
     tech: "HTML, CSS",
     instructor: "Tracey Johnson",
-    cert: "01"
+    cert: "02",
   },
   {
     url: `${getBase()}241-2/`,
@@ -185,7 +200,7 @@ const mainNav = [
     name: "Networking Design I",
     tech: "Advanced Topics: Subnetting, Routers, Switches, Firewalls, DNS, DHCP, TCP/IP",
     instructor: "Paul Stokes",
-    cert: "03"
+    cert: "03",
   },
   {
     url: `${getBase()}240/`,
@@ -195,7 +210,7 @@ const mainNav = [
     name: "Networking",
     tech: "Subnetting, Routers, Switches, Firewalls,  DNS, DHCP, TCP/IP",
     instructor: "Sheila Force",
-    cert: "03"
+    cert: "03",
   },
   {
     url: `${getBase()}246/`,
@@ -205,7 +220,7 @@ const mainNav = [
     name: "Software Design and Development",
     tech: "Java, IntelliJ, Android Studio, GitHub",
     instructor: "Dario Gonzalez-Suarez",
-    cert: "01"
+    cert: "01",
   },
   {
     url: `${getBase()}241/`,
@@ -215,7 +230,7 @@ const mainNav = [
     name: "Survey Object-Oriented Programming/Data Structures",
     tech: "Python 3, Thonny, PyCharm, GitHub",
     instructor: "Nathan Parrish",
-    cert: "01"
+    cert: "01",
   },
   {
     url: `${getBase()}213/`,
@@ -225,7 +240,7 @@ const mainNav = [
     name: "Web Engineering I",
     tech: "HTML, CSS, JavaScript, AJAX, JSON, GitHub, Linux CLI",
     instructor: "Jason Rice",
-    cert: "02"
+    cert: "02",
   },
   {
     url: `${getBase()}130/`,
@@ -235,7 +250,7 @@ const mainNav = [
     name: "Visual Media",
     tech: "Illustrator, Photoshop, InDesign",
     instructor: "Sara Tranberg",
-    cert: "02"
+    cert: "02",
   },
   {
     url: `${getBase()}230/`,
@@ -245,11 +260,61 @@ const mainNav = [
     name: "Web Frontend Development",
     tech: "HTML, CSS, JavaScript, GitHub",
     instructor: "Mike Odom",
-    cert: "02"
-  }
+    cert: "02",
+  },
+  {
+    url: `${getBase()}260/`,
+    term: "02",
+    year: "22",
+    code: "CIT260",
+    name: "Object Oriented Programming",
+    tech: "Java, Swing",
+    instructor: "",
+    cert: "05",
+  },
+  {
+    url: `${getBase()}365/`,
+    term: "02",
+    year: "22",
+    code: "WDD365",
+    name: ".NET Software Development",
+    tech: ".NET",
+    instructor: "",
+    cert: "05",
+  },
+  {
+    url: `${getBase()}211/`,
+    term: "04",
+    year: "21",
+    code: "GEINT211",
+    name: "Global Hotspot: Pakistan",
+    tech: "Social Science",
+    instructor: "Annette Bybee",
+    cert: "06",
+  },
+  {
+    url: `${getBase()}/`,
+    term: "0",
+    year: "2",
+    code: "",
+    name: "",
+    tech: "",
+    instructor: "",
+    cert: "06",
+  },
+  {
+    url: `${getBase()}/`,
+    term: "0",
+    year: "2",
+    code: "GEINT",
+    name: "",
+    tech: "",
+    instructor: "",
+    cert: "06",
+  },
 ];
 
-const noteslist = [
+const list330 = [
   {
     name: "Week 01 Notes",
     url: `${getBase()}week01.html`,
@@ -261,10 +326,7 @@ const noteslist = [
   {
     name: "Week 03 Notes",
     url: `${getBase()}week03.html`,
-  }
-];
-
-const exerciseslist = [
+  },
   {
     name: "Week 01 Exercises",
     url: `${getBase()}exercises/week01.html`,
@@ -284,7 +346,15 @@ const exerciseslist = [
   {
     name: "Week 05 Challenge 1: To Do App",
     url: `${getBase()}challenges/week05.html`,
-  }
+  },
+  {
+    name: "Week 06 Challenge 1: To Do App",
+    url: `${getBase()}challenges/todo-app/`,
+  },
+  {
+    name: "Week 07 Challenge 1: To Do App",
+    url: `${getBase()}challenges/todo-app/`,
+  },
 ];
 
 const paperslist = [
@@ -343,7 +413,7 @@ const paperslist = [
   {
     name: "MEAN Stack Integration into the Data Warehouse",
     url: `${getBase()}week14.html`,
-  }
+  },
 ];
 
 const presentations = [
@@ -357,12 +427,13 @@ const presentations = [
   },
   {
     name: "template",
-    url: "template.html"
-  }
+    url: "template.html",
+  },
 ];
 
 
-// Functions
+// Menu Functions
+//import * as lists from './menulists.js';
 
 const siteTitle = (element) => {
   // set header
@@ -430,7 +501,7 @@ getIndexPageTitle("WDD330-indexpagetitle");
 
 
 // set page title for WDD330 weekly pages
-const header330 = `WDD330 - Web Frontend II | Week ${ getWeeknum(getFilename()) }`;
+const header330 = `WDD330 - Web Frontend II | Week ${getWeeknum(getFilename()) }`;
 if (isElement("wdd330pagetitle") && substr(0, 4, getFilename()) === "week") {
   document.getElementById("wdd330pagetitle").innerText = header330;
 }
@@ -473,17 +544,138 @@ function getWeekPaperTitle(array) {
 }
 getWeekPaperTitle(paperslist);
 
+function createCertNav(array, id) {
+  // create link list container element
+  if (isElement(id)) {
+    const certbox = document.getElementById(id);
+      // sort cert array by certdate
+      certs.sort(function(a, b) {
+        var dateA = a.certdate;
+        var dateB = b.certdate;
+        if (dateA < dateB) {
+          return -1;
+        }
+        if (dateA > dateB) {
+          return 1;
+        }
+        // dates must be equal
+        return 0;
+      });
+      // create cert list element
+      const menu = document.createElement('ol');
+      menu.setAttribute(id, 'menu');
+      // get list of files to create links for each menu entry
+      let certcount = 1;
+      certs.forEach((element) => {
+          // get cert number
+          const certCheck = element.cert;
+          // create list item for this cert
+          const certitem = document.createElement('li');
+          certitem.classList.add('nav');
+          certitem.setAttribute(id, `cert${certcount}`);
+          // set text for item
+          certitem.innerText += `${element.certname}, Issue date: ${element.certdate}`;
+          // add item to menu list
+          menu.appendChild(certitem);
+          // sort array by name
+          array.sort(function(a, b) {
+            var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+            var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            // names must be equal
+            return 0;
+          });
+      let submenu = document.createElement('ol');
+      submenu.setAttribute(id, 'submenu');
+      // sort array by name
+      array.sort(function(a, b) {
+        var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        // names must be equal
+        return 0;
+      });
+      // set count of courses
+      let coursecount = 1;
+      // get list of files to create links for each menu entry
+      array.forEach((element) => {
+        // console.log('element.cert === certCheck' + element.cert === certCheck);
+        // console.log('element.cert: ' + element.cert);
+        // console.log('certCheck: ' + certCheck);
+        // if subitem's cert number = item's cert number, add to submenu list
+        if (element.cert === certCheck) {
+          const submenuitem = document.createElement('li');
+          submenuitem.classList.add('nav');
+          submenuitem.setAttribute(id, `course${coursecount}`);
+          // if url does not exist AND data url length is less than 100, exit program
+          if ((!urlExists(element.url)) && (element.url.length < 100)) {
+            return;
+          } else {
+            const link = document.createElement('a');
+            // url and term exist, create the link and post to page
+            if ((element.term) && (element.term.length > 0)) {
+              const linktext = document.createTextNode(`${element.term}, ${element.code} - ${element.name}, (${element.tech})`);
+              link.setAttribute('href', element.url);
+              link.appendChild(linktext);
+              //submenuitem.innerText = `${createLink(url, linktext)}`;
+            } else {
+              link.setAttribute('href', element.url);
+              const linktext = document.createTextNode(`${createLink(element.url, element.name)}`);
+              link.appendChild(linktext);
+              //submenuitem.innerText = `${createLink(element.url, element.name)}`;
+            }
+            submenuitem.appendChild(link);
+            submenu.appendChild(submenuitem);
+          }
+        certitem.appendChild(submenu);
+        }
+        coursecount++;
+      });
+      certcount++;
+      menu.appendChild(certitem);
+    })
+    certbox.appendChild(menu);
+  }
+}
+
+createCertNav(mainNav,'certnav');
+
 function createNav(array, id) {
   // create link list container element
   if (isElement(id)) {
     const container = document.getElementById(id);
+    // sort array by name
+    array.sort(function(a, b) {
+      var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+      var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      // names must be equal
+      return 0;
+    });
     // create link list element
     let menu = "<ol>";
     // get list of files to create links for each menu entry
     array.forEach((element) => {
+      // if url does not exist AND data url length is less than 100, exit program
       if ((!urlExists(element.url)) && (element.url.length < 100)) {
         return;
       } else {
+        // url and term exist, create the link and post to page
         if ((element.term) && (element.term.length > 0)) {
           const url = element.url;
           const linktext = `${element.term}, ${element.code} - ${element.name}, (${element.tech})`;
@@ -499,8 +691,7 @@ function createNav(array, id) {
   }
 }
 createNav(mainNav, "main-nav");
-createNav(noteslist, "notes");
-createNav(exerciseslist, "exercises");
+createNav(list330, "notes");
 createNav(paperslist, "papers");
 createNav(presentations, "presentations");
 

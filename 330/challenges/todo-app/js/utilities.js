@@ -20,7 +20,8 @@ function onTouch(elSelector, callback) {
     //console.log(el);
     if (el.addEventListener) {
         el.addEventListener(event, callback, false);
-    } else if (el.attachEvent) {
+    }
+    else if (el.attachEvent) {
         el.attachEvent(event, callback);
     }
 }
