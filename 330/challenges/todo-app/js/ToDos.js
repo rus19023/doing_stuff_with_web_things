@@ -13,9 +13,9 @@ export default class ToDos {
         this.donebtn = util.qs('#donebtn');
         this.actbtn = util.qs('#actbtn');
         this.allbtn = util.qs('#allbtn');
-        this.donebtn.addEventListener("click", () => { this.listDone(); }, false);
-        this.actbtn.addEventListener("click", () => { this.listActive(); }, false);
-        this.allbtn.addEventListener("click", () => { this.listAll(); }, false);
+        this.donebtn.addEventListener("touchend", () => { this.listDone(); }, false);
+        this.actbtn.addEventListener("touchend", () => { this.listActive(); }, false);
+        this.allbtn.addEventListener("touchend", () => { this.listAll(); }, false);
         // this.actbtn = util.qs('#actbtn');
 
         util.onTouch('#addbtn', this.addTodo);
@@ -106,7 +106,7 @@ export default class ToDos {
   checkBtn() {
       let btnitems = Array.from(document.querySelectorAll('.chkbtn'));
       btnitems.forEach(function (item) {
-          item.addEventListener('click', function(e) {
+          item.addEventListener('touchend', function(e) {
             // check if the event is a checkbox
             if (e.target.type === 'checkbox') {
               // get id from button id value and toggle the state
