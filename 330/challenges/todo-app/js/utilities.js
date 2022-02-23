@@ -12,6 +12,12 @@ add a touchend event listener to an element for mobile with a click event fallba
 * @param {function} callback The callback function to run
 */
 
+function bind(context, fn) {
+    return function() {
+        return fn.apply(context, arguments);
+    };
+}
+
 function onTouch(elSelector, callback) {
     //let event = 'touchend';
     let event = 'click';
@@ -34,4 +40,4 @@ function createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass) {
     lmnt.setAttribute('class', LMNTclass);
     return lmnt;
 }
-export { qs, onTouch, createLMNT };
+export { qs, onTouch, createLMNT, bind };

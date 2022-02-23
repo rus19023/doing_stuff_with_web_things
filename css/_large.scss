@@ -1,13 +1,12 @@
-@media screen and (min-width: 1500px) {
-}
+@media screen and (min-width: 451px) {
 
-
-@media screen and (min-width: 1200px) {
     #todocontainer {
-        max-width: 50%;
+        max-width: 500px;
     }
 }
 
+@media screen and (min-width: 700px) {
+}
 
 @media screen and (min-width: 992px) {
     .color3 {
@@ -23,20 +22,14 @@
       grid-template-areas:
       "left right";
     }
+}
 
+
+@media screen and (min-width: 1200px) {
     #todocontainer {
-        max-width: 60%;
+        max-width: 50%;
     }
 }
 
-@media screen and (min-width: 700px) {
-    #todocontainer {
-        max-width: 70%;
-    }
-}
-
-@media screen and (min-width: 451px) {
-    #todocontainer {
-        max-width: 80%;
-    }
+@media screen and (min-width: 1500px) {
 }
