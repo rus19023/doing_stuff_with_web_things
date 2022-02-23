@@ -13,28 +13,21 @@ export default class ToDos {
         this.donebtn = util.qs('#donebtn');
         this.actbtn = util.qs('#actbtn');
         this.allbtn = util.qs('#allbtn');
+        this.addbtn = util.qs('#addbtn');
         this.donebtn.addEventListener("touchend", () => { this.listDone(); }, false);
         this.actbtn.addEventListener("touchend", () => { this.listActive(); }, false);
         this.allbtn.addEventListener("touchend", () => { this.listAll(); }, false);
-        // this.actbtn = util.qs('#actbtn');
-
-        util.onTouch('#addbtn', this.addTodo);
-        //util.onTouch('#allbtn', this.listAll);
-        //util.onTouch('#actbtn', this.listActive);
-        //util.onTouch('#donebtn', this.listDone);
+        this.addbtn.addEventListener("touchend", () => { this.addTodo(); }, false);
   }
 
   listAll() {
       this.todoList = getTodos(lskey);
-      console.log(this.todoList);
-      console.log(this.parentId);
       this.renderTodoList(this.todoList);
       this.itemsLeft();
   }
 
   // function to show how many items are left undone in the todo list
   itemsLeft() {
-      console.log(this.todoList.length);
       let itemcount = this.todoList.length;
       let t;
       if (itemcount === 1) {
@@ -71,11 +64,9 @@ export default class ToDos {
   }
 
   renderTodoList(renderlist) {
-    console.log(renderlist);
       // build new display
       const parentEl = util.qs('#todos');
       parentEl.innerText = '';
-      console.log(renderlist);
       renderlist.forEach((field) => {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
@@ -124,16 +115,13 @@ export default class ToDos {
 
   listActive() {
       this.todoList = getTodos(lskey);
-      console.log(this.todoList);
       this.todoList = this.todoList.filter(el => el.done === false);
-      console.log(this.todoList);
       this.renderTodoList(this.todoList);
     }
 
     listDone() {
       this.todoList = getTodos(lskey);
       this.todoList = this.todoList.filter(el => el.done === true);
-      console.log(this.todoList);
       this.renderTodoList(this.todoList);
     }
 }
@@ -175,8 +163,6 @@ function markDone(id) {
     todoList.forEach(function(item) {
         // use == not ===, because here types are different. One is number and other is string
         if (item.id == id) {
-          console.log(id);
-          console.log(item);
           // toggle the value
           item.done = !item.done;
         }

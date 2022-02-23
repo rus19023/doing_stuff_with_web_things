@@ -13,16 +13,15 @@ add a touchend event listener to an element for mobile with a click event fallba
 */
 
 function onTouch(elSelector, callback) {
-    //let event = 'touchend';
-    let event = 'touchend';
-    //console.log(elSelector);
+    const event = 'touchend';
     const el = qs(elSelector);
-    //console.log(el);
     if (el.addEventListener) {
-        el.addEventListener(event, callback, false);
+        //this.allbtn.addEventListener("touchend", () => { this.listAll(); }, false);
+        el.addEventListener(event, () => { callback; }, false);
+        //el.addEventListener(event, callback, false);
     }
     else if (el.attachEvent) {
-        el.attachEvent(event, callback);
+        el.attachEvent(event, () => { callback; })
     }
 }
 
