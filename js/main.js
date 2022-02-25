@@ -29,7 +29,7 @@ function urlExists(url) {
   if (url.includes(getBase())) {
     var http = new XMLHttpRequest();
     http.open("HEAD", url, false);
-    http.send();
+    //http.send();
     return http.status != 404;
   }
 }

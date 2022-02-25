@@ -336,10 +336,6 @@ const list330 = [
     url: `${getBase()}exercises/week02.html`,
   },
   {
-    name: "Week 03 Exercises",
-    url: `${getBase()}exercises/week03.html`,
-  },
-  {
     name: "Week 04 Exercises: Further work on team project - Tic Tac Toe game",
     url: `${getBase()}exercises/week04.html`,
   },
@@ -352,8 +348,16 @@ const list330 = [
     url: `${getBase()}challenges/todo-app/`,
   },
   {
-    name: "Week 07 Challenge 1: To Do App",
-    url: `${getBase()}challenges/todo-app/`,
+    name: "Week 07 Quiz Ninja",
+    url: `${getBase()}exercises/ninjaquiz.html`,
+  },
+  {
+    name: "Week 07 Exercises",
+    url: `${getBase()}exercises/week07.html`,
+  },
+  {
+    name: "Week 08 Quiz Ninja",
+    url: `${getBase()}exercises/week08ninjaquiz.html`,
   },
 ];
 
@@ -548,6 +552,7 @@ function createCertNav(array, id) {
   // create link list container element
   if (isElement(id)) {
     const certbox = document.getElementById(id);
+    console.log(certbox)
       // sort cert array by certdate
       certs.sort(function(a, b) {
         var dateA = a.certdate;
@@ -562,8 +567,8 @@ function createCertNav(array, id) {
         return 0;
       });
       // create cert list element
-      const menu = document.createElement('ol');
-      menu.setAttribute(id, 'menu');
+      const certmenu = document.createElement('ol');
+      certmenu.setAttribute(id, 'menu');
       // get list of files to create links for each menu entry
       let certcount = 1;
       certs.forEach((element) => {
@@ -575,8 +580,8 @@ function createCertNav(array, id) {
           certitem.setAttribute(id, `cert${certcount}`);
           // set text for item
           certitem.innerText += `${element.certname}, Issue date: ${element.certdate}`;
-          // add item to menu list
-          menu.appendChild(certitem);
+          // add item to cert submenu list
+          certmenu.appendChild(certitem);
           // sort array by name
           array.sort(function(a, b) {
             var nameA = a.name.toUpperCase(); // ignore upper and lowercase
@@ -642,9 +647,10 @@ function createCertNav(array, id) {
         coursecount++;
       });
       certcount++;
-      menu.appendChild(certitem);
+      certmenu.appendChild(certitem);
     })
-    certbox.appendChild(menu);
+    console.log(certmenu)
+    certbox.appendChild(certmenu);
   }
 }
 

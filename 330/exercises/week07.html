@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
+    <title id="wdd330weekpagetitle">My WDD330 Weekly Notes | Title</title>
+  </head>
+
+  <body>
+    <header id="autoheader">auto header</header>
+    <main>
+      <h1 id="wdd330weekpageheading" class="padit">Notes for this week</h1>
+          <div>
+              <ul>
+      
+                <li>
+                <h2>
+                  <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/11/">
+                    Source: Code Sandbox, Eloquent JavaScript, Chapter 5, Higher-Order Functions
+                  </a>
+                </h2>
+                <h3>5.1: Flattening</h3>
+                <p class="normal-text">
+                    Given this array of arrays: [[1, 2, 3], [4, 5], [6]]
+                    Create this array: [1, 2, 3, 4, 5, 6]
+                </p>
+                <p id="result7-1">Result: </p>
+                <pre class="code">
+                  let arrays = [[1, 2, 3], [4, 5], [6]];
+                  // Result required: [1, 2, 3, 4, 5, 6]
+
+                  // Your code here.
+
+                  const flatten = (array => {
+                    let newarray = [];
+                    array.forEach(subarray => {
+                        subarray.forEach(item => {
+                            newarray.push(item);
+                        });
+                    });
+                    newarray.sort();
+                    return newarray;
+                });
+                </pre>
+                <br><br>
+            </li>
+            <li>
+              <h2>5.2: Mother-child age difference</h2>
+              <p class="normal-text">
+                  Given ancestry data file, calculate the average age difference between mothers and their children
+              </p>
+              <p id="result7-2">Result: </p>
+              <pre class="code">
+                function average(array) {
+                  function plus(a, b) { return a + b; }
+                  return array.reduce(plus) / array.length;
+                }
+              
+                var byName = {};
+                ancestry.forEach(function(person) {
+                  byName[person.name] = person;
+                });
+                // Your code here.
+              </pre>
+              <p class="normal-text">
+              
+              // → 31.2
+              </p>
+          </li>
+
+            
+            </div>
+            <li>
+              <p class="normal-text">
+                
+              </p>
+              <pre class="code"></pre>
+              <p class="normal-text">
+                
+              </p>
+            </li>
+
+          <li>
+              <h2>
+                <a href="">
+                  Source: 
+
+                </a>
+              </h2>
+              <div>
+                  <h3></h3>
+                  <p class="normal-text">
+                    
+                  </p>
+                  <h3></h3>
+                  <p class="normal-text">
+                  </p>
+                  <h3>Questions</h3>
+                  <ul>
+                    <li class="normal-text">
+                        What exactly was the task was for 5.2?
+                        The instructions are not clear: <br>
+                        "Mother-child age difference"
+                        <pre class="code">function average(array) {
+                          function plus(a, b) { return a + b; }
+                          return array.reduce(plus) / array.length;
+                        }
+                        
+                        var byName = {};
+                        ancestry.forEach(function(person) {
+                          byName[person.name] = person;
+                        });
+                        
+                        // Your code here.
+                        
+                        // → 31.2</pre>
+                    </li>
+                    <li class="normal-text">
+                        What exactly was the task was for 5.3?
+                        The instructions are not clear: 
+                    </li>
+                    <li class="normal-text">
+                        
+                    </li>
+
+                  </ul>
+                  <li class="normal-text">
+                      
+                  </li>
+              </div>
+          </li>
+
+          <li>
+              <div>
+                  <h3>Arrays</h3>
+                  <p class="normal-text">
+                      notes here
+                      <br />
+                      <h4>image caption</h4>
+                      <img class="centerimg" src="/images/serverRoom.jpg" alt="test">
+                      <br />
+                  </p>
+                  <h3>Questions</h3>
+                  <p class="normal-text">
+                      question?
+                  </p>
+              </div>
+          </li>
+
+      </ul>
+  </main>
+  <footer id="autofooter"></footer>
+  <script src="../../js/main.js"></script>
+  <script src="../../js/menu.js"></script>
+  <script src="./js/week07.js" type="module"></script>
+
+</body>
+</html>

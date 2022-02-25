@@ -10,18 +10,30 @@ const qs = selector => {
 /*
 add a touchend event listener to an element for mobile with a click event fallback for desktops @param {string} elementSelector The selector for the element to attach the listener to
 * @param {function} callback The callback function to run
-*/
+// */
+
+// const getEventType = $(this).on('touchend click', function(event) {
+//     if (event.type == "touchend") {
+//         $(this).off('click');
+//         const eventType = 'touchend';
+//         console.log("Only touch event is fired");
+//     } else if (event.type == "click") {
+//         $(this).off('touchend');
+//         console.log("Only click event is fired");
+//     }
+//     return event.type;
+// });
 
 function onTouch(elSelector, callback) {
-    const event = 'touchend';
     const el = qs(elSelector);
+    //const eventType = getEventType(el);
     if (el.addEventListener) {
         //this.allbtn.addEventListener("touchend", () => { this.listAll(); }, false);
-        el.addEventListener(event, () => { callback; }, false);
+        el.addEventListener(eventType, () => { callback; }, false);
         //el.addEventListener(event, callback, false);
     }
     else if (el.attachEvent) {
-        el.attachEvent(event, () => { callback; })
+        el.attachEvent(eventType, () => { callback; })
     }
 }
 

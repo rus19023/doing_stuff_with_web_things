@@ -2,43 +2,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 body {
-  grid-template-areas: "header" "main" "footer";
+      grid-template-areas: "header" "main" "footer";
 }
+
 body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
 }
+
 body header #main-nav {
+  display: -ms-grid;
   display: grid;
   grid-area: main-nav;
-  grid-template-areas: "list";
+      grid-template-areas: "list";
 }
+
 body header #main-nav ol {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: list;
-  grid-template-areas: "list-item";
+      grid-template-areas: "list-item";
 }
+
 body header #main-nav ol li {
+  display: -ms-grid;
   display: grid;
 }
+
 body header #main-nav ol li a {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: list-item;
 }
 
 #gridcontainer {
   grid-area: gridcontainer;
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "left" "right";
+      grid-template-areas: "left" "right";
 }
+
 #gridcontainer #left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: left;
 }
+
 #gridcontainer #right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: right;
-  grid-template-areas: "todocontainer";
+      grid-template-areas: "todocontainer";
 }
+
 #gridcontainer #right #todocontainer {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "header" "todos" "footer" "addbar";
+      grid-template-areas: "header" "todos" "footer" "addbar";
 }
 
 @media screen and (min-width: 451px) {
@@ -46,31 +69,35 @@ body header #main-nav ol li a {
     max-width: 500px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .color3 {
-    grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
   }
-
   .normal-text, p.normal-text {
-    font-size: max(3vh);
+    font-size: 3vh;
   }
-
   #gridcontainer {
     gap: 2vw;
-    grid-template-areas: "left right";
+        grid-template-areas: "left right";
   }
 }
+
 @media screen and (min-width: 1200px) {
   #todocontainer {
     max-width: 50%;
   }
 }
+
 .color3 {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   max-width: 100%;
-  font-size: max(4vh);
-  padding: 0.25vw;
+  font-size: 4vh;
+  padding: .25vw;
 }
 
 .primary {
@@ -146,7 +173,7 @@ body header #main-nav ol li a {
 }
 
 #error {
-  font-size: max(4vh);
+  font-size: 4vh;
   font-weight: bold;
   color: #ff8f9e;
 }
@@ -156,11 +183,12 @@ body header #main-nav ol li a {
   margin: 1vw;
   padding: 1vw;
   color: #8ffff0;
-  font-size: max(2vh);
+  font-size: 2vh;
   background: black;
   border: 2px solid #8ffff0;
   border-radius: 8px;
 }
+
 .todo-buttons :hover {
   border: 2px solid #8ffff0;
 }
@@ -183,57 +211,78 @@ ul li {
   text-align: left;
   color: #8ffff0;
   font-family: "Nunito", sans-serif;
-  font-size: max(3vh);
-  margin: 0.5vw;
-  padding: 0.5vw;
+  font-size: 3vh;
+  margin: .5vw;
+  padding: .5vw;
 }
 
 .markbtn {
   border: 2px solid #8ffff0;
   border-radius: 10px;
-  margin: 0.5vh;
-  padding: 0.5;
+  margin: .5vh;
+  padding: .5;
   width: 6vh;
   height: 6vh;
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 auto;
 }
 
 .foot-row {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "tasks allbtn actbtn donebtn";
+      grid-template-areas: "tasks allbtn actbtn donebtn";
 }
 
 .item-row {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
+  -ms-grid-columns: 1fr 8fr 1fr;
+      grid-template-columns: 1fr 8fr 1fr;
 }
 
 #todocontainer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: todocontainer;
   text-align: center;
   max-width: 90%;
   margin: 0 auto;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
+
 #todocontainer #header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
   color: #ff8f9e;
   margin-bottom: 5vw;
 }
+
 #todocontainer #todos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: todos;
   padding: 0;
   margin: 0 auto;
   width: 100%;
-  grid-template-areas: "listitem";
+      grid-template-areas: "listitem";
 }
+
 #todocontainer #todos li.listitem {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: listitem;
   list-style-type: none;
   max-width: 100%;
@@ -241,21 +290,30 @@ ul li {
   margin: 0;
   height: 8vh;
   border-radius: 10px;
-  grid-template-areas: "markbtn itemtext delbtn";
+      grid-template-areas: "markbtn itemtext delbtn";
 }
+
 #todocontainer #todos li.listitem .markbtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: markbtn;
   width: 4vh;
   height: 4vh;
   padding: 1vw;
   margin: auto;
 }
+
 #todocontainer #todos li.listitem #itemtext {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: itemtext;
   height: 4vh;
   margin: 2vh;
 }
+
 #todocontainer #todos li.listitem .delbtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: delbtn;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -264,15 +322,21 @@ ul li {
   color: #ff8f9e;
   background: black;
   padding: 1vh;
-  font-size: max(5vh);
+  font-size: 5vh;
 }
+
 #todocontainer #footer {
   height: 8vh;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: footer;
   text-align: center;
   margin: 0;
 }
+
 #todocontainer #footer p#tasks {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: tasks;
   text-align: center;
   margin: 0 auto;
@@ -280,31 +344,48 @@ ul li {
   max-height: 4vh;
   width: 95%;
 }
+
 #todocontainer #footer #allbtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: allbtn;
   text-align: center;
 }
+
 #todocontainer #footer #actbtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: actbtn;
   text-align: center;
 }
+
 #todocontainer #footer #donebtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   grid-area: donebtn;
   text-align: center;
 }
+
 #todocontainer #addbar {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: addbar;
   height: 8vh;
   /*position: absolute;
-  bottom: 0vh;*/
+        bottom: 0vh;*/
   width: 100%;
   padding: 0;
   margin: 10vh 0 2vw 0;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 8fr 1fr;
-  grid-template-areas: "addinput addbtn";
+  -ms-grid-columns: 8fr 1fr;
+      grid-template-columns: 8fr 1fr;
+      grid-template-areas: "addinput addbtn";
 }
+
 #todocontainer #addbar #addinput {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: addinput;
   background: black;
   color: #ff8fd6;
@@ -313,7 +394,10 @@ ul li {
   margin: 0;
   padding: 0 0 0 1vw;
 }
+
 #todocontainer #addbar #addbtn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: addbtn;
   background: black;
   color: #8ffff0;
@@ -321,8 +405,9 @@ ul li {
   height: 8vh;
   padding: 0;
   margin: 0;
-  font-size: max(6vh);
+  font-size: 6vh;
 }
+
 #todocontainer h3 {
   background: black;
   color: #d6ff8f;
@@ -344,11 +429,13 @@ ul li {
   background: white;
   margin: 0 auto;
   padding: 10px 20px 50px 20px;
+  -webkit-box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
 }
 
 #question {
-  font-size: 24px;
+  font-size: 16px;
+  height: 8vh;
 }
 
 #result {
@@ -381,10 +468,10 @@ ul li {
   font-size: 24px;
 }
 
-input[type=checkbox].markbtnX {
+input[type="checkbox"].markbtnX {
   content: "✕";
   color: #ff8f9e;
-  font-size: max(6vh);
+  font-size: 6vh;
 }
 
 html {
@@ -400,7 +487,7 @@ html {
 }
 
 h1 {
-  font-size: max(5vh);
+  font-size: 5vh;
 }
 
 h2#tab-bar {
@@ -411,6 +498,7 @@ h2#tab-bar {
   border-radius: 0;
   height: 4vh;
 }
+
 h2#tab-bar a {
   float: left;
   display: block;
@@ -466,32 +554,32 @@ section {
 }
 
 h1 {
-  font-size: max(4vh);
+  font-size: 4vh;
   color: #d6ff8f;
 }
 
 h2 {
-  font-size: max(3vh);
+  font-size: 3vh;
 }
 
 h3 {
-  font-size: max(3vh);
+  font-size: 3vh;
   width: 90%;
 }
 
 h4 {
-  font-size: max(3vh);
+  font-size: 3vh;
   width: 85%;
 }
 
 h5 {
-  font-size: max(2vh);
+  font-size: 2vh;
   width: 80%;
   font-weight: bold;
 }
 
 h6 {
-  font-size: max(2vh);
+  font-size: 2vh;
   width: 75%;
   font-weight: bold;
 }
@@ -499,7 +587,7 @@ h6 {
 .normal-text {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
-  font-size: max(3vh);
+  font-size: 3vh;
   padding: 2vw;
   margin: 0 2vw;
   background: black;
@@ -510,16 +598,18 @@ h6 {
 }
 
 li.nav a {
-  font-size: max(3vh);
+  font-size: 3vh;
 }
 
 ol li {
   color: #d6ff8f;
 }
+
 ol li a {
-  font-size: max(2vh);
+  font-size: 2vh;
   color: #8f9eff;
 }
+
 ol li a:hover {
   color: #b88fff;
 }
@@ -541,9 +631,9 @@ a:hover {
   text-align: center;
   cursor: pointer;
   background: black;
-  box-shadow: 0 0 10px #ffb88f;
+  -webkit-box-shadow: 0 0 10px #ffb88f;
+          box-shadow: 0 0 10px #ffb88f;
   padding: 2vw;
-  width: 100%;
   max-width: 50%;
   margin: 0 auto;
   height: 10vh;
@@ -551,11 +641,12 @@ a:hover {
   color: #d6ff8f;
   font-family: "Dosis", sans-serif;
   font-weight: bold;
-  font-size: max(3vh);
+  font-size: 3vh;
 }
+
 .buttons a {
   text-decoration: none;
-  color: #d6ff8f;
+  color: #8f9eff;
   font-size: 4vh;
 }
 
@@ -565,7 +656,7 @@ a:hover {
 }
 
 #siteTitle2 {
-  font-size: max(4vh);
+  font-size: 4vh;
   color: #d6ff8f;
   font-family: "Dosis", sans-serif;
   font-weight: bold;
@@ -613,6 +704,7 @@ footer#autofooter {
   font-weight: bold;
   margin: 2vh auto;
 }
+
 .sources a {
   text-decoration: none;
   color: #8fffb8;
@@ -622,7 +714,7 @@ footer#autofooter {
 .code {
   background: #ffb88f;
   color: black;
-  font-size: max(3vh);
+  font-size: 3vh;
   border-radius: 10px;
   padding: 1.5vw;
   font-family: "Dosis", sans-serif;
@@ -654,4 +746,5 @@ ul {
 
 h5.indent, p.indenth5, p ul li.indent {
   padding-left: 8vw;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */
