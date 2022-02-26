@@ -288,27 +288,57 @@ const mainNav = [
     year: "21",
     code: "GEINT211",
     name: "Global Hotspot: Pakistan",
-    tech: "Social Science",
+    tech: "Breadth: Social Science",
     instructor: "Annette Bybee",
     cert: "06",
   },
   {
-    url: `${getBase()}/`,
-    term: "0",
-    year: "2",
-    code: "",
-    name: "",
-    tech: "",
+    url: `${getBase()}/105`,
+    term: "03",
+    year: "22",
+    code: "105",
+    name: "Precalculus",
+    tech: "Breadth: Mathematics",
+    instructor: "",
+    cert: "06",
+  },
+  {
+    url: `${getBase()}/112`,
+    term: "04",
+    year: "22",
+    code: "112",
+    name: "Calculus",
+    tech: "Breadth: Mathematics",
     instructor: "",
     cert: "06",
   },
   {
     url: `${getBase()}/`,
-    term: "0",
-    year: "2",
-    code: "GEINT",
-    name: "",
-    tech: "",
+    term: "04",
+    year: "22",
+    code: "",
+    name: "Physics",
+    tech: "Breadth: Natural Science",
+    instructor: "",
+    cert: "06",
+  },
+  {
+    url: `${getBase()}/150`,
+    term: "01",
+    year: "23",
+    code: "",
+    name: "Writing",
+    tech: "Breadth: Writing",
+    instructor: "",
+    cert: "06",
+  },
+  {
+    url: `${getBase()}/`,
+    term: "01",
+    year: "23",
+    code: "",
+    name: "Writing",
+    tech: "Breadth: Writing",
     instructor: "",
     cert: "06",
   },
@@ -354,10 +384,6 @@ const list330 = [
   {
     name: "Week 07 Exercises",
     url: `${getBase()}exercises/week07.html`,
-  },
-  {
-    name: "Week 08 Quiz Ninja",
-    url: `${getBase()}exercises/week08ninjaquiz.html`,
   },
 ];
 
@@ -531,10 +557,10 @@ function getWeekPageTitle(id, page) {
 }
 getWeekPageTitle("cs101weekpagetitle", "CS101");
 getWeekPageTitle("cit327weekpagetitle", "CIT327 Paper");
-getWeekPageTitle("wdd330weekpagetitle", "WDD330 Notes");
+getWeekPageTitle("wdd330weekpagetitle", "WDD330 Tasks");
 getWeekPageTitle("wdd330weekexercisetitle", "Exercises");
 getWeekPageTitle("wdd330challengetitle", "Challenges");
-getWeekPageTitle("wdd330weekpageheading", "WDD330 Notes");
+getWeekPageTitle("wdd330weekpageheading", "WDD330 Tasks");
 
 function getWeekPaperTitle(array) {
   let weekFile = `week${getWeeknum(getFilename())}`;

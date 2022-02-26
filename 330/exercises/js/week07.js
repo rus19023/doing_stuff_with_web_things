@@ -15,22 +15,39 @@ const flatten = (array => {
 document.getElementById('result7-1').innerHTML = `Result: <pre>${JSON.stringify(flatten(arrays))} </pre>`;
 // → [1, 2, 3, 4, 5, 6]
 
-// Exercise 5.2
-function average(array) {
-    function plus(a, b) { return a + b; }
-    return array.reduce(plus) / array.length;
-  }
+// Exercise 5.2 - Your own loop
+// Your code here.
+function loop(n, fn1, fn2, display) {
+    let result = 'Result: <br>';
+    for (let i = n; fn1(i); i = fn2(i)) {
+        display(i);
+        result += `${i}<br>`;
+    }
+    document.getElementById('result7-2').innerHTML = result;
+}
 
-  var byName = {};
-  ancestry.forEach(function(person) {
-    byName[person.name] = person;
-  });
+loop(3, n => n > 0, n => n - 1, console.log);
+// → 3
+// → 2
+// → 1
 
-  var differences = ancestry.filter(function(person) {
-    return byName[person.mother] != null;
-  }).map(function(person) {
-    return person.born - byName[person.mother].born;
-  });
-  document.getElementById('result7-2').innerHTML = `Result: <pre>${differences}</pre>`;
+function every(array, test) {
+    // Your code here.
+    let result = true;
+    array.forEach(item => {
+      if (test(item)) {
+        result = true;
+      } else {
+        result = false;
+      }
+    });
+    return result;
+}
+console.log(every([1, 3, 5], n => n < 10));
+console.log(every([2, 4, 16], n => n < 10));
+console.log(every([], n => n < 10));
 
-  // → 31.2
+let results = `Results: <br>every([1, 3, 5], n => n < 10) = ${every([1, 3, 5], n => n < 10)}<br>`;
+results += `every([2, 4, 16], n => n < 10) = ${every([2, 4, 16], n => n < 10)}<br>`;
+results += `every([], n => n < 10) = ${every([], n => n < 10)}`;
+document.getElementById('result7-3').innerHTML = results; 
