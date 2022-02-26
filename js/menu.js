@@ -385,6 +385,10 @@ const list330 = [
     name: "Week 07 Exercises",
     url: `${getBase()}exercises/week07.html`,
   },
+  {
+    name: "Week 08 Quiz Ninja",
+    url: `${getBase()}exercises/week08ninjaquiz.html`,
+  },
 ];
 
 const paperslist = [
