@@ -11,59 +11,85 @@
   <body>
     <header id="autoheader">auto header</header>
     <main>
-      <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
-      <h2 id="paperTitle" class="padit">paper title</h2>
-      <div>
-        <h3></h3>
-        <p class="normal-text">
-          In addition, you have a paper about how MongoDB stores and provides access to data and how that will impact ongoing maintenance and utilization of the data. 
-          <br><br>
-          The expectation on this is your craft your response to the manager in a way that it represents two groups who are impacted by the decision of incorporating data from MongoDB into the data warehouse.
-          <br><br><br>
-          Group 1 - Database Management / DevOps
-          <br><br>
-          What is the impact of using a database like MongoDB?  
-          How is the data stored and what types of challenges will administrators need to deal with in managing this environment?
-          What will be the key considerations in transforming and loading data from the MongoDB environment into a relational database (RDBMS)?
-          <br><br><br>
-          Group 2 - Developers (Node.js) <br><br>
-          How will developers, who are using the MongoDB database, access the data? <br><br>
-          What challenges will they face in working with the data in the MongoDB database? <br><br>
-           
-          
-          My hope is that, as you are working through this set of hypothetical case studies associated with your papers, you are starting to get a sense of how to craft your messages to your manager in such a way that the advice can be acted upon. 
-          <br><br>
-          This is meant to be a simulation of the process that teams go through as they make architectural decisions, identifying the pros and cons of each alternative and looking at who will be impacted by the decision and how.  Learning this skill will be essential in your career as you will play many different roles on the team with a single goal of providing a solid and easy-to-manage solution.  
-        </p>
+        <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
+        <h2 id="paperTitle" class="padit">paper title</h2>
+        <div>
+            <h3></h3>
+            <p class="normal-text">
 
-        <p class="normal-text"></p>
-        <p class="normal-text"></p>
-        <p class="normal-text">
-          <br />
-          <figure>
-            <img src="../images/" alt="alt text here" class="centerimg" />
-            <figcaption class="source">
-              text here. &nbsp; Source:
-              <a href="">link text here </a>
-            </figcaption>
-          </figure>
-        </p>
-        <p class="normal-text"></p>
-        <ol class="sources">
-          Sources:
-          <li class="normal-text">
-            <a href="https://sdtimes.com/big-data/technical-debt-youre-overlooking-big-data-debt/">linktext</a>
-          </li>
-          <li class="normal-text">
-            <a href="https://medium.com/partoo/partoo-migrates-from-mongodb-to-postgresql-43c60854bebb">linktext</a>
-          </li>
-          <li class="normal-text">
-            <a href="">linktext</a>
-          </li>
-          <li class="normal-text">
-            <a href="">linktext</a>
-          </li>
-        </ol>
+            <h3>Database Management / DevOps</h3>
+            <h4>
+                What is the impact of using a database like MongoDB?
+            </h4>
+            <p class="normal-text">
+                MongoDB is easy to start using, even for someone who has never used it before. The documentation is complete and easy to understand for those with limited knowledge. It does not need any schema set up before data can be inserted. The model can be built in the code, using a variety of app programming languages, including at the very least Vanilla Javascript, Python and Node.js.
+            </p>
+            <h4>
+              How is the data stored and what types of challenges will administrators need to deal with in managing this environment?
+            </h4>
+            <p class="normal-text">
+                MongoDB uses the document store type of database storage. Each document is like a table row in a traditional database. 
+                <br><br>
+                Subqueries can be utilized as documents embedded in the parent documents, for example, a comments document can be embedded within a document containing hike listings for a travel guide. These subdocuments are linked by their auto-generated id numbers to the parent document.
+            </p>
+            <h4>
+                What will be the key considerations in transforming and loading data from the MongoDB environment into a relational database (RDBMS)?
+            </h4>
+            <p class="normal-text">
+              To migrate data from MongoDB to a relational database, the schema for the RDBMS will have to be set up before any records are inserted. If any fields are changed after some records are inserted, the RDBMS schema will need to be altered before any new records can be added. This will put and additional workload on the app developers to be sure the data keeps its integrity.
+            </p>
+            <p class="normal-text">
+
+            </p>
+            <h3>Developers (Node.js)</h3>
+            <h4>
+              How will developers, who are using the MongoDB database, access the data?
+            </h4>
+            <p class="normal-text">
+
+            </p>
+            <h4>
+                What challenges will they face in working with the data in the MongoDB database?
+            </h4>
+            <p class="normal-text">
+
+            </p>
+            <h3>
+              how MongoDB stores and provides access to data and how that will impact ongoing maintenance and utilization of the data.
+            </h3>
+            <p class="normal-text">
+
+            </p>
+            <p class="normal-text">
+
+            </p>
+
+            <p class="normal-text">
+            <br />
+              <figure>
+                  <img src="../images/" alt="alt text here" class="centerimg" />
+                  <figcaption class="source">
+                      text here. &nbsp; Source:
+                      <a href="">link text here </a>
+                  </figcaption>
+              </figure>
+          </p>
+          <ol class="sources">
+            Sources:
+            <li class="normal-text">
+              <a href="https://sdtimes.com/author/tomer-shiran/">Shiran, Tomer</a>
+              <a href="https://sdtimes.com/big-data/technical-debt-youre-overlooking-big-data-debt/"> "The technical debt you’re overlooking: Big Data debt", SD Times, August 16, 2017</a>
+            </li>
+            <li class="normal-text">
+              <a href="https://medium.com/partoo/partoo-migrates-from-mongodb-to-postgresql-43c60854bebb">linktext</a>
+            </li>
+            <li class="normal-text">
+              <a href="">linktext</a>
+            </li>
+            <li class="normal-text">
+              <a href="">linktext</a>
+            </li>
+          </ol>
       </div>
     </main>
     <footer id="autofooter"></footer>

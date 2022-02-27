@@ -65,7 +65,7 @@ function getBase() {
 function getWeeknum(menuweek) {
   let weekno;
   if (menuweek.substr(0, 4) === "week") {
-    weekno = menuweek.substr(5, 2);
+    weekno = menuweek.substr(4, 2);
   }
   return weekno;
 }

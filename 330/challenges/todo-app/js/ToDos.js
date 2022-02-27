@@ -70,7 +70,7 @@ export default class ToDos {
       renderlist.forEach((field) => {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-        let item = util.createLMNT('li', '', '', '', 'listitem bordered item-row');
+        let item = util.createLMNT('li', '', '', '', 'listitem bordered item-row nodots');
         let itemtext = util.createLMNT("p", "", "", field.task , "todo-text");
         let markbox = util.createLMNT('label', `label${field.id}`, '', '', 'bordered markbtn');
         markbox.setAttribute('name', `label${field.id}`);

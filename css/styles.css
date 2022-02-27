@@ -203,7 +203,7 @@ body header #main-nav ol li a {
   text-decoration: line-through;
 }
 
-ul li {
+.nodots {
   list-style-type: none;
 }
 
@@ -416,6 +416,17 @@ ul li {
   font-weight: bolder;
 }
 
+.mobileShow {
+  display: none;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .mobileShow {
+    display: inline;
+  }
+}
+
 .dojo {
   background: url(https://gistcdn.githack.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/635810bd1a925c06b5c0bc0c861d62fe53597078/dojo.svg) no-repeat;
   width: 90%;
@@ -584,6 +595,10 @@ h6 {
   font-weight: bold;
 }
 
+.listdots {
+  list-style: square;
+}
+
 .normal-text {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
@@ -591,10 +606,6 @@ h6 {
   padding: 2vw;
   margin: 0 2vw;
   background: black;
-}
-
-.nostyle {
-  list-style: none;
 }
 
 li.nav a {
@@ -738,10 +749,6 @@ pre {
 
 h4.indent, p.indenth4 {
   padding-left: 4vw;
-}
-
-ul {
-  list-style: none;
 }
 
 h5.indent, p.indenth5, p ul li.indent {

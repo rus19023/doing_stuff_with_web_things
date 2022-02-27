@@ -114,6 +114,10 @@ h6 {
   font-weight: bold;
 }
 
+.listdots {
+  list-style: square;
+}
+
 .normal-text {
   color: $primary;
   font-family: $fontprimary;
@@ -121,10 +125,6 @@ h6 {
   padding: 2vw;
   margin: 0 2vw;
   background: black;
-}
-
-.nostyle {
-  list-style: none;
 }
 
 li.nav a {
@@ -263,10 +263,6 @@ pre {
 
 h4.indent, p.indenth4 {
   padding-left: 4vw;
-}
-
-ul {
-  list-style: none;
 }
 
 h5.indent, p.indenth5, p ul li.indent {

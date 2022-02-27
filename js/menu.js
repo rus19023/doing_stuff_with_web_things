@@ -570,8 +570,12 @@ function getWeekPaperTitle(array) {
   let weekFile = `week${getWeeknum(getFilename())}`;
   // get paper title from menu array where filename is the week number
   array.forEach(element => {
+    //console.log(element.url.substr(-11, 6))
+    //console.log(weekFile)
     if ((element.url.substr(-11, 6) === weekFile) && (isElement("paperTitle"))) {
-      document.getElementById("paperTitle").innerText = element.name;
+      //console.log(element.name)
+      //console.log(document.getElementById("paperTitle"))
+      document.getElementById("paperTitle").innerHTML = element.name;
       return;
     }
   });

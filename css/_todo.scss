@@ -30,7 +30,7 @@ $todoborder: 2px solid $p150;
     text-decoration: line-through;
 }
 
-ul li {
+.nodots {
     list-style-type: none;
 }
 
@@ -187,4 +187,13 @@ ul li {
         text-align: center;
         font-weight: bolder;
     }
+}
+
+.mobileShow {display: none;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
 }
