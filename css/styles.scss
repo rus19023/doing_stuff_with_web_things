@@ -10,9 +10,11 @@
 
 html {
   color: $accent;
-  background: $background; 
+  background: $background;
+  padding: 1vw;
   font-size: 12px;
 }
+
 .centered {
   text-align: center;
   width: 100%;
@@ -21,6 +23,10 @@ html {
 
 h1 {
   font-size: $font5;
+}
+
+#autoheader {
+  margin: 1vw;
 }
 
 h2#tab-bar {
@@ -178,7 +184,7 @@ a:hover {
 
 .padit {
   padding: 4vw;
-  width: 100%;
+  max-width: 100%;
 }
 
 #siteTitle2 {

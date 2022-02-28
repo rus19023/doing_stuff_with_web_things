@@ -90,7 +90,7 @@ $todoborder: 2px solid $p150;
         & li.listitem {
             grid-area: listitem;
             list-style-type: none;
-            max-width: 90%;
+            width: 100%;
             border: $todoborder;
             margin: 0;
             height: 8vh;
@@ -150,6 +150,7 @@ $todoborder: 2px solid $p150;
     }
     & #addbar {
         grid-area: addbar;
+        cursor: pointer;
         height: 8vh;
         /*position: absolute;
         bottom: 0vh;*/

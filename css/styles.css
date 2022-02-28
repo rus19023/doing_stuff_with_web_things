@@ -42,6 +42,8 @@ body header #main-nav ol li a {
   grid-area: gridcontainer;
   display: -ms-grid;
   display: grid;
+  max-width: 100%;
+  padding: 1vw;
       grid-template-areas: "left" "right";
 }
 
@@ -285,7 +287,7 @@ body header #main-nav ol li a {
   -ms-grid-column: 1;
   grid-area: listitem;
   list-style-type: none;
-  max-width: 90%;
+  width: 100%;
   border: 2px solid #8ffff0;
   margin: 0;
   height: 8vh;
@@ -370,6 +372,7 @@ body header #main-nav ol li a {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: addbar;
+  cursor: pointer;
   height: 8vh;
   /*position: absolute;
         bottom: 0vh;*/
@@ -488,6 +491,7 @@ input[type="checkbox"].markbtnX {
 html {
   color: #d6ff8f;
   background: #7e5201;
+  padding: 1vw;
   font-size: 12px;
 }
 
@@ -499,6 +503,10 @@ html {
 
 h1 {
   font-size: 5vh;
+}
+
+#autoheader {
+  margin: 1vw;
 }
 
 h2#tab-bar {
@@ -663,7 +671,7 @@ a:hover {
 
 .padit {
   padding: 4vw;
-  width: 100%;
+  max-width: 100%;
 }
 
 #siteTitle2 {

@@ -1,55 +1,55 @@
 import * as ls from "./ls.js";
 import * as util from "./utilities.js";
 
-let todoList = [];
+let sList = [];
 const lskey = 'items';
 
-export default class ToDos {
+export default class Scriptures {
     // a class needs a constructor
     constructor(parentId) {
         this.parentId = parentId;
-        this.todoList = [];
+        this.sList = [];
         this.error = error;
-        this.donebtn = util.qs('#donebtn');
-        this.actbtn = util.qs('#actbtn');
+        this.srchbtn = util.qs('#srchbtn');
+        this.fltrbtn = util.qs('#fltrbtn');
         this.allbtn = util.qs('#allbtn');
-        this.addbtn = util.qs('#addbtn');
-        this.donebtn.addEventListener("touchend", () => { this.listDone(); }, false);
-        this.actbtn.addEventListener("touchend", () => { this.listActive(); }, false);
+        //this.addbtn = util.qs('#addbtn');
+        this.srchbtn.addEventListener("touchend", () => { this.listSearch(); }, false);
+        this.fltrbtn.addEventListener("touchend", () => { this.listFilter(); }, false);
         this.allbtn.addEventListener("touchend", () => { this.listAll(); }, false);
-        this.addbtn.addEventListener("touchend", () => { this.addTodo(); }, false);
+        //this.addbtn.addEventListener("touchend", () => { this.addTodo(); }, false);
   }
 
   listAll() {
-      this.todoList = getTodos(lskey);
-      this.renderTodoList(this.todoList);
+      this.sList = getScriptures(lskey);
+      this.rendersList(this.sList);
       this.itemsLeft();
   }
 
   // function to show how many items are left undone in the todo list
   itemsLeft() {
-      let itemcount = this.todoList.length;
+      let itemcount = this.sList.length;
       let t;
       if (itemcount === 1) {
-        t = ' task ';
+        t = ' scripture ';
       } else if ((itemcount > 1) || (itemcount === 0)) {
-        t = ' tasks ';
+        t = ' scriptures ';
       }
-      util.qs("#tasks").innerHTML = `${itemcount} ${t} left`;
+      util.qs("#scriptures").innerHTML = `${itemcount} ${t} left`;
   }
 
   addTodo() {
       // set blank error field
       this.error = '';
       util.qs("#error").innerText = this.error;
-      // grab task from input field
-      const task = util.qs("#addinput");
-      if (!task.value.length > 0) {
-          this.error = 'Item cannot be blank, please enter your task.';
+      // grab scripture from input field
+      const scripture = util.qs("#addinput");
+      if (!scripture.value.length > 0) {
+          this.error = 'Item cannot be blank, please enter your scripture.';
           util.qs("#error").innerText = this.error;
       } else {
-          saveTodo(task.value, lskey);
-          task.value = '';
+          saveTodo(scripture.value, lskey);
+          scripture.value = '';
       }
   }
 
@@ -63,20 +63,20 @@ export default class ToDos {
       this.listAll;
   }
 
-  renderTodoList(renderlist) {
+  rendersList(renderlist) {
       // build new display
-      const parentEl = util.qs('#todos');
+      const parentEl = util.qs('#Scriptures');
       parentEl.innerText = '';
       renderlist.forEach((field) => {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
         let item = util.createLMNT('li', '', '', '', 'listitem bordered item-row nodots');
-        if (field.task.length > 75) {
+        if (field.scripture.length > 75) {
           item.style.height = '12vh';
-        } else if (field.task.length > 30) {
+        } else if (field.scripture.length > 30) {
           item.style.height = '10vh';
         }
-        let itemtext = util.createLMNT("p", "", "", field.task , "todo-text");
+        let itemtext = util.createLMNT("p", "", "", field.scripture , "todo-text");
         let markbox = util.createLMNT('label', `label${field.id}`, '', '', 'bordered markbtn');
         markbox.setAttribute('name', `label${field.id}`);
         let markbtn = util.createLMNT("input", "checkbox", field.id, "", "markbtn chkbtn");
@@ -119,53 +119,53 @@ export default class ToDos {
   }
 
   listActive() {
-      this.todoList = getTodos(lskey);
-      this.todoList = this.todoList.filter(el => el.done === false);
-      this.renderTodoList(this.todoList);
+      this.sList = getScriptures(lskey);
+      this.sList = this.sList.filter(el => el.done === false);
+      this.rendersList(this.sList);
     }
 
     listDone() {
-      this.todoList = getTodos(lskey);
-      this.todoList = this.todoList.filter(el => el.done === true);
-      this.renderTodoList(this.todoList);
+      this.sList = getScriptures(lskey);
+      this.sList = this.sList.filter(el => el.done === true);
+      this.rendersList(this.sList);
     }
 }
 
-/***** END OF ToDos CLASS *****/
+/***** END OF Scriptures CLASS *****/
 
 /*
-In the Todos.js module, but not in the Todos class create the following function
-/ check the contents of todoList, a local variable containing a list of ToDos. If it is null then pull the list of todos from localstorage, update the local variable, and return it
+In the Scriptures.js module, but not in the Scriptures class create the following function
+/ check the contents of sList, a local variable containing a list of Scriptures. If it is null then pull the list of Scriptures from localstorage, update the local variable, and return it
 @param {string} key The key under which the value is stored under in LS @return {array} The value as an array of objects /
-function getTodos(key) { }
+function getScriptures(key) { }
 */
 
-function getTodos(lskey) {
-    let tasklist = JSON.parse(ls.readFromLS(lskey)) || [];
-  return tasklist;
+function getScriptures(lskey) {
+    let scripturelist = JSON.parse(ls.readFromLS(lskey)) || [];
+  return scripturelist;
 }
 
 /*
-In the Todo.js module, but not in the Todos class, create the following function
-/* build a todo object, add it to the todoList, and save the new list to local storage.
-@param {string} key The key under which the value is stored under in LS @param {string} task The text of the task to be saved.
+In the Todo.js module, but not in the Scriptures class, create the following function
+/* build a todo object, add it to the sList, and save the new list to local storage.
+@param {string} key The key under which the value is stored under in LS @param {string} scripture The text of the scripture to be saved.
 A todo should look like this: { id : timestamp, content: string, completed: bool }
 */
 
-function saveTodo(task, lskey) {
-  todoList = getTodos(lskey);
+function saveTodo(scripture, lskey) {
+  sList = getScriptures(lskey);
   // build todo object
-  const todo = { id: Date.now(), task: task, done: false };
-  // add obj to todoList
-  todoList.push(todo);
+  const todo = { id: Date.now(), scripture: scripture, done: false };
+  // add obj to sList
+  sList.push(todo);
   // save JSON.stringified list to ls
-  ls.writeToLS(lskey, JSON.stringify(todoList));
+  ls.writeToLS(lskey, JSON.stringify(sList));
   location.reload();
 }
 
 function markDone(id) {
-    todoList = getTodos(lskey);
-    todoList.forEach(function(item) {
+    sList = getScriptures(lskey);
+    sList.forEach(function(item) {
         // use == not ===, because here types are different. One is number and other is string
         if (item.id == id) {
           // toggle the value
@@ -173,15 +173,15 @@ function markDone(id) {
         }
     });
     // save modified JSON.stringified list to ls
-    ls.writeToLS(lskey, JSON.stringify(todoList));
-    console.log(todoList);
+    ls.writeToLS(lskey, JSON.stringify(sList));
+    console.log(sList);
     location.reload();
 }
 
 function deleteTodo(id) {
-    todoList = getTodos(lskey);
-    todoList = todoList.filter(item => item.id != id.substr(3, id.length));
+    sList = getScriptures(lskey);
+    sList = sList.filter(item => item.id != id.substr(3, id.length));
     // save JSON.stringified list to ls
-    ls.writeToLS('items', JSON.stringify(todoList));
+    ls.writeToLS('items', JSON.stringify(sList));
     location.reload();
 }
