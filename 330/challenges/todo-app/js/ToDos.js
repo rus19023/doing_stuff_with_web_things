@@ -71,6 +71,11 @@ export default class ToDos {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
         let item = util.createLMNT('li', '', '', '', 'listitem bordered item-row nodots');
+        if (field.task.length > 75) {
+          item.style.height = '12vh';
+        } else if (field.task.length > 30) {
+          item.style.height = '10vh';
+        }
         let itemtext = util.createLMNT("p", "", "", field.task , "todo-text");
         let markbox = util.createLMNT('label', `label${field.id}`, '', '', 'bordered markbtn');
         markbox.setAttribute('name', `label${field.id}`);
