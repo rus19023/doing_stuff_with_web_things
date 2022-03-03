@@ -33,7 +33,7 @@ const certs = [
 
 const mainNav = [
   {
-    url: `${getBase()}101/`,
+    url: `${getCbase()}101/`,
     term: "04",
     year: "19",
     code: "CS101",
@@ -43,7 +43,7 @@ const mainNav = [
     cert: "01",
   },
   {
-    url: `${getBase()}327/`,
+    url: `${getCbase()}327/`,
     term: "01",
     year: "22",
     code: "CIT327",
@@ -53,7 +53,7 @@ const mainNav = [
     cert: "04",
   },
   {
-    url: `${getBase()}330/`,
+    url: `${getCbase()}330/`,
     term: "01",
     year: "22",
     code: "WDD330",
@@ -63,7 +63,7 @@ const mainNav = [
     cert: "05",
   },
   {
-    url: `${getBase()}331/`,
+    url: `${getCbase()}331/`,
     term: "04",
     year: "20",
     code: "WDD331",
@@ -73,7 +73,7 @@ const mainNav = [
     cert: "02",
   },
   {
-    url: `${getBase()}111/`,
+    url: `${getCbase()}111/`,
     term: "04",
     year: "19",
     code: "CIT111",
@@ -83,7 +83,7 @@ const mainNav = [
     cert: "04",
   },
   {
-    url: `${getBase()}111/`,
+    url: `${getCbase()}111/`,
     term: "04",
     year: "19",
     code: "CIT111",
@@ -93,7 +93,7 @@ const mainNav = [
     cert: "01",
   },
   {
-    url: `${getBase()}225/`,
+    url: `${getCbase()}225/`,
     term: "01",
     year: "21",
     code: "CIT225",
@@ -103,7 +103,7 @@ const mainNav = [
     cert: "04",
   },
   {
-    url: `${getBase()}325/`,
+    url: `${getCbase()}325/`,
     term: "02",
     year: "21",
     code: "CIT325",
@@ -113,7 +113,7 @@ const mainNav = [
     cert: "04",
   },
   {
-    url: `${getBase()}160/`,
+    url: `${getCbase()}160/`,
     term: "04",
     year: "19",
     code: "CIT160",
@@ -123,7 +123,7 @@ const mainNav = [
     cert: "01",
   },
   {
-    url: `${getBase()}171/`,
+    url: `${getCbase()}171/`,
     term: "01",
     year: "21",
     code: "CIT171",
@@ -133,7 +133,7 @@ const mainNav = [
     cert: "06",
   },
   {
-    url: `${getBase()}270/`,
+    url: `${getCbase()}270/`,
     term: "02",
     year: "21",
     code: "CIT270",
@@ -143,7 +143,7 @@ const mainNav = [
     cert: "03",
   },
   {
-    url: `${getBase()}352/`,
+    url: `${getCbase()}352/`,
     term: "02",
     year: "21",
     code: "CIT352",
@@ -153,7 +153,7 @@ const mainNav = [
     cert: "03",
   },
   {
-    url: `${getBase()}353/`,
+    url: `${getCbase()}353/`,
     term: "04",
     year: "21",
     code: "CIT353",
@@ -163,7 +163,7 @@ const mainNav = [
     cert: "03",
   },
   {
-    url: `${getBase()}341/`,
+    url: `${getCbase()}341/`,
     term: "04",
     year: "21",
     code: "WDD341",
@@ -173,7 +173,7 @@ const mainNav = [
     cert: "05",
   },
   {
-    url: `${getBase()}340/`,
+    url: `${getCbase()}340/`,
     term: "04",
     year: "21",
     code: "WDD340",
@@ -183,7 +183,7 @@ const mainNav = [
     cert: "05",
   },
   {
-    url: `${getBase()}100/`,
+    url: `${getCbase()}100/`,
     term: "04",
     year: "19",
     code: "WDD100",
@@ -193,7 +193,7 @@ const mainNav = [
     cert: "02",
   },
   {
-    url: `${getBase()}241-2/`,
+    url: `${getCbase()}241-2/`,
     term: "02",
     year: "21",
     code: "CIT241",
@@ -203,7 +203,7 @@ const mainNav = [
     cert: "03",
   },
   {
-    url: `${getBase()}240/`,
+    url: `${getCbase()}240/`,
     term: "01",
     year: "21",
     code: "CIT240",
@@ -213,7 +213,7 @@ const mainNav = [
     cert: "03",
   },
   {
-    url: `${getBase()}246/`,
+    url: `${getCbase()}246/`,
     term: "02",
     year: "20",
     code: "CS246",
@@ -223,7 +223,7 @@ const mainNav = [
     cert: "01",
   },
   {
-    url: `${getBase()}241/`,
+    url: `${getCbase()}241/`,
     term: "01",
     year: "20",
     code: "CS241",
@@ -233,7 +233,7 @@ const mainNav = [
     cert: "01",
   },
   {
-    url: `${getBase()}213/`,
+    url: `${getCbase()}213/`,
     term: "02",
     year: "20",
     code: "CS213",
@@ -243,7 +243,7 @@ const mainNav = [
     cert: "02",
   },
   {
-    url: `${getBase()}130/`,
+    url: `${getCbase()}130/`,
     term: "04",
     year: "20",
     code: "COMM130",
@@ -253,7 +253,7 @@ const mainNav = [
     cert: "02",
   },
   {
-    url: `${getBase()}230/`,
+    url: `${getCbase()}230/`,
     term: "01",
     year: "20",
     code: "WDD230",
@@ -263,7 +263,7 @@ const mainNav = [
     cert: "02",
   },
   {
-    url: `${getBase()}260/`,
+    url: `${getCbase()}260/`,
     term: "02",
     year: "22",
     code: "CIT260",
@@ -273,7 +273,7 @@ const mainNav = [
     cert: "05",
   },
   {
-    url: `${getBase()}365/`,
+    url: `${getCbase()}365/`,
     term: "02",
     year: "22",
     code: "WDD365",
@@ -283,7 +283,7 @@ const mainNav = [
     cert: "05",
   },
   {
-    url: `${getBase()}211/`,
+    url: `${getCbase()}211/`,
     term: "04",
     year: "21",
     code: "GEINT211",
@@ -293,7 +293,7 @@ const mainNav = [
     cert: "06",
   },
   {
-    url: `${getBase()}/105`,
+    url: `${getCbase()}/105`,
     term: "03",
     year: "22",
     code: "105",
@@ -303,7 +303,7 @@ const mainNav = [
     cert: "06",
   },
   {
-    url: `${getBase()}/112`,
+    url: `${getCbase()}/112`,
     term: "04",
     year: "22",
     code: "112",
@@ -313,7 +313,7 @@ const mainNav = [
     cert: "06",
   },
   {
-    url: `${getBase()}/`,
+    url: `${getCbase()}/`,
     term: "04",
     year: "22",
     code: "",
@@ -323,7 +323,7 @@ const mainNav = [
     cert: "06",
   },
   {
-    url: `${getBase()}/150`,
+    url: `${getCbase()}/150`,
     term: "01",
     year: "23",
     code: "",
@@ -333,7 +333,7 @@ const mainNav = [
     cert: "06",
   },
   {
-    url: `${getBase()}/`,
+    url: `${getCbase()}/`,
     term: "01",
     year: "23",
     code: "",
@@ -393,59 +393,59 @@ const list330 = [
 
 const paperslist = [
   {
-    name: "Data Mart vs. Data Warehouse",
+    name: "Week 01: Data Mart vs. Data Warehouse",
     url: `${getBase()}week01.html`,
   },
   {
-    name: "Kimball and Inmon Methodologies",
+    name: "Week 02: Kimball and Inmon Methodologies",
     url: `${getBase()}week02.html`,
   },
   {
-    name: "ETL Processes",
+    name: "Week 03: ETL Processes",
     url: `${getBase()}week03.html`,
   },
   {
-    name: "Data Warehouse Granularity",
+    name: "Week 04: Data Warehouse Granularity",
     url: `${getBase()}week04.html`,
   },
   {
-    name: "ERD Model for Snowflake Schema",
+    name: "Week 05: ERD Model for Snowflake Schema",
     url: `${getBase()}week05.html`,
   },
   {
-    name: "Cassandra, Map Reduce, and CSQL",
+    name: "Week 06: Cassandra, Map Reduce, and CSQL",
     url: `${getBase()}week06.html`,
   },
   {
-    name: "Vertical vs. Horizontal Scaling",
+    name: "Week 07: Vertical vs. Horizontal Scaling",
     url: `${getBase()}week07.html`,
   },
   {
-    name: "MongoDB",
+    name: "Week 08: MongoDB",
     url: `${getBase()}week08.html`,
   },
   {
-    name: "Schemaless Collections in MongoDB",
+    name: "Week 09: Schemaless Collections in MongoDB",
     url: `${getBase()}week09.html`,
   },
   {
-    name: "XSLT with XML Documents",
+    name: "Week 10: XSLT with XML Documents",
     url: `${getBase()}week10.html`,
   },
   {
-    name: "XQuery",
+    name: "Week 11: XQuery",
     url: `${getBase()}week11.html`,
   },
   {
-    name: "MEAN Stack Integration into the Data Warehouse - Outline",
+    name: "Week 12: MEAN Stack Integration into the Data Warehouse - Outline",
     url: `${getBase()}week12.html`,
   },
   {
-    name: "MEAN Stack Integration into the Data Warehouse - Draft",
+    name: "Week 13: MEAN Stack Integration into the Data Warehouse - Draft",
     url: `${getBase()}week13.html`,
   },
   {
-    name: "MEAN Stack Integration into the Data Warehouse",
+    name: "Week 14: MEAN Stack Integration into the Data Warehouse",
     url: `${getBase()}week14.html`,
   },
 ];

@@ -678,6 +678,16 @@ h5.indent, p.indenth5, p ul li.indent {
   color: #ff8f9e;
 }
 
+#root a {
+  color: #d6ff8f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#root a:visited {
+  color: #9eff8f;
+}
+
 .todo-buttons {
   height: 6vh;
   margin: 1vw;

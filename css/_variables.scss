@@ -47,7 +47,6 @@ $legendborder: 4px solid $mdgrey;
 // Fonts
 $fontprimary: 'Nunito', sans-serif;
 $fontsecond: 'Dosis', sans-serif;
-$fontinput: 3vw/4vw;
 $font1: max(1vh);
 $font2: max(2vh);
 $font3: max(3vh);
@@ -78,6 +77,6 @@ $fa-version:           "5.15.4" !default;
 $fa-border-color:      $primary !default;
 $fa-inverse:           $contrast !default;
 $fa-li-width:          2em !default;
-$fa-fw-width:          (20em / 16);
+$fa-fw-width:          20em;
 $fa-primary-opacity:   1 !default;
 $fa-secondary-opacity: .4 !default;

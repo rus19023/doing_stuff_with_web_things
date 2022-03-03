@@ -59,7 +59,12 @@ function getBase() {
   //return window.location.href.replace(/\/[^\/]*$/, '/');
   var href = location.href; //returns the entire url
   var host = location.hostname; //returns just the hostname of the url
+  //console.log(href);
   return location.href;
+}
+
+function getCbase() {
+  return `${location.href}courses/`;
 }
 
 function getWeeknum(menuweek) {

@@ -9,6 +9,16 @@ $todoborder: 2px solid $p150;
     color: $p-30;
 }
 
+#root a {
+  color: $accent;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#root a:visited {
+  color: $p90;
+}
+
 .todo-buttons {
     height: 6vh;
     margin: 1vw;
