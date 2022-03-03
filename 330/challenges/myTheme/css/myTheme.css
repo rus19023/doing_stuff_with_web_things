@@ -1,0 +1,60 @@
+body {
+    max-width: 100%;
+    background: grey;
+    color: chartreuse;
+    font-size: 15px;
+}
+
+.gridit {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1vw;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+.padit {
+    padding: 1vw;
+    max-width: 100%;
+}
+
+.nomargin {
+    margin: 0;
+}
+
+input {
+    width: 10vw;
+    height: 5vw;
+    padding: .5vw;
+    margin: 1vw;
+}
+
+h6, input {
+    width: 20vw;
+}
+
+button {
+    background: chartreuse;
+    color: grey;
+    border: none;
+    font-size: 2vw;
+    padding: 2vw;
+    margin: 1vw;
+    height: 4vw;
+    width: 10vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 20px dkgrey;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

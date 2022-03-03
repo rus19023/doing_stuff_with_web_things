@@ -1,12 +1,12 @@
-import TodosModel from "./todosModel.js";
-import TodosView from "./todosView.js";
+import scriptureModel from "./scriptureModel.js";
+import scriptureView from "./scriptureView.js";
 
-export default class TodosController {
+export default class scriptureController {
     // a class needs a constructor
     constructor(parentId) {
         this.parentElement = document.getElementById(parentId);
-        this.todoModel = new TodosModel();
-        this.todosView = new TodosView(parentId);
+        this.todoModel = new scriptureModel();
+        this.scriptureView = new scriptureView(parentId);
     }
 
     onTap(event) {
@@ -30,15 +30,15 @@ export default class TodosController {
         console.log(getElementById('addinput').value);
         createItem('items', this.lastId, this.itemName, this.itemDone);
       }
-      // If the active button is clicked/tapped, show all active todos
+      // If the active button is clicked/tapped, show all active scripture
       if ((event.target.id === 'actbtn')) {
         showActive();
       }
-      // If the all button is clicked/tapped, show all todos
+      // If the all button is clicked/tapped, show all scripture
       if ((event.target.id === 'allbtn')) {
         showAll();
       }
-      // If the done button is clicked/tapped, show all done todos
+      // If the done button is clicked/tapped, show all done scripture
       if ((event.target.id === 'donbtn')) {
         showDone();
       }
@@ -46,33 +46,33 @@ export default class TodosController {
     //window.addEventListener('touchend', onTap);
 
     showAll() {
-        // the list of todos will come from the model
-        //const todolist = this.todosModel.getAllTodos();
-        // send the list of todos and the element we would like those placed into to the view.
+        // the list of scripture will come from the model
+        //const todolist = this.scriptureModel.getAllscripture();
+        // send the list of scripture and the element we would like those placed into to the view.
         //this.todoView.renderTodoList(this.parentElement, todolist);
-        // after the todos have been rendered...add our listener
+        // after the scripture have been rendered...add our listener
         //this.addTodoListener();
     }
 
     showOneTodo(todoName) {
-        const todo = this.todosModel.gettodoByName(todoName);
-        this.todosView.renderOneTodoFull(this.parentElement, todo).ontouchend =
+        const todo = this.scriptureModel.gettodoByName(todoName);
+        this.scriptureView.renderOneTodoFull(this.parentElement, todo).ontouchend =
         () => {
             this.showTodoList();
         };
     }
 
     showActive() {
-        const todolist = this.todosModel.getAllTodos();
-        const activeTodos = todolist.filter(todo => !todo.itemDone);
-        this.todoView.renderTodoList(this.parentElement, activeTodos);
+        const todolist = this.scriptureModel.getAllscripture();
+        const activescripture = todolist.filter(todo => !todo.itemDone);
+        this.todoView.renderTodoList(this.parentElement, activescripture);
         this.addTodoListener();
     }
 
     showDone() {
-        const todolist = this.todosModel.getAllTodos();
-        const doneTodos = todolist.filter(todo => todo.itemDone);
-        this.todoView.renderTodoList(this.parentElement, doneTodos);
+        const todolist = this.scriptureModel.getAllscripture();
+        const donescripture = todolist.filter(todo => todo.itemDone);
+        this.todoView.renderTodoList(this.parentElement, donescripture);
         this.addTodoListener();
     }
 
@@ -99,7 +99,7 @@ export default class TodosController {
        }
    }
 
-  // in order to show the details of a todo ontouchend we will need to attach a listener AFTER the list of todos has been built. The function below does that.
+  // in order to show the details of a todo ontouchend we will need to attach a listener AFTER the list of scripture has been built. The function below does that.
   addTodoListener() {
     // We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. So in order to use something like a forEach we need to convert it to an array.
     const childrenArray = Array.from(this.parentElement.children);

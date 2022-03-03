@@ -11,7 +11,7 @@ export default class ToDos {
       this.lskey = lskey;
       console.log(this.lskey);
       this.todoList = [];
-      this.error = '';
+      this.todo_error = "";
       util.onTouch('#addbtn', this.addTodo);
       util.onTouch('#allbtn', this.listAll);
       util.onTouch('#actbtn', this.listActive);
@@ -20,14 +20,14 @@ export default class ToDos {
 
     addTodo() {
       // set blank error field
-      util.qs("#error").innerText = this.error;
+      util.qs("#todo-error").innerText = this.todo_error;
       // grab task from input field
       const task = util.qs("#addinput").value;
       if (!task.length > 0) {
-        this.error = 'Item cannot be blank, please enter your task.';
-        util.qs("#error").innerText = this.error;
+        this.todo_error = 'Item cannot be blank, please enter your task.';
+        util.qs("#todo-error").innerText = this.todo_error;
       } else {
-        this.error = "";
+        this.todo_error = "";
         saveTodo(task, this.lskey);
       }
       this.todoList = getTodos(this.lskey);

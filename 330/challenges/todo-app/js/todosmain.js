@@ -4,3 +4,4 @@ window.addEventListener("load", () => {
     const myTodos = new ToDos("todos");
     myTodos.listActive();
 });
+
