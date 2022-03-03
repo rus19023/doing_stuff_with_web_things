@@ -17,6 +17,13 @@ DerivedData
 *.ipa
 *.xcuserstate
 *hike*
+node_modules/
+*.xcworkspace
+*.code-workspace
+.vscode/
+scripturechase/
+
+
 
 # CocoaPods
 #

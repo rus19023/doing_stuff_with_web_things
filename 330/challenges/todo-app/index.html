@@ -1,59 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" rel="stylesheet" href="../../../css/todo-app.css" />
-     <!--
-      <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
-     -->
-    <title id="wdd330challengetitle">challenges title</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link type="text/css" rel="stylesheet" href="../../../css/todo-app.css" />
+        <!--
+          <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+        -->
+        <title id="wdd330challengetitle">challenges title</title>
+    </head>
 
-  <body class="mobileHide">
-    <!-- <h1>App only available on mobile devices with screens smaller than 1000px wide</h1> -->
-		<header id=""><a href="/330/0">Back to Home</a></header>
-    <main id="gridcontainer"  class="mobileShow">
-      <section id="left">
-        <h1 id="todoheading" class="padit">To Do App</h1>
-        <div id="todocontainer" class="bordered">
-          <h2 id="header" class="centered">To Do List</h2>
-          <ul id="todos"></ul>
-          <div id="footer" class="bordered todo-text foot-row">
-              <p id="tasks">_ tasks done.</p>
-              <button  class="todo-buttons" id="allbtn"> Show All</button>
-              <button  class="todo-buttons" id="actbtn"> Show Pending</button>
-              <button  class="todo-buttons" id="donebtn"> Show Done</button>
-          </div>
-          <div id="addbar" class="todo-text">
-            <input id="addinput" type="text" name="addinput" placeholder="Add a To Do task" value="" class="bordered">
-            <button id="addbtn" class="bordered">+</button>
-          </div>
-          <div id="searchbar" class="todo-text">
-            <input id="searchinput" type="text" name="searchinput" placeholder="Search tasks" value="" class="bordered">
-            <button id="srchbtn" class="bordered">Search</button>
-          </div>
-        </div>
-        <div id="error"></div>
-      <!-- </section>
-
-      <section id="right">
-            Wireframes for each view:
-            <div class="fig-block">
-              <figure>
-                <img
-                  src="../../images/todo-wireframe.png"
-                  alt="Todo app wireframe" width="300"
-                />
-              </figure>
-            </div>
-      </section> -->
-    </main>
-    <footer id="autofooter"></footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../../../js/main.js" ></script>
-    <script src="../../../js/menu.js"></script>
-    <script src="./js/todosmain.js" type="module"></script>
-  </body>
+    <body class="mobileHide">
+        <!-- <h1>App only available on mobile devices with screens smaller than 1000px wide</h1> -->
+        <header id=""><a href="/330/0">Back to Home</a></header>
+        <main id="gridcontainer"  class="mobileShow">
+            <section id="left">
+                <h1 id="todoheading" class="padit">To Do App</h1>
+                <div id="todocontainer" class="bordered">
+                    <h2 id="header" class="centered">To Do List</h2>
+                    <ul id="todos"></ul>
+                    <div id="footer" class="bordered todo-text foot-row">
+                        <p id="tasks">_ tasks done.</p>
+                        <button  class="todo-buttons" id="allbtn"> Show All</button>
+                        <button  class="todo-buttons" id="actbtn"> Show Pending</button>
+                        <button  class="todo-buttons" id="donebtn"> Show Done</button>
+                    </div>
+                    <div id="addbar" class="todo-text">
+                        <input id="addinput" type="text" name="addinput" placeholder="Add a To Do task" value="" class="bordered">
+                        <button id="addbtn" class="bordered">+</button>
+                    </div>
+                    <div id="searchbar" class="todo-text">
+                        <input id="searchinput" type="text" name="searchinput" placeholder="Search tasks" value="" class="bordered">
+                        <button id="srchbtn" class="bordered">Search</button>
+                    </div>
+                </div>
+                <div id="error"></div>
+            </section>
+        </main>
+        <footer id="autofooter"></footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../../../js/main.js" ></script>
+        <script src="../../../js/menu.js"></script>
+        <script src="./js/todosmain.js" type="module"></script>
+    </body>
 </html>

@@ -1,0 +1,33 @@
+{
+  "name": "parcel",
+  "version": "2.3.2",
+  "description": "Boilerplate for a simple parcel based web app",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "rimraf build/*",
+    "start": "parcel src/index.html -d build/",
+    "prebuild": "rimraf dist/*",
+    "build": "parcel build src/index.html --public-url ./",
+    "watch": "parcel watch src/index.html -d build/",
+    "lint": "eslint *.js src/**/*.js"
+  },
+  "author": "Shane T",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-compat": "^4.0.2",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "babel-eslint": "^10.1.0"
+  },
+  "resolutions": {}
+}
