@@ -9,14 +9,35 @@
   </head>
 
   <body>
-    <header id="autoheader">auto header</header>
+    <header id="header">auto header</header>
     <main>
       <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
       <h2 id="paperTitle" class="padit">paper title</h2>
       <div>
         <h3></h3>
-        <p class="normal-text"></p>
-        <p class="normal-text"></p>
+        <p class="normal-text">
+          telemetry used to decide whether to scale up (need more resources for single machine) or out (need more nodes added to the database network)
+        </p>
+        <p class="normal-text">With your paper, your focus is to understand what complexity having a schemaless database brings.  My expectations for the paper are that you cover the following questions:
+          <br><br>
+          What is a schemaless collection in MongoDB?
+          Schema-on-write vs. Schema-on-read and Schemaless databases 
+          https://www.mongodb.com/unstructured-data/schemaless (Links to an external site.) 
+          https://www.dell.com/en-us/blog/schema-read-vs-schema-write-started/ (Links to an external site.) 
+          <br><br>
+          
+          How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?
+          Updating MongoDB - https://mindmajix.com/mongodb-update-document (Links to an external site.) 
+          <br><br>
+          
+          If you have a MongoDB source feeding into your data warehouse and an individual field value changes, what is the downstream impact?  What is the downstream impact if the schema of new documents in your collection changes?  How do these downstream considerations impact your technical debt?  How do they impact your telemetry?
+          <br><br>
+           
+          
+          Note: Sometimes the question of whether MongoDB as a source, or Redis as a source, or ElasticSearch as a source, or Cassandra as a source, or Neo4J as a source ... is good or bad is irrelevant.  The question from a data warehouse perspective is more about given that we have a MongoDB/Redis/ElasticSearch/Cassandra/Neo4J database, how do we minimize or manage the technical debt associated with getting it into the data warehouse?  And how do we take away the complexity of integration from the end-user and present them with something that is highly usable and consistent?
+          <br><br>
+          
+          </p>
         <h3></h3>
         <p class="normal-text"></p>
         <p class="normal-text"></p>

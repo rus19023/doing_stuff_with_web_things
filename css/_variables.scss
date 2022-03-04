@@ -12,7 +12,8 @@ $p-90: adjust-hue($primary, -90deg);
 $p-60: adjust-hue($primary, -60deg);
 $p-30: adjust-hue($primary, -30deg);
 
-$accent: lighten($primary, 10%);
+$accent3: lighten($primary, 10%);
+$accent2: $p120;
 $accent: $p60;
 $headings: $accent;
 $contrast: $p180;

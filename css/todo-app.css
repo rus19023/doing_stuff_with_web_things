@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -582,6 +583,7 @@ a:hover {
 .padit {
   padding: 4vw;
   max-width: 100%;
+  margin: 1vw auto;
 }
 
 #siteTitle2 {
@@ -647,8 +649,20 @@ footer#autofooter {
   padding: 1.5vw;
   font-family: "Dosis", sans-serif;
   font-weight: bold;
-  max-width: 90%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 2vw auto;
+  text-decoration: none;
+  list-style: none;
+}
+
+li {
+  padding-left: 4vw;
+}
+
+.col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2vw;
 }
 
 pre {
