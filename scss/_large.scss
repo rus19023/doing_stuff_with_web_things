@@ -13,10 +13,6 @@
         grid-template-columns: repeat(6, 1fr);
     }
 
-    .normal-text, p.normal-text  {
-        font-size: $font3;
-    }
-
     #gridcontainer {
       gap: 2vw;
       grid-template-areas:

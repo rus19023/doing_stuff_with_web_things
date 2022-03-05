@@ -142,7 +142,7 @@ h6 {
 .normal-text {
     color: $primary;
     font-family: $fontprimary;
-    font-size: $font2;
+    font-size: $font3;
     padding: 2vw;
     margin: 0 2vw;
     background: black;
@@ -256,6 +256,7 @@ footer#autofooter {
 .source {
   text-align: center;
   color: $p-90;
+  font-size: $font3;
 }
 
 .sources {
@@ -267,7 +268,7 @@ footer#autofooter {
   & a {
     text-decoration: none;
     color: $p120;
-    font-size: 3vh;
+    font-size: $font3;
   }
 }
 
