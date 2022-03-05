@@ -2,7 +2,7 @@ import * as ls from "./ls.js";
 import * as util from "./utilities.js";
 
 //let sList = [];
-const url = ''
+//const url = ''
 const lskey = "reflist";
 const bom = 'https://github.com/rus19023/scriptures-json/blob/master/reference/book-of-mormon-reference.json';
 const pgp = 'https://github.com/rus19023/scriptures-json/blob/master/reference/pearl-of-great-price-reference.json';
@@ -194,7 +194,7 @@ A todo should look like this: { id : timestamp, content: string, completed: bool
 */
 
 function saveTodo(scripture, lskey) {
-  sList = getScriptures(lskey);
+  let sList = getScriptures(lskey);
   // build todo object
   const todo = { id: Date.now(), scripture: scripture, done: false };
   // add obj to sList

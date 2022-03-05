@@ -474,26 +474,28 @@ const siteTitle = (el) => {
     // set header
     switch (elheader) {
         case `autoheader${el}`:
-            el = `courses/${el}`;
+            el = "/courses/" + el + "/";
             break;
         case "autoheader330":
             el = "/330/";
             break;
         case "autoheaderhome":
             el = "/";
-            console.log(`${el}`);
+            console.log(el);
             break;
-        case "autoheadercourses":
-            el = "/";
-            console.log(`${el}`);
+        case "autoheaderchallenge":
+            el = "../../";
+            console.log(el);
             break;
         default:
             el = "../";
             break;
     }
     // set header
+    console.log(el);
+    console.log(createLink(el, "Back to Index"));
     if (isElement(elheader)) {
-        writeById(elheader, '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink(`${el}`, "Back to Index")}</h2>`);
+        writeById(elheader, '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink(el, "Back to Index")}</h2>`);
     }
 }
 siteTitle("327");
@@ -538,7 +540,7 @@ function getIndexPageTitle(id) {
         let title;
         courses.forEach(course => {
             const termtext = getTerm(course.term);
-            const term = `${course.term}: 20${course.year}-${termtext}`;
+            const term = `${course.term}: 20${course.year} - ${termtext}`;
             spot = id.indexOf("-");
             if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
                 title = `${course.code} - ${course.name}
