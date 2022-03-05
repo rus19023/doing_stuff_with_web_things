@@ -1,62 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
-@import "../../../../css/styles";
-$todoborder: 2px solid $p150;
-
-#todo-error {
-    font-size: $font4;
-    font-weight: bold;
-    color: $p-30;
-}
-
-#root a {
-  color: $accent;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#root a:visited {
-  color: $p90;
-}
-
-.todo-buttons {
-    height: 6vh;
-    margin: 1vw;
-    padding: 1vw;
-    color: $p150;
-    font-size: $font2;
-    background: black;
-    border: $todoborder;
-    border-radius: 8px;
-    & :hover {
-        border: 2px solid $p150;
-    }
-}
-
-.todo-bordered {
-    border: 2px solid $p150;
-    border-radius: 10px;
-    padding: 1vh;
-}
-
-.todo-scratch {
-    text-decoration: line-through;
-}
-
-.nodots {
-    list-style-type: none;
-}
-
-.todo-text, p.todo-text {
-    text-align: left;
-    color: $p150;
-    max-width: 100%;
-    font-family: $fontprimary;
-    font-size: $font2;
-    margin: .5vw;
-    padding: .5vw;
-}
-
 .markbtn {
     border: $todoborder;
     border-radius: 10px;
@@ -98,13 +39,13 @@ $todoborder: 2px solid $p150;
         grid-area: todos;
         padding: 0;
         margin: 0 auto;
-        width: 100%;
+        max-width: 100%;
         grid-template-areas:
         "listitem";
         & li.listitem {
             grid-area: listitem;
             list-style-type: none;
-            width: 100%;
+            max-width: 100%;
             border: $todoborder;
             margin: 0;
             height: 8vh;
@@ -127,7 +68,7 @@ $todoborder: 2px solid $p150;
                 grid-area: delbtn;
                 border: 2px solid transparent;
                 border-radius: 10px;
-                width: 100%;
+                max-width: 100%;
                 height: 4vh;
                 color: $p-30;
                 background: black;
@@ -143,7 +84,6 @@ $todoborder: 2px solid $p150;
         margin: 0;
         & p#tasks {
             grid-area: tasks;
-            font-size: $font2;
             text-align: center;
             margin: 0 auto;
             padding: 1vh 0 0 0;
@@ -169,7 +109,7 @@ $todoborder: 2px solid $p150;
         height: 8vh;
         /*position: absolute;
         bottom: 0vh;*/
-        width: 100%;
+        max-width: 100%;
         padding: 0;
         margin: 10vh 0 2vw 0;
         display: grid;
@@ -205,15 +145,11 @@ $todoborder: 2px solid $p150;
     }
 }
 
-// .mobileShow { display: inline; }
-
-// .mobileHide { display: none; }
+.mobileShow {display: none;}
 
   /* Smartphone Portrait and Landscape */
   @media only screen
     and (min-device-width : 320px)
-    and (max-device-width : 999px) {
-    //   .mobileShow { display: none; }
-
-    //   .mobileHide { display: inline; }
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
 }

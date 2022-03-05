@@ -1,1 +1,9 @@
-{"version":3,"sources":["../330/teamprojects/week07/css/style.scss","style.css"],"names":[],"mappings":"AAAA;EACI,mBAAA;ACCJ;;ADEA;EACI,SAAA;EACA,UAAA;EACA,wIAAA;ACCJ;;ADGA;EACI,kBAAA;EACA,2BAAA;EACA,YAAA;EACA,aAAA;EACA,qBAAA;ACAJ;;ADGA;EACI,eAAA;ACAJ;;ADGA;EACI,aAAA;ACAJ;;ADGA;EACI,UAAA;EACA,aAAA;EACA,qBAAA;ACAJ;;ADGA;EACI,gBAAA;ACAJ;;ADGA;EACI,kBAAA;EACA,2BAAA;EACA,oBAAA;ACAJ;;ADGA;EACI,aAAA;EACA,eAAA;EACA,mBAAA;ACAJ;;ADGA;EACI,WAAA;EACA,cAAA;ACAJ;;ADGA;EACI,UAAA;EACA,gBAAA;EACA,cAAA;ACAJ;;ADGA;EACI,qBAAA;ACAJ","file":"style.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,OAAO;CAC5B",
+    "sources": [
+        "../330/teamprojects/week08/style.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

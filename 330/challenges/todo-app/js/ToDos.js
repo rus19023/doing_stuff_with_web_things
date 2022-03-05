@@ -27,7 +27,7 @@ export default class todos {
   }
 
   listAll() {
-      this.todoList = gettodos(lskey);
+      this.todoList = getTodos(lskey);
       this.renderTodoList(this.todoList);
       this.itemsLeft();
   }
@@ -41,21 +41,21 @@ export default class todos {
       } else if ((itemcount > 1) || (itemcount === 0)) {
         t = ' todos ';
       }
-      util.qs("#todos").innerHTML = `${itemcount} ${t} left`;
+      util.qs("#tasks").innerHTML = `${itemcount} ${t} left`;
   }
 
   addTodo() {
-      // set blank error field
+      // clear error message
       this.todo_error = '';
       util.qs("#error").innerText = this.todo_error;
       // grab todo from input field
-      const todo = util.qs("#addinput");
-      if (!todo.value.length > 0) {
+      const task = util.qs("#addinput");
+      console.log(task);
+      if (!task.value.length > 0) {
           this.todo_error = 'Item cannot be blank, please enter your todo.';
           util.qs("#error").innerText = this.todo_error;
       } else {
-          saveTodo(todo.value, lskey);
-          todo.value = '';
+          saveTodo(task.value, lskey);
       }
   }
 
@@ -76,7 +76,8 @@ export default class todos {
       renderlist.forEach((field) => {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-        let item = util.createLMNT('li', '', '', '', 'listitem bordered item-row nodots');
+        let item = util.createLMNT('li', '', '', '', 'listitem todo-bordered item-row nodots');
+        //console.log(field);
         if (field.task.length > 75) {
           item.style.height = '12vh';
         } else if (field.task.length > 30) {
@@ -128,18 +129,35 @@ export default class todos {
       this.todoList = getTodos(lskey);
       this.todoList = this.todoList.filter(el => el.done === false);
       this.renderTodoList(this.todoList);
+      this.itemsLeft();
     }
 
     listDone() {
       this.todoList = getTodos(lskey);
       this.todoList = this.todoList.filter(el => el.done === true);
       this.renderTodoList(this.todoList);
+      this.itemsLeft();
     }
 
-    listFiltered(searchKeyword) {
+    listFiltered() {
         this.todoList = getTodos(lskey);
-        this.todoList = this.todoList.filter(el => el.task.contains(searchKeyword));
-        this.renderTodoList(this.todoList);
+        const searchitem = util.qs('#searchinput').value;
+        console.log(searchitem);
+        let newlist = [];
+        this.todoList.forEach((field) => {
+            if (field.task.includes(searchitem)) {
+                console.log(field);
+                newlist.push(field);
+            }
+        });
+        //this.todoList = this.todoList.filter(el => el.task == searchitem);
+        // var __FOUND = el.findIndex(function(task, index) {
+        //   if(post.title == 'Guava')
+        //     return true;
+        // });
+        console.log(newlist);
+        this.renderTodoList(newlist);
+        this.itemsLeft();
     }
 }
 
@@ -157,17 +175,10 @@ function getTodos(lskey) {
   return todolist;
 }
 
-/*
-In the Todo.js module, but not in the todos class, create the following function
-/* build a todo object, add it to the sList, and save the new list to local storage.
-@param {string} key The key under which the value is stored under in LS @param {string} todo The text of the todo to be saved.
-A todo should look like this: { id : timestamp, content: string, completed: bool }
-*/
-
 function saveTodo(todo, lskey) {
   todoList = getTodos(lskey);
   // build todo object
-  const newItem = { id: Date.now(), task: todo.task, done: false };
+  const newItem = { id: Date.now(), task: todo, done: false };
   // add obj to todoList
   todoList.push(newItem);
   // save JSON.stringified list to ls

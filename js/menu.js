@@ -1,4 +1,57 @@
-const certs = [
+
+
+const list330 = [
+    {
+        name: "Week 01 Notes",
+        url: `${getBase()}week01.html`,
+    },
+    {
+        name: "Week 02 Notes",
+        url: `${getBase()}week02.html`,
+    },
+    {
+        name: "Week 03 Notes",
+        url: `${getBase()}week03.html`,
+    },
+    {
+        name: "Week 01 Exercises",
+        url: `${getBase()}exercises/week01.html`,
+    },
+    {
+        name: "Week 02 Exercises",
+        url: `${getBase()}exercises/week02.html`,
+    },
+    {
+        name: "Week 04 Exercises: Further work on team project - Tic Tac Toe game",
+        url: `${getBase()}exercises/week04.html`,
+      },
+      {
+          name: "Week 05 Challenge 1: To Do App",
+          url: `${getBase()}challenges/todo-app/`,
+      },
+      {
+          name: "Week 06 Challenge 1: To Do App",
+          url: `${getBase()}challenges/todo-app/`,
+      },
+      {
+          name: "Week 07 Quiz Ninja",
+          url: `${getBase()}exercises/ninjaquiz.html`,
+      },
+      {
+          name: "Week 07 Exercises",
+          url: `${getBase()}exercises/week07.html`,
+      },
+      {
+          name: "Week 08 Quiz Ninja",
+          url: `${getBase()}exercises/week08ninjaquiz.html`,
+      },
+      {
+          name: "Week 09 Quiz Ninja",
+          url: `${getBase()}exercises/week09ninjaquiz.html`,
+      },
+  ];
+
+  const certs = [
     {
         cert: "01",
         certname: "Certificate: Computer Programming",
@@ -53,7 +106,7 @@ const mainNav = [
         cert: "04",
     },
     {
-        url: `${getCbase()}330/`,
+        url: `${getBase()}330/`,
         term: "01",
         year: "22",
         code: "WDD330",
@@ -344,61 +397,6 @@ const mainNav = [
     },
 ];
 
-const list330 = [
-    {
-        name: "Week 01 Notes",
-        url: `${getBase()}week01.html`,
-    },
-    {
-        name: "Week 02 Notes",
-        url: `${getBase()}week02.html`,
-    },
-    {
-        name: "Week 03 Notes",
-        url: `${getBase()}week03.html`,
-    },
-    {
-        name: "Week 01 Exercises",
-        url: `${getBase()}exercises/week01.html`,
-    },
-    {
-        name: "Week 02 Exercises",
-        url: `${getBase()}exercises/week02.html`,
-    },
-    {
-        name: "Week 04 Exercises: Further work on team project - Tic Tac Toe game",
-        url: `${getBase()}exercises/week04.html`,
-      },
-      {
-          name: "Week 05 Challenge 1: To Do App",
-          url: `${getBase()}challenges/week05.html`,
-      },
-      {
-          name: "Week 06 Challenge 1: To Do App",
-          url: `${getBase()}challenges/todo-app/`,
-      },
-      {
-          name: "Week 07 Quiz Ninja",
-          url: `${getBase()}exercises/ninjaquiz.html`,
-      },
-      {
-          name: "Week 07 Exercises",
-          url: `${getBase()}exercises/week07.html`,
-      },
-      {
-          name: "Week 08 Quiz Ninja",
-          url: `${getBase()}exercises/week08ninjaquiz.html`,
-      },
-      {
-          name: "Week 09 Notes",
-          url: `${getBase()}week09.html`,
-      },
-      {
-          name: "Week 09 Quiz Ninja",
-          url: `${getBase()}exercises/week09ninjaquiz.html`,
-      },
-  ];
-
   const paperslist = [
       {
           name: "Week 01: Data Mart vs. Data Warehouse",
@@ -487,11 +485,11 @@ const siteTitle = (el) => {
             break;
         case "autoheaderhome":
             elhref = "/";
-            console.log(elhref);
+            //console.log(elhref);
             break;
         case "autoheaderchallenge":
             elhref = "../../";
-            console.log(el);
+            console.log(elhref);
             break;
         case `autoheader${el}`:
             elhref = "/courses/" + el + "/";
@@ -501,8 +499,8 @@ const siteTitle = (el) => {
             break;
     }
     // set header
-    console.log(elhref);
-    console.log(createLink(elhref, "Back to Index"));
+    //console.log(elhref);
+    //console.log(createLink(elhref, "Back to Index"));
     if (isElement(elheader)) {
         writeById(elheader, '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink(elhref, "Back to Index")}</h2>`);
     }

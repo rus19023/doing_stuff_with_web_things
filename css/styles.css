@@ -148,203 +148,12 @@ body header #main-nav ol li a {
   margin: 0;
 }
 
-#error {
-  font-size: 4vh;
-  font-weight: bold;
+input[type=checkbox].markbtnX {
+  content: "✕";
   color: #ff8f9e;
-}
-
-.todo-buttons {
-  height: 6vh;
-  margin: 1vw;
-  padding: 1vw;
-  color: #8ffff0;
-  font-size: 2vh;
-  background: black;
-  border: 2px solid #8ffff0;
-  border-radius: 8px;
-}
-.todo-buttons :hover {
-  border: 2px solid #8ffff0;
-}
-
-.bordered {
-  border: 2px solid #8ffff0;
-  border-radius: 10px;
-  padding: 1vh;
-}
-
-.scratch {
-  text-decoration: line-through;
-}
-
-.nodots {
-  list-style-type: none;
-}
-
-.todo-text, p.todo-text {
-  text-align: left;
-  color: #8ffff0;
-  font-family: "Nunito", sans-serif;
-  font-size: 3vh;
-  margin: 0.5vw;
-  padding: 0.5vw;
-}
-
-.markbtn {
-  border: 2px solid #8ffff0;
-  border-radius: 10px;
-  margin: 0.5vh;
-  padding: 0.5;
-  width: 6vh;
-  height: 6vh;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0 auto;
-}
-
-.foot-row {
-  display: grid;
-  grid-template-areas: "tasks allbtn actbtn donebtn";
-}
-
-.item-row {
-  display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
-}
-
-#todocontainer {
-  grid-area: todocontainer;
-  text-align: center;
-  max-width: 90%;
-  margin: 0 auto;
-  grid-template-columns: 1fr;
-}
-#todocontainer #header {
-  grid-area: header;
-  color: #ff8f9e;
-  margin-bottom: 5vw;
-}
-#todocontainer #todos {
-  grid-area: todos;
-  padding: 0;
-  margin: 0 auto;
-  width: 100%;
-  grid-template-areas: "listitem";
-}
-#todocontainer #todos li.listitem {
-  grid-area: listitem;
-  list-style-type: none;
-  width: 100%;
-  border: 2px solid #8ffff0;
-  margin: 0;
-  height: 8vh;
-  border-radius: 10px;
-  grid-template-areas: "markbtn itemtext delbtn";
-}
-#todocontainer #todos li.listitem .markbtn {
-  grid-area: markbtn;
-  width: 4vh;
-  height: 4vh;
-  padding: 1vw;
-  margin: auto;
-}
-#todocontainer #todos li.listitem #itemtext {
-  grid-area: itemtext;
-  height: 4vh;
-  margin: 2vh;
-}
-#todocontainer #todos li.listitem .delbtn {
-  grid-area: delbtn;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  width: 100%;
-  height: 4vh;
-  color: #ff8f9e;
-  background: black;
-  padding: 1vh;
-  font-size: 5vh;
-}
-#todocontainer #footer {
-  height: 8vh;
-  grid-area: footer;
-  text-align: center;
-  margin: 0;
-}
-#todocontainer #footer p#tasks {
-  grid-area: tasks;
-  text-align: center;
-  margin: 0 auto;
-  padding: 1vh 0 0 0;
-  max-height: 4vh;
-  width: 95%;
-}
-#todocontainer #footer #allbtn {
-  grid-area: allbtn;
-  text-align: center;
-}
-#todocontainer #footer #actbtn {
-  grid-area: actbtn;
-  text-align: center;
-}
-#todocontainer #footer #donebtn {
-  grid-area: donebtn;
-  text-align: center;
-}
-#todocontainer #addbar {
-  grid-area: addbar;
-  cursor: pointer;
-  height: 8vh;
-  /*position: absolute;
-  bottom: 0vh;*/
-  width: 100%;
-  padding: 0;
-  margin: 10vh 0 2vw 0;
-  display: grid;
-  grid-template-columns: 8fr 1fr;
-  grid-template-areas: "addinput addbtn";
-}
-#todocontainer #addbar #addinput {
-  grid-area: addinput;
-  background: black;
-  color: #ff8fd6;
-  height: 8vh;
-  width: 90%;
-  margin: 0;
-  padding: 0 0 0 1vw;
-}
-#todocontainer #addbar #addbtn {
-  grid-area: addbtn;
-  background: black;
-  color: #8ffff0;
-  width: 8vh;
-  height: 8vh;
-  padding: 0;
-  margin: 0;
   font-size: 6vh;
 }
-#todocontainer h3 {
-  background: black;
-  color: #d6ff8f;
-  padding: 1vh;
-  text-align: center;
-  font-weight: bolder;
-}
 
-.mobileShow {
-  display: none;
-}
-
-/* Smartphone Portrait and Landscape */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .mobileShow {
-    display: inline;
-  }
-}
 .dojo {
   background: url(https://gistcdn.githack.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/635810bd1a925c06b5c0bc0c861d62fe53597078/dojo.svg) no-repeat;
   width: 90%;
@@ -392,26 +201,24 @@ body header #main-nav ol li a {
   border-radius: 4px;
   margin: 0.2em 0;
   display: block;
-  width: 100%;
+  max-width: 100%;
   font-size: 24px;
 }
 
-input[type=checkbox].markbtnX {
-  content: "✕";
-  color: #ff8f9e;
-  font-size: 6vh;
-}
-
 html, body {
-  color: #d6ff8f;
+  color: #8fffb8;
   background: #7e5201;
   padding: 1vw;
-  font-size: 12px;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .centered {
   text-align: center;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -427,7 +234,7 @@ h2#tab-bar {
   overflow: hidden;
   margin-left: 4vw;
   bottom: 0;
-  width: 100%;
+  max-width: 100%;
   border-radius: 0;
   height: 4vh;
 }
@@ -481,7 +288,7 @@ section {
 
 .centerimg {
   display: block;
-  width: 100%;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -523,21 +330,22 @@ h6 {
 .normal-text {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
-  font-size: 3vh;
+  font-size: 2vh;
   padding: 2vw;
   margin: 0 2vw;
   background: black;
 }
 
-li.nav a {
+.nav a {
   font-size: 3vh;
+  font-weight: bold;
 }
 
 ol li {
   color: #d6ff8f;
 }
 ol li a {
-  font-size: 2vh;
+  font-size: 3vh;
   color: #8f9eff;
 }
 ol li a:hover {
@@ -591,7 +399,7 @@ a:hover {
   font-weight: bold;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .inputs {

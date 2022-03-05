@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"css-snippets.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../css-snippets.scss"
+    ],
+    "names": [],
+    "file": "css-snippets.css"
+}
