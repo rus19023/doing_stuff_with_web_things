@@ -172,3 +172,31 @@ document.getElementById("link").addEventListener('click', function(e) {
 //   });
 
 // });
+
+
+
+  // //console.table(`mainNav.sort: ${mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1)}`);
+  // //console.table(courses);
+  // if (isElement(id)) {
+  //   let spot;
+  //   let title;
+  //   courses.forEach(course => {
+  //     const termtext = getTerm(course.term);
+  //     const term = `${term}: 20${course.year}-${termtext}`;
+  //     spot = id.indexOf("-");
+  //     console.log(`course: ${course.code}`);
+  //     // console.log(`spot: ${spot}`);
+  //     // console.log('course.code: ' + course.code === id.substr(0, spot));
+  //     if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
+  //       title = `${course.code} - ${course.name}`;
+  //       title += "<br>";
+  //       title += `Technology learned: ${course.tech}`;
+  //       title += "<br><br>";
+  //       //console.log(`title: ${title}`);
+  //       writeById(id, title);
+  //       let id2 = `${id}2`;
+  //       //console.log(`id2: ${id2}`);
+  //       writeById(id2, title);
+  //     }
+  //   });
+  //}

@@ -645,7 +645,8 @@ function createCertNav(array, id) {
           const certCheck = element.cert;
           // create list item for this cert
           const certitem = document.createElement('li');
-          certitem.classList.add('nav');
+          //certitem.classList.add('nav');
+          certitem.classList.add('cert-text');
           certitem.setAttribute(id, `cert${certcount}`);
           // set text for item
           certitem.innerText += `${element.certname}, Issue date: ${element.certdate}`;
@@ -731,8 +732,8 @@ function createNav(array, id) {
     const container = document.getElementById(id);
     // sort array by name
     array.sort(function(a, b) {
-      var nameA = a.name.toUpperCase(); // ignore upper and lowercase
-      var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      var nameA = a.name.toUpperCase(); // make non-case-sensitive
+      var nameB = b.name.toUpperCase(); // make non-case-sensitive
       if (nameA < nameB) {
         return -1;
       }
@@ -770,29 +771,3 @@ createNav(list330, "notes");
 createNav(paperslist, "papers");
 createNav(presentations, "presentations");
 
-
-  // //console.table(`mainNav.sort: ${mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1)}`);
-  // //console.table(courses);
-  // if (isElement(id)) {
-  //   let spot;
-  //   let title;
-  //   courses.forEach(course => {
-  //     const termtext = getTerm(course.term);
-  //     const term = `${term}: 20${course.year}-${termtext}`;
-  //     spot = id.indexOf("-");
-  //     console.log(`course: ${course.code}`);
-  //     // console.log(`spot: ${spot}`);
-  //     // console.log('course.code: ' + course.code === id.substr(0, spot));
-  //     if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
-  //       title = `${course.code} - ${course.name}`;
-  //       title += "<br>";
-  //       title += `Technology learned: ${course.tech}`;
-  //       title += "<br><br>";
-  //       //console.log(`title: ${title}`);
-  //       writeById(id, title);
-  //       let id2 = `${id}2`;
-  //       //console.log(`id2: ${id2}`);
-  //       writeById(id2, title);
-  //     }
-  //   });
-  //}

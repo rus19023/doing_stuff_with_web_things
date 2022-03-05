@@ -230,6 +230,10 @@ h1 {
   margin: 1vw;
 }
 
+#text {
+  font-size: 3vh;
+}
+
 h2#tab-bar {
   overflow: hidden;
   margin-left: 4vw;
@@ -327,6 +331,12 @@ h6 {
   list-style: square;
 }
 
+.cert-text {
+  font-size: 3vh;
+  font-family: "Nunito", sans-serif;
+  color: #ffd8c2;
+}
+
 .normal-text {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
@@ -336,16 +346,14 @@ h6 {
   background: black;
 }
 
-.nav a {
-  font-size: 3vh;
-  font-weight: bold;
+ol {
+  margin: 4vw;
 }
-
 ol li {
-  color: #d6ff8f;
+  color: #8f9eff;
 }
 ol li a {
-  font-size: 3vh;
+  font-size: 2vh;
   color: #8f9eff;
 }
 ol li a:hover {
@@ -390,6 +398,20 @@ a:hover {
   padding: 4vw;
   max-width: 100%;
   margin: 1vw auto;
+}
+
+#certnav {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2vw;
+  background: black;
+  border-radius: 10px;
+  font-size: 3vh;
+  font-weight: bold;
+}
+#certnav a {
+  text-decoration: none;
+  color: #8f9eff;
 }
 
 #siteTitle2 {

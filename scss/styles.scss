@@ -34,6 +34,10 @@ h1 {
   margin: 1vw;
 }
 
+#text {
+  font-size: $font3;
+}
+
 h2#tab-bar {
   overflow: hidden;
   margin-left: 4vw;
@@ -73,90 +77,94 @@ ol,
 p,
 header,
 section {
-  font-family: $fontprimary;
-  padding: 3vw;
-  background: black;
-  margin: 2vw 0;
-  border-radius: 10px;
+    font-family: $fontprimary;
+    padding: 3vw;
+    background: black;
+    margin: 2vw 0;
+    border-radius: 10px;
 }
 
 .exercise {
-  border: $border;
-  border-radius: 10px;
-  margin: 2vw;
+    border: $border;
+    border-radius: 10px;
+    margin: 2vw;
 }
 
 .morespc { line-height: 1.5; }
 
 .centerimg {
-  display: block;
-  max-width: 100%;
-  margin: auto;
+    display: block;
+    max-width: 100%;
+    margin: auto;
 }
 
 h1 {
-  font-size: $font4;
-  color: $accent;
+    font-size: $font4;
+    color: $accent;
 }
 
 h2 {
-  font-size: $font3;
+    font-size: $font3;
 }
 
 h3 {
-  font-size: $font3;
-  width: 90%;
+    font-size: $font3;
+    width: 90%;
 }
 
 h4 {
-  font-size: $font3;
-  width: 85%;
+    font-size: $font3;
+    width: 85%;
 }
 
 h5 {
-  font-size: $font2;
-  width: 80%;
-  font-weight: bold;
+    font-size: $font2;
+    width: 80%;
+    font-weight: bold;
 }
 
 h6 {
-  font-size: $font2;
-  width: 75%;
-  font-weight: bold;
+    font-size: $font2;
+    width: 75%;
+    font-weight: bold;
 }
 
 .listdots {
-  list-style: square;
+    list-style: square;
+}
+
+.cert-text {
+    font-size: $font3;
+    font-family: $fontprimary;
+    color: $accent3;
 }
 
 .normal-text {
-  color: $primary;
-  font-family: $fontprimary;
-  font-size: $font2;
-  padding: 2vw;
-  margin: 0 2vw;
-  background: black;
+    color: $primary;
+    font-family: $fontprimary;
+    font-size: $font2;
+    padding: 2vw;
+    margin: 0 2vw;
+    background: black;
 }
 
-.nav a {
-  font-size: $font3;
-  font-weight: bold;
-}
-
-ol li {
-  color: $accent;
-  & a {
-    font-size: $font3;
-    color: $p-150;
-  }
-  & a:hover {
-    color: $p-120;
-  }
+ol {
+    margin: 4vw;
+    & li {
+        color: $p-150;
+        & a {
+          font-size: $font2;
+          color: $p-150;
+        }
+        & a:hover {
+          color: $p-120;
+        }
+    }
 }
 
 a {
-  color: $accent;
-  text-decoration: none;
+    color: $accent;
+    text-decoration: none;
 }
 
 a:visited {
@@ -192,6 +200,20 @@ a:hover {
   padding: 4vw;
   max-width: 100%;
   margin: 1vw auto;
+}
+
+#certnav {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 2vw;
+  background: black;
+  border-radius: 10px;
+  font-size: $font3;
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: $p-150;
+  }
 }
 
 #siteTitle2 {
