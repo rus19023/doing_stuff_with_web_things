@@ -270,9 +270,9 @@ p,
 header,
 section {
   font-family: "Nunito", sans-serif;
-  padding: 3vw;
+  padding: 0 2vw;
   background: black;
-  margin: 2vw 0;
+  margin: 2vw auto;
   border-radius: 10px;
 }
 
@@ -303,7 +303,6 @@ h2 {
 
 h3 {
   font-size: 3vh;
-  width: 90%;
 }
 
 h4 {
@@ -342,14 +341,11 @@ h6 {
   background: black;
 }
 
-ol {
-  margin: 4vw;
-}
 ol li {
   color: #8f9eff;
 }
 ol li a {
-  font-size: 2vh;
+  font-size: 3vh;
   color: #8f9eff;
 }
 ol li a:hover {
@@ -392,8 +388,21 @@ a:hover {
 
 .padit {
   padding: 4vw;
+}
+
+.padhead {
+  padding: 2vw;
+}
+
+.padhead, .padit {
   max-width: 100%;
   margin: 1vw auto;
+}
+
+#presentations {
+  max-width: 100%;
+  margin: 1vw auto;
+  padding: 2vw;
 }
 
 #certnav {
@@ -441,10 +450,11 @@ textarea {
 footer#autofooter {
   font-family: "Dosis", sans-serif;
   font-size: 3vh;
+  padding: 2vw;
   font-weight: bold;
   color: #d6ff8f;
   text-align: center;
-  margin-bottom: 6vh;
+  margin-bottom: 3vh;
 }
 
 .source {

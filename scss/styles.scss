@@ -78,9 +78,9 @@ p,
 header,
 section {
     font-family: $fontprimary;
-    padding: 3vw;
+    padding: 0 2vw;
     background: black;
-    margin: 2vw 0;
+    margin: 2vw auto;
     border-radius: 10px;
 }
 
@@ -109,7 +109,6 @@ h2 {
 
 h3 {
     font-size: $font3;
-    width: 90%;
 }
 
 h4 {
@@ -149,11 +148,10 @@ h6 {
 }
 
 ol {
-    margin: 4vw;
     & li {
         color: $p-150;
         & a {
-          font-size: $font2;
+          font-size: $font3;
           color: $p-150;
         }
         & a:hover {
@@ -198,8 +196,21 @@ a:hover {
 
 .padit {
   padding: 4vw;
+}
+
+.padhead {
+  padding: 2vw;
+}
+
+.padhead, .padit {
   max-width: 100%;
   margin: 1vw auto;
+}
+
+#presentations {
+  max-width: 100%;
+  margin: 1vw auto;
+  padding: 2vw;
 }
 
 #certnav {
@@ -246,11 +257,12 @@ textarea {
 
 footer#autofooter {
   font-family: $fontsecond;
-  font-size: 3vh;
+  font-size: $font3;
+  padding: 2vw;
   font-weight: bold;
   color: $accent;
   text-align: center;
-  margin-bottom: 6vh;
+  margin-bottom: 3vh;
 }
 
 .source {
