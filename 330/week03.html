@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header id="autoheader">auto header</header>
+    <header id="autoheader330">auto header</header>
     <main>
       <h1 id="wdd330weekpageheading" class="padit font4">Notes for this week</h1>
       <ul>
@@ -26,7 +26,7 @@
                 An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}. Object literals are a distinguishing feature of the JavaScript language, as they allow objects to be created quickly without the need for defining a class. They also provide a useful way of organizing your code without polluting the global namespace. <br>
                 Here is an example of an object literal that describes the Man of Steel:
             </p>
-            <pre>
+            <pre class="code">
                 const superman = {
                 name: 'Superman',
                 'real name': 'Clark Kent',
@@ -49,7 +49,7 @@
                 <br><br>
                 All objects are mutable at any time when a program is running. This means that its properties and methods can be changed or removed, and new properties and methods can be added to the object, even if it was declared using const.
             </p>
-            <pre>
+            <pre class="code">
                 const spiderman = {};
                 const spiderman = new Object();
                 const name = 'Iron Man';
@@ -62,30 +62,30 @@
                 const ironMan = { name, realName };
 
                 superman.name
-                << 'Superman' 
-                
+                << 'Superman'
+
                 superman['name']
-                << 'Superman' 
-                
+                << 'Superman'
+
                 superman.fly()
                 << 'Up, up and away!'
-                
+
                 superman['fly']()
                 << 'Up, up and away!'
             </pre>
             <p class="normal-text">
                 The in operator can be used to check whether an object has a particular property. So, for example, we can check if the superman object has a property called city using this code:
             </p>
-            <pre>
+            <pre class="code">
                 'city' in superman;
-                << false 
-                
+                << false
+
                 superman.city !== undefined;
-                << false 
-                
+                << false
+
                 superman.hasOwnProperty('city');
                 << false
-                
+
                 superman.hasOwnProperty('name');
                 << true
             </pre>
@@ -94,28 +94,28 @@
                 <br>
                 To demonstrate using this, we'll create a dice object that has a sides property and a roll() method that returns a number between 1 and the number of sides.
                 <br>
-                Here’s the code to create our dice object:                
+                Here’s the code to create our dice object:
             </p>
-            <pre>
+            <pre class="code">
                 const dice = {
                     sides: 6,
                     roll() {
                     return Math.floor(this.sides * Math.random()) + 1;
                     }
-                } 
-                
+                }
+
                 dice.roll();
                 << 5
-                
+
                 dice.roll();
-                << 3 
-                
+                << 3
+
                 dice.roll();
                 << 12
-                
+
                 dice.roll();
                 << 18
-                
+
                 dice.sides = 20;
                 << 20
             </pre>
@@ -124,7 +124,7 @@
                 <br>
                 A solution to this problem is to use the object literal pattern to create a namespace for groups of related functions. This is done by creating an object literal that serves as the namespace, then adding any values as properties of that object, and any functions as methods.
             </p>
-            <pre>
+            <pre class="code">
                 const myMaths = {
 
                     square(x) {
@@ -160,7 +160,7 @@
                 </ol>
                 A JSON string representation the Caped Crusader is shown below:
             </p>
-            <pre>
+            <pre class="code">
                 const batman = '{"name": "Batman","real name": "Bruce Wayne","height": 74, "weight": 210, "hero": true, "villain": false, "allies": ["Robin","Batgirl","Superman"]}'
 
                 JSON.parse(batman);
@@ -170,7 +170,7 @@
                     weight: 210,
                     hero: true,
                     villain: false,
-                    allies: [ 'Robin', 'Batgirl', 'Superman' ] } 
+                    allies: [ 'Robin', 'Batgirl', 'Superman' ] }
 
                     const wonderWoman = {
                         name: 'Wonder Woman',
@@ -196,7 +196,7 @@
             <p class="normal-text">
                 Math Object
             </p>
-            <pre>
+            <pre class="code">
                 Math.PI // The ratio of the circumference and diameter of a circle
                 << 3.141592653589793
 
@@ -219,107 +219,99 @@
                 << 1.4426950408889634
 
                 Math.LOG10E // Log base 10 of Euler's constant
-                << 0.4342944819032518  
-                
+                << 0.4342944819032518
+
                 Math.abs(3);
                 << 3
-                
+
                 Math.abs(-4.6);
-                << 4.6  
-                
+                << 4.6
+
                 Math.ceil(4.2);
                 << 5
-                
+
                 Math.ceil(8);
                 << 8
-                
+
                 Math.ceil(-4.2);
-                << -4  
-                
+                << -4
+
                 Math.floor(4.2);
                 << 4
-                
+
                 Math.floor(8);
                 << 8
-                
+
                 Math.floor(-4.2);
-                << -5  
-                
+                << -5
+
                 Math.round(4.5);
                 << 5
-                
+
                 Math.round(4.499);
                 << 4
-                
+
                 Math.round(-4.2);
-                << -4  
-                
+                << -4
+
                 Math.trunc(4.9);
                 << 4
-                
+
                 Math.trunc(-4.2);
-                << -4  
-                
+                << -4
+
                 Math.exp(1); // This is Euler's constant
                 << 2.718281828459045
-                
+
                 Math.exp(0); // Any number to the power of 0 is 1
                 << 1
-                
+
                 Math.exp(-3);
-                << 0.049787068367863944  
-                
+                << 0.049787068367863944
+
                 Math.pow(3, 2); // 3 squared
                 << 9
-                
+
                 Math.pow(4.5, 0); // Any number to the power of 0 is 1
                 << 1
-                
+
                 Math.pow(27, 1/3); // A nice way to do cube roots
-                << 3  
-                
+                << 3
+
                 Math.sqrt(121);
                 << 11
-                
+
                 Math.sqrt(2); // same as Math.SQRT2
                 << 1.4142135623730951
-                
+
                 Math.sqrt(-1); // imaginary numbers aren't supported!
-                << NaN  
-                
+                << NaN
+
                 // cube root
                 Math.cbrt(8);
                 << 2
-                
+
                 Math.cbrt(-1000);
-                << -10  
-                
+                << -10
+
                 Math.hypot(3,4); // returns the square root of 3 squared + 4 squared
                 << 5
-                
+
                 Math.hypot(2,3,6); // more than 2 arguments can be used
-                << 7  
-                
+                << 7
+
                 Math.log(Math.E); // Natural logs have a base of Euler's constant
                 << 1
-                
+
                 Math.log(1); // log of 1 is zero
                 << 0
-                
+
                 Math.log(0); // You can't take the log of zero
                 << -Infinity
-                
+
                 Math.log(-2); // You can't take logs of negative numbers
-                << NaN  
+                << NaN
             </pre>
-            <p class="normal-text">
-                
-            </p>
-            <pre></pre>
-            <p class="normal-text">
-                
-            </p>
-            <pre></pre>
             </div>
           </li>
 
@@ -331,18 +323,6 @@
                 </a>
               </h2>
               <div>
-                  <h3></h3>
-                  <p class="normal-text">
-                    
-                  </p>
-                  <h3></h3>
-                  <p class="normal-text">
-                      notes here
-                      <br />
-                      <h4>image caption</h4>
-                      <img class="centerimg" src="/images/serverRoom.jpg" alt="test">
-                      <br />
-                  </p>
                   <h3>Questions</h3>
                   <p class="normal-text">
                       question?

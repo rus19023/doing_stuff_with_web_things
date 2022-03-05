@@ -389,6 +389,14 @@ const list330 = [
           name: "Week 08 Quiz Ninja",
           url: `${getBase()}exercises/week08ninjaquiz.html`,
       },
+      {
+          name: "Week 09 Notes",
+          url: `${getBase()}week09.html`,
+      },
+      {
+          name: "Week 09 Quiz Ninja",
+          url: `${getBase()}exercises/week09ninjaquiz.html`,
+      },
   ];
 
   const paperslist = [
@@ -471,31 +479,32 @@ const presentations = [
 
 const siteTitle = (el) => {
     let elheader = `autoheader${el}`;
+    let elhref;
     // set header
     switch (elheader) {
-        case `autoheader${el}`:
-            el = "/courses/" + el + "/";
-            break;
         case "autoheader330":
-            el = "/330/";
+            elhref = "/330/";
             break;
         case "autoheaderhome":
-            el = "/";
-            console.log(el);
+            elhref = "/";
+            console.log(elhref);
             break;
         case "autoheaderchallenge":
-            el = "../../";
+            elhref = "../../";
             console.log(el);
             break;
+        case `autoheader${el}`:
+            elhref = "/courses/" + el + "/";
+            break;
         default:
-            el = "../";
+            elhref = "../";
             break;
     }
     // set header
-    console.log(el);
-    console.log(createLink(el, "Back to Index"));
+    console.log(elhref);
+    console.log(createLink(elhref, "Back to Index"));
     if (isElement(elheader)) {
-        writeById(elheader, '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink(el, "Back to Index")}</h2>`);
+        writeById(elheader, '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink(elhref, "Back to Index")}</h2>`);
     }
 }
 siteTitle("327");

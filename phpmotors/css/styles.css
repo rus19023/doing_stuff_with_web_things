@@ -1,6 +1,5 @@
-body {
-  background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */is");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dosis");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
 body {
@@ -524,7 +523,7 @@ h6 {
 .normal-text {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
-  font-size: 3vh;
+  font-size: 2vh;
   padding: 2vw;
   margin: 0 2vw;
   background: black;
