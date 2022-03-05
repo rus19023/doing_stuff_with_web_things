@@ -502,7 +502,7 @@ const siteTitle = (el) => {
     //console.log(elhref);
     //console.log(createLink(elhref, "Back to Index"));
     if (isElement(elheader)) {
-        writeById(elheader, '<h1 id="siteTitle2">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar">${createLink(elhref, "Back to Index")}</h2>`);
+        writeById(elheader, '<h1 id="siteTitle2" class="padhead">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar" class="padhead">${createLink(elhref, "Back to Index")}</h2>`);
     }
 }
 siteTitle("327");
