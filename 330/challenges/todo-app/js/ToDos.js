@@ -89,13 +89,13 @@ export default class todos {
         let markbtn = util.createLMNT("input", "checkbox", field.id, "", "markbtn chkbtn");
         let delbtn = util.createLMNT("button", "", `del${field.id}`, "X", "delbtn chkbtn");
         if (field.done === true) {
-          itemtext.classList.add("scratch");
+          itemtext.classList.add("todo-scratch");
           markbtn.classList.add('markbtnX');
           markbtn.checked = true;
         } else {
           markbtn.checked = false;
           markbtn.classList.remove('markbtnX');
-          itemtext.classList.remove("scratch");
+          itemtext.classList.remove("todo-scratch");
         }
         markbox.appendChild(markbtn);
         item.appendChild(markbox);
