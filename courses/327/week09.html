@@ -17,18 +17,16 @@
 
                 <h3 class="padhead">What is a schemaless collection in MongoDB?</h3>
                 <p class="normal-text padleft">
-                  A schema is a well-defined, structured description of each part of a traditional database. This requires rigid formatting to maintain data consistency and read speed.
+                    A schema is a well-defined, structured description of each part of a traditional database. This requires rigid formatting to maintain data consistency and read speed.
                   
-                  MongoDB does a more natural mapping of data with its JSON-style BSON (binary JSON) documents, so it does not need such structure or definition beforehand.
+                    MongoDB does a more natural mapping of data with its JSON-style BSON (binary JSON) documents, so it does not need such structure or definition beforehand.
                   
-                  MongoDB's containers for document objects are called collections. A collection is a group of documents that share a common theme, and can be compared to a traditional database table.
-                  
-                 
+                    MongoDB's containers for document objects are called collections. A collection is a group of documents that share a common theme, and can be compared to a traditional database table.  
                 </p>
-                <p class="normal-text padleft"></p>
 
-
-                <h3 class="padhead">Schema-on-write vs. Schema-on-read and Schemaless databases</h3>
+                <h3 class="padhead">
+                    Schema-on-write vs. Schema-on-read and Schemaless databases
+                </h3>
                 <p class="normal-text padleft">
                     Schema-on-write is the process of defining the structure of a database before writing data. 
                     
@@ -39,8 +37,9 @@
                 <p class="normal-text padleft">
                     In Schema-on-read means the structure of a database is defined when data is read. This gives more agility and capacity for scaling out, but the speed takes a hit. 
                     
-                    Schemaless means the schema/model is not required before writing data, but is needed when the data is read, so the data can be translated into what is needed in the warehouse. 
-                    
+                    Schemaless means the schema/model is not required before writing data, but is needed when the data is read, so the data can be translated into what is needed in the warehouse.
+                </p>
+                <p class="normal-text padleft">
                     Schemaless databases can handle both structured and unstructured data.
 
                     This is what allows for more outward scalability and flexibility in adding fields and nesting up to 100 levels for the data store.
@@ -48,53 +47,27 @@
 
 
                 <h3 class="padhead">
-                    How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?
+                    How do you update data in MongoDB?
                 </h3>
-                <p class="normal-text padleft">
+                <p class="normal-text padleft">                     
+                    Updates in MongoDB are done using object methods, finding the id numbers created by the system when the documents are created.
+
                     When a field or field value is changed in MongoDB, the whole document must be "upserted" to include the new data. 
                     
                     This means that the whole document and any embedded documents must be held in memory until the update is complete. 
                     
-                    Each document has a maximum size of 16MB. This could cause a performance problem if the document has many nested dependents.  
-                    
-                    Updates in MongoDB are done using object methods, finding the id numbers created by the system when the documents are created.
-                    
-                    *** NEED THIS? IS IT ACCURATE? ***
-                    This means that if you have a large update, you can update the document in chunks.
+                    Each document has a maximum size of 16MB. This could cause a performance problem if the document has many nested dependents.
                 </p>
-                <p class="normal-text padleft"></p>
-                <h3 class="padhead"></h3>
-                <p class="normal-text padleft"></p>
-                <p class="normal-text padleft"></p>
-                <p class="normal-text padleft">
-                    <br />
-                    <figure>
-                        <img src="../../images/" alt="alt text here" class="centerimg" />
-                        <br /><br />
-                        <figcaption class="source">
-                            text here. &nbsp; 
-                            <br />
-                            Source:
-                            <a href="">
-                              link text here 
-                            </a>
-                        </figcaption>
-                    </figure>
-                </p>
+
                 <h3 class="padhead">Summary</h3>
                 <p class="normal-text padleft">
-                    how do we minimize or manage the technical debt associated with getting it into the data warehouse?
-                    
-                    And how do we take away the complexity of integration from the end-user and present them with something that is highly usable and consistent?
+                    Telemetry readings can be used to decide whether to scale up (need more resources for single machine) or out (need more nodes added to the database network).
                 </p>
                 <p class="normal-text padleft">
-                     
+                    Using MongoDB, it is easier to mitigate the issue of heavily nested document collections using all the resources. With sharding, the data can be written and read across few or many nodes. This means that if there is a huge update, the document or collection can be updated in chunks. 
                 </p>
                 <p class="normal-text padleft">
-                    telemetry used to decide whether to scale up (need more resources for single machine) or out (need more nodes added to the database network)
-                </p>
-                  <p class="normal-text padleft">
-
+                    Also, MongoDB makes it easier to migrate from a traditional database or export to a data warehouse due to the object orientation of the system. Using the application's code, bridges can be built using the built-in mapping capabilities of MongoDB to create data cubes to serve the end-users' needs.
                 </p>
                 <ol class="sources">
                     Sources:
@@ -109,6 +82,9 @@
                     </li>
                     <li class="normal-text padleft">
                       <a href="https://docs.mongodb.com/manual/reference/limits/">"MongoDB Limits and Thresholds", MongoDB Documentation</a>
+                    </li>
+                    <li class="normal-text padleft">
+                      <a href="https://www.mongodb.com/blog/post/4-steps-to-success-from-surviving-with-legacy-systems-to-thriving-with-mongodb">Bialek, Boris, "4 Steps to Success: From Surviving with Legacy Systems to Thriving with MongoDB", May 6, 2021, MongoDB blog</a>
                     </li>
                 </ol>
             </div>
