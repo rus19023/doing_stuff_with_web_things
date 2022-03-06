@@ -45,12 +45,14 @@ button {
 #answer, 
 #timer, 
 #score, 
+#response,
 .correct, 
 .wrong, 
 #info {
   text-align: center;
   font-size: 4vw;
   border-radius: 10px;
+  margin: 0.5em auto;
 }
 
 #result {
