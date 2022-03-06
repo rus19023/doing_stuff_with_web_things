@@ -21,10 +21,30 @@ $primaryborder: darken($primary, 20%);
 $warning: darken($contrast, 50%);
 $nav: $p-60;
 $valid: $p-90;
-$background: $p-120;
-//$background: darken($primary, 0%);
-$background: #7e5201;
+$bgmoz: -moz-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(224,228,0,1) 67%);
+$bgweb: -webkit-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(224,228,0,1) 67%);
+$bgfilter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0300ca",endColorstr="#e0e400",GradientType=1);
+$lgradient: linear-gradient(180deg, lighten($primary, 20%), lighten($contrast, 10%));
+$hgradient: linear-gradient(180deg, rgba(3,0,202,1), rgba(224,228,0,1));
+$vgradient: linear-gradient(90deg, rgba(3,0,202,1), rgba(224,228,0,1));
+$newhgradient: linear-gradient(
+    180deg,
+    hsl(241deg 100% 40%) 0%,
+    hsl(69deg 9% 60%) 52%,
+    hsl(61deg 100% 45%) 100%
+  );
+  $newvgradient: linear-gradient(
+      90deg,
+      hsl(241deg 100% 40%) 0%,
+      hsl(69deg 9% 60%) 52%,
+      hsl(61deg 100% 45%) 100%
+    );
 
+// $background: $p-120;
+// $background: darken($primary, 0%);
+// $background: #7e5201;
+
+$background: $newhgradient;
 $debug: rgb(190, 255, 60);
 
 $dkgrey: #3a3a3a;

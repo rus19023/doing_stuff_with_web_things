@@ -151,7 +151,7 @@ input[type=checkbox].markbtnX {
 
 html, body {
   color: #8fffb8;
-  background: #7e5201;
+  background: linear-gradient(180deg, #0300cc 0%, #9fa290 52%, #e2e600 100%);
   padding: 1vw;
   font-size: 18px;
 }
