@@ -345,7 +345,7 @@ h6 {
 .normal-text {
   color: #8ffff0;
   font-family: "Nunito", sans-serif;
-  font-size: 3vh;
+  font-size: 2vh;
   background: black;
 }
 
@@ -527,4 +527,23 @@ h4.indent, p.indenth4 {
 
 h5.indent, p.indenth5, p ul li.indent {
   padding-left: 8vw;
+}
+
+/* Medium View */
+@media screen and (min-width: 701px) {
+  .normal-text {
+    font-size: 2vh;
+  }
+}
+/* Large View */
+@media screen and (min-width: 1201px) {
+  .normal-text {
+    font-size: 3vh;
+  }
+}
+/* Wide View */
+@media screen and (min-width: 1701px) {
+  .normal-text {
+    font-size: 4vh;
+  }
 }/*# sourceMappingURL=styles.css.map */

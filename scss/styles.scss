@@ -151,7 +151,7 @@ h6 {
 .normal-text {
     color: $p150;
     font-family: $fontprimary;
-    font-size: $font3;
+    font-size: $font2;
     background: black;
 }
 
@@ -335,4 +335,26 @@ h4.indent, p.indenth4 {
 
 h5.indent, p.indenth5, p ul li.indent {
   padding-left: 8vw;
+}
+
+
+/* Medium View */
+@media screen and (min-width: 701px) {
+    .normal-text {
+      font-size: $font2;
+    }
+}
+
+/* Large View */
+@media screen and (min-width: 1201px) {
+    .normal-text {
+      font-size: $font3;
+    }
+}
+
+/* Wide View */
+@media screen and (min-width: 1701px) {
+  .normal-text {
+    font-size: $font4;
+  }
 }
