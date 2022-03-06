@@ -42,12 +42,16 @@ const list330 = [
           url: `${getBase()}exercises/week07.html`,
       },
       {
-          name: "Week 08 Quiz Ninja",
+          name: "Week 08  Exercises: Quiz Ninja",
           url: `${getBase()}exercises/week08ninjaquiz.html`,
       },
       {
-          name: "Week 09 Quiz Ninja",
+          name: "Week 09  Exercises: Quiz Ninja",
           url: `${getBase()}exercises/week09ninjaquiz.html`,
+      },
+      {
+          name: "Week 09 Challenge 2: New App Proposal",
+          url: `${getBase()}challenges/week09.html`,
       },
   ];
 

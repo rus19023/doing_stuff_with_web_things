@@ -230,6 +230,16 @@ h1 {
   font-size: 3vh;
 }
 
+.padleft {
+  padding-left: 4vw;
+  padding-bottom: 1vw;
+}
+
+.padleft8 {
+  padding-left: 8vw;
+  padding-bottom: 1vw;
+}
+
 h2#tab-bar {
   overflow: hidden;
   margin-left: 4vw;
@@ -336,8 +346,6 @@ h6 {
   color: #ffb88f;
   font-family: "Nunito", sans-serif;
   font-size: 3vh;
-  padding: 2vw;
-  margin: 0 2vw;
   background: black;
 }
 

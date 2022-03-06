@@ -14,7 +14,7 @@
             <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
             <h2 id="paperTitle" class="padit">paper title</h2>
             <div>
-                <h3></h3>
+                <h3>Instructions - DELETE </h3>
                 <p class="normal-text">
                     With your paper, your focus is to understand what complexity having a schemaless database brings.  My expectations for the paper are that you cover the following questions:
                     <br><br>
@@ -34,6 +34,9 @@
                     
                     <br><br>
                 </p>
+                END DELETE
+
+
                 <h3>What is a schemaless collection in MongoDB?</h3>
                 <p class="normal-text">
                   A schema is a well-defined, structured description of each part of a traditional database. This requires rigid formatting to maintain data consistency.​
@@ -47,12 +50,23 @@
                   MongoDB does a more natural mapping of data with its JSON-style BSON (binary JSON) documents, so it does not need such structure or definition beforehand. This is what allows for more outward scalability and flexibility in adding fields and nesting levels for the data store.​
                 </p>
                 <p class="normal-text"></p>
+
+
                 <h3>Schema-on-write vs. Schema-on-read and Schemaless databases</h3>
-                <p class="normal-text"></p>
-                <p class="normal-text"></p>
+                <p class="normal-text">
+                    Schema-on-write is the process of defining the structure of a database before writing data. This provides for quick results, as the data is already formattted for the most part. This is great for repetitive reports, but not for agility in the system.
+                </p>
+                <p class="normal-text">
+                  In Schema-on-read is, the structure of a database is defined when data is read. 
+                </p>
+
+
                 <h3>How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?</h3>
                 <p class="normal-text">
-                    When a field or field value is changed in MongoDB, the whole document must be re-written to include the new data. This means that the whole document and any embedded documents must be held in memory until the update is complete. This could cause a performance problem if the update is large. The good thing is that each document has a maximum size of 16MB. This means that if you have a large update, you can update the document in chunks.
+                    When a field or field value is changed in MongoDB, the whole document must be "upserted" to include the new data. This means that the whole document and any embedded documents must be held in memory until the update is complete. Each document has a maximum size of 16MB. This could cause a performance problem if the document has many nested dependents.    
+                    
+                    *** NEED THIS? IS IT ACCURATE? ***
+                    This means that if you have a large update, you can update the document in chunks.
                 </p>
                 <p class="normal-text"></p>
                 <h3></h3>
@@ -89,10 +103,10 @@
                       <a href="https://www.mongodb.com/unstructured-data/schemaless">"What is a Schemaless Database?", MongoDB</a>
                     </li>
                     <li class="normal-text">
-                      <a href="">linktext</a>
+                      <a href="https://mindmajix.com/mongodb-update-document">"MongoDB Update Document", MindMajix</a>
                     </li>
                     <li class="normal-text">
-                      <a href="">linktext</a>
+                      <a href="https://www.dell.com/en-us/blog/schema-read-vs-schema-write-started/">Henson, Thomas, "How Schema On Read vs. Schema On Write Started It All", Dell, August 21, 2017</a>
                     </li>
                     <li class="normal-text">
                       <a href="">linktext</a>

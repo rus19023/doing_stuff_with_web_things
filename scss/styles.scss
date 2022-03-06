@@ -38,6 +38,16 @@ h1 {
   font-size: $font3;
 }
 
+.padleft {
+  padding-left: 4vw;
+  padding-bottom: 1vw;
+}
+
+.padleft8 {
+  padding-left: 8vw;
+  padding-bottom: 1vw;
+}
+
 h2#tab-bar {
   overflow: hidden;
   margin-left: 4vw;
@@ -142,8 +152,6 @@ h6 {
     color: $primary;
     font-family: $fontprimary;
     font-size: $font3;
-    padding: 2vw;
-    margin: 0 2vw;
     background: black;
 }
 
