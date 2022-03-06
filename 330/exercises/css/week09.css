@@ -79,3 +79,91 @@ button {
   background: black;
   padding: 2vw;
 }
+
+
+/* Medium View */
+@media screen and (min-width: 701px) {
+  .quiz-body {
+    margin: 10vh 20vw;
+  }
+  h1 {
+    font-size: 5vh;
+  }
+  button {
+    font-size: 2vh;
+  }
+  #question, 
+  #answer, 
+  #timer, 
+  #score, 
+  .correct, 
+  .wrong, 
+  #info {
+    font-size: 3vw;
+  }
+  #result {
+    font-size: 3vw;
+  }
+  #timer, #score {
+    width: 100%;
+  }
+}
+
+
+
+/* Large View */
+@media screen and (min-width: 1201px) {
+  .quiz-body {
+    margin: 10vh 20vw;
+  }
+  h1 {
+    font-size: 6vh;
+  }
+  button {
+    font-size: 3vh;
+  }
+  #question, 
+  #answer, 
+  #timer, 
+  #score, 
+  .correct, 
+  .wrong, 
+  #info {
+    font-size: 2vw;
+  }
+  #result {
+    font-size: 2vw;
+  }
+  #timer, #score {
+    width: 100%;
+  }
+}
+
+
+/* Wide View */
+@media screen and (min-width: 1701px) {
+  .quiz-body {
+    margin: 10vh 20vw;
+  }
+  h1 {
+    font-size: 2vh;
+  }
+  button {
+    font-size: 2vh;
+  }
+  #question, 
+  #answer, 
+  #timer, 
+  #score, 
+  .correct, 
+  .wrong, 
+  #info {
+    font-size: 1vw;
+  }
+  #result {
+    font-size: 1vw;
+  }
+  #timer, #score {
+    width: 100%;
+  }
+}

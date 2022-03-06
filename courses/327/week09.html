@@ -14,65 +14,59 @@
             <h1 id="cit327weekpagetitle2" class="padit">page title</h1>
             <h2 id="paperTitle" class="padit">paper title</h2>
             <div>
-                <h3>Instructions - DELETE </h3>
-                <p class="normal-text">
-                    With your paper, your focus is to understand what complexity having a schemaless database brings.  My expectations for the paper are that you cover the following questions:
-                    <br><br>
-                    What is a schemaless collection in MongoDB?
-                    Schema-on-write vs. Schema-on-read and Schemaless databases
-                    https://www.mongodb.com/unstructured-data/schemaless (Links to an external site.)
-                    https://www.dell.com/en-us/blog/schema-read-vs-schema-write-started/ (Links to an external site.)
-                    <br><br>
-
-                    How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?
-                    Updating MongoDB - https://mindmajix.com/mongodb-update-document (Links to an external site.)
-                    <br><br>
-
-                    If you have a MongoDB source feeding into your data warehouse and an individual field value changes, what is the downstream impact?  What is the downstream impact if the schema of new documents in your collection changes?  How do these downstream considerations impact your technical debt?  How do they impact your telemetry?
-                    <br><br>
-
-                    
-                    <br><br>
-                </p>
-                END DELETE
-
 
                 <h3 class="padhead">What is a schemaless collection in MongoDB?</h3>
-                <p class="normal-text">
-                  A schema is a well-defined, structured description of each part of a traditional database. This requires rigid formatting to maintain data consistency.​
-
-                  ​
+                <p class="normal-text padleft">
+                  A schema is a well-defined, structured description of each part of a traditional database. This requires rigid formatting to maintain data consistency and read speed.
                   
-                  Schema-less means the schema/model is not required before writing data, but is needed when the data is read, so the data can be translated into what is needed in the warehouse.​
+                  MongoDB does a more natural mapping of data with its JSON-style BSON (binary JSON) documents, so it does not need such structure or definition beforehand.
                   
-                  ​
+                  MongoDB's containers for document objects are called collections. A collection is a group of documents that share a common theme, and can be compared to a traditional database table.
                   
-                  MongoDB does a more natural mapping of data with its JSON-style BSON (binary JSON) documents, so it does not need such structure or definition beforehand. This is what allows for more outward scalability and flexibility in adding fields and nesting levels for the data store.​
+                 
                 </p>
-                <p class="normal-text"></p>
+                <p class="normal-text padleft"></p>
 
 
                 <h3 class="padhead">Schema-on-write vs. Schema-on-read and Schemaless databases</h3>
-                <p class="normal-text">
-                    Schema-on-write is the process of defining the structure of a database before writing data. This provides for quick results, as the data is already formattted for the most part. This is great for repetitive reports, but not for agility in the system.
+                <p class="normal-text padleft">
+                    Schema-on-write is the process of defining the structure of a database before writing data. 
+                    
+                    This provides for quick results, as the data is already formattted for the most part. 
+                    
+                    This is great for repetitive reports, but not for agility in the whole system.
                 </p>
-                <p class="normal-text">
-                  In Schema-on-read is, the structure of a database is defined when data is read. This gives more agility and capacity for scaling out, but the speed takes a hit. Updates in MongoDB are done using object methods, finding the id numbers created by the system when the documents are created.
+                <p class="normal-text padleft">
+                    In Schema-on-read means the structure of a database is defined when data is read. This gives more agility and capacity for scaling out, but the speed takes a hit. 
+                    
+                    Schemaless means the schema/model is not required before writing data, but is needed when the data is read, so the data can be translated into what is needed in the warehouse. 
+                    
+                    Schemaless databases can handle both structured and unstructured data.
+
+                    This is what allows for more outward scalability and flexibility in adding fields and nesting up to 100 levels for the data store.
                 </p>
 
 
-                <h3 class="padhead">How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?</h3>
-                <p class="normal-text">
-                    When a field or field value is changed in MongoDB, the whole document must be "upserted" to include the new data. This means that the whole document and any embedded documents must be held in memory until the update is complete. Each document has a maximum size of 16MB. This could cause a performance problem if the document has many nested dependents.    
+                <h3 class="padhead">
+                    How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?
+                </h3>
+                <p class="normal-text padleft">
+                    When a field or field value is changed in MongoDB, the whole document must be "upserted" to include the new data. 
+                    
+                    This means that the whole document and any embedded documents must be held in memory until the update is complete. 
+                    
+                    Each document has a maximum size of 16MB. This could cause a performance problem if the document has many nested dependents.  
+                    
+                    Updates in MongoDB are done using object methods, finding the id numbers created by the system when the documents are created.
                     
                     *** NEED THIS? IS IT ACCURATE? ***
                     This means that if you have a large update, you can update the document in chunks.
                 </p>
-                <p class="normal-text"></p>
+                <p class="normal-text padleft"></p>
                 <h3 class="padhead"></h3>
-                <p class="normal-text"></p>
-                <p class="normal-text"></p>
-                <p class="normal-text">
+                <p class="normal-text padleft"></p>
+                <p class="normal-text padleft"></p>
+                <p class="normal-text padleft">
                     <br />
                     <figure>
                         <img src="../../images/" alt="alt text here" class="centerimg" />
@@ -87,29 +81,34 @@
                         </figcaption>
                     </figure>
                 </p>
-                <h3>Summary</h3>
-                <p class="normal-text">
-                    Note: Sometimes the question of whether MongoDB as a source, or Redis as a source, or ElasticSearch as a source, or Cassandra as a source, or Neo4J as a source ... is good or bad is irrelevant.  The question from a data warehouse perspective is more about given that we have a MongoDB/Redis/ElasticSearch/Cassandra/Neo4J database, how do we minimize or manage the technical debt associated with getting it into the data warehouse?  And how do we take away the complexity of integration from the end-user and present them with something that is highly usable and consistent?
+                <h3 class="padhead">Summary</h3>
+                <p class="normal-text padleft">
+                    how do we minimize or manage the technical debt associated with getting it into the data warehouse?
+                    
+                    And how do we take away the complexity of integration from the end-user and present them with something that is highly usable and consistent?
                 </p>
-                <p class="normal-text">
+                <p class="normal-text padleft">
+                     
+                </p>
+                <p class="normal-text padleft">
                     telemetry used to decide whether to scale up (need more resources for single machine) or out (need more nodes added to the database network)
                 </p>
-                  <p class="normal-text">
+                  <p class="normal-text padleft">
 
                 </p>
                 <ol class="sources">
                     Sources:
-                    <li class="normal-text">
+                    <li class="normal-text padleft">
                       <a href="https://www.mongodb.com/unstructured-data/schemaless">"What is a Schemaless Database?", MongoDB</a>
                     </li>
-                    <li class="normal-text">
+                    <li class="normal-text padleft">
                       <a href="https://mindmajix.com/mongodb-update-document">"MongoDB Update Document", MindMajix</a>
                     </li>
-                    <li class="normal-text">
+                    <li class="normal-text padleft">
                       <a href="https://www.dell.com/en-us/blog/schema-read-vs-schema-write-started/">Henson, Thomas, "How Schema On Read vs. Schema On Write Started It All", Dell, August 21, 2017</a>
                     </li>
-                    <li class="normal-text">
-                      <a href="">linktext</a>
+                    <li class="normal-text padleft">
+                      <a href="https://docs.mongodb.com/manual/reference/limits/">"MongoDB Limits and Thresholds", MongoDB Documentation</a>
                     </li>
                 </ol>
             </div>

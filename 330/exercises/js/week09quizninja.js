@@ -1,55 +1,70 @@
 const quiz = [
-  { name: "Superman", realName: "Clark Kent" },
-  { name: "Wonderwoman", realName: "Dianna Prince" },
-  { name: "Batman", realName: "Bruce Wayne" },
+    { name: "Superman", realName: "Clark Kent" },
+    { name: "Wonderwoman", realName: "Dianna Prince" },
+    { name: "Batman", realName: "Bruce Wayne" },
 ];
+
+function random(a,b=1) {
+    // if only 1 argument is provided, we need to swap the values of a and b
+    if (b === 1) {
+        [a,b] = [b,a];
+    }
+    return Math.floor((b-a+1) * Math.random()) + a;
+}
+
+function shuffle(array) {
+    for (let i = array.length; i; i--) {
+        let j = random(i)-1;
+        [array[i - 1], array[j]] = [array[j], array[i - 1]];
+    }
+}
 
 // View Object
 const view = {
-  score: document.querySelector("#score strong"),
-  question: document.getElementById("question"),
-  result: document.getElementById("result"),
-  info: document.getElementById("info"),
-  start: document.getElementById("start"),
-  response: document.querySelector("#response"),
-  timer: document.querySelector('#timer strong'),
+    score: document.querySelector("#score strong"),
+    question: document.getElementById("question"),
+    result: document.getElementById("result"),
+    info: document.getElementById("info"),
+    start: document.getElementById("start"),
+    response: document.querySelector("#response"),
+    timer: document.querySelector('#timer strong'),
 
   render(target, content, attributes) {
-    for (const key in attributes) {
-      target.setAttribute(key, attributes[key]);
-    }
-    target.innerHTML = content;
+      for (const key in attributes) {
+          target.setAttribute(key, attributes[key]);
+      }
+      target.innerHTML = content;
   },
 
   show(element) {
-    element.style.display = "block";
+      element.style.display = "block";
   },
 
   hide(element) {
-    element.style.display = "none";
+      element.style.display = "none";
   },
 
   resetForm() {
-    this.response.answer.value = "";
-    this.response.answer.focus();
+      this.response.answer.value = "";
+      this.response.answer.focus();
   },
 
   setup() {
-    this.show(this.question);
-    this.show(this.response);
-    this.show(this.result);
-    this.hide(this.start);
-    this.render(this.score, game.score);
-    this.render(this.result, "");
-    this.render(this.info, "");
-    this.resetForm();
+      this.show(this.question);
+      this.show(this.response);
+      this.show(this.result);
+      this.hide(this.start);
+      this.render(this.score, game.score);
+      this.render(this.result, "");
+      this.render(this.info, "");
+      this.resetForm();
   },
 
   teardown() {
-    this.hide(this.question);
-    this.hide(this.response);
-    this.show(this.start);
-  },
+      this.hide(this.question);
+      this.hide(this.response);
+      this.show(this.start);
+    },
 };
 
 const game = {
@@ -66,11 +81,12 @@ const game = {
     ask(name) {
         console.log('ask() invoked');
         if (this.questions.length > 0) {
-        this.question = this.questions.pop();
-        const question = `What is ${this.question.name}'s real name?`;
-        view.render(view.question, question);
+            shuffle(this.questions);
+            this.question = this.questions.pop();
+            const question = `What is ${this.question.name}'s real name?`;
+            view.render(view.question, question);
         } else {
-        this.gameOver();
+            this.gameOver();
         }
     },
 
