@@ -37,7 +37,7 @@
                 END DELETE
 
 
-                <h3>What is a schemaless collection in MongoDB?</h3>
+                <h3 class="padhead">What is a schemaless collection in MongoDB?</h3>
                 <p class="normal-text">
                   A schema is a well-defined, structured description of each part of a traditional database. This requires rigid formatting to maintain data consistency.​
 
@@ -52,16 +52,16 @@
                 <p class="normal-text"></p>
 
 
-                <h3>Schema-on-write vs. Schema-on-read and Schemaless databases</h3>
+                <h3 class="padhead">Schema-on-write vs. Schema-on-read and Schemaless databases</h3>
                 <p class="normal-text">
                     Schema-on-write is the process of defining the structure of a database before writing data. This provides for quick results, as the data is already formattted for the most part. This is great for repetitive reports, but not for agility in the system.
                 </p>
                 <p class="normal-text">
-                  In Schema-on-read is, the structure of a database is defined when data is read. 
+                  In Schema-on-read is, the structure of a database is defined when data is read. This gives more agility and capacity for scaling out, but the speed takes a hit. Updates in MongoDB are done using object methods, finding the id numbers created by the system when the documents are created.
                 </p>
 
 
-                <h3>How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?</h3>
+                <h3 class="padhead">How do you update data in MongoDB?  What happens when an individual field or field value in a document changes?</h3>
                 <p class="normal-text">
                     When a field or field value is changed in MongoDB, the whole document must be "upserted" to include the new data. This means that the whole document and any embedded documents must be held in memory until the update is complete. Each document has a maximum size of 16MB. This could cause a performance problem if the document has many nested dependents.    
                     
@@ -69,7 +69,7 @@
                     This means that if you have a large update, you can update the document in chunks.
                 </p>
                 <p class="normal-text"></p>
-                <h3></h3>
+                <h3 class="padhead"></h3>
                 <p class="normal-text"></p>
                 <p class="normal-text"></p>
                 <p class="normal-text">

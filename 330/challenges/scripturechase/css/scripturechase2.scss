@@ -41,7 +41,7 @@ $newhgradient: linear-gradient(
     hsl(61deg 100% 45%) 100%
   );
   $newvgradient: linear-gradient(
-      90deg,
+      180deg,
       hsl(241deg 100% 40%) 0%,
       hsl(69deg 9% 60%) 52%,
       hsl(61deg 100% 45%) 100%
@@ -188,21 +188,35 @@ body {
     max-width: 100%;
     font-size: $font5;
     font-weight: bolder;
-    background: black;
 }
 
-.primary { background: #bbbbbb; color: $primary; margin: 0; }
-.p30 { background: #bbbbbb; color: $p30; margin: 0; }
-.p60 { color: $p60; margin: 0; }
-.p90 { color: $p90; margin: 0; }
-.p120 { color: $p120; margin: 0; }
-.p150 { color: $p150; margin: 0; }
-.p180 { color: $p180; margin: 0; }
-.p-150 { color: $p-150; margin: 0; }
-.p-120 { color: $p-120; margin: 0; }
-.p-90 { color: $p-90; margin: 0; }
-.p-60 { color: $p-60; margin: 0; }
-.p-30 { background: #bbbbbb; color: $p-30; margin: 0; }
+.primary { background: $p180; color: $primary; margin: 0; }
+.p30 { background: $p-150; color: $p30; margin: 0; }
+.p60 { background: $p-120; color: $p60; margin: 0; }
+.p90 { background: $p-90; color: $p90; margin: 0; }
+.p120 { background: $p-60; color: $p120; margin: 0; }
+.p150 { background: $p-30; color: $p150; margin: 0; }
+.p180 { background: $primary; color: $p180; margin: 0; }
+.p-150 { background: $p30; color: $p-150; margin: 0; }
+.p-120 { background: $p60; color: $p-120; margin: 0; }
+.p-90 { background: $p90; color: $p-90; margin: 0; }
+.p-60 { background: $p120; color: $p-60; margin: 0; }
+.p-30 { background: $p150; color: $p-30; margin: 0; }
+
+
+
+p#primary { background: $p180; color: $primary; margin: 0; }
+p#p30 { background: $p-150; color: $p30; margin: 0; }
+p#p60 { background: $p-120; color: $p60; margin: 0; }
+p#p90 { background: $p-90; color: $p90; margin: 0; }
+p#p120 { background: $p-60; color: $p120; margin: 0; }
+p#p150 { background: $p-30; color: $p150; margin: 0; }
+p#p180 { background: $primary; color: $p180; margin: 0; }
+p#p-150 { background: $p30; color: $p-150; margin: 0; }
+p#p-120 { background: $p60; color: $p-120; margin: 0; }
+p#p-90 { background: $p90; color: $p-90; margin: 0; }
+p#p-60 { background: $p120; color: $p-60; margin: 0; }
+p#p-30 { background: $p150; color: $p-30; margin: 0; }
 
 
 .bordered {

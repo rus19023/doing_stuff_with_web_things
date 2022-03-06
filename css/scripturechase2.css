@@ -83,68 +83,148 @@ body {
   max-width: 100%;
   font-size: 5vh;
   font-weight: bolder;
-  background: black;
 }
 
 .primary {
-  background: #bbbbbb;
+  background: #e5e900;
   color: #0300ca;
   margin: 0;
 }
 
 .p30 {
-  background: #bbbbbb;
+  background: #62ca00;
   color: #6800ca;
   margin: 0;
 }
 
 .p60 {
+  background: #00ca03;
   color: #ca00c7;
   margin: 0;
 }
 
 .p90 {
+  background: #00ca68;
   color: #ca0062;
   margin: 0;
 }
 
 .p120 {
+  background: #00c7ca;
   color: #ca0300;
   margin: 0;
 }
 
 .p150 {
+  background: #0062ca;
   color: #ca6800;
   margin: 0;
 }
 
 .p180 {
+  background: #0300ca;
   color: #e5e900;
   margin: 0;
 }
 
 .p-150 {
+  background: #6800ca;
   color: #62ca00;
   margin: 0;
 }
 
 .p-120 {
+  background: #ca00c7;
   color: #00ca03;
   margin: 0;
 }
 
 .p-90 {
+  background: #ca0062;
   color: #00ca68;
   margin: 0;
 }
 
 .p-60 {
+  background: #ca0300;
   color: #00c7ca;
   margin: 0;
 }
 
 .p-30 {
-  background: #bbbbbb;
+  background: #ca6800;
+  color: #0062ca;
+  margin: 0;
+}
+
+p#primary {
+  background: #e5e900;
+  color: #0300ca;
+  margin: 0;
+}
+
+p#p30 {
+  background: #62ca00;
+  color: #6800ca;
+  margin: 0;
+}
+
+p#p60 {
+  background: #00ca03;
+  color: #ca00c7;
+  margin: 0;
+}
+
+p#p90 {
+  background: #00ca68;
+  color: #ca0062;
+  margin: 0;
+}
+
+p#p120 {
+  background: #00c7ca;
+  color: #ca0300;
+  margin: 0;
+}
+
+p#p150 {
+  background: #0062ca;
+  color: #ca6800;
+  margin: 0;
+}
+
+p#p180 {
+  background: #0300ca;
+  color: #e5e900;
+  margin: 0;
+}
+
+p#p-150 {
+  background: #6800ca;
+  color: #62ca00;
+  margin: 0;
+}
+
+p#p-120 {
+  background: #ca00c7;
+  color: #00ca03;
+  margin: 0;
+}
+
+p#p-90 {
+  background: #ca0062;
+  color: #00ca68;
+  margin: 0;
+}
+
+p#p-60 {
+  background: #ca0300;
+  color: #00c7ca;
+  margin: 0;
+}
+
+p#p-30 {
+  background: #ca6800;
   color: #0062ca;
   margin: 0;
 }
@@ -185,4 +265,4 @@ body {
   .color3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}/*# sourceMappingURL=scripturechase.css.map */
+}/*# sourceMappingURL=scripturechase2.css.map */
