@@ -85,145 +85,145 @@ body {
   font-weight: bolder;
 }
 
-.primary {
+.orange {
   background: #e5e900;
   color: #0300ca;
   margin: 0;
 }
 
-.p30 {
+.yellow {
   background: #62ca00;
   color: #6800ca;
   margin: 0;
 }
 
-.p60 {
+.chartreuse {
   background: #00ca03;
   color: #ca00c7;
   margin: 0;
 }
 
-.p90 {
+.limegreen {
   background: #00ca68;
   color: #ca0062;
   margin: 0;
 }
 
-.p120 {
+.seafoam {
   background: #00c7ca;
   color: #ca0300;
   margin: 0;
 }
 
-.p150 {
+.skyblue {
   background: #0062ca;
   color: #ca6800;
   margin: 0;
 }
 
-.p180 {
+.medblue {
   background: #0300ca;
   color: #e5e900;
   margin: 0;
 }
 
-.p-150 {
+.royalblue {
   background: #6800ca;
   color: #62ca00;
   margin: 0;
 }
 
-.p-120 {
+.purple {
   background: #ca00c7;
   color: #00ca03;
   margin: 0;
 }
 
-.p-90 {
+.hotpink {
   background: #ca0062;
   color: #00ca68;
   margin: 0;
 }
 
-.p-60 {
+.dksalmon {
   background: #ca0300;
   color: #00c7ca;
   margin: 0;
 }
 
-.p-30 {
+.redorange {
   background: #ca6800;
   color: #0062ca;
   margin: 0;
 }
 
-p#primary {
+p#orange {
   background: #e5e900;
   color: #0300ca;
   margin: 0;
 }
 
-p#p30 {
+p#yellow {
   background: #62ca00;
   color: #6800ca;
   margin: 0;
 }
 
-p#p60 {
+p#chartreuse {
   background: #00ca03;
   color: #ca00c7;
   margin: 0;
 }
 
-p#p90 {
+p#limegreen {
   background: #00ca68;
   color: #ca0062;
   margin: 0;
 }
 
-p#p120 {
+p#seafoam {
   background: #00c7ca;
   color: #ca0300;
   margin: 0;
 }
 
-p#p150 {
+p#skyblue {
   background: #0062ca;
   color: #ca6800;
   margin: 0;
 }
 
-p#p180 {
+p#medblue {
   background: #0300ca;
   color: #e5e900;
   margin: 0;
 }
 
-p#p-150 {
+p#royalblue {
   background: #6800ca;
   color: #62ca00;
   margin: 0;
 }
 
-p#p-120 {
+p#purple {
   background: #ca00c7;
   color: #00ca03;
   margin: 0;
 }
 
-p#p-90 {
+p#hotpink {
   background: #ca0062;
   color: #00ca68;
   margin: 0;
 }
 
-p#p-60 {
+p#dksalmon {
   background: #ca0300;
   color: #00c7ca;
   margin: 0;
 }
 
-p#p-30 {
+p#redorange {
   background: #ca6800;
   color: #0062ca;
   margin: 0;

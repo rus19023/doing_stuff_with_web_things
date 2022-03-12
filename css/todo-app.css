@@ -12,15 +12,15 @@ body header #main-nav {
   grid-area: main-nav;
   grid-template-areas: "list";
 }
-body header #main-nav ol {
+body header #main-nav ul {
   display: grid;
   grid-area: list;
   grid-template-areas: "list-item";
 }
-body header #main-nav ol li {
+body header #main-nav ul li {
   display: grid;
 }
-body header #main-nav ol li a {
+body header #main-nav ul li a {
   grid-area: list-item;
 }
 
@@ -71,86 +71,86 @@ body header #main-nav ol li a {
   padding: 0.25vw;
 }
 
-.primary {
+.orange {
   background: black;
-  color: #ffb88f;
+  color: #e67700;
   margin: 0;
 }
 
-.p30 {
+.yellow {
   background: black;
-  color: #fff08f;
+  color: #e2e600;
   margin: 0;
 }
 
-.p60 {
+.chartreuse {
   background: black;
-  color: #d6ff8f;
+  color: #6fe600;
   margin: 0;
 }
 
-.p90 {
+.limegreen {
   background: black;
-  color: #9eff8f;
+  color: #00e604;
   margin: 0;
 }
 
-.p120 {
+.seafoam {
   background: black;
-  color: #8fffb8;
+  color: #00e677;
   margin: 0;
 }
 
-.p150 {
+.skyblue {
   background: black;
-  color: #8ffff0;
+  color: #00e2e6;
   margin: 0;
 }
 
-.p180 {
+.medblue {
   background: black;
-  color: #8fd6ff;
+  color: #006fe6;
   margin: 0;
 }
 
-.p-150 {
+.royalblue {
   background: black;
-  color: #8f9eff;
+  color: #0400e6;
   margin: 0;
 }
 
-.p-120 {
+.purple {
   background: black;
-  color: #b88fff;
+  color: #7700e6;
   margin: 0;
 }
 
-.p-90 {
+.hotpink {
   background: black;
-  color: #f08fff;
+  color: #e600e2;
   margin: 0;
 }
 
-.p-60 {
+.dksalmon {
   background: black;
-  color: #ff8fd6;
+  color: #e6006f;
   margin: 0;
 }
 
-.p-30 {
+.redorange {
   background: black;
-  color: #ff8f9e;
+  color: #e60400;
   margin: 0;
 }
 
 input[type=checkbox].markbtnX {
   content: "✕";
-  color: #ff8f9e;
+  color: #e60400;
   font-size: 6vh;
 }
 
 html, body {
-  color: #8fffb8;
+  color: #fbff1a;
   background: linear-gradient(180deg, #0300cc 0%, #9fa290 52%, #e2e600 100%);
   padding: 1vw;
   font-size: 18px;
@@ -179,7 +179,7 @@ h2#tab-bar a {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #ff8fd6;
+  color: #e6006f;
   padding: 1vw 2vw;
 }
 
@@ -189,9 +189,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: #d6ff8f;
+  color: #6fe600;
   max-width: 90%;
-  font-family: "Dosis", sans-serif;
+  font-family: "Handlee", cursive;
   background: black;
   border-radius: 10px;
   margin: 2vh auto;
@@ -205,7 +205,7 @@ ol,
 p,
 header,
 section {
-  font-family: "Nunito", sans-serif;
+  font-family: "Hubbali", sans-serif;
   padding: 3vw;
   background: black;
   margin: 2vw 0;
@@ -213,7 +213,7 @@ section {
 }
 
 .exercise {
-  border: 2px solid #ffb88f;
+  border: 2px solid #e67700;
   border-radius: 10px;
   margin: 2vw;
 }
@@ -230,7 +230,7 @@ section {
 
 h1 {
   font-size: 4vh;
-  color: #d6ff8f;
+  color: #6fe600;
 }
 
 h2 {
@@ -264,8 +264,8 @@ h6 {
 }
 
 .normal-text {
-  color: #ffb88f;
-  font-family: "Nunito", sans-serif;
+  color: #e67700;
+  font-family: "Hubbali", sans-serif;
   font-size: 2vh;
   padding: 2vw;
   margin: 0 2vw;
@@ -277,48 +277,48 @@ h6 {
   font-weight: bold;
 }
 
-ol li {
-  color: #d6ff8f;
+ul li {
+  color: #6fe600;
 }
-ol li a {
+ul li a {
   font-size: 3vh;
-  color: #8f9eff;
+  color: #0400e6;
 }
-ol li a:hover {
-  color: #b88fff;
+ul li a:hover {
+  color: #7700e6;
 }
 
 a {
-  color: #d6ff8f;
+  color: #6fe600;
   text-decoration: none;
 }
 
 a:visited {
-  color: #9eff8f;
+  color: #00e604;
 }
 
 a:hover {
-  color: #8fd6ff;
+  color: #006fe6;
 }
 
 .buttons {
   text-align: center;
   cursor: pointer;
   background: black;
-  box-shadow: 0 0 10px #ffb88f;
+  box-shadow: 0 0 10px #e67700;
   padding: 2vw;
   max-width: 50%;
   margin: 0 auto;
   height: 10vh;
   border-radius: 10px;
-  color: #d6ff8f;
-  font-family: "Dosis", sans-serif;
+  color: #6fe600;
+  font-family: "Handlee", cursive;
   font-weight: bold;
   font-size: 3vh;
 }
 .buttons a {
   text-decoration: none;
-  color: #8f9eff;
+  color: #0400e6;
   font-size: 4vh;
 }
 
@@ -330,8 +330,8 @@ a:hover {
 
 #siteTitle2 {
   font-size: 4vh;
-  color: #d6ff8f;
-  font-family: "Dosis", sans-serif;
+  color: #6fe600;
+  font-family: "Handlee", cursive;
   font-weight: bold;
   text-align: center;
   margin: 0 auto;
@@ -344,10 +344,10 @@ a:hover {
 
 .textarea,
 .inputs {
-  background: #ffb88f;
+  background: #e67700;
   color: black;
   border-radius: 10px;
-  border: 4px solid #ff7729;
+  border: 4px solid #804200;
   margin: 2vw;
 }
 
@@ -357,39 +357,39 @@ textarea {
 }
 
 footer#autofooter {
-  font-family: "Dosis", sans-serif;
+  font-family: "Handlee", cursive;
   font-size: 3vh;
   font-weight: bold;
-  color: #d6ff8f;
+  color: #6fe600;
   text-align: center;
   margin-bottom: 6vh;
 }
 
 .source {
   text-align: center;
-  color: #f08fff;
+  color: #e600e2;
 }
 
 .sources {
   text-align: left;
-  color: #8fffb8;
+  color: #00e677;
   font-size: 3vh;
   font-weight: bold;
   margin: 2vh auto;
 }
 .sources a {
   text-decoration: none;
-  color: #8fffb8;
+  color: #00e677;
   font-size: 3vh;
 }
 
 .code {
-  background: #ffb88f;
+  background: #e67700;
   color: black;
   font-size: 3vh;
   border-radius: 10px;
   padding: 1.5vw;
-  font-family: "Dosis", sans-serif;
+  font-family: "Handlee", cursive;
   font-weight: bold;
   width: 90%;
   margin: 2vw auto;
@@ -416,18 +416,6 @@ pre {
   word-wrap: break-word;
 }
 
-.italic {
-  font-style: italic;
-}
-
-h4.indent, p.indenth4 {
-  padding-left: 4vw;
-}
-
-h5.indent, p.indenth5, p ul li.indent {
-  padding-left: 8vw;
-}
-
 h1 {
   font-size: 5vh;
 }
@@ -439,35 +427,35 @@ h1 {
 #todo-error {
   font-size: 4vh;
   font-weight: bold;
-  color: #ff8f9e;
+  color: #e60400;
 }
 
 #root a {
-  color: #d6ff8f;
+  color: #6fe600;
   text-decoration: none;
   font-weight: bold;
 }
 
 #root a:visited {
-  color: #9eff8f;
+  color: #00e604;
 }
 
 .todo-buttons {
   height: 6vh;
   margin: 1vw;
   padding: 1vw;
-  color: #8ffff0;
+  color: #00e2e6;
   font-size: 2vh;
   background: black;
-  border: 2px solid #8ffff0;
+  border: 2px solid #00e2e6;
   border-radius: 8px;
 }
 .todo-buttons :hover {
-  border: 2px solid #8ffff0;
+  border: 2px solid #00e2e6;
 }
 
 .todo-bordered {
-  border: 2px solid #8ffff0;
+  border: 2px solid #00e2e6;
   border-radius: 10px;
   padding: 1vh;
 }
@@ -482,16 +470,16 @@ h1 {
 
 .todo-text, p.todo-text {
   text-align: left;
-  color: #8ffff0;
+  color: #00e2e6;
   max-width: 100%;
-  font-family: "Nunito", sans-serif;
+  font-family: "Hubbali", sans-serif;
   font-size: 2vh;
   margin: 1vw auto;
   padding: 1vw;
 }
 
 .markbtn {
-  border: 2px solid #8ffff0;
+  border: 2px solid #00e2e6;
   border-radius: 10px;
   margin: 0.5vh;
   padding: 0.5vh;
@@ -526,7 +514,7 @@ h1 {
 }
 #todocontainer #header {
   grid-area: header;
-  color: #ff8f9e;
+  color: #e60400;
   margin-bottom: 5vw;
 }
 #todocontainer #todos {
@@ -540,7 +528,7 @@ h1 {
   grid-area: listitem;
   list-style-type: none;
   max-width: 100%;
-  border: 2px solid #8ffff0;
+  border: 2px solid #00e2e6;
   margin: 1vw;
   height: 8vh;
   border-radius: 10px;
@@ -563,7 +551,7 @@ h1 {
   border: none;
   max-width: 8vw;
   height: 8vh;
-  color: #ff8f9e;
+  color: #e60400;
   background: transparent;
   padding: 1vh;
   font-size: 5vh;
@@ -617,7 +605,7 @@ h1 {
 }
 #todocontainer #addbar #addinput, #todocontainer #addbar #searchinput, #todocontainer #searchbar #addinput, #todocontainer #searchbar #searchinput {
   background: black;
-  color: #ff8fd6;
+  color: #e6006f;
   height: 10vh;
   width: 90%;
   margin: -2vw 1vw;
@@ -625,7 +613,7 @@ h1 {
 }
 #todocontainer #addbar #addbtn, #todocontainer #searchbar #addbtn {
   background: black;
-  color: #8ffff0;
+  color: #00e2e6;
   width: 10vh;
   height: 10vh;
   padding: 0.75vw;
@@ -634,7 +622,7 @@ h1 {
 }
 #todocontainer h3 {
   background: black;
-  color: #d6ff8f;
+  color: #6fe600;
   padding: 1vh;
   text-align: center;
   font-weight: bolder;

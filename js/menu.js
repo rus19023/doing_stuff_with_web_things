@@ -1,5 +1,3 @@
-
-
 const list330 = [
     {
         name: "Week 01 Notes",
@@ -354,7 +352,7 @@ const mainNav = [
         cert: "06",
     },
     {
-        url: `${getCbase()}/105`,
+        url: `${getCbase()}105/`,
         term: "03",
         year: "22",
         code: "105",
@@ -364,7 +362,7 @@ const mainNav = [
         cert: "06",
     },
     {
-        url: `${getCbase()}/112`,
+        url: `${getCbase()}112/`,
         term: "04",
         year: "22",
         code: "112",
@@ -374,7 +372,7 @@ const mainNav = [
         cert: "06",
     },
     {
-        url: `${getCbase()}/`,
+        url: `${getCbase()}000/`,
         term: "04",
         year: "22",
         code: "",
@@ -384,7 +382,7 @@ const mainNav = [
         cert: "06",
     },
     {
-        url: `${getCbase()}/150`,
+        url: `${getCbase()}150/`,
         term: "01",
         year: "23",
         code: "",
@@ -394,7 +392,7 @@ const mainNav = [
         cert: "06",
     },
     {
-        url: `${getCbase()}/`,
+        url: `${getCbase()}000/`,
         term: "01",
         year: "23",
         code: "",
@@ -510,7 +508,7 @@ const siteTitle = (el) => {
     //console.log(elhref);
     //console.log(createLink(elhref, "Back to Index"));
     if (isElement(elheader)) {
-        writeById(elheader, '<h1 id="siteTitle2" class="padhead">Doris Rush-Lopez - My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar" class="padhead">${createLink(elhref, "Back to Index")}</h2>`);
+        writeById(elheader, '<h1 id="siteTitle2" class="title">Doris Rush-Lopez <br> My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar" class="title">${createLink(elhref, "Back to Index")}</h2>`);
     }
 }
 siteTitle("327");
@@ -644,7 +642,7 @@ function createCertNav(array, id) {
         return 0;
       });
       // create cert list element
-      const certmenu = document.createElement('ol');
+      const certmenu = document.createElement('ul');
       certmenu.setAttribute(id, 'menu');
       // get list of files to create links for each menu entry
       let certcount = 1;
@@ -653,7 +651,7 @@ function createCertNav(array, id) {
           const certCheck = element.cert;
           // create list item for this cert
           const certitem = document.createElement('li');
-          //certitem.classList.add('nav');
+          certitem.classList.add('nomarg');
           certitem.classList.add('cert-text');
           certitem.setAttribute(id, `cert${certcount}`);
           // set text for item
@@ -673,7 +671,8 @@ function createCertNav(array, id) {
             // names must be equal
             return 0;
           });
-      let submenu = document.createElement('ol');
+      let submenu = document.createElement('ul');
+      submenu.style.listStyleType = "none";
       submenu.setAttribute(id, 'submenu');
       // sort array by name
       array.sort(function(a, b) {
@@ -698,7 +697,7 @@ function createCertNav(array, id) {
         // if subitem's cert number = item's cert number, add to submenu list
         if (element.cert === certCheck) {
           const submenuitem = document.createElement('li');
-          submenuitem.classList.add('nav');
+          submenuitem.classList.add('nomarg');
           submenuitem.setAttribute(id, `course${coursecount}`);
           // if url does not exist AND data url length is less than 100, exit program
           if ((!urlExists(element.url)) && (element.url.length < 100)) {
@@ -752,7 +751,7 @@ function createNav(array, id) {
       return 0;
     });
     // create link list element
-    let menu = "<ol>";
+    let menu = "<ul class='hotpink marg padit'>";
     // get list of files to create links for each menu entry
     array.forEach((element) => {
       // if url does not exist AND data url length is less than 100, exit program
@@ -769,13 +768,13 @@ function createNav(array, id) {
         }
       }
     });
-    menu += "</ol>";
+    menu += "</ul>";
     container.innerHTML = menu;
     return;
   }
 }
-createNav(mainNav, "main-nav");
-createNav(list330, "notes");
+// createNav(mainNav, "main-nav");
+// createNav(list330, "notes");
 createNav(paperslist, "papers");
 createNav(presentations, "presentations");
 

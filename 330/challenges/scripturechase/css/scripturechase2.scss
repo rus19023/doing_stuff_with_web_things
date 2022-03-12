@@ -3,35 +3,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap');
 
 // Colors
-$primary: #0300ca;
-$p30: adjust-hue($primary, 30deg);
-$p60: adjust-hue($primary, 60deg);
-$p90: adjust-hue($primary, 90deg);
-$p120: adjust-hue($primary, 120deg);
-$p150: adjust-hue($primary, 150deg);
-$p180: lighten(adjust-hue($primary, 180deg), 6%);
-$p-150: adjust-hue($primary, -150deg);
-$p-120: adjust-hue($primary, -120deg);
-$p-90: adjust-hue($primary, -90deg);
-$p-60: adjust-hue($primary, -60deg);
-$p-30: adjust-hue($primary, -30deg);
+$orange: #0300ca;
+$yellow: adjust-hue($orange, 30deg);
+$chartreuse: adjust-hue($orange, 60deg);
+$limegreen: adjust-hue($orange, 90deg);
+$seafoam: adjust-hue($orange, 120deg);
+$skyblue: adjust-hue($orange, 150deg);
+$medblue: lighten(adjust-hue($orange, 180deg), 6%);
+$royalblue: adjust-hue($orange, -150deg);
+$purple: adjust-hue($orange, -120deg);
+$hotpink: adjust-hue($orange, -90deg);
+$dksalmon: adjust-hue($orange, -60deg);
+$redorange: adjust-hue($orange, -30deg);
 
-$accent3: lighten($primary, 10%);
-$accent2: $p120;
-$accent: $p60;
+$accent3: lighten($orange, 10%);
+$accent2: $seafoam;
+$accent: $chartreuse;
 $headings: $accent;
-$contrast: $p180;
-$primaryborder: darken($primary, 20%);
+$contrast: $medblue;
+$orangeborder: darken($orange, 20%);
 $warning: darken($contrast, 50%);
-$nav: $p-60;
-$valid: $p-90;
-$background: $primary;
+$nav: $dksalmon;
+$valid: $hotpink;
+$background: $orange;
 $background2: $contrast;
-//$background: darken($primary, 0%);
+//$background: darken($orange, 0%);
 $bgmoz: -moz-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(224,228,0,1) 67%);
 $bgweb: -webkit-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(224,228,0,1) 67%);
 $bgfilter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0300ca",endColorstr="#e0e400",GradientType=1);
-$lgradient: linear-gradient(180deg, lighten($primary, 20%), lighten($contrast, 10%));
+$lgradient: linear-gradient(180deg, lighten($orange, 20%), lighten($contrast, 10%));
 $hgradient: linear-gradient(180deg, rgba(3,0,202,1), rgba(224,228,0,1));
 $vgradient: linear-gradient(90deg, rgba(3,0,202,1), rgba(224,228,0,1));
 $newhgradient: linear-gradient(
@@ -52,23 +52,23 @@ $debug: rgb(190, 255, 60);
 $dkgrey: #3a3a3a;
 $mdgrey: #686868;
 $ltgrey: #bababa;
-$primaryshadow: rgba(234, 250, 93, 0.95);
+$orangeshadow: rgba(234, 250, 93, 0.95);
 $mdgreyshadow: rgba(255, 227, 100, 0.75);
 $oldwarning: #bd0000;
 
-$formshadow: 0 0 10px $primary;
+$formshadow: 0 0 10px $orange;
 $greyshadow: 0 0 20px $mdgrey;
 $radius: 10px;
-$border: 2px solid $primary;
-$borderb: 4px solid $primary;
+$border: 2px solid $orange;
+$borderb: 4px solid $orange;
 $borderwarn: 4px solid $warning;
 $bordervalid: 4px solid $valid;
 $buttonborder: 4px solid white;
-$inputborder: 4px solid $primaryborder;
+$inputborder: 4px solid $orangeborder;
 $legendborder: 4px solid $mdgrey;
 
 // Fonts
-$fontprimary: 'Hubbali', sans-serif;
+$fontfirst: 'Hubbali', sans-serif;
 $fontsecond: 'Handlee', cursive;
 $font1: max(1vh);
 $font2: max(2vh);
@@ -97,11 +97,11 @@ $fa-font-size-base:    16px !default;
 $fa-font-display:      block !default;
 $fa-css-prefix:        fa !default;
 $fa-version:           "5.15.4" !default;
-$fa-border-color:      $primary !default;
+$fa-border-color:      $orange !default;
 $fa-inverse:           $contrast !default;
 $fa-li-width:          2em !default;
 $fa-fw-width:          20em;
-$fa-primary-opacity:   1 !default;
+$fa-orange-opacity:   1 !default;
 $fa-secondary-opacity: .4 !default;
 
 html {
@@ -111,7 +111,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background: $primary;
+    background: $orange;
     background: $bgmoz;
     background: $bgweb;
     background: $newhgradient;
@@ -156,7 +156,7 @@ body {
     color: $contrast;
     font-size: 1vw;
     font-weight: bold;
-    font-family: $fontprimary;
+    font-family: $fontfirst;
     display: grid;
     grid-template-columns: 1fr;
     & .icon {
@@ -173,7 +173,7 @@ body {
 }
 
 .f1 {
-    font-family: $fontprimary;
+    font-family: $fontfirst;
 }
 
 .f2 {
@@ -190,33 +190,33 @@ body {
     font-weight: bolder;
 }
 
-.primary { background: $p180; color: $primary; margin: 0; }
-.p30 { background: $p-150; color: $p30; margin: 0; }
-.p60 { background: $p-120; color: $p60; margin: 0; }
-.p90 { background: $p-90; color: $p90; margin: 0; }
-.p120 { background: $p-60; color: $p120; margin: 0; }
-.p150 { background: $p-30; color: $p150; margin: 0; }
-.p180 { background: $primary; color: $p180; margin: 0; }
-.p-150 { background: $p30; color: $p-150; margin: 0; }
-.p-120 { background: $p60; color: $p-120; margin: 0; }
-.p-90 { background: $p90; color: $p-90; margin: 0; }
-.p-60 { background: $p120; color: $p-60; margin: 0; }
-.p-30 { background: $p150; color: $p-30; margin: 0; }
+.orange { background: $medblue; color: $orange; margin: 0; }
+.yellow { background: $royalblue; color: $yellow; margin: 0; }
+.chartreuse { background: $purple; color: $chartreuse; margin: 0; }
+.limegreen { background: $hotpink; color: $limegreen; margin: 0; }
+.seafoam { background: $dksalmon; color: $seafoam; margin: 0; }
+.skyblue { background: $redorange; color: $skyblue; margin: 0; }
+.medblue { background: $orange; color: $medblue; margin: 0; }
+.royalblue { background: $yellow; color: $royalblue; margin: 0; }
+.purple { background: $chartreuse; color: $purple; margin: 0; }
+.hotpink { background: $limegreen; color: $hotpink; margin: 0; }
+.dksalmon { background: $seafoam; color: $dksalmon; margin: 0; }
+.redorange { background: $skyblue; color: $redorange; margin: 0; }
 
 
 
-p#primary { background: $p180; color: $primary; margin: 0; }
-p#p30 { background: $p-150; color: $p30; margin: 0; }
-p#p60 { background: $p-120; color: $p60; margin: 0; }
-p#p90 { background: $p-90; color: $p90; margin: 0; }
-p#p120 { background: $p-60; color: $p120; margin: 0; }
-p#p150 { background: $p-30; color: $p150; margin: 0; }
-p#p180 { background: $primary; color: $p180; margin: 0; }
-p#p-150 { background: $p30; color: $p-150; margin: 0; }
-p#p-120 { background: $p60; color: $p-120; margin: 0; }
-p#p-90 { background: $p90; color: $p-90; margin: 0; }
-p#p-60 { background: $p120; color: $p-60; margin: 0; }
-p#p-30 { background: $p150; color: $p-30; margin: 0; }
+p#orange { background: $medblue; color: $orange; margin: 0; }
+p#yellow { background: $royalblue; color: $yellow; margin: 0; }
+p#chartreuse { background: $purple; color: $chartreuse; margin: 0; }
+p#limegreen { background: $hotpink; color: $limegreen; margin: 0; }
+p#seafoam { background: $dksalmon; color: $seafoam; margin: 0; }
+p#skyblue { background: $redorange; color: $skyblue; margin: 0; }
+p#medblue { background: $orange; color: $medblue; margin: 0; }
+p#royalblue { background: $yellow; color: $royalblue; margin: 0; }
+p#purple { background: $chartreuse; color: $purple; margin: 0; }
+p#hotpink { background: $limegreen; color: $hotpink; margin: 0; }
+p#dksalmon { background: $seafoam; color: $dksalmon; margin: 0; }
+p#redorange { background: $skyblue; color: $redorange; margin: 0; }
 
 
 .bordered {

@@ -1,34 +1,30 @@
-
 // Colors
-$primary: #0300ca;
-$p30: adjust-hue($primary, 30deg);
-$p60: adjust-hue($primary, 60deg);
-$p90: adjust-hue($primary, 90deg);
-$p120: adjust-hue($primary, 120deg);
-$p150: adjust-hue($primary, 150deg);
-$p180: lighten(adjust-hue($primary, 180deg), 6%);
-$p-150: adjust-hue($primary, -150deg);
-$p-120: adjust-hue($primary, -120deg);
-$p-90: adjust-hue($primary, -90deg);
-$p-60: adjust-hue($primary, -60deg);
-$p-30: adjust-hue($primary, -30deg);
+$orange: #0300ca;
+$yellow: adjust-hue($orange, 30deg);
+$chartreuse: adjust-hue($orange, 60deg);
+$limegreen: adjust-hue($orange, 90deg);
+$seafoam: adjust-hue($orange, 120deg);
+$skyblue: adjust-hue($orange, 150deg);
+$medblue: lighten(adjust-hue($orange, 180deg), 6%);
+$royalblue: adjust-hue($orange, -150deg);
+$purple: adjust-hue($orange, -120deg);
+$hotpink: adjust-hue($orange, -90deg);
+$dksalmon: adjust-hue($orange, -60deg);
+$redorange: adjust-hue($orange, -30deg);
 
-$accent3: lighten($primary, 10%);
-$accent2: $p120;
-$accent: $p60;
-$headings: $accent;
-$contrast: $p180;
-$primaryborder: darken($primary, 20%);
+$accent: lighten($orange, 10%);
+$contrast: $medblue;
+$orangeborder: darken($orange, 20%);
 $warning: darken($contrast, 50%);
-$nav: $p-60;
-$valid: $p-90;
-$background: $primary;
+$nav: $dksalmon;
+$valid: $hotpink;
+$background: $orange;
 $background2: $contrast;
-//$background: darken($primary, 0%);
+//$background: darken($orange, 0%);
 $bgmoz: -moz-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(224,228,0,1) 67%);
 $bgweb: -webkit-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(224,228,0,1) 67%);
 $bgfilter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0300ca",endColorstr="#e0e400",GradientType=1);
-$lgradient: linear-gradient(180deg, lighten($primary, 20%), lighten($contrast, 10%));
+$lgradient: linear-gradient(180deg, lighten($orange, 20%), lighten($contrast, 10%));
 $hgradient: linear-gradient(180deg, rgba(3,0,202,1), rgba(224,228,0,1));
 $vgradient: linear-gradient(90deg, rgba(3,0,202,1), rgba(224,228,0,1));
 $newhgradient: linear-gradient(
@@ -49,23 +45,23 @@ $debug: rgb(190, 255, 60);
 $dkgrey: #3a3a3a;
 $mdgrey: #686868;
 $ltgrey: #bababa;
-$primaryshadow: rgba(234, 250, 93, 0.95);
+$orangeshadow: rgba(234, 250, 93, 0.95);
 $mdgreyshadow: rgba(255, 227, 100, 0.75);
 $oldwarning: #bd0000;
 
-$formshadow: 0 0 10px $primary;
+$formshadow: 0 0 10px $orange;
 $greyshadow: 0 0 20px $mdgrey;
 $radius: 10px;
-$border: 2px solid $primary;
-$borderb: 4px solid $primary;
+$border: 2px solid $orange;
+$borderb: 4px solid $orange;
 $borderwarn: 4px solid $warning;
 $bordervalid: 4px solid $valid;
 $buttonborder: 4px solid white;
-$inputborder: 4px solid $primaryborder;
+$inputborder: 4px solid $orangeborder;
 $legendborder: 4px solid $mdgrey;
 
 // Fonts
-$fontprimary: 'Hubbali', sans-serif;
+$fontfirst: 'Hubbali', sans-serif;
 $fontsecond: 'Handlee', cursive;
 $font1: max(1vh);
 $font2: max(2vh);
@@ -87,7 +83,7 @@ $height: max(35vh);
 $headerfont: "Handlee", sans-serif;
 $textfont: "Hubbali", sans-serif;
 $headingfont: "Nunito", sans-serif;
-$bg: $primary;
+$bg: $orange;
 $ft: $contrast; 
 
 .markbtn {
@@ -120,11 +116,11 @@ $ft: $contrast;
     grid-area: todocontainer;
     text-align: center;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 2vw auto;
     grid-template-columns: 1fr;
     & #header {
         grid-area: header;
-        color: $p-30;
+        color: $redorange;
         margin-bottom: 5vw;
     }
     & #todos {
@@ -162,7 +158,7 @@ $ft: $contrast;
                 border-radius: 10px;
                 max-width: 100%;
                 height: 4vh;
-                color: $p-30;
+                color: $redorange;
                 background: black;
                 padding: 1vh;
                 font-size: $font5;
@@ -211,7 +207,7 @@ $ft: $contrast;
         & #addinput {
             grid-area: addinput;
             background: black;
-            color: $p-60;
+            color: $dksalmon;
             height: 8vh;
             width: 90%;
             margin: 0;
@@ -220,7 +216,7 @@ $ft: $contrast;
         & #addbtn {
             grid-area: addbtn;
             background: black;
-            color: $p150;
+            color: $skyblue;
             width: 8vh;
             height: 8vh;
             padding: 0;
@@ -230,8 +226,7 @@ $ft: $contrast;
     }
     & h3 {
         background: black;
-        color: $accent;
-        padding: 1vh;
+        color: $chartreuse;
         text-align: center;
         font-weight: bolder;
     }

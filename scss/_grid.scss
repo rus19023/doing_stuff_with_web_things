@@ -10,7 +10,7 @@ body {
         grid-area: main-nav;
         grid-template-areas:
         "list";
-        & ol {
+        & ul {
             display: grid;
             grid-area: list;
             grid-template-areas:

@@ -16,7 +16,7 @@ const quiz = [
   { name: "Gambit", realName: "Remy LeBeau" },
   { name: "Wolverine", realName: "James Logan" },
   { name: "Mystique", realName: "Raven Darkholme" },
-  { name: "Magneto", realName: "Eric Lehnsherr," },
+  { name: "Magneto", realName: "Eric Lehnsherr" },
   { name: "Professor X", realName: "Charles Xavier" },
   { name: "Phoenix", realName: "Jean Gray" },
   { name: "NightCrawler", realName: "Kurt Wagner" },
@@ -36,15 +36,18 @@ const view = {
   show(element) {
     element.style.display = "block";
   },
+
   hide(element) {
     element.style.display = "none";
   },
+
   render(target, content, attributes) {
     for (const key in attributes) {
       target.setAttribute(key, attributes[key]);
     }
     target.innerHTML = content;
   },
+
   setup() {
     this.show(this.question);
     this.show(this.response);
@@ -55,10 +58,12 @@ const view = {
     this.render(this.info, "");
     this.resetForm();
   },
+
   resetForm() {
     this.response.answer.value = "";
     this.response.answer.focus();
   },
+  
   teardown() {
     this.hide(this.question);
     this.hide(this.response);
@@ -81,6 +86,7 @@ const game = {
     // end of main game loop
     this.gameOver();
   },
+
   ask(name) {
     if (this.questions.length > 0) {
       this.question = this.questions.pop();
@@ -90,6 +96,7 @@ const game = {
       this.gameOver();
     }
   },
+  
   check(event) {
     event.preventDefault();
     const response = view.response.answer.value;

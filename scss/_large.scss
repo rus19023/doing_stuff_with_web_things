@@ -1,4 +1,8 @@
 @media screen and (min-width: 451px) {
+    
+    .nomarg {
+        margin: 0;
+    }
 
     #todocontainer {
         max-width: 500px;
@@ -9,23 +13,62 @@
 }
 
 @media screen and (min-width: 992px) {
-    .color3 {
-        grid-template-columns: repeat(6, 1fr);
-    }
 
     #gridcontainer {
-      gap: 2vw;
-      grid-template-areas:
-      "left right";
+        margin: 2vw 4vw;
     }
+    h1 {
+        font-size: $font5;
+    }
+    
+    h2 {
+        font-size: $font4;
+    }
+    
+    h3 {
+        font-size: $font3;
+    }
+
+    h4 {
+        font-size: $font2;
+    }
+    
+    h5 {
+        font-size: $font1;
+    }
+    
+    h6 {
+        font-size: $font1;
+    }  
+
 }
 
 
 @media screen and (min-width: 1200px) {
-    #todocontainer {
-        max-width: 50%;
+
+    #gridcontainer {
+        max-width: 85%;
+        margin: 0 auto;
     }
 }
 
 @media screen and (min-width: 1500px) {
+
+    body {font-size: 12px;}
+
+    #gridcontainer {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    h1 { font-size: max(5vw); }
+    h2 { font-size: max(4.5vw); }
+    h3 { font-size: max(4vw); }
+    h4 { font-size: max(3.5vw); }
+    h5 { font-size: max(3vw); }
+    h6 { font-size: max(2vw); }
+
+    .color3 {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
