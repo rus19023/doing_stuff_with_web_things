@@ -59,7 +59,18 @@ const list330 = [
             name: "Week 10: Quiz Ninja",
             url: `${getBase()}exercises/week10ninjaquiz.html`,
       },
+      {
+            name: "Week 10: Challenge Two - App: Scripture Chase",
+            url: `${getBase()}challenges/scripturechase/`,
+      },
+      {
+            name: "Week 10: To Do App, Revisited (added search feature and style changes to use with new app)",
+            url: "https://rus19023.github.io/ToDoApp/",
+      },
   ];
+
+  // End of list330
+
 
 const list101 = [
     {
