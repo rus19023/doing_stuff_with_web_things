@@ -55,9 +55,13 @@ const list330 = [
             name: "Week 10: Updates to To Do App",
             url: "https://rus19023.github.io/ToDoApp/",
       },
+      {
+            name: "Week 10: Quiz Ninja",
+            url: `${getBase()}exercises/week10ninjaquiz.html`,
+      },
   ];
 
-  const list101 = [
+const list101 = [
     {
       name: "",
       url: "",
@@ -953,7 +957,7 @@ function createNav(array, id) {
   }
 }
 // createNav(mainNav, "main-nav");
-// createNav(list330, "notes");
+createNav(list330, "notes");
 createNav(paperslist, "papers");
 createNav(presentations, "presentations");
 
