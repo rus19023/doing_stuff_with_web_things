@@ -1,89 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Dosis");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
-@media screen and (min-width: 451px) {
-  .nomarg {
-    margin: 0;
-  }
-
-  #todocontainer {
-    max-width: 500px;
-  }
-}
-@media screen and (min-width: 992px) {
-  #gridcontainer {
-    margin: 2vw 4vw;
-  }
-
-  h1 {
-    font-size: 5vw;
-  }
-
-  h2 {
-    font-size: 4vw;
-  }
-
-  h3 {
-    font-size: 3vw;
-  }
-
-  h4 {
-    font-size: 2vw;
-  }
-
-  h5 {
-    font-size: 1vw;
-  }
-
-  h6 {
-    font-size: 1vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #gridcontainer {
-    max-width: 85%;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1500px) {
-  body {
-    font-size: 12px;
-  }
-
-  #gridcontainer {
-    max-width: 75%;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 5vw;
-  }
-
-  h2 {
-    font-size: 4.5vw;
-  }
-
-  h3 {
-    font-size: 4vw;
-  }
-
-  h4 {
-    font-size: 3.5vw;
-  }
-
-  h5 {
-    font-size: 3vw;
-  }
-
-  h6 {
-    font-size: 2vw;
-  }
-
-  .color3 {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -130,7 +46,7 @@ body header #main-nav ul li a {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
-  font-size: 4vw;
+  font-size: 16px;
   padding: 0.25vw;
 }
 
@@ -209,7 +125,7 @@ body header #main-nav ul li a {
 input[type=checkbox].markbtnX {
   content: "✕";
   color: #b70500;
-  font-size: 6vw;
+  font-size: 20px;
 }
 
 .dojo {
@@ -273,10 +189,12 @@ html, body {
 
 ul {
   list-style: none;
+  max-width: 100%;
 }
 
 li {
   padding: 1.5vw 0;
+  max-width: 100%;
 }
 
 .bold {
@@ -287,17 +205,6 @@ li {
   text-align: center;
   max-width: 100%;
   margin: 0 auto;
-}
-
-.title {
-  font-family: "Handlee", cursive;
-  color: #ffd700;
-  font-size: 3vw;
-  padding: 2vw;
-}
-
-h1 {
-  font-size: 7vh;
 }
 
 #autoheader {
@@ -313,7 +220,7 @@ h1 {
 }
 
 #text {
-  font-size: 3vw;
+  font-size: 14px;
 }
 
 .padleft {
@@ -332,14 +239,15 @@ h2#tab-bar {
   bottom: 0;
   max-width: 100%;
   border-radius: 0;
-  height: 4vh;
+  max-height: 4vh;
 }
 h2#tab-bar a {
   float: left;
+  max-width: 100%;
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #ffdf33;
+  color: #57b700;
   padding: 1vw 2vw;
 }
 
@@ -353,7 +261,7 @@ section,
 main {
   max-width: 90%;
   border-radius: 10px;
-  margin: 2vw auto;
+  margin: 1vw auto;
   background: black;
 }
 
@@ -378,15 +286,15 @@ main {
 }
 
 .cert-text {
-  font-size: 4vw;
+  font-size: 1.5vw;
   font-family: "Handlee", cursive;
   color: #00b3b7;
   font-weight: bold;
+  max-width: 100%;
 }
 
 li a {
-  color: #00b3b7;
-  font-size: 3vw;
+  color: #57b700;
   font-weight: bold;
   font-family: "Hubbali", sans-serif;
 }
@@ -394,21 +302,48 @@ li a {
 .normal-text {
   color: white;
   font-family: "Hubbali", sans-serif;
-  font-size: 3vw;
-  font-weight: bold;
+  padding: 2vw;
+}
+
+li.normal-text {
+  list-style-type: square;
+  margin-left: 2vw;
+}
+
+h1.title, li.cert-text {
+  font-size: 5vw;
+}
+
+h2.title, .sources {
+  font-size: 4.5vw;
+}
+
+h3.title {
+  font-size: 4.25vw;
+}
+
+p.normal-text, li a, #autofooter, .source, li.title {
+  font-size: 4vw;
+}
+
+.title {
+  font-family: "Handlee", cursive;
+  color: #ffd700;
+  padding: 1vw;
 }
 
 a {
-  font-family: "Handlee", cursive;
+  font-family: "Hubbali", sans-serif;
+  color: #57b700;
   text-decoration: none;
 }
 
 a:visited {
-  color: #00b760;
+  color: #ea00e4;
 }
 
 a:hover {
-  color: #0057b7;
+  color: #00e4ea;
 }
 
 .wborder {
@@ -420,7 +355,7 @@ a:hover {
   text-align: center;
   cursor: pointer;
   background: #0500b7;
-  box-shadow: 0 0 10px #b76000;
+  box-shadow: 0 0 10px #ea00e4;
   padding: 2vw;
   max-width: 50%;
   margin: 0 auto;
@@ -430,7 +365,7 @@ a:hover {
   color: #ffd700;
   font-family: "Handlee", cursive;
   font-weight: bold;
-  font-size: 3vw;
+  font-size: 14px;
 }
 .buttons a {
   text-decoration: none;
@@ -460,7 +395,7 @@ a:hover {
 #certnav {
   margin: 1vw auto;
   border-radius: 10px;
-  font-size: 3vw;
+  font-size: 1.25vw;
   font-weight: bold;
 }
 #certnav a {
@@ -494,29 +429,30 @@ textarea {
 footer#autofooter {
   color: #ffd700;
   font-family: "Handlee", cursive;
-  font-size: 1.75vw;
+  font-size: 1.5vw;
+  border-radius: 10px;
   padding: 2vw;
-  margin: 4vw;
+  margin: 4vw auto;
+  max-width: 90%;
   font-weight: bold;
   text-align: center;
 }
 
 .source {
-  text-align: center;
-  color: #0500b7;
-  font-size: 3vw;
+  text-align: left;
+  color: #57b700;
   font-family: "Hubbali", sans-serif;
+  padding: 1vw;
+}
+.source a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #57b700;
 }
 
 .sources {
   text-align: left;
   margin: 2vh auto;
-}
-.sources a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #0500b7;
-  font-size: 3vw;
 }
 
 .nomarg {
@@ -526,7 +462,7 @@ footer#autofooter {
 .code {
   background: #ffd700;
   color: #0500b7;
-  font-size: 3vw;
+  font-size: 14px;
   border-radius: 10px;
   padding: 1.5vw;
   font-family: "Hubbali", sans-serif;
@@ -552,25 +488,111 @@ pre {
   word-wrap: break-word;
 }
 
-/* Medium View */
-@media screen and (min-width: 701px) {
-  .normal-text {
+@media screen and (min-width: 451px) {
+  h1.title, li.cert-text {
     font-size: 4vw;
   }
-}
-/* Large View */
-@media screen and (min-width: 1201px) {
-  .normal-text {
-    font-size: 3vw;
-  }
-}
-/* Wide View */
-@media screen and (min-width: 1701px) {
-  h1 {
-    font-size: 8px;
+
+  h2.title, .sources {
+    font-size: 3.5vw;
   }
 
-  .normal-text {
+  h3.title {
+    font-size: 3.25vw;
+  }
+
+  p.normal-text, li a, #autofooter, .source, li.normal-text {
+    font-size: 3vw;
+  }
+
+  #todocontainer {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 700px) {
+  h1.title, li.cert-text {
+    font-size: 3.5vw;
+  }
+
+  h2.title, .sources {
+    font-size: 2.5vw;
+  }
+
+  h3.title {
+    font-size: 2.25vw;
+  }
+
+  p.normal-text, li a, #autofooter, .source, li.normal-text {
     font-size: 2vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1.title, li.cert-text {
+    font-size: 3vw;
+  }
+
+  h2.title, .sources {
+    font-size: 2.75vw;
+  }
+
+  h3.title {
+    font-size: 2.5vw;
+  }
+
+  p.normal-text, li a, #autofooter, .source, li.normal-text {
+    font-size: 2.25vw;
+  }
+
+  #gridcontainer {
+    margin: 2vw 4vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1.title, li.cert-text {
+    font-size: 2.5vw;
+  }
+
+  h2.title, .sources {
+    font-size: 2.5vw;
+  }
+
+  h3.title {
+    font-size: 2.25vw;
+  }
+
+  p.normal-text, li a, #autofooter, .source, li.normal-text {
+    font-size: 2vw;
+  }
+
+  #gridcontainer {
+    max-width: 85%;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  h1.title, li.cert-text {
+    font-size: 2vw;
+  }
+
+  h2.title, .sources {
+    font-size: 1.75vw;
+  }
+
+  h3.title {
+    font-size: 1.5vw;
+  }
+
+  p.normal-text, li a, #autofooter, .source, li.normal-text {
+    font-size: 1.25vw;
+  }
+
+  #gridcontainer {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .color3 {
+    grid-template-columns: repeat(6, 1fr);
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -1,8 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap');
 @import "variables";
-@import "large";
 @import "grid";
 @import "colors";
 @import "checkbox";
@@ -17,8 +14,8 @@ html, body {
   background-attachment: fixed;
 }
 
-ul { list-style: none; }
-li { padding: 1.5vw 0; }
+ul { list-style: none; max-width: 100%; }
+li { padding: 1.5vw 0; max-width: 100%; }
 
 .bold {
   font-weight: bold;
@@ -28,17 +25,6 @@ li { padding: 1.5vw 0; }
   text-align: center;
   max-width: 100%;
   margin: 0 auto;
-}
-
-.title {
-  font-family: $fontsecond;
-  color: $yellow;
-  font-size: $font3;
-  padding: 2vw;
-}
-
-h1 {
-  font-size: $font7;
 }
 
 #autoheader {
@@ -73,13 +59,14 @@ h2#tab-bar {
   bottom: 0;
   max-width: 100%;
   border-radius: 0;
-  height: 4vh;
+  max-height: 4vh;
   a {
     float: left;
+    max-width: 100%;
     display: block;
     text-align: center;
     text-decoration: none;
-    color: $accent2;
+    color: $accent;
     padding: 1vw 2vw;
   }
 }
@@ -94,13 +81,13 @@ section,
 main {
     max-width: 90%;
     border-radius: $radius;
-    margin: 2vw auto;
+    margin: 1vw auto;
     background: black;
 }
 
 .exercise {
     border: $border;
-    border-radius: 10px;
+    border-radius: $radius;
     margin: 2vw;
 }
 
@@ -117,15 +104,15 @@ main {
 }
 
 .cert-text {
-    font-size: $font4;
+    font-size: 1.5vw;
     font-family: $fontsecond;
     color: $skyblue;
     font-weight: bold;
+    max-width: 100%;
 }
 
 li a {
-    color: $skyblue;
-    font-size: $font3;
+    color: $accent;
     font-weight: bold;
     font-family: $fontfirst;
 }
@@ -133,26 +120,39 @@ li a {
 .normal-text {
     color: white;
     font-family: $fontfirst;
-    font-size: $font3;
-    font-weight: bold;
+    padding: 2vw;
+}
+
+li.normal-text { list-style-type: square; margin-left: 2vw; }
+
+h1.title, li.cert-text { font-size: 5vw; }
+h2.title, .sources { font-size: 4.5vw; }
+h3.title { font-size: 4.25vw; }
+p.normal-text, li a, #autofooter, .source, li.title { font-size: 4vw; }
+
+.title {
+  font-family: $fontsecond;
+  color: $yellow;
+  padding: 1vw;
 }
 
 a {
-    font-family: $fontsecond;
+    font-family: $fontfirst;
+    color: $accent;
     text-decoration: none;
 }
 
 a:visited {
-  color: $seafoam;
+  color: $accent3;
 }
 
 a:hover {
-  color: $medblue;
+  color: $accent2;
 }
 
 .wborder {
   border: $buttonborder;
-  border-radius: 10px;;
+  border-radius: $radius;
 }
 
 .buttons {
@@ -165,7 +165,7 @@ a:hover {
   margin: 0 auto;
   height: 10vh;
   border: $buttonborder;
-  border-radius: 10px;
+  border-radius: $radius;
   color: $yellow;
   font-family: $fontsecond;
   font-weight: bold;
@@ -198,8 +198,8 @@ a:hover {
 
 #certnav {
     margin: 1vw auto;
-    border-radius: 10px;
-    font-size: $font3;
+    border-radius: $radius;
+    font-size: 1.25vw;
     font-weight: bold;
     a {
       text-decoration: none;
@@ -220,7 +220,7 @@ a:hover {
 .inputs {
   background: $orange;
   color: black;
-  border-radius: 10px;
+  border-radius: $radius;
   border: $inputborder;
   margin: 2vw;
 }
@@ -233,47 +233,48 @@ textarea {
 footer#autofooter {
   color: $yellow;
   font-family: $fontsecond;
-  font-size: 1.75vw;
+  font-size: 1.5vw;
+  border-radius: $radius;
   padding: 2vw;
-  margin: 4vw;
+  margin: 4vw auto;
+  max-width: 90%;
   font-weight: bold;
   text-align: center;
 }
 
 .source {
-  text-align: center;
-  color: $royalblue;
-  font-size: $font3;
-  font-family: $fontfirst;
+    text-align: left;
+    color: $accent;
+    font-family: $fontfirst;
+    padding: 1vw;
+    & a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $accent;
+    }
 }
 
 .sources {
-  text-align: left;
-  margin: 2vh auto;
-  & a {
-    text-decoration: none;
-    font-weight: bold;
-    color: $royalblue;
-    font-size: $font3;
-  }
+    text-align: left;
+    margin: 2vh auto;
 }
 
 .nomarg {
-  margin-left: -8vw;
+    margin-left: -8vw;
 }
 
 .code {
-  background: $yellow;
-  color: $royalblue;
-  font-size: $font3;
-  border-radius: 10px;
-  padding: 1.5vw;
-  font-family: $fontfirst;
-  font-weight: bold;
-  width: 90%;
-  margin: 2vw auto;
-  text-decoration: none;
-  list-style: none;
+    background: $yellow;
+    color: $royalblue;
+    font-size: $font3;
+    border-radius: $radius;
+    padding: 1.5vw;
+    font-family: $fontfirst;
+    font-weight: bold;
+    width: 90%;
+    margin: 2vw auto;
+    text-decoration: none;
+    list-style: none;
 }
 
 .col2 {
@@ -291,27 +292,4 @@ pre {
   word-wrap: break-word;
 }
 
-
-/* Medium View */
-@media screen and (min-width: 701px) {
-    .normal-text {
-      font-size: $font4;
-    }
-}
-
-/* Large View */
-@media screen and (min-width: 1201px) {
-    .normal-text {
-      font-size: $font3;
-    }
-}
-
-/* Wide View */
-@media screen and (min-width: 1701px) {
-  h1 {
-    font-size: 8px;
-  }
-  .normal-text {
-    font-size: $font2;
-  }
-}
+@import "large";

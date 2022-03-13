@@ -57,6 +57,184 @@ const list330 = [
       },
   ];
 
+  const list101 = [
+    {
+      name: "",
+      url: "",
+    }
+];  
+
+const list100 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list111 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list130 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list160 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list171 = [
+  {
+    name: "",
+    url: "",
+  }
+];
+
+  
+
+const list211 = [
+    {
+      name: "",
+      url: "",
+    }
+];  
+
+const list213 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list225 = [
+    {
+      name: "",
+      url: "",
+    }
+];  
+
+const list230 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list240 = [
+    {
+      name: "",
+      url: "",
+    }
+];  
+
+const list241 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list2411 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list246 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list260 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list270 = [
+  {
+    name: "",
+    url: "",
+  }
+];  
+
+const list325 = [
+  {
+    name: "",
+    url: "",
+  }
+]; 
+
+  const list331 = [
+    {
+      name: "",
+      url: "",
+    }
+  ];
+
+  const list340 = [
+      {
+            name: "",
+            url: "",
+      },
+      {
+            name: "",
+            url: "",
+      },
+      {
+            name: "Final Project",
+            url: 'https://phpmotors.bonniesites.solutions/',
+      },
+  ];  
+
+  const list341 = [
+      {
+        name: "",
+        url: "",
+      }
+  ];  
+
+  const list352 = [
+    {
+      name: "",
+      url: "",
+    }
+  ]; 
+
+  const list353 = [
+    {
+      name: "",
+      url: "",
+    }
+  ]; 
+
+  const list365 = [
+    {
+      name: "",
+      url: "",
+    }
+  ];   
+
+  const list499 = [
+    {
+      name: "",
+      url: "",
+    }
+  ];
+
   const certs = [
     {
         cert: "01",
@@ -513,6 +691,7 @@ const siteTitle = (el) => {
 }
 siteTitle("327");
 siteTitle("330");
+siteTitle("340");
 siteTitle("home");
 siteTitle("courses");
 
@@ -572,6 +751,7 @@ function getIndexPageTitle(id) {
 getIndexPageTitle("CS101-indexpagetitle");
 getIndexPageTitle("CIT327-indexpagetitle");
 getIndexPageTitle("WDD330-indexpagetitle");
+getIndexPageTitle("CSE340-indexpagetitle");
 
 
 // set page title for WDD330 weekly pages
@@ -651,7 +831,6 @@ function createCertNav(array, id) {
           const certCheck = element.cert;
           // create list item for this cert
           const certitem = document.createElement('li');
-          certitem.classList.add('nomarg');
           certitem.classList.add('cert-text');
           certitem.setAttribute(id, `cert${certcount}`);
           // set text for item
@@ -751,7 +930,7 @@ function createNav(array, id) {
       return 0;
     });
     // create link list element
-    let menu = "<ul class='hotpink marg padit'>";
+    let menu = "<ul class='hotpink marg'>";
     // get list of files to create links for each menu entry
     array.forEach((element) => {
       // if url does not exist AND data url length is less than 100, exit program

@@ -32,35 +32,40 @@ const view = {
     response: document.querySelector("#response"),
     timer: document.querySelector('#timer strong'),
 
-  render(target, content, attributes) {
-      for (const key in attributes) {
-          target.setAttribute(key, attributes[key]);
-      }
-      target.innerHTML = content;
-  },
+    render(target, content, attributes) {
+        for (const key in attributes) {
+            target.setAttribute(key, attributes[key]);
+        }
+        target.innerHTML = content;
+    },
 
-  show(element) {
-      element.style.display = "block";
-  },
+    show(element) {
+        element.style.display = "block";
+    },
 
-  hide(element) {
-      element.style.display = "none";
-  },
+    hide(element) {
+        element.style.display = "none";
+    },
 
-  setup() {
-      this.show(this.question);
-      this.show(this.response);
-      this.show(this.result);
-      this.hide(this.start);
-      this.render(this.score, game.score);
-      this.render(this.result, "");
-      this.render(this.info, "");
-  },
+    setup() {
+        this.show(this.question);
+        this.show(this.response);
+        this.show(this.result);
+        this.hide(this.start);
+        this.render(this.score, game.score);
+        this.render(this.result, "");
+        this.render(this.info, "");
+    },
 
-  teardown() {
-      this.hide(this.question);
-      this.hide(this.response);
-      this.show(this.start);
+    buttons(array) {
+        console.log(array.map(value => `<button>${value}</button>`).join(''));
+        return array.map(value => `<button class="buttons">${value}</button>`).join('');
+    },
+
+    teardown() {
+        this.hide(this.question);
+        this.hide(this.response);
+        this.show(this.start);
     },
 };
 
@@ -84,16 +89,12 @@ const game = {
             console.log(options);
             shuffle(options);
             const question = `What is ${this.question.name}'s real name?`;
-            view.render(view.question,question);
-            view.render(view.response, view.buttons(options));
+            view.render(view.question, question);
+            console.log(view.buttons(options));
+            view.render(view.response, view.buttons(options), {'class':'buttonbox'});
         } else {
             this.gameOver();
         }
-    },
-
-    buttons(array) {
-        console.log(array.map(value => `<button>${value}</button>`).join(''));
-        return array.map(value => `<button>${value}</button>`).join('');
     },
 
     check(event) {

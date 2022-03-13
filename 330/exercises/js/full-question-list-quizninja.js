@@ -23,6 +23,9 @@ const quiz = [
   { name: "Beast", realName: "Hank McCoy" },
   { name: "Storm", realName: "Ororo Munroe" },
   { name: "Rogue", realName: "Anna Marie D'Ancanto" },
+  { name: "The Hulk",realName: "Bruce Banner" },
+  { name: "Spider-man",realName: "Peter Parker" },
+  { name: "Cyclops",realName: "Scott Summers" }
 ];
 
 // View Object

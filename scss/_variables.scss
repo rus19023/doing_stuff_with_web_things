@@ -16,7 +16,7 @@ $redorange: adjust-hue($orange, -30deg);
 $ublue: #0057b7;
 
 $accent3: lighten($hotpink, 10%);
-$accent2: lighten($yellow, 10%);
+$accent2: lighten($skyblue, 10%);
 $accent: $chartreuse;
 $headings: $accent;
 $contrast: $medblue;
@@ -54,13 +54,15 @@ $dkgrey: #3a3a3a;
 $mdgrey: #686868;
 $ltgrey: #bababa;
 $orangeshadow: rgba(255, 215, 0, 0.95);
-$mdgreyshadow: rgba(255, 227, 100, 0.75);
 $oldwarning: #bd0000;
 
 
-$formshadow: 0 0 10px $orange;
+$formshadow: 0 0 10px $accent3;
 $greyshadow: 0 0 20px $mdgrey;
+$blueshadow: 0 0 20px $medblue;
 $radius: 10px;
+$lgradius: 20px;
+
 $border: 2px solid $orange;
 $borderb: 4px solid $orange;
 $borderwarn: 4px solid $warning;
@@ -72,14 +74,14 @@ $legendborder: 4px solid $mdgrey;
 // Fonts
 $fontfirst: 'Hubbali', sans-serif;
 $fontsecond: 'Handlee', cursive;
-$font1: max(1vw);
-$font2: max(2vw);
-$font3: max(3vw);
-$font4: max(4vw);
-$font5: max(5vw);
-$font6: max(6vw);
-$font7: max(7vh);
-$fonth1: max(10vh);
+$font1: max(10px);
+$font2: max(12px);
+$font3: max(14px);
+$font4: max(16px);
+$font5: max(18px);
+$font6: max(20px);
+$font7: max(30px);
+$fonth1: max(30px);
 
 // Dimensions
 $cardwidth: max(28);
