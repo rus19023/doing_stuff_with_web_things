@@ -50,15 +50,13 @@ h1 {
   max-width: 80%;
 }
 
-
-
-#question, 
-#answer, 
-#timer, 
-#score, 
+#question,
+#answer,
+#timer,
+#score,
 #response,
-.correct, 
-.wrong, 
+.correct,
+.wrong,
 #info {
   text-align: center;
   font-size: 4vh;
@@ -105,12 +103,12 @@ h1 {
   button {
     font-size: 2vh;
   }
-  #question, 
-  #answer, 
-  #timer, 
-  #score, 
-  .correct, 
-  .wrong, 
+  #question,
+  #answer,
+  #timer,
+  #score,
+  .correct,
+  .wrong,
   #info {
     font-size: 3vw;
   }
@@ -135,12 +133,12 @@ h1 {
   button {
     font-size: 3vh;
   }
-  #question, 
-  #answer, 
-  #timer, 
-  #score, 
-  .correct, 
-  .wrong, 
+  #question,
+  #answer,
+  #timer,
+  #score,
+  .correct,
+  .wrong,
   #info {
     font-size: 2vw;
   }
@@ -164,12 +162,12 @@ h1 {
   button {
     font-size: 2vh;
   }
-  #question, 
-  #answer, 
-  #timer, 
-  #score, 
-  .correct, 
-  .wrong, 
+  #question,
+  #answer,
+  #timer,
+  #score,
+  .correct,
+  .wrong,
   #info {
     font-size: 1vw;
   }

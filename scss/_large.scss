@@ -10,7 +10,7 @@
     h1.title, li.cert-text { font-size: 3.5vw; }
     h2.title, .sources  { font-size: 2.5vw; }
     h3.title { font-size: 2.25vw; }
-    p.normal-text, li a, #autofooter, .source, li.normal-text { font-size: 2vw; }
+    p.normal-text, li a, #autofooter, .code, .source, li.normal-text { font-size: 2vw; }
 }
 
 @media screen and (min-width: 992px) {
@@ -18,7 +18,7 @@
     h1.title, li.cert-text { font-size: 3vw; }
     h2.title, .sources  { font-size: 2.75vw; }
     h3.title { font-size: 2.5vw; }
-    p.normal-text, li a, #autofooter, .source, li.normal-text { font-size: 2.25vw; }
+    p.normal-text, li a, #autofooter, .code, .source, li.normal-text { font-size: 2.25vw; }
 
     #gridcontainer {
         margin: 2vw 4vw;
@@ -32,7 +32,7 @@
     h1.title, li.cert-text { font-size: 2.5vw; }
     h2.title, .sources  { font-size: 2.5vw; }
     h3.title { font-size: 2.25vw; }
-    p.normal-text, li a, #autofooter, .source, li.normal-text { font-size: 2vw; }
+    p.normal-text, li a, #autofooter, .code, .source, li.normal-text { font-size: 2vw; }
 
     #gridcontainer {
         max-width: 85%;
@@ -46,7 +46,7 @@
     h1.title, li.cert-text { font-size: 2vw; }
     h2.title, .sources  { font-size: 1.75vw; }
     h3.title { font-size: 1.5vw; }
-    p.normal-text, li a, #autofooter, .source, li.normal-text { font-size: 1vw; }
+    p.normal-text, li a, #autofooter, .code, .source, li.normal-text { font-size: 1vw; }
 
     #gridcontainer {
         max-width: 75%;

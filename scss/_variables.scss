@@ -74,21 +74,21 @@ $legendborder: 4px solid $mdgrey;
 // Fonts
 $fontfirst: 'Hubbali', sans-serif;
 $fontsecond: 'Handlee', cursive;
-$font1: max(10px);
-$font2: max(12px);
-$font3: max(14px);
-$font4: max(16px);
-$font5: max(18px);
-$font6: max(20px);
-$font7: max(30px);
-$fonth1: max(30px);
+$font1: 1em;
+$font2: 1.5em;
+$font3: 2em;
+$font4: 2.5em;
+$font5: 3em;
+$font6: 3.5em;
+$font7: 4em;
+$fonth1: 5em;
 
 // Dimensions
-$cardwidth: max(28);
+$cardwidth: max(28vw);
 $htmob: max(6vh);
 $htlg: max(7vw);
 $htdesc: max(18vh);
-$cht: max(60vh);
+$cardht: max(60vh);
 $height: max(35vh);
 
 $headerfont: "Yanone Kaffeesatz", sans-serif;

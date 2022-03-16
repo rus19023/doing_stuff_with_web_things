@@ -9,7 +9,7 @@
 html, body {
   color: $skyblue;
   background: $background;
-  font-size: 12px;
+  font-size: 16px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -109,7 +109,7 @@ img {
 }
 
 .cert-text {
-    font-size: 1.5vw;
+    font-size: $font2;
     font-family: $fontsecond;
     color: $skyblue;
     font-weight: bold;
@@ -128,18 +128,16 @@ li a {
     padding: 2vw;
 }
 
-h1, h2, h3, h4, h5, h6 { 
+h1, h2, h3, h4, h5, h6 {
     font-family: $fontfirst;
     font-weight: bold;
 }
 
 li.normal-text { list-style-type: square; margin-left: 2vw; }
-
-h1.title, li.cert-text { font-size: 5vw; }
-h2.title, .sources { font-size: 4.5vw; color: $accent3;}
-h3.title { font-size: 4.25vw; color: $accent2; }
-p.normal-text, li a, .source, li.title { font-size: 4vw; }
-#autofooter { font-size: $font6; }
+h1.title, li.cert-text { font-size: 5em; }
+h2.title, .sources { font-size: 4.5em; color: $accent3;}
+h3.title { font-size: 4.25em; color: $accent2; }
+p.normal-text, li a, #autofooter, .code, .source, li.title { font-size: 4em; }
 
 .title {
   font-family: $fontsecond;
@@ -278,7 +276,6 @@ footer#autofooter {
 .code {
     background: $yellow;
     color: $royalblue;
-    font-size: $font3;
     border-radius: $radius;
     padding: 1.5vw;
     font-family: $fontfirst;

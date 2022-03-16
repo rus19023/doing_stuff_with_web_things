@@ -1,6 +1,5 @@
-body {
-  background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -47,7 +46,7 @@ body header #main-nav ul li a {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
-  font-size: 16px;
+  font-size: 2.5em;
   padding: 0.25vw;
 }
 
@@ -126,7 +125,7 @@ body header #main-nav ul li a {
 input[type=checkbox].markbtnX {
   content: "✕";
   color: #b70500;
-  font-size: 20px;
+  font-size: 3.5em;
 }
 
 .dojo {
@@ -183,7 +182,7 @@ input[type=checkbox].markbtnX {
 html, body {
   color: #00b3b7;
   background: linear-gradient(180deg, #0300cc 0%, #9fa290 52%, #ffd900 100%);
-  font-size: 12px;
+  font-size: 16px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -221,7 +220,7 @@ li {
 }
 
 #text {
-  font-size: 14px;
+  font-size: 2em;
 }
 
 .padleft {
@@ -283,7 +282,7 @@ main {
 }
 
 img {
-  font-size: 14px;
+  font-size: 2em;
   color: #00e4ea;
 }
 
@@ -292,7 +291,7 @@ img {
 }
 
 .cert-text {
-  font-size: 1.5vw;
+  font-size: 1.5em;
   font-family: "Handlee", cursive;
   color: #00b3b7;
   font-weight: bold;
@@ -322,25 +321,21 @@ li.normal-text {
 }
 
 h1.title, li.cert-text {
-  font-size: 5vw;
+  font-size: 5em;
 }
 
 h2.title, .sources {
-  font-size: 4.5vw;
+  font-size: 4.5em;
   color: #ff241e;
 }
 
 h3.title {
-  font-size: 4.25vw;
+  font-size: 4.25em;
   color: #00e4ea;
 }
 
-p.normal-text, li a, .source, li.title {
-  font-size: 4vw;
-}
-
-#autofooter {
-  font-size: 20px;
+p.normal-text, li a, #autofooter, .code, .source, li.title {
+  font-size: 4em;
 }
 
 .title {
@@ -382,7 +377,7 @@ a:hover {
   color: #ffd700;
   font-family: "Handlee", cursive;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 2em;
 }
 .buttons a {
   text-decoration: none;
@@ -480,7 +475,6 @@ footer#autofooter {
 .code {
   background: #ffd700;
   color: #0500b7;
-  font-size: 14px;
   border-radius: 10px;
   padding: 1.5vw;
   font-family: "Hubbali", sans-serif;
@@ -524,7 +518,7 @@ pre {
     font-size: 2.25vw;
   }
 
-  p.normal-text, li a, #autofooter, .source, li.normal-text {
+  p.normal-text, li a, #autofooter, .code, .source, li.normal-text {
     font-size: 2vw;
   }
 }
@@ -541,7 +535,7 @@ pre {
     font-size: 2.5vw;
   }
 
-  p.normal-text, li a, #autofooter, .source, li.normal-text {
+  p.normal-text, li a, #autofooter, .code, .source, li.normal-text {
     font-size: 2.25vw;
   }
 
@@ -562,7 +556,7 @@ pre {
     font-size: 2.25vw;
   }
 
-  p.normal-text, li a, #autofooter, .source, li.normal-text {
+  p.normal-text, li a, #autofooter, .code, .source, li.normal-text {
     font-size: 2vw;
   }
 
@@ -585,7 +579,7 @@ pre {
     font-size: 1.5vw;
   }
 
-  p.normal-text, li a, #autofooter, .source, li.normal-text {
+  p.normal-text, li a, #autofooter, .code, .source, li.normal-text {
     font-size: 1vw;
   }
 
