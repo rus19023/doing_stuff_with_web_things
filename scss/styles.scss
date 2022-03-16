@@ -99,6 +99,11 @@ main {
     margin: auto;
 }
 
+img {
+    font-size: $font3;
+    color: $accent2;
+}
+
 .listdots {
     list-style: square;
 }
@@ -123,12 +128,18 @@ li a {
     padding: 2vw;
 }
 
+h1, h2, h3, h4, h5, h6 { 
+    font-family: $fontfirst;
+    font-weight: bold;
+}
+
 li.normal-text { list-style-type: square; margin-left: 2vw; }
 
 h1.title, li.cert-text { font-size: 5vw; }
-h2.title, .sources { font-size: 4.5vw; }
-h3.title { font-size: 4.25vw; }
-p.normal-text, li a, #autofooter, .source, li.title { font-size: 4vw; }
+h2.title, .sources { font-size: 4.5vw; color: $accent3;}
+h3.title { font-size: 4.25vw; color: $accent2; }
+p.normal-text, li a, .source, li.title { font-size: 4vw; }
+#autofooter { font-size: $font6; }
 
 .title {
   font-family: $fontsecond;
@@ -143,11 +154,11 @@ a {
 }
 
 a:visited {
-  color: $accent3;
+  color: $accent2;
 }
 
 a:hover {
-  color: $accent2;
+  color: $accent3;
 }
 
 .wborder {
@@ -233,7 +244,6 @@ textarea {
 footer#autofooter {
   color: $yellow;
   font-family: $fontsecond;
-  font-size: 1.5vw;
   border-radius: $radius;
   padding: 2vw;
   margin: 4vw auto;
@@ -257,6 +267,8 @@ footer#autofooter {
 .sources {
     text-align: left;
     margin: 2vh auto;
+    font-family: $fontsecond;
+    font-weight: bold;
 }
 
 .nomarg {

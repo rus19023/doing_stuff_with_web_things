@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -281,6 +282,11 @@ main {
   margin: auto;
 }
 
+img {
+  font-size: 14px;
+  color: #00e4ea;
+}
+
 .listdots {
   list-style: square;
 }
@@ -305,6 +311,11 @@ li a {
   padding: 2vw;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Hubbali", sans-serif;
+  font-weight: bold;
+}
+
 li.normal-text {
   list-style-type: square;
   margin-left: 2vw;
@@ -316,14 +327,20 @@ h1.title, li.cert-text {
 
 h2.title, .sources {
   font-size: 4.5vw;
+  color: #ff241e;
 }
 
 h3.title {
   font-size: 4.25vw;
+  color: #00e4ea;
 }
 
-p.normal-text, li a, #autofooter, .source, li.title {
+p.normal-text, li a, .source, li.title {
   font-size: 4vw;
+}
+
+#autofooter {
+  font-size: 20px;
 }
 
 .title {
@@ -339,11 +356,11 @@ a {
 }
 
 a:visited {
-  color: #ea00e4;
+  color: #00e4ea;
 }
 
 a:hover {
-  color: #00e4ea;
+  color: #ff241e;
 }
 
 .wborder {
@@ -355,7 +372,7 @@ a:hover {
   text-align: center;
   cursor: pointer;
   background: #0500b7;
-  box-shadow: 0 0 10px #ea00e4;
+  box-shadow: 0 0 10px #ff241e;
   padding: 2vw;
   max-width: 50%;
   margin: 0 auto;
@@ -429,7 +446,6 @@ textarea {
 footer#autofooter {
   color: #ffd700;
   font-family: "Handlee", cursive;
-  font-size: 1.5vw;
   border-radius: 10px;
   padding: 2vw;
   margin: 4vw auto;
@@ -453,6 +469,8 @@ footer#autofooter {
 .sources {
   text-align: left;
   margin: 2vh auto;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
 }
 
 .nomarg {
@@ -489,22 +507,6 @@ pre {
 }
 
 @media screen and (min-width: 451px) {
-  h1.title, li.cert-text {
-    font-size: 4vw;
-  }
-
-  h2.title, .sources {
-    font-size: 3.5vw;
-  }
-
-  h3.title {
-    font-size: 3.25vw;
-  }
-
-  p.normal-text, li a, #autofooter, .source, li.normal-text {
-    font-size: 3vw;
-  }
-
   #todocontainer {
     max-width: 500px;
   }
@@ -570,7 +572,7 @@ pre {
     border-radius: 20px;
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
   h1.title, li.cert-text {
     font-size: 2vw;
   }
@@ -584,7 +586,7 @@ pre {
   }
 
   p.normal-text, li a, #autofooter, .source, li.normal-text {
-    font-size: 1.25vw;
+    font-size: 1vw;
   }
 
   #gridcontainer {
