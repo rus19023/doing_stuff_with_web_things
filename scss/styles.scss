@@ -6,8 +6,7 @@
 @import "quizninja";
 
 
-html, body {
-  color: $skyblue;
+body {
   background: $background;
   font-size: 16px;
   background-repeat: no-repeat;
@@ -39,9 +38,9 @@ li { padding: 1.5vw 0; max-width: 100%; }
   padding: 2vw;
 }
 
-#text {
-  font-size: $font3;
-}
+// #text {
+//   font-size: $font3;
+// }
 
 .padleft {
   padding-left: 4vw;
@@ -100,7 +99,7 @@ main {
 }
 
 img {
-    font-size: $font3;
+    // font-size: $font3;
     color: $accent2;
     border-radius: $radius;
 }
@@ -110,7 +109,7 @@ img {
 }
 
 .cert-text {
-    font-size: $font2;
+    // font-size: $font2;
     font-family: $fontsecond;
     color: $skyblue;
     font-weight: bold;
@@ -173,11 +172,11 @@ a:hover {
   color: $yellow;
   font-family: $fontsecond;
   font-weight: bold;
-  font-size: $font3;
+  // font-size: $font3;
   & a {
     text-decoration: none;
     color: $royalblue;
-    font-size: 4vh;
+    // font-size: 4vh;
   }
 }
 
@@ -203,7 +202,7 @@ a:hover {
 #certnav {
     margin: 1vw auto;
     border-radius: $radius;
-    font-size: 1.25vw;
+    // font-size: 1.25vw;
     font-weight: bold;
     a {
       text-decoration: none;
@@ -307,6 +306,6 @@ li.cert-text { font-size: 2rem; }
 .sources { font-size: 1.5rem; color: $accent3; }
 h3.title, h4.title { color: $accent2; }
 h5.title, h6.title {  color: $accent3; }
-p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title { font-size: .25rem; }
+//p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title { font-size: .25rem; }
 
 @import "large";
