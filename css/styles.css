@@ -489,36 +489,36 @@ li.normal-text {
 }
 
 h1.title, li.cert-text {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h2.title, .sources {
-  font-size: 2.5rem;
-  color: #ff241e;
-}
-
-h3.title {
-  font-size: 2.25rem;
-  color: #00e4ea;
-}
-
-h4.title {
-  font-size: 2rem;
-  color: #57b700;
-}
-
-h5.title {
-  font-size: 1.75rem;
-  color: #ff241e;
-}
-
-h6.title {
   font-size: 1.5rem;
   color: #ff241e;
 }
 
-p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title {
+h3.title {
   font-size: 1.25rem;
+  color: #00e4ea;
+}
+
+h4.title {
+  font-size: 1rem;
+  color: #57b700;
+}
+
+h5.title {
+  font-size: 0.75rem;
+  color: #ff241e;
+}
+
+h6.title {
+  font-size: 0.5rem;
+  color: #ff241e;
+}
+
+p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title {
+  font-size: 0.25rem;
 }
 
 @media screen and (min-width: 451px) {
@@ -527,6 +527,43 @@ p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title {
   }
 }
 @media screen and (min-width: 992px) {
+  li.normal-text {
+    list-style-type: square;
+  }
+
+  h1.title, li.cert-text {
+    font-size: 3rem;
+  }
+
+  h2.title, .sources {
+    font-size: 2.5rem;
+    color: #ff241e;
+  }
+
+  h3.title {
+    font-size: 2.25rem;
+    color: #00e4ea;
+  }
+
+  h4.title {
+    font-size: 2rem;
+    color: #57b700;
+  }
+
+  h5.title {
+    font-size: 1.75rem;
+    color: #ff241e;
+  }
+
+  h6.title {
+    font-size: 1.5rem;
+    color: #ff241e;
+  }
+
+  p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title {
+    font-size: 1.25rem;
+  }
+
   #gridcontainer {
     margin: 2vw 4vw;
   }

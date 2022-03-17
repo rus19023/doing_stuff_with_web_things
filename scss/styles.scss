@@ -303,12 +303,12 @@ pre {
 }
 
 li.normal-text { list-style-type: square; }
-h1.title, li.cert-text { font-size: 3rem; }
-h2.title, .sources { font-size: 2.5rem; color: $accent3; }
-h3.title { font-size: 2.25rem; color: $accent2; }
-h4.title { font-size: 2rem; color: $accent; }
-h5.title { font-size: 1.75rem; color: $accent3; }
-h6.title { font-size: 1.5rem; color: $accent3; }
-p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title { font-size: 1.25rem; }
+h1.title, li.cert-text { font-size: 2rem; }
+h2.title, .sources { font-size: 1.5rem; color: $accent3; }
+h3.title { font-size: 1.25rem; color: $accent2; }
+h4.title { font-size: 1rem; color: $accent; }
+h5.title { font-size: .75rem; color: $accent3; }
+h6.title { font-size: .5rem; color: $accent3; }
+p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title { font-size: .25rem; }
 
 @import "large";
