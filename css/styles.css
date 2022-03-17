@@ -318,7 +318,6 @@ h1, h2, h3, h4, h5, h6 {
 
 li.normal-text {
   list-style-type: square;
-  margin-left: 2rem;
 }
 
 h1.title, li.cert-text {
@@ -342,15 +341,15 @@ h4.title {
 
 h5.title {
   font-size: 2.5rem;
-  color: #57b700;
+  color: #ff241e;
 }
 
 h6.title {
   font-size: 2.25rem;
-  color: #57b700;
+  color: #ff241e;
 }
 
-p.normal-text, li a, #autofooter, .code, .source, li.title {
+p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title {
   font-size: 2rem;
 }
 
