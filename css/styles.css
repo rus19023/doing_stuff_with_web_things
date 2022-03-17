@@ -506,6 +506,12 @@ footer#autofooter {
   gap: 2vw;
 }
 
+.col5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2vw;
+}
+
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
