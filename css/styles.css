@@ -204,6 +204,10 @@ li {
   margin: 0 auto;
 }
 
+.whitebg {
+  background: white;
+}
+
 #autoheader {
   margin: 1vw;
 }
