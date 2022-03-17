@@ -102,6 +102,7 @@ main {
 img {
     font-size: $font3;
     color: $accent2;
+    border-radius: $radius;
 }
 
 .listdots {
@@ -135,11 +136,11 @@ h1, h2, h3, h4, h5, h6 {
 
 li.normal-text { list-style-type: square; margin-left: 2rem; }
 h1.title, li.cert-text { font-size: 4rem; }
-h2.title, .sources { font-size: 4.5rem; color: $accent3;}
-h3.title { font-size: 4.25rem; color: $accent2; }
-h4.title { font-size: 3.5rem; color: $accent; }
-h5.title { font-size: 3rem; color: $accent; }
-h6.title { font-size: 2.5rem; color: $accent; }
+h2.title, .sources { font-size: 3.5rem; color: $accent3;}
+h3.title { font-size: 3.25rem; color: $accent2; }
+h4.title { font-size: 2.75rem; color: $accent; }
+h5.title { font-size: 2.5rem; color: $accent; }
+h6.title { font-size: 2.25rem; color: $accent; }
 p.normal-text, li a, #autofooter, .code, .source, li.title { font-size: 2rem; }
 
 .title {
