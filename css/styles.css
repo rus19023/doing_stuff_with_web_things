@@ -488,32 +488,20 @@ li.normal-text {
   list-style-type: square;
 }
 
-h1.title, li.cert-text {
+li.cert-text {
   font-size: 2rem;
 }
 
-h2.title, .sources {
+.sources {
   font-size: 1.5rem;
   color: #ff241e;
 }
 
-h3.title {
-  font-size: 1.25rem;
+h3.title, h4.title {
   color: #00e4ea;
 }
 
-h4.title {
-  font-size: 1rem;
-  color: #57b700;
-}
-
-h5.title {
-  font-size: 0.75rem;
-  color: #ff241e;
-}
-
-h6.title {
-  font-size: 0.5rem;
+h5.title, h6.title {
   color: #ff241e;
 }
 
