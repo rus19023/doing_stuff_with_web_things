@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" rel="stylesheet" href="../../css/styles.css" />
+    <link type="text/css" rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
     <title id="cit327weekpagetitle" class="title">page title</title>
   </head>
 
@@ -17,23 +17,85 @@
         <h4>DELETE FROM HERE</h4>
         <p class="normal-text padleft">
             The second topic your manager wants you to understand is XQuery. Your manager needs you to work with XML documents stored in a MarkLogic database.
-<br>
-            The MarkLogic XML database works exclusively with XML documents. It uses XQuery, which is extremely powerful. It is an ideal solution for documents that are fairly static. XQuery provides great search speeds and ease of use. In short, it has a low technical debt associated with using it as a primary source for documents in an enterprise. 
-<br>
+            <br>
+            The MarkLogic XML database works exclusively with XML documents. It uses XQuery, which is extremely powerful. It is an ideal solution for documents that are fairly static. XQuery provides great search speeds and ease of use. In short, it has a low technical debt associated with using it as a primary source for documents in an enterprise.
+            <br>
             You should write a 3–5 paragraph paper that explains why XQuery is virtually the only solution appropriate to querying data from a MarkLogic database. You should note why the solution offers such significant advantages over other approaches to document-centric data.
             <br>
-            How does XQuery interface with MarkLogic document-store database?
-            Why is XQuery better than other options with a MarkLogic document-store database?
             How does MarkLogic optimize indexing to support XQuery?
         </p>
         <h4>DELETE TO HERE</h4>
-        <h3 class="padhead title"></h3>
+
+
+        <h3 class="padhead title">
+            How does XQuery interface with MarkLogic document-store database?
+        </h3>
         <p class="normal-text padleft">
+            Marklogic extends XQuery with features such as function mapping, serialization options, transaction separator of semi-colon and many others.​ In MarkLogic, since the document-store model is a tree-type structure, a collection of documents, or trees, is the equivalent of traditional database tables, and are called forests. A collection of forests is similar to a traditional database.
+            <br>
+            MarkLogic provides a web-app GUI tool to manage queries called Query Console. It can be accessed through localhost:8000/qconsole in a web browser, where queries can be built from XQuery, JavaScript, SPARQL and SQL languages. active
             
+           
+
+            Supports two dialects of XQuery ​
+
+            Gives access to XSLT language​
+
+            MarkLogic offers libraries to be used with XQuery​:
+
         </p>
         <p class="normal-text padleft">
 
         </p>
+
+        <h3 class="padhead title">
+            Why is XQuery better than other options with a MarkLogic document-store database?
+        </h3>
+        <p class="normal-text padleft">
+            XQuery is supported by all major databases, making it useful for the data ingestion process from many sources. ​
+
+            XQuery is case-sensitive, and strings can be enclosed in single or double quotes, so it can do more flexible and specific searches​
+
+            XPath 2.0 and XQuery 1.0 share the same data model.​
+
+            MarkLogic has a "universal" index set that is optimized for speed and created when data is ingested. This allows XQuery and XPath to be utilized to their full potential.​
+
+            XQuery is supported by all major databases, making it useful for the data ingestion process from many sources.​
+
+            MarkLogic has a "universal" index set that is optimized for speed and created when data is ingested, for querying XML elements and JSON properties. This allows XQuery and XPath to be utilized to their full potential.​
+
+            The index sees structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c", because XPath 2.0 and XQuery 1.0 share the same data model.​
+
+        </p>
+        <p class="normal-text padleft">
+
+        </p>
+
+
+        <h3 class="padhead title">
+            How does MarkLogic optimize indexing to support XQuery?
+        </h3>
+        <p class="normal-text padleft">
+            MarkLogic's indexing 
+            Can specify collations for string range indexes and for word lexicons to specify their sort order​
+
+            The universal index indexes the XML elements and JSON properties in the loaded documents​
+
+            index additional data to speed up specific types of searches​
+
+            Word Indexing with inverted index for fast element word searches​
+
+            Phrase Indexing with phrase searches index for  fast phrase searches to include two-word phrases​
+
+            Relationship Indexing with parent-child index lets you search against an XPath even when you don't know the path in advance​
+
+            The index sees structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c".​
+        </p>
+        <p class="normal-text padleft">
+
+        </p>
+
+
         <h3 class="padhead title"></h3>
         <p class="normal-text padleft">
 
@@ -41,21 +103,13 @@
         <p class="normal-text padleft">
 
         </p>
-        <h3 class="padhead title"></h3>
-        <p class="normal-text padleft">
 
-        </p>
-        <p class="normal-text padleft">
 
-        </p>
-        <h3 class="padhead title"></h3>
-        <p class="normal-text padleft">
 
-        </p>
-        <p class="normal-text padleft">
 
-        </p>
-        <h3 class="padhead title"></h3>
+        <h3 class="padhead title">
+            Summary
+        </h3>
         <p class="normal-text padleft">
 
         </p>
@@ -90,7 +144,10 @@
             <a class="source" href="">linktext</a>
           </li>
           <li>
-            <a class="source" href="">linktext</a>
+            <a class="source" href="https://docs.marklogic.com/guide/mlcp/export">"Exporting Content from MarkLogic Server", MarkLogic.com</a>
+          </li>
+          <li>
+            <a class="source" href="https://developer.marklogic.com/learn/technical-overview/">"An Introduction to MarkLogic Server and XQuery", MarkLogic.com</a>
           </li>
         </ul>
       </div>

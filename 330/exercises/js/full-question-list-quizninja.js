@@ -1,4 +1,4 @@
-const quiz = [
+const quiz = JSON.stringify([
   { name: "Superman", realName: "Clark Kent" },
   { name: "Wonder Woman", realName: "Diana Prince" },
   { name: "Batman", realName: "Bruce Wayne" },
@@ -16,17 +16,19 @@ const quiz = [
   { name: "Gambit", realName: "Remy LeBeau" },
   { name: "Wolverine", realName: "James Logan" },
   { name: "Mystique", realName: "Raven Darkholme" },
-  { name: "Magneto", realName: "Eric Lehnsherr" },
+  { name: "Magneto", realName: "Max Eisenhardt" },
   { name: "Professor X", realName: "Charles Xavier" },
   { name: "Phoenix", realName: "Jean Gray" },
   { name: "NightCrawler", realName: "Kurt Wagner" },
   { name: "Beast", realName: "Hank McCoy" },
   { name: "Storm", realName: "Ororo Munroe" },
-  { name: "Rogue", realName: "Anna Marie D'Ancanto" },
+  { name: "Rogue", realName: "Anna Marie DAncanto" },
   { name: "The Hulk",realName: "Bruce Banner" },
   { name: "Spider-man",realName: "Peter Parker" },
   { name: "Cyclops",realName: "Scott Summers" }
-];
+]);
+
+console.log(quiz);
 
 // View Object
 const view = {
@@ -66,7 +68,7 @@ const view = {
     this.response.answer.value = "";
     this.response.answer.focus();
   },
-  
+
   teardown() {
     this.hide(this.question);
     this.hide(this.response);
@@ -99,7 +101,7 @@ const game = {
       this.gameOver();
     }
   },
-  
+
   check(event) {
     event.preventDefault();
     const response = view.response.answer.value;
