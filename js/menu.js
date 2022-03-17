@@ -68,6 +68,14 @@ const list330 = [
             name: "Week 10: To Do App, Revisited (added search feature and style changes to use with new app)",
             url: "https://rus19023.github.io/ToDoApp/",
       },
+      {
+            name: "Week 11: Quiz Ninja - Ch. 14",
+            url: `${getBase()}exercises/week11ninjaquiz.html`,
+      },
+      {
+            name: "Week 11: Quiz Ninja - Ch. 14",
+            url: `${getBase()}exercises/week11ninjaquizteam.html`,
+      },
   ];
 
   // End of list330
