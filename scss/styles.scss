@@ -30,6 +30,27 @@ li { padding: 1.5vw 0; max-width: 100%; }
   background: white;
 }
 
+.imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: .5rem;
+  margin: 1vw;
+  max-height: 20vh;
+}
+
+h2.subtitle {
+  color: $yellow;
+  height: 3vh;
+  font-family: $fontsecond;
+  font-size: .75rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
 #autoheader {
   margin: 1vw;
 }
@@ -42,18 +63,20 @@ li { padding: 1.5vw 0; max-width: 100%; }
   padding: 2vw;
 }
 
+.pad1 {
+  padding: 1vw;
+}
+
 // #text {
 //   font-size: $font3;
 // }
 
 .padleft {
   padding-left: 4vw;
-  padding-bottom: 1vw;
 }
 
 .padleft8 {
   padding-left: 8vw;
-  padding-bottom: 1vw;
 }
 
 h2#tab-bar {
@@ -80,12 +103,21 @@ footer,
 p,
 header,
 section,
-.title, 
+.title,
 main {
     max-width: 90%;
     border-radius: $radius;
     margin: 1vw auto;
     background: black;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+
 }
 
 .exercise {
@@ -112,18 +144,13 @@ img {
     list-style: square;
 }
 
-.cert-text {
-    // font-size: $font2;
+li.cert-text {
+    font-size: 2rem;
     font-family: $fontsecond;
+    text-align: left;
     color: $skyblue;
     font-weight: bold;
     max-width: 100%;
-}
-
-li a {
-    color: $accent;
-    font-weight: bold;
-    font-family: $fontfirst;
 }
 
 .normal-text {
@@ -147,6 +174,7 @@ a {
     font-family: $fontfirst;
     color: $accent;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:visited {
@@ -203,15 +231,11 @@ a:hover {
   padding: 2vw;
 }
 
-#certnav {
-    margin: 1vw auto;
-    border-radius: $radius;
-    // font-size: 1.25vw;
+#certnav a {
+    font-size: 1rem;
     font-weight: bold;
-    a {
-      text-decoration: none;
-      color: $yellow;
-    }
+    text-decoration: none;
+    color: $yellow;
 }
 
 #siteTitle2 {
@@ -267,10 +291,6 @@ footer#autofooter {
     font-weight: bold;
 }
 
-.nomarg {
-    margin-left: -8vw;
-}
-
 .code {
     background: $yellow;
     color: $royalblue;
@@ -282,6 +302,12 @@ footer#autofooter {
     margin: 2vw auto;
     text-decoration: none;
     list-style: none;
+}
+
+.col1 {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .col2 {
@@ -305,8 +331,7 @@ pre {
   word-wrap: break-word;
 }
 
-li.normal-text { list-style-type: square; }
-li.cert-text { font-size: 2rem; }
+li.normal-text { list-style-type: square; margin: 0 auto; }
 .sources { font-size: 1.5rem; color: $accent3; }
 h3.title, h4.title { color: $accent2; }
 h5.title, h6.title {  color: $accent3; }

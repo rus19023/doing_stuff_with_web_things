@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -178,7 +179,7 @@ input[type=checkbox].markbtnX {
 }
 
 body {
-  background: linear-gradient(180deg, #0300cc 0%, #9fa290 52%, #ffd900 100%);
+  background: linear-gradient(180deg, #0059b8 40%, #9fa290 50%, #ffd900 60%);
   font-size: 16px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -208,6 +209,27 @@ li {
   background: white;
 }
 
+.imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 0.5rem;
+  margin: 1vw;
+  max-height: 20vh;
+}
+
+h2.subtitle {
+  color: #ffd700;
+  height: 3vh;
+  font-family: "Handlee", cursive;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
 #autoheader {
   margin: 1vw;
 }
@@ -220,14 +242,16 @@ li {
   padding: 2vw;
 }
 
+.pad1 {
+  padding: 1vw;
+}
+
 .padleft {
   padding-left: 4vw;
-  padding-bottom: 1vw;
 }
 
 .padleft8 {
   padding-left: 8vw;
-  padding-bottom: 1vw;
 }
 
 h2#tab-bar {
@@ -262,6 +286,14 @@ main {
   background: black;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+}
+
 .exercise {
   border: 2px solid #b76000;
   border-radius: 10px;
@@ -287,17 +319,13 @@ img {
   list-style: square;
 }
 
-.cert-text {
+li.cert-text {
+  font-size: 2rem;
   font-family: "Handlee", cursive;
+  text-align: left;
   color: #00b3b7;
   font-weight: bold;
   max-width: 100%;
-}
-
-li a {
-  color: #57b700;
-  font-weight: bold;
-  font-family: "Hubbali", sans-serif;
 }
 
 .normal-text {
@@ -321,6 +349,7 @@ a {
   font-family: "Hubbali", sans-serif;
   color: #57b700;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:visited {
@@ -375,12 +404,9 @@ a:hover {
   padding: 2vw;
 }
 
-#certnav {
-  margin: 1vw auto;
-  border-radius: 10px;
-  font-weight: bold;
-}
 #certnav a {
+  font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
   color: #ffd700;
 }
@@ -438,10 +464,6 @@ footer#autofooter {
   font-weight: bold;
 }
 
-.nomarg {
-  margin-left: -8vw;
-}
-
 .code {
   background: #ffd700;
   color: #0500b7;
@@ -453,6 +475,12 @@ footer#autofooter {
   margin: 2vw auto;
   text-decoration: none;
   list-style: none;
+}
+
+.col1 {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .col2 {
@@ -478,10 +506,7 @@ pre {
 
 li.normal-text {
   list-style-type: square;
-}
-
-li.cert-text {
-  font-size: 2rem;
+  margin: 0 auto;
 }
 
 .sources {

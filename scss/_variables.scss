@@ -32,17 +32,16 @@ $hgradient: linear-gradient(180deg, rgba(3,0,202,1), rgb(255, 215, 0, 1));
 $vgradient: linear-gradient(90deg, rgba(3,0,202,1), rgba(255, 215, 0, 1));
 $newhgradient: linear-gradient(
     180deg,
-    hsl(241deg 100% 40%) 0%,
-    hsl(69deg 9% 60%) 52%,
-    hsl(51, 100%, 50%) 100%
-  );
-  $newvgradient: linear-gradient(
+    hsl(211, 100%, 36%) 40%,
+    hsl(69deg 9% 60%) 50%,
+    hsl(51, 100%, 50%) 60%
+);
+$newvgradient: linear-gradient(
       90deg,
-      hsl(241deg 100% 40%) 0%,
+      hsl(211, 100%, 36%) 0%,
       hsl(69deg 9% 60%) 52%,
       hsl(51, 100%, 50%) 100%
-    );
-
+);
 // $background: $purple;
 // $background: darken($orange, 0%);
 // $background: #7e5201;

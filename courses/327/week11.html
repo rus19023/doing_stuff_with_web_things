@@ -31,20 +31,16 @@
             How does XQuery interface with MarkLogic document-store database?
         </h3>
         <p class="normal-text padleft">
-            MarkLogic extends XQuery with features such as function mapping, serialization options, transaction separator of semi-colon and many others.​ In MarkLogic, since the document-store model is a tree-type structure, a collection of documents, or trees, is the equivalent of traditional database tables, and are called forests. A collection of forests is similar to a traditional database.
-            <br>
-            MarkLogic provides a web-app GUI tool to manage queries called Query Console. It can be accessed through localhost:8000/qconsole in a web browser, where queries can be built from XQuery, JavaScript, SPARQL and SQL languages. active
-            
-           
+            MarkLogic extends XQuery with features such as function mapping, serialization options, transaction separator of semi-colon and many others.​ In MarkLogic, since the document-store model is a tree-type structure, a collection of documents (trees) is called a forest, which is the equivalent of traditional database tables. A collection of forests is similar to a traditional database.
+          </p>
+          <p class="normal-text padleft">
+            MarkLogic provides a web-app GUI tool called Query Console to manage queries. It can be accessed through localhost:8000/qconsole in a web browser, where queries can be built from XQuery, JavaScript, SPARQL and SQL languages. 
 
-            Supports two dialects of XQuery ​
+            Supports two dialects of XQuery,  ​
 
             Gives access to XSLT language​
 
             MarkLogic offers libraries to be used with XQuery​:
-
-        </p>
-        <p class="normal-text padleft">
 
         </p>
 
@@ -52,19 +48,32 @@
             Why is XQuery better than other options with a MarkLogic document-store database?
         </h3>
         <p class="normal-text padleft">
-            XQuery is supported by all major databases, making it useful for the data ingestion process from many sources. ​
-
-            XQuery is case-sensitive, and strings can be enclosed in single or double quotes, so it can do more flexible and specific searches​
-
-            XPath 2.0 and XQuery 1.0 share the same data model.​
-
-            MarkLogic has a "universal" index set that is optimized for speed and created when data is ingested. This allows XQuery and XPath to be utilized to their full potential.​
-
-            XQuery is supported by all major databases, making it useful for the data ingestion process from many sources.​
-
-            MarkLogic has a "universal" index set that is optimized for speed and created when data is ingested, for querying XML elements and JSON properties. This allows XQuery and XPath to be utilized to their full potential.​
-
-            The index sees structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c", because XPath 2.0 and XQuery 1.0 share the same data model.​
+            <ul class="">
+              <li class="normal-text">
+                  XQuery is supported by all major databases, making it useful for the data ingestion process from many sources.
+              </li>
+              <li class="normal-text">
+                  XQuery is case-sensitive, and strings can be enclosed in single or double quotes, so it can do more flexible and specific searches​.
+              </li>
+              <li class="normal-text">
+                MarkLogic has a "universal" index set that is optimized for speed and created when data is ingested, for querying XML elements and JSON properties. This allows XQuery and XPath to be utilized to their full potential.​ The index "sees" structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c", because XPath 2.0 and XQuery 1.0 share the same data model.​
+              </li>
+              <li class="normal-text">
+                  XPath 2.0 and XQuery 1.0 share the same data model, facilitating the simplicity of connecting varied data sources. ???  need more research!!!
+              </li>
+              <li class="normal-text">
+                  
+              </li>
+              <li class="normal-text">
+                  
+              </li>
+              <li class="normal-text">
+                  
+              </li>
+              <li class="normal-text">
+                  
+              </li>
+            </ul>
 
         </p>
         <p class="normal-text padleft">
