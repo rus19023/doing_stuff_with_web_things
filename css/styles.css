@@ -191,7 +191,7 @@ ul {
 }
 
 li {
-  padding: 1.5vw 0;
+  padding: 0.5vw 0;
   max-width: 100%;
 }
 
@@ -342,7 +342,6 @@ h1, h2, h3, h4, h5, h6 {
 .title {
   font-family: "Handlee", cursive;
   color: #ffd700;
-  padding: 1vw;
 }
 
 a {
@@ -390,12 +389,7 @@ a:hover {
 }
 
 .padhead {
-  padding: 2vw;
-}
-
-.padhead, .padit {
-  max-width: 100%;
-  margin: 1vw auto;
+  padding: 1vw;
 }
 
 #presentations {

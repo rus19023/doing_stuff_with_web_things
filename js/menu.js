@@ -727,7 +727,7 @@ const mainNav = [
           url: `${getBase()}week10.html`,
       },
       {
-          name: "Week 11: XQuery",
+          name: "Week 11: XQuery and MarkLogic",
           url: `${getBase()}week11.html`,
       },
       {

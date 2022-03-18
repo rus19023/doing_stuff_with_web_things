@@ -14,7 +14,7 @@ body {
 }
 
 ul { list-style: none; max-width: 100%; }
-li { padding: 1.5vw 0; max-width: 100%; }
+li { padding: .5vw 0; max-width: 100%; }
 
 .bold {
   font-weight: bold;
@@ -167,7 +167,6 @@ h1, h2, h3, h4, h5, h6 {
 .title {
   font-family: $fontsecond;
   color: $yellow;
-  padding: 1vw;
 }
 
 a {
@@ -217,12 +216,7 @@ a:hover {
 }
 
 .padhead {
-  padding: 2vw;
-}
-
-.padhead, .padit {
-  max-width: 100%;
-  margin: 1vw auto;
+  padding: 1vw;
 }
 
 #presentations {
