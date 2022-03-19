@@ -14,7 +14,7 @@ const url5 = JSON.stringify([
     { name: "Riddler", realName: "Edward Nygma" },
     { name: "SpiderMan", realName: "Peter Parker" },
     { name: "Green Goblin", realName: "Norman Osborne" },
-    { name: "Penquin", realName: "Oswald Cobblepot" },
+    { name: "Penguin", realName: "Oswald Cobblepot" },
     { name: "Scarecrow", realName: "Dr Jonathan Crane" },
     { name: "Dr Manhattan", realName: "Jonathan Osterman" },
     { name: "Rorschach", realName: "Walter Kovacs" },

@@ -23,8 +23,6 @@
 
 @media screen and (min-width: 1200px) {
 
-   
-
     #gridcontainer {
         max-width: 85%;
         margin: 0 auto;
@@ -34,8 +32,6 @@
 
 @media screen and (min-width: 1400px) {
 
-    
-
     #gridcontainer {
         max-width: 75%;
         margin: 0 auto;
@@ -44,8 +40,4 @@
     .color3 {
         grid-template-columns: repeat(6, 1fr);
     }
-}
-
-@media screen and (max-width: 451px) {
-
 }

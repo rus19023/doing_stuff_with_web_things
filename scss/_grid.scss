@@ -26,16 +26,20 @@ body {
   }
 }
 
-
-
 #gridcontainer {
     grid-area: gridcontainer;
     display: grid;
-    max-width: 100%;
+    max-width: 90%;
     padding: 1vw;
     grid-template-areas:
       "left"
       "right";
+    & #signInForm {
+      grid-area: right;
+    }
+    & #signUpForm {
+      grid-area: right;
+    }
     & #left {
         grid-area: left;
     }

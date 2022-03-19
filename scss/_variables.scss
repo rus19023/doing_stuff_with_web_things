@@ -21,6 +21,7 @@ $accent: $chartreuse;
 $headings: $accent;
 $contrast: $medblue;
 $orangeborder: darken($orange, 20%);
+$yellowborder: darken($yellow, 20%);
 $warning: darken($redorange, 50%);
 $nav: $dksalmon;
 $valid: $hotpink;
@@ -67,7 +68,7 @@ $borderb: 4px solid $orange;
 $borderwarn: 4px solid $warning;
 $bordervalid: 4px solid $valid;
 $buttonborder: 4px solid white;
-$inputborder: 4px solid $orangeborder;
+$inputborder: 4px solid $yellowborder;
 $legendborder: 4px solid $mdgrey;
 
 // Fonts

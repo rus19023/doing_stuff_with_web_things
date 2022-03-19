@@ -40,6 +40,12 @@ li { padding: .5vw 0; max-width: 100%; }
   max-height: 20vh;
 }
 
+.warning { color: $warning; font-weight: bold; }
+
+#tabbar { font-size: .75rem; padding: 1vw; }
+h1.title { font-size: 1.05rem; padding: 1vw; }
+h2.title { font-size: 1rem; padding: 1vw; }
+
 h2.subtitle {
   color: $yellow;
   height: 3vh;
@@ -66,10 +72,6 @@ h2.subtitle {
 .pad1 {
   padding: 1vw;
 }
-
-// #text {
-//   font-size: $font3;
-// }
 
 .padleft {
   padding-left: 4vw;
@@ -116,8 +118,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1vw;
-
 }
 
 .exercise {
@@ -145,7 +145,7 @@ img {
 }
 
 li.cert-text {
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: $fontsecond;
     text-align: left;
     color: $skyblue;
@@ -156,7 +156,9 @@ li.cert-text {
 .normal-text {
     color: white;
     font-family: $fontfirst;
-    padding: 2vw;
+    font-size: .6rem;
+    padding: 1vw;
+    font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -167,6 +169,10 @@ h1, h2, h3, h4, h5, h6 {
 .title {
   font-family: $fontsecond;
   color: $yellow;
+}
+
+.hotpink {
+  background: $hotpink;
 }
 
 a {
@@ -203,16 +209,14 @@ a:hover {
   color: $yellow;
   font-family: $fontsecond;
   font-weight: bold;
-  // font-size: $font3;
   & a {
     text-decoration: none;
     color: $royalblue;
-    // font-size: 4vh;
   }
 }
 
 .padit {
-  padding: 4vw;
+  padding: 2vw;
 }
 
 .padhead {
@@ -235,16 +239,17 @@ a:hover {
 #siteTitle2 {
     font-weight: bold;
     text-align: center;
+    font-size: 1rem;
 }
 
 .inputs {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .textarea,
 .inputs {
-  background: $orange;
-  color: black;
+  background: $yellow;
+  color: $royalblue;
   border-radius: $radius;
   border: $inputborder;
   margin: 2vw;
@@ -259,7 +264,7 @@ footer#autofooter {
   color: $yellow;
   font-family: $fontsecond;
   border-radius: $radius;
-  padding: 2vw;
+  padding: 2vw 0;
   margin: 4vw auto;
   max-width: 90%;
   font-weight: bold;
@@ -304,6 +309,35 @@ footer#autofooter {
     grid-template-columns: 1fr;
 }
 
+.sc-slider-ot {
+    max-width: 100%;
+    min-height: 10vh;
+    max-height: 20vh;
+    background: url('https://rus19023.github.io/scripturechase/img/ot/three_men_in_fiery_furnace-ot-tall.jpeg') no-repeat center center;
+    margin: 0 auto;
+    animation: sc-slide-ot 20s infinite;
+}
+
+@keyframes sc-slide-ot {
+    25% {
+      background: url('https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.jpeg') no-repeat center center;
+    }
+    50% {
+      background: url('https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.jpeg') no-repeat center center;
+    }
+    75% {
+      background: url('https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.jpeg') no-repeat center center;
+    }
+    100% {
+      background: url('https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.jpeg') no-repeat center center;
+    }
+}
+
+.sc-slider-tall {
+  max-width: 100%;
+  max-height: 10vh;
+}
+
 .col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -316,6 +350,8 @@ footer#autofooter {
   gap: 2vw;
 }
 
+.nav { padding: 1vw; }
+
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -325,10 +361,29 @@ pre {
   word-wrap: break-word;
 }
 
+#tabbar { font-size: 1rem; padding: 1vw; }
+#siteTitle, #siteTitle2 { font-size: 2rem; }
+h1.title { font-size: 2rem; padding: 1vw; }
+h2.title { font-size: 1.5rem; padding: 1vw; }
+h3.title { font-size: 1.25rem; padding: 1vw; }
+.sources { font-size: 1.25rem; color: $accent3; }
+.normal-text { font-size: 1.1rem; }
+
+h2.subtitle {
+  color: $yellow;
+  height: 3vh;
+  font-family: $fontsecond;
+  font-size: .75rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
 li.normal-text { list-style-type: square; margin: 0 auto; }
-.sources { font-size: 1.5rem; color: $accent3; }
 h3.title, h4.title { color: $accent2; }
 h5.title, h6.title {  color: $accent3; }
+p.normal-text { padding-left: 4vw; }
 //p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title { font-size: .25rem; }
 
 @import "large";

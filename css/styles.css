@@ -1,6 +1,5 @@
-body {
-  background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -27,9 +26,15 @@ body header #main-nav ul li a {
 #gridcontainer {
   grid-area: gridcontainer;
   display: grid;
-  max-width: 100%;
+  max-width: 90%;
   padding: 1vw;
   grid-template-areas: "left" "right";
+}
+#gridcontainer #signInForm {
+  grid-area: right;
+}
+#gridcontainer #signUpForm {
+  grid-area: right;
 }
 #gridcontainer #left {
   grid-area: left;
@@ -219,6 +224,26 @@ li {
   max-height: 20vh;
 }
 
+.warning {
+  color: black;
+  font-weight: bold;
+}
+
+#tabbar {
+  font-size: 0.75rem;
+  padding: 1vw;
+}
+
+h1.title {
+  font-size: 1.05rem;
+  padding: 1vw;
+}
+
+h2.title {
+  font-size: 1rem;
+  padding: 1vw;
+}
+
 h2.subtitle {
   color: #ffd700;
   height: 3vh;
@@ -291,7 +316,6 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1vw;
 }
 
 .exercise {
@@ -320,7 +344,7 @@ img {
 }
 
 li.cert-text {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Handlee", cursive;
   text-align: left;
   color: #00b3b7;
@@ -331,7 +355,9 @@ li.cert-text {
 .normal-text {
   color: white;
   font-family: "Hubbali", sans-serif;
-  padding: 2vw;
+  font-size: 0.6rem;
+  padding: 1vw;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -342,6 +368,10 @@ h1, h2, h3, h4, h5, h6 {
 .title {
   font-family: "Handlee", cursive;
   color: #ffd700;
+}
+
+.hotpink {
+  background: #b700b3;
 }
 
 a {
@@ -385,7 +415,7 @@ a:hover {
 }
 
 .padit {
-  padding: 4vw;
+  padding: 2vw;
 }
 
 .padhead {
@@ -408,18 +438,19 @@ a:hover {
 #siteTitle2 {
   font-weight: bold;
   text-align: center;
+  font-size: 1rem;
 }
 
 .inputs {
-  max-width: 90%;
+  max-width: 80%;
 }
 
 .textarea,
 .inputs {
-  background: #b76000;
-  color: black;
+  background: #ffd700;
+  color: #0500b7;
   border-radius: 10px;
-  border: 4px solid #512a00;
+  border: 4px solid #998100;
   margin: 2vw;
 }
 
@@ -432,7 +463,7 @@ footer#autofooter {
   color: #ffd700;
   font-family: "Handlee", cursive;
   border-radius: 10px;
-  padding: 2vw;
+  padding: 2vw 0;
   margin: 4vw auto;
   max-width: 90%;
   font-weight: bold;
@@ -477,6 +508,50 @@ footer#autofooter {
   grid-template-columns: 1fr;
 }
 
+.sc-slider-ot {
+  max-width: 100%;
+  min-height: 10vh;
+  max-height: 20vh;
+  background: url("https://rus19023.github.io/scripturechase/img/ot/three_men_in_fiery_furnace-ot-tall.jpeg") no-repeat center center;
+  margin: 0 auto;
+  -webkit-animation: sc-slide-ot 20s infinite;
+          animation: sc-slide-ot 20s infinite;
+}
+
+@-webkit-keyframes sc-slide-ot {
+  25% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.jpeg") no-repeat center center;
+  }
+  50% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.jpeg") no-repeat center center;
+  }
+  75% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.jpeg") no-repeat center center;
+  }
+  100% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.jpeg") no-repeat center center;
+  }
+}
+
+@keyframes sc-slide-ot {
+  25% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.jpeg") no-repeat center center;
+  }
+  50% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.jpeg") no-repeat center center;
+  }
+  75% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.jpeg") no-repeat center center;
+  }
+  100% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.jpeg") no-repeat center center;
+  }
+}
+.sc-slider-tall {
+  max-width: 100%;
+  max-height: 10vh;
+}
+
 .col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -489,6 +564,10 @@ footer#autofooter {
   gap: 2vw;
 }
 
+.nav {
+  padding: 1vw;
+}
+
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -498,14 +577,53 @@ pre {
   word-wrap: break-word;
 }
 
-li.normal-text {
-  list-style-type: square;
-  margin: 0 auto;
+#tabbar {
+  font-size: 1rem;
+  padding: 1vw;
+}
+
+#siteTitle, #siteTitle2 {
+  font-size: 2rem;
+}
+
+h1.title {
+  font-size: 2rem;
+  padding: 1vw;
+}
+
+h2.title {
+  font-size: 1.5rem;
+  padding: 1vw;
+}
+
+h3.title {
+  font-size: 1.25rem;
+  padding: 1vw;
 }
 
 .sources {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #ff241e;
+}
+
+.normal-text {
+  font-size: 1.1rem;
+}
+
+h2.subtitle {
+  color: #ffd700;
+  height: 3vh;
+  font-family: "Handlee", cursive;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+li.normal-text {
+  list-style-type: square;
+  margin: 0 auto;
 }
 
 h3.title, h4.title {
@@ -514,6 +632,10 @@ h3.title, h4.title {
 
 h5.title, h6.title {
   color: #ff241e;
+}
+
+p.normal-text {
+  padding-left: 4vw;
 }
 
 @media screen and (min-width: 451px) {

@@ -78,7 +78,7 @@ const list330 = [
       },
   ];
 
-  // End of list330
+  // End of **list330
 
 
 const list101 = [
@@ -86,35 +86,35 @@ const list101 = [
       name: "",
       url: "",
     }
-];  
+];
 
 const list100 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list111 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list130 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list160 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list171 = [
   {
@@ -123,84 +123,83 @@ const list171 = [
   }
 ];
 
-  
 
 const list211 = [
     {
       name: "",
       url: "",
     }
-];  
+];
 
 const list213 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list225 = [
     {
       name: "",
       url: "",
     }
-];  
+];
 
 const list230 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list240 = [
     {
       name: "",
       url: "",
     }
-];  
+];
 
 const list241 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list2411 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list246 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list260 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list270 = [
   {
     name: "",
     url: "",
   }
-];  
+];
 
 const list325 = [
   {
     name: "",
     url: "",
   }
-]; 
+];
 
   const list331 = [
     {
@@ -222,35 +221,35 @@ const list325 = [
             name: "Final Project",
             url: 'https://phpmotors.bonniesites.solutions/',
       },
-  ];  
+  ];
 
   const list341 = [
       {
         name: "",
         url: "",
       }
-  ];  
+  ];
 
   const list352 = [
     {
       name: "",
       url: "",
     }
-  ]; 
+  ];
 
   const list353 = [
     {
       name: "",
       url: "",
     }
-  ]; 
+  ];
 
   const list365 = [
     {
       name: "",
       url: "",
     }
-  ];   
+  ];
 
   const list499 = [
     {
@@ -790,7 +789,7 @@ const siteTitle = (el) => {
     //console.log(elhref);
     //console.log(createLink(elhref, "Back to Index"));
     if (isElement(elheader)) {
-        writeById(elheader, '<h1 id="siteTitle2" class="title">Doris Rush-Lopez <br> My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar" class="title">${createLink(elhref, "Back to Index")}</h2>`);
+        writeById(elheader, '<h1 id="siteTitle2" class="title">Doris Rush-Lopez <br> My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar" class="">${createLink(elhref, "Back to Index")}</h2>`);
     }
 }
 siteTitle("327");
@@ -1035,7 +1034,7 @@ function createNav(array, id) {
       return 0;
     });
     // create link list element
-    let menu = "<ul class='hotpink marg'>";
+    let menu = "<ul>";
     // get list of files to create links for each menu entry
     array.forEach((element) => {
       // if url does not exist AND data url length is less than 100, exit program
@@ -1045,7 +1044,8 @@ function createNav(array, id) {
         // url and term exist, create the link and post to page
         if ((element.term) && (element.term.length > 0)) {
           const url = element.url;
-          const linktext = `${element.term}, ${element.code} - ${element.name}, (${element.tech})`;
+          const linktext = `${element.term}, ${element.code} - ${element.name}`;
+          // TODO: save as variable for adding to index.html page as parameter? (${element.tech})
           menu += `<li class="nav">${createLink(url, linktext)}</li>`;
         } else {
           menu += `<li class="nav">${createLink(element.url, element.name)}</li>`;
