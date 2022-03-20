@@ -62,7 +62,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 }
-.buttons .icon {
+
+.iconbuttons .icon {
   margin: 0 auto;
   width: 4vw;
   height: 4vw;

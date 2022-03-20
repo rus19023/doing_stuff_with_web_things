@@ -27,7 +27,6 @@ body header #main-nav ul li a {
   grid-area: gridcontainer;
   display: grid;
   max-width: 90%;
-  padding: 1vw;
   grid-template-areas: "left" "right";
 }
 #gridcontainer #signInForm {
@@ -214,14 +213,84 @@ li {
   background: white;
 }
 
+.orange {
+  color: #b76000;
+}
+
+.yellow {
+  color: #ffd700;
+}
+
+.chartreuse {
+  color: #57b700;
+}
+
+.limegreen {
+  color: #00b705;
+}
+
+.seafoam {
+  color: #00b760;
+}
+
+.skyblue {
+  color: #00b3b7;
+}
+
+.medblue {
+  background: #bbbbbb;
+  color: #0057b7;
+}
+
+.royalblue {
+  background: #bbbbbb;
+  color: #0500b7;
+}
+
+.purple {
+  background: #bbbbbb;
+  color: #6000b7;
+}
+
+.hotpink {
+  color: #b700b3;
+}
+
+.dksalmon {
+  color: #b70057;
+}
+
+.redorange {
+  color: #b70500;
+}
+
 .imgbox {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  max-width: 100%;
+  max-width: 90%;
   padding: 0.5rem;
   margin: 1vw;
-  max-height: 20vh;
+  max-height: 40vh;
+  font-size: 0.25rem;
+}
+
+.listdots {
+  list-style: square;
+}
+
+.f1 {
+  font-family: "Hubbali", sans-serif;
+}
+
+.f2 {
+  font-family: "Handlee", cursive;
+}
+
+.gridparts {
+  border: 5px solid white;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 2vw;
+  max-width: 100%;
 }
 
 .warning {
@@ -229,26 +298,10 @@ li {
   font-weight: bold;
 }
 
-#tabbar {
-  font-size: 0.75rem;
-  padding: 1vw;
-}
-
-h1.title {
-  font-size: 1.05rem;
-  padding: 1vw;
-}
-
-h2.title {
-  font-size: 1rem;
-  padding: 1vw;
-}
-
 h2.subtitle {
   color: #ffd700;
   height: 3vh;
   font-family: "Handlee", cursive;
-  font-size: 0.75rem;
   font-weight: bold;
   margin: 0;
   padding: 1rem;
@@ -376,9 +429,24 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   font-family: "Hubbali", sans-serif;
+  font-weight: bold;
   color: #57b700;
   text-decoration: none;
-  font-weight: bold;
+}
+a a:hover {
+  color: #b70057;
+}
+
+::-moz-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
 }
 
 a:visited {
@@ -387,6 +455,215 @@ a:visited {
 
 a:hover {
   color: #ff241e;
+}
+
+.nodots {
+  list-style-type: none;
+}
+
+.todo-text, p.todo-text {
+  text-align: left;
+  font-weight: bold;
+  margin: 1vw;
+  padding: 1vw;
+  color: white;
+  font-family: "Hubbali", sans-serif;
+}
+
+.markbtn {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 0.5vh;
+  padding: 0.5vh;
+  width: 6vh;
+  height: 6vh;
+}
+
+.todo-text, p.todo-text {
+  text-align: left;
+  font-weight: bold;
+  margin: 1vw;
+  padding: 1vw;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+#todocontainer {
+  display: grid;
+  grid-area: todocontainer;
+  background: black;
+  text-align: center;
+  max-width: 90%;
+  margin: 1vw auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header1" "todos" "addbar" "listfooter";
+}
+#todocontainer #header1 {
+  grid-area: header1;
+  margin-bottom: 0;
+}
+#todocontainer #todos, #todocontainer #dtodos {
+  grid-area: todos;
+  padding: 1vw;
+  grid-template-areas: "listitem";
+}
+#todocontainer #todos li.listitem, #todocontainer #dtodos li.listitem {
+  grid-area: listitem;
+  display: grid;
+  grid-template-columns: 1fr 9fr 1fr;
+  margin: 0;
+  max-height: 25vw;
+  max-width: 100%;
+  grid-template-areas: "markbtn itemtext delbtn";
+}
+#todocontainer #todos li.listitem .markbtn, #todocontainer #dtodos li.listitem .markbtn {
+  grid-area: markbtn;
+  width: 4vh;
+  height: 4vh;
+  padding: 1vw;
+  margin: auto;
+}
+#todocontainer #todos li.listitem #itemtext, #todocontainer #dtodos li.listitem #itemtext {
+  grid-area: itemtext;
+  height: 4vh;
+  margin: 2vh;
+}
+#todocontainer #todos li.listitem .delbtn, #todocontainer #dtodos li.listitem .delbtn {
+  grid-area: delbtn;
+  color: #b70057;
+  background: transparent;
+  margin: auto;
+  border: none;
+  max-width: 8vw;
+  height: 8vh;
+  font-size: 2em;
+  font-weight: bold;
+}
+#todocontainer #listfooter {
+  display: grid;
+  max-height: 28vh;
+  grid-area: listfooter;
+  text-align: left;
+  margin: 2vw;
+  grid-template-columns: 1fr 1fr;
+  justify-content: left;
+  color: #ffd700;
+  grid-template-areas: "tasks btns" "srchbar srchbar";
+}
+#todocontainer #listfooter #btncontainer {
+  grid-area: btns;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+#todocontainer #listfooter p#tasks {
+  grid-area: tasks;
+  text-align: center;
+  margin: 1vw auto;
+  max-height: 6vh;
+  width: 100%;
+}
+#todocontainer #listfooter #allbtn {
+  grid-area: allbtn;
+}
+#todocontainer #listfooter #actbtn {
+  grid-area: actbtn;
+}
+#todocontainer #listfooter #donebtn {
+  grid-area: donebtn;
+}
+#todocontainer #listfooter #allbtn, #todocontainer #listfooter #actbtn, #todocontainer #listfooter #donebtn {
+  border: 2px dotted white;
+  padding: 1vw;
+  margin: 0 2vw;
+}
+#todocontainer #listfooter #srchbar {
+  display: grid;
+  grid-area: srchbar;
+  max-width: 100%;
+  grid-template-areas: "srchinput srchbtn";
+}
+#todocontainer #listfooter #srchbar #srchbtn {
+  grid-area: srchbtn;
+  background: #00b705;
+  padding: 0.5vw;
+  margin-left: 1vw;
+  color: #ffd700;
+  max-width: 100%;
+}
+#todocontainer #listfooter #srchbar #srchinput {
+  grid-area: srchinput;
+  width: 46vw;
+  height: 4vh;
+  margin: auto;
+  padding: 1vw;
+  font-weight: bold;
+  background: #00b705;
+  color: #ffd700;
+}
+#todocontainer #addbar {
+  grid-area: addbar;
+  margin: 2vw;
+  grid-template-areas: "addinput addbtn";
+  cursor: pointer;
+  height: 8vw;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+#todocontainer #addbar #addinput {
+  background: #ffd700;
+}
+#todocontainer #addbar #addbtn {
+  width: 8vw;
+  height: 8vw;
+  margin: 1vw auto;
+  padding: 0.25vw;
+  color: #0057b7;
+  background: #ffd700;
+  font-size: 2.5em;
+}
+#todocontainer h3 {
+  padding: 1vh;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.todo-buttons {
+  max-height: 8vw;
+  padding: 1vw;
+  color: #ffd700;
+  background: #0057b7;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.todo-buttons a {
+  text-decoration: none;
+  color: #0500b7;
+  text-align: center;
+}
+.todo-buttons a :hover {
+  border: 2px solid #00b3b7;
+}
+
+.todo-bordered {
+  border: 2px solid white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.white {
+  color: white;
 }
 
 .wborder {
@@ -502,60 +779,171 @@ footer#autofooter {
   list-style: none;
 }
 
+.todo-scratch {
+  text-decoration: line-through;
+}
+
+.color3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+  padding: 2vw;
+  border-radius: 10px;
+  margin: 4vw;
+  font-weight: bold;
+}
+
 .col1 {
   width: 50%;
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.sc-slider-ot {
-  max-width: 100%;
-  min-height: 10vh;
-  max-height: 20vh;
-  background: url("https://rus19023.github.io/scripturechase/img/ot/three_men_in_fiery_furnace-ot-tall.jpeg") no-repeat center center;
+.icon {
   margin: 0 auto;
-  -webkit-animation: sc-slide-ot 20s infinite;
-          animation: sc-slide-ot 20s infinite;
+  width: 45px;
+  height: 45px;
+  font-size: 0.25rem;
+  padding: 0.5rem;
+}
+
+.icondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 85px;
+  height: 85px;
+  font-size: 0.25rem;
+}
+
+.sc-slider-ot {
+  background-size: 200px 304px;
+  width: 200px;
+  height: 304px;
+  background: url("https://rus19023.github.io/scripturechase/img/ot/three_men_in_fiery_furnace-ot-tall.webp") no-repeat center center;
+  margin: 0 auto;
+  -webkit-animation: sc-slide-ot 20s ease-in-out infinite;
+          animation: sc-slide-ot 20s ease-in-out infinite;
+}
+
+.sc-slider-ot:hover, .progress-bar:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 @-webkit-keyframes sc-slide-ot {
-  25% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.jpeg") no-repeat center center;
+  20% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.webp") no-repeat center center;
   }
-  50% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.jpeg") no-repeat center center;
+  40% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.webp") no-repeat center center;
   }
-  75% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.jpeg") no-repeat center center;
+  60% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.webp") no-repeat center center;
+  }
+  80% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.webp") no-repeat center center;
   }
   100% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.jpeg") no-repeat center center;
+    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.webp") no-repeat center center;
   }
 }
 
 @keyframes sc-slide-ot {
-  25% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.jpeg") no-repeat center center;
+  20% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.webp") no-repeat center center;
   }
-  50% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.jpeg") no-repeat center center;
+  40% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/moses_brass_serpent-ot-tall.webp") no-repeat center center;
   }
-  75% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.jpeg") no-repeat center center;
+  60% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/joseph_resists_potiphars_wife-ot-tall.webp") no-repeat center center;
+  }
+  80% {
+    background: url("https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.webp") no-repeat center center;
   }
   100% {
-    background: url("https://rus19023.github.io/scripturechase/img/ot/hannah_presents_son_samuel_barrett-ot-tall.jpeg") no-repeat center center;
+    background: url("https://rus19023.github.io/scripturechase/img/ot/adam_eve_altar-ot-tall.webp") no-repeat center center;
   }
 }
-.sc-slider-tall {
-  max-width: 100%;
-  max-height: 10vh;
+.progress-bar {
+  position: relative;
+  top: -5px;
+  width: 680px;
+  height: 5px;
+  background: #000;
+  -webkit-animation: fullexpand 25s ease-out infinite;
+          animation: fullexpand 25s ease-out infinite;
 }
 
+@-webkit-keyframes fullexpand {
+  /* In these keyframes, the progress-bar is stationary */
+  0%, 20%, 40%, 60%, 80%, 100% {
+    width: 0%;
+    opacity: 0;
+  }
+  /* In these keyframes, the progress-bar starts to come alive */
+  4%, 24%, 44%, 64%, 84% {
+    width: 0%;
+    opacity: 0.3;
+  }
+  /* In these keyframes, the progress-bar moves forward for 3 seconds */
+  16%, 36%, 56%, 76%, 96% {
+    width: 100%;
+    opacity: 0.7;
+  }
+  /* In these keyframes, the progress-bar has finished his path */
+  17%, 37%, 57%, 77%, 97% {
+    width: 100%;
+    opacity: 0.3;
+  }
+  /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+  18%, 38%, 58%, 78%, 98% {
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes fullexpand {
+  /* In these keyframes, the progress-bar is stationary */
+  0%, 20%, 40%, 60%, 80%, 100% {
+    width: 0%;
+    opacity: 0;
+  }
+  /* In these keyframes, the progress-bar starts to come alive */
+  4%, 24%, 44%, 64%, 84% {
+    width: 0%;
+    opacity: 0.3;
+  }
+  /* In these keyframes, the progress-bar moves forward for 3 seconds */
+  16%, 36%, 56%, 76%, 96% {
+    width: 100%;
+    opacity: 0.7;
+  }
+  /* In these keyframes, the progress-bar has finished his path */
+  17%, 37%, 57%, 77%, 97% {
+    width: 100%;
+    opacity: 0.3;
+  }
+  /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+  18%, 38%, 58%, 78%, 98% {
+    width: 100%;
+    opacity: 0;
+  }
+}
 .col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2vw;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2vw;
+  text-align: center;
 }
 
 .col5 {
@@ -577,37 +965,33 @@ pre {
   word-wrap: break-word;
 }
 
-#tabbar {
-  font-size: 1rem;
-  padding: 1vw;
-}
-
-#siteTitle, #siteTitle2 {
-  font-size: 2rem;
-}
-
 h1.title {
-  font-size: 2rem;
+  font-size: 1.05rem;
   padding: 1vw;
 }
 
 h2.title {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 1vw;
+}
+
+#tabbar, h2.subtitle {
+  font-size: 0.75rem;
   padding: 1vw;
 }
 
 h3.title {
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   padding: 1vw;
 }
 
 .sources {
-  font-size: 1.25rem;
+  font-size: 0.8rem;
   color: #ff241e;
 }
 
-.normal-text {
-  font-size: 1.1rem;
+.normal-text, h4.title {
+  font-size: 0.75rem;
 }
 
 h2.subtitle {
@@ -647,15 +1031,77 @@ p.normal-text {
   #gridcontainer {
     margin: 2vw 4vw;
   }
+
+  .color3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media screen and (min-width: 1200px) {
+  h1.title {
+    font-size: 0.8rem;
+    padding: 1vw;
+  }
+
+  h2.title {
+    font-size: 0.7rem;
+    padding: 1vw;
+  }
+
+  #tabbar, h2.subtitle {
+    font-size: 0.7rem;
+    padding: 1vw;
+  }
+
+  h3.title {
+    font-size: 0.6rem;
+    padding: 1vw;
+  }
+
+  .sources {
+    font-size: 0.5rem;
+    color: #ff241e;
+  }
+
+  .normal-text, h4.title, #autofooter {
+    font-size: 0.5rem;
+  }
+
   #gridcontainer {
     max-width: 85%;
     margin: 0 auto;
     border-radius: 20px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
+  h1.title {
+    font-size: 0.7rem;
+    padding: 1vw;
+  }
+
+  h2.title {
+    font-size: 0.6rem;
+    padding: 1vw;
+  }
+
+  #tabbar, h2.subtitle {
+    font-size: 0.5rem;
+    padding: 1vw;
+  }
+
+  h3.title {
+    font-size: 0.4rem;
+    padding: 1vw;
+  }
+
+  .sources {
+    font-size: 0.3rem;
+    color: #ff241e;
+  }
+
+  .normal-text, h4.title, #autofooter {
+    font-size: 0.3rem;
+  }
+
   #gridcontainer {
     max-width: 75%;
     margin: 0 auto;
@@ -663,5 +1109,15 @@ p.normal-text {
 
   .color3 {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media screen and (min-width: 1700px) {
+  #gridcontainer {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .color3 {
+    grid-template-columns: repeat(7, 1fr);
   }
 }/*# sourceMappingURL=styles.css.map */
