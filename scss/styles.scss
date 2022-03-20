@@ -13,7 +13,12 @@ body {
   background-attachment: fixed;
 }
 
-ul { list-style: none; max-width: 100%; }
+ul {
+  list-style: none;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 li { padding: .5vw 0; max-width: 100%; }
 
 .bold {

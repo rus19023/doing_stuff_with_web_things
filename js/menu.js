@@ -76,6 +76,14 @@ const list330 = [
             name: "Week 11: Quiz Ninja - Ch. 14",
             url: `${getBase()}exercises/week11ninjaquizteam.html`,
       },
+      {
+            name: "Week 11: Quiz Ninja - Ch. 15",
+            url: `${getBase()}exercises/week11ch15ninjaquizteam.html`,
+      },
+      {
+            name: "Week 11: Scripture Chase App",
+            url: 'https://rus19023.github.io/pages/home.html',
+      }
   ];
 
   // End of **list330

@@ -15,126 +15,69 @@
       <h1 id="cit327weekpagetitle2" class="padit title">page title</h1>
       <h2 id="paperTitle" class="padit title">paper title</h2>
       <div>
-        <h4 class="title">DELETE FROM HERE</h4>
-        <p class="normal-text padleft">
-            The second topic your manager wants you to understand is XQuery. Your manager needs you to work with XML documents stored in a MarkLogic database.
-            <br>
-            The MarkLogic XML database works exclusively with XML documents. It uses XQuery, which is extremely powerful. It is an ideal solution for documents that are fairly static. XQuery provides great search speeds and ease of use. In short, it has a low technical debt associated with using it as a primary source for documents in an enterprise.
-            <br>
-            You should write a 3–5 paragraph paper that explains why XQuery is virtually the only solution appropriate to querying data from a MarkLogic database. You should note why the solution offers such significant advantages over other approaches to document-centric data.
-        </p>
-        <h4 class="title">DELETE TO HERE</h4>
-        <br><br>
 
         <h3 class="padhead title">
             How does XQuery interface with MarkLogic document-store database?
         </h3>
         <p class="normal-text">
-            MarkLogic extends XQuery with features such as function mapping, serialization options, transaction separator of semi-colon and many others.​ In MarkLogic, since the document-store model is a tree-type structure, a collection of documents (trees) is called a forest, which is the equivalent of traditional database tables. A collection of forests is similar to a traditional database.
+            ​In MarkLogic, since the document-store model is a tree-type structure, a collection of documents (trees) is called a forest, which is the equivalent of traditional database tables. A collection of forests is similar to a traditional database.
           </p>
           <p class="normal-text padleft">
-            MarkLogic provides a web-app GUI tool called Query Console to manage queries. It can be accessed through localhost:8000/qconsole in a web browser, where queries can be built from XQuery, JavaScript, SPARQL and SQL languages. 
-
-            Supports two dialects of XQuery,  ​
-
-            Gives access to XSLT language​
-
-            MarkLogic offers libraries to be used with XQuery​:
-
+            MarkLogic provides a web-app GUI tool called Query Console to manage queries. It can be accessed through localhost:8000/qconsole in a web browser, where queries can be built from XQuery, JavaScript, SPARQL and SQL languages. It supports two dialects of its querying language, basically the original version and a ramped up, extended version with many new features. ​It gives access to XSLT, and offers libraries to be used with XQuery​ to facilitate interfacing and applications that use a variety of scripting languages.
         </p>
 
         <h3 class="padhead title">
             Why is XQuery better than other options with a MarkLogic document-store database?
         </h3>
-        <p class="normal-text padleft">
-            <ul class="">
-              <li class="normal-text">
-                  XQuery is supported by all major databases, making it useful for the data ingestion process from many sources.
-              </li>
-              <li class="normal-text">
-                  XQuery is case-sensitive, and strings can be enclosed in single or double quotes, so it can do more flexible and specific searches​.
-              </li>
-              <li class="normal-text">
+        <ul class="">
+            <li class="normal-text padleft8">
+                XQuery is supported by all major databases, making it useful for the data ingestion process from many sources.
+            </li>
+            <li class="normal-text padleft8">
+                XQuery is case-sensitive, and strings can be enclosed in single or double quotes, so it can do more flexible and specific searches​.
+            </li>
+            <li class="normal-text padleft8">
                 MarkLogic has a "universal" index set that is optimized for speed and created when data is ingested, for querying XML elements and JSON properties. This allows XQuery and XPath to be utilized to their full potential.​ The index "sees" structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c", because XPath 2.0 and XQuery 1.0 share the same data model.​
-              </li>
-              <li class="normal-text">
-                  XPath 2.0 and XQuery 1.0 share the same data model, facilitating the simplicity of connecting varied data sources. ???  need more research!!!
-              </li>
-              <li class="normal-text">
-                  MarkLogic supports the major app-building languages, facilitating the creation of applications in the current language, but also allowing flexibility to change to a new system in the future.
-              </li>
-              <li class="normal-text">
-                  
-              </li>
-              <li class="normal-text">
-                  
-              </li>
-              <li class="normal-text">
-                  
-              </li>
-            </ul>
-
-        </p>
-        <p class="normal-text padleft">
-
-        </p>
-
+            </li>
+            <li class="normal-text padleft8">
+                XPath 2.0 and XQuery 1.0 share the same data model, facilitating the simplicity of connecting varied data sources. ???  need more research!!!
+            </li>
+            <li class="normal-text padleft8">
+                MarkLogic supports the major app-building languages, facilitating the creation of applications in the current language, but also allowing flexibility to change to a new system in the future.
+            </li>
+            <li class="normal-text padleft8">
+                XQuery has similar syntax to other query languages, such as SQL, PL/SQL and CQL, but are not limited to any particular database.
+            </li>
+            <li class="normal-text padleft8">
+                MarkLogic extends XQuery with features such as function mapping, serialization options, transaction separator of semi-colon and many others.
+            </li>
+            <li class="normal-text padleft8">
+                MarkLogic has the ability to do an excellent job with searching for words in text due to its universal index.
+            </li>
+        </ul>
+        <br>
 
         <h3 class="padhead title">
             How does MarkLogic optimize indexing to support XQuery?
         </h3>
         <p class="normal-text padleft">
-            MarkLogic's indexing 
-            Can specify collations for string range indexes and for word lexicons to specify their sort order​
-
-            The universal index indexes the XML elements and JSON properties in the loaded documents​
-
-            index additional data to speed up specific types of searches​
-
-            Word Indexing with inverted index for fast element word searches​
-
-            Phrase Indexing with phrase searches index for  fast phrase searches to include two-word phrases​
-
-            Relationship Indexing with parent-child index lets you search against an XPath even when you don't know the path in advance​
-
-            The index sees structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c".​
+            MarkLogic's indexing can specify collections by their keys, and has string range indexes and word dictionaries to specify their sort order​. The universal index works with the XML elements and JSON properties in loaded documents.
         </p>
         <p class="normal-text padleft">
-
+            Some additional indexes to speed up specific types of searches​ are Word Indexing with inverted index for fast element word searches​, Phrase Indexing with phrase searches index for fast phrase searches to include two-word phrases, Relationship Indexing with parent-child index lets you search against an XPath even when you don't know the path in advance​. The index sees structure (schema) the same way it "sees" content. Example: An XPath expression "/a /b /c" can be searched basically the same way as the phrase "a b c".​
         </p>
-
-
-        <h3 class="padhead title"></h3>
-        <p class="normal-text padleft">
-
-        </p>
-        <p class="normal-text padleft">
-
-        </p>
-
-
-
 
         <h3 class="padhead title">
-            Summary
+          Summary
         </h3>
         <p class="normal-text padleft">
-
+            For XML document stores, or even when ingesting from traditional databases, MarkLogic is a very good source of ETL processing, for varied reasons. It is cost-effective with its different pricing plans for its cloud-based data hub services. It uses XQuery as the querying language, which only has moderate technical debt cost when the developers are not already familiar with SQL or any of its varieties. It is efficient in processing time, has flexibility with databases and application languages, and has very strong indexing power.
         </p>
         <p class="normal-text padleft">
 
         </p>
         <p class="normal-text padleft">
-          <br />
-          <figure>
-            <img src="../../images/" alt="alt text here" class="centerimg" />
-            <br><br>
-            <figcaption class="source">
-              text here. &nbsp; <br>
-              Source:
-              <a href="">link text here </a>
-            </figcaption>
-          </figure>
+
         </p>
         <p class="normal-text padleft">
 
@@ -143,13 +86,13 @@
         <ul class="sources">
           Sources:
           <li>
-            <a class="source" href="">linktext</a>
+            <a class="source" href="https://docs.marklogic.com/guide/xquery/dialects">"XQuery Dialects in MarkLogic Server", MarkLogic Documentation</a>
           </li>
           <li>
-            <a class="source" href="">linktext</a>
+            <a class="source" href="https://docs.marklogic.com/guide/concepts/indexing">"Indexing in MarkLogic", MarkLogic Documentation</a>
           </li>
           <li>
-            <a class="source" href="">linktext</a>
+            <a class="source" href="https://www.covetus.com/blog/detailed-guide-on-xquery-for-novice-intermediate-advanced-learners">"Detailed Guide on XQuery for Novice, Intermediate & Advanced Learners", July 5, 2019, Covetus Blog</a>
           </li>
           <li>
             <a class="source" href="https://docs.marklogic.com/guide/mlcp/export">"Exporting Content from MarkLogic Server", MarkLogic.com</a>
