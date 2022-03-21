@@ -27,12 +27,20 @@ body {
 }
 
 #gridcontainer {
+    position: relative;
+    min-height: 100vh;
     grid-area: gridcontainer;
     display: grid;
-    max-width: 90%;
+    max-width: 80%;
+    margin: 0 auto;
     grid-template-areas:
       "left"
       "right";
+    & autofooter {
+      position: absolute;
+      bottom: 0;
+      height: 2.5rem;
+    }
     & #signInForm {
       grid-area: right;
     }
@@ -44,15 +52,157 @@ body {
     }
     & #right {
         grid-area: right;
+    }
+}
+
+#todocontainer {
+    display: grid;
+    grid-area: todocontainer;
+    background: black;
+    text-align: center;
+    margin: 1% auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header1"
+    "todos"
+    "addbar"
+    "listfooter";
+    & #header1 {
+        grid-area: header1;
+        margin-bottom: 10%;
+    }
+    & #todos, #dtodos {
+        grid-area: todos;
+        padding: 1%;
+        margin: 1% auto;
         grid-template-areas:
-        "todocontainer";
-        & #todocontainer {
+        "listitem";
+        & li.listitem {
+            grid-area: listitem;
             display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
             grid-template-areas:
-            "header"
-            "todos"
-            "footer"
-            "addbar";
+            "markbtn itemtext delbtn";
+            & .markbtn {
+                grid-area: markbtn;
+                border-radius: $radius;
+                width: 1.75rem;
+                height: 1.75rem;
+                padding: 2%;
+                margin: auto;
+            }
+            & #itemtext {
+                grid-area: itemtext;
+                height: 2rem;
+                margin: 2% auto;
+                padding: 10%;
+            }
+            & .delbtn {
+                grid-area: delbtn;
+                color: $dksalmon;
+                background: transparent;
+                margin: auto;
+                border: none;
+                font-size: $font3;
+                font-weight: bold;
+            }
         }
     }
+    & #addbar {
+        grid-area: addbar;
+        grid-template-areas:
+        "addinput addbtn";
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        & #addinput {
+            height: 2rem;
+            background: $yellow;
+            font-size: 1rem;
+        }
+        & #addbtn {
+            width: 3rem;
+            height: 3rem;
+            font-size: 3rem;
+            margin: 1% auto;
+            padding: .5%;
+            border-radius: $radius;
+            color: $medblue;
+            background: $yellow;
+        }
+    }
+    & h3 {
+        padding: 1%;
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+
+#listfooter {
+  display: grid;
+  max-width: 100%;
+
+  max-height: 28%;
+  grid-area: listfooter;
+  grid-template-columns: 1fr 1fr;
+  justify-content: left;
+  grid-template-areas:
+  "tasks btns"
+  "srchbar srchbar";
+  & #btncontainer {
+      grid-area: btns;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+  }
+  & p#tasks {
+      grid-area: tasks;
+      text-align: center;
+      margin: 1% auto;
+      max-height: 6%;
+      width: 100%;
+  }
+  & #allbtn {
+      grid-area: allbtn;
+  }
+  & #actbtn {
+      grid-area: actbtn;
+  }
+  & #donebtn {
+      grid-area: donebtn;
+  }
+  & #allbtn, #actbtn, #donebtn {
+      border: $dotborder;
+      padding: 1%;
+      margin: 0 2%;
+  }
+  & #srchbar {
+      display: grid;
+      grid-area: srchbar;
+      max-width: 100%;
+      margin: 0 auto;
+      grid-template-areas:
+      "srchinput srchbtn";
+      & #srchbtn {
+          grid-area: srchbtn;
+          background: $limegreen;
+          padding: .5%;
+          margin-left: 1%;
+          color: $yellow;
+          max-width: 100%;
+      }
+      & #srchinput {
+          grid-area: srchinput;
+          padding: 1%;
+          font-weight: bold;
+          background: $limegreen;
+          color: $yellow;
+      }
+  }
+}
+
+#content-wrap, #listfooter {
+  padding-bottom: 2.5rem;    /* Footer height */
 }

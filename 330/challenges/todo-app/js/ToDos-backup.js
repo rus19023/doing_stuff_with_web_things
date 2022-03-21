@@ -81,7 +81,7 @@ export default class ToDos {
         "",
         `item${field.id}`,
         "",
-        "listitem bordered item-row"
+        "listitem bordered"
       );
       let itemtext = util.createLMNT("p", "", "", field.task, "todo-text");
       let markbox = util.createLMNT("label", "", "", "", "bordered markbtn");

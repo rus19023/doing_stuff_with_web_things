@@ -11,15 +11,17 @@ body {
   font-size: 16px;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-ul {
-  list-style: none;
+  border-radius: $radius;
   max-width: 100%;
-  margin: 0 auto;
 }
 
-li { padding: .5vw 0; max-width: 100%; }
+main, header, section, footer {
+  max-width: 90%;
+  border-radius: $radius;
+  margin: 2% auto;
+  padding: 1%;
+  background: black;
+}
 
 .bold {
   font-weight: bold;
@@ -52,8 +54,8 @@ li { padding: .5vw 0; max-width: 100%; }
   align-items: center;
   max-width: 90%;
   padding: .5rem;
-  margin: 1vw;
-  max-height: 40vh;
+  margin: 1%;
+  max-height: 40%;
   font-size: .25rem;
 }
 
@@ -69,11 +71,15 @@ li { padding: .5vw 0; max-width: 100%; }
     font-family: $fontsecond;
 }
 
+.fifty {
+    max-width: 50%;
+}
+
 .gridparts {
     border: 5px solid white;
     border-radius: 15px;
     margin: 0 auto;
-    padding: 2vw;
+    padding: 2%;
     max-width: 100%;
 }
 
@@ -81,7 +87,7 @@ li { padding: .5vw 0; max-width: 100%; }
 
 h2.subtitle {
   color: $yellow;
-  height: 3vh;
+  height: 3%;
   font-family: $fontsecond;
   font-weight: bold;
   margin: 0;
@@ -90,59 +96,43 @@ h2.subtitle {
 }
 
 #autoheader {
-  margin: 1vw;
+  margin: 1%;
 }
 
 .marg {
-  margin: 2vw 10vw;
+  margin: 2% 10%;
 }
 
 .pad2 {
-  padding: 2vw;
+  padding: 2%;
 }
 
 .pad1 {
-  padding: 1vw;
+  padding: 1%;
 }
 
 .padleft {
-  padding-left: 4vw;
+  padding-left: 4%;
 }
 
 .padleft8 {
-  padding-left: 8vw;
+  padding-left: 8%;
 }
 
 h2#tab-bar {
   overflow: hidden;
-  margin-left: 4vw;
+  margin-left: 4%;
   bottom: 0;
-  max-width: 100%;
   border-radius: 0;
-  max-height: 4vh;
+  max-height: 4%;
   a {
     float: left;
-    max-width: 100%;
     display: block;
     text-align: center;
     text-decoration: none;
     color: $accent;
-    padding: 1vw 2vw;
+    padding: 1% 2%;
   }
-}
-
-div,
-form,
-footer,
-p,
-header,
-section,
-.title,
-main {
-    max-width: 90%;
-    border-radius: $radius;
-    margin: 1vw auto;
-    background: black;
 }
 
 header {
@@ -155,7 +145,7 @@ header {
 .exercise {
     border: $border;
     border-radius: $radius;
-    margin: 2vw;
+    margin: 2%;
 }
 
 .morespc { line-height: 1.5; }
@@ -189,7 +179,7 @@ li.cert-text {
     color: white;
     font-family: $fontfirst;
     font-size: .6rem;
-    padding: 1vw;
+    padding: 1%;
     font-weight: bold;
 }
 
@@ -212,21 +202,16 @@ a {
     font-weight: bold;
     color: $accent;
     text-decoration: none;
-    & a:hover {
-        color: $dksalmon;
+    & :hover {
+        color: $accent3;
+    }
+    & :visited {
+      color: $accent2;
     }
 }
 
 ::placeholder {
     color: black;
-}
-
-a:visited {
-  color: $accent2;
-}
-
-a:hover {
-  color: $accent3;
 }
 
 .nodots {
@@ -236,8 +221,8 @@ a:hover {
 .todo-text, p.todo-text {
     text-align: left;
     font-weight: bold;
-    margin: 1vw;
-    padding: 1vw;
+    margin: 1%;
+    padding: 1%;
     color: white;
     font-family: $fontfirst;
 }
@@ -245,17 +230,10 @@ a:hover {
 .markbtn {
     border: $todoborder;
     border-radius: 10px;
-    margin: .5vh;
-    padding: .5vh;
-    width: 6vh;
-    height: 6vh;
-}
-
-.todo-text, p.todo-text {
-    text-align: left;
-    font-weight: bold;
-    margin: 1vw;
-    padding: 1vw;
+    margin: .5%;
+    padding: .5%;
+    width: 6rem;
+    height: 6rem;
 }
 
 .row {
@@ -264,162 +242,10 @@ a:hover {
     justify-content: space-around;
     margin: 0 auto;
 }
-#todocontainer {
-    display: grid;
-    grid-area: todocontainer;
-    background: black;
-    text-align: center;
-    max-width: 90%;
-    margin: 1vw auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "header1"
-    "todos"
-    "addbar"
-    "listfooter";
-    & #header1 {
-        grid-area: header1;
-        margin-bottom: 0;
-    }
-    & #todos, #dtodos {
-        grid-area: todos;
-        padding: 1vw;
-        grid-template-areas:
-        "listitem";
-        & li.listitem {
-            grid-area: listitem;
-            display: grid;
-            grid-template-columns: 1fr 9fr 1fr;
-            margin: 0;
-            max-height: 25vw;
-            max-width: 100%;
-            grid-template-areas:
-            "markbtn itemtext delbtn";
-            & .markbtn {
-                grid-area: markbtn;
-                width: 4vh;
-                height: 4vh;
-                padding: 1vw;
-                margin: auto;
-            }
-            & #itemtext {
-                grid-area: itemtext;
-                height: 4vh;
-                margin: 2vh;
-            }
-            & .delbtn {
-                grid-area: delbtn;
-                color: $dksalmon;
-                background: transparent;
-                margin: auto;
-                border: none;
-                max-width: 8vw;
-                height: 8vh;
-                font-size: $font3;
-                font-weight: bold;
-            }
-        }
-    }
-    & #listfooter {
-        display: grid;
-        max-height: 28vh;
-        grid-area: listfooter;
-        text-align: left;
-        margin: 2vw;
-        grid-template-columns: 1fr 1fr;
-        justify-content: left;
-        color: $yellow;
-        grid-template-areas:
-        "tasks btns"
-        "srchbar srchbar";
-        & #btncontainer {
-            grid-area: btns;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-        }
-        & p#tasks {
-            grid-area: tasks;
-            text-align: center;
-            margin: 1vw auto;
-            max-height: 6vh;
-            width: 100%;
-        }
-        & #allbtn {
-            grid-area: allbtn;
-        }
-        & #actbtn {
-            grid-area: actbtn;
-        }
-        & #donebtn {
-            grid-area: donebtn;
-        }
-        & #allbtn, #actbtn, #donebtn {
-            border: $dotborder;
-            padding: 1vw;
-            margin: 0 2vw;
-        }
-        & #srchbar {
-            display: grid;
-            grid-area: srchbar;
-            max-width: 100%;
-            grid-template-areas:
-            "srchinput srchbtn";
-            & #srchbtn {
-                grid-area: srchbtn;
-                background: $limegreen;
-                padding: .5vw;
-                margin-left: 1vw;
-                color: $yellow;
-                max-width: 100%;
-            }
-            & #srchinput {
-                grid-area: srchinput;
-                width: 46vw;
-                height: 4vh;
-                margin: auto;
-                padding: 1vw;
-                font-weight: bold;
-                background: $limegreen;
-                color: $yellow;
-            }
-        }
-    }
-    & #addbar {
-        grid-area: addbar;
-        margin: 2vw;
-        grid-template-areas:
-            "addinput addbtn";
-        cursor: pointer;
-        height: 8vw;
-        padding: 0;
-        display: grid;
-        grid-template-columns: 9fr 1fr;
-        & #addinput {
-            background: $yellow;
-        }
-        & #addbtn {
-            width: 8vw;
-            height: 8vw;
-            margin: 1vw auto;
-            padding: .25vw;
-            color: $medblue;
-            background: $yellow;
-            font-size: $font4;
-        }
-    }
-    & h3 {
-        padding: 1vh;
-        text-align: center;
-        font-weight: bolder;
-    }
-}
 
 .todo-buttons {
-    max-height: 8vw;
-    padding: 1vw;
+    max-height: 8%;
+    padding: 1%;
     color: $yellow;
     background: $contrast;
     border: $todoborder;
@@ -437,10 +263,6 @@ a:hover {
 .todo-bordered {
     border: $todoborder;
     border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
 }
 
 .white {
@@ -457,10 +279,10 @@ a:hover {
   cursor: pointer;
   background: $royalblue;
   box-shadow: $formshadow;
-  padding: 2vw;
+  padding: 2%;
   max-width: 50%;
   margin: 0 auto;
-  height: 10vh;
+  height: 10%;
   border: $buttonborder;
   border-radius: $radius;
   color: $yellow;
@@ -473,17 +295,17 @@ a:hover {
 }
 
 .padit {
-  padding: 2vw;
+  padding: 2%;
 }
 
 .padhead {
-  padding: 1vw;
+  padding: 1%;
 }
 
 #presentations {
   max-width: 100%;
-  margin: 1vw auto;
-  padding: 2vw;
+  margin: 1% auto;
+  padding: 2%;
 }
 
 #certnav a {
@@ -499,40 +321,34 @@ a:hover {
     font-size: 1rem;
 }
 
-.inputs {
-    max-width: 80%;
-}
-
 .textarea,
 .inputs {
-  background: $yellow;
-  color: $royalblue;
   border-radius: $radius;
-  border: $inputborder;
-  margin: 2vw;
+  margin-left: 4.5%;
 }
 
 textarea {
   width: 90%;
-  height: 15vh;
+  height: 15%;
 }
 
 footer#autofooter {
   color: $yellow;
   font-family: $fontsecond;
   border-radius: $radius;
-  padding: 2vw 0;
-  margin: 4vw auto;
+  padding: 2% 0;
+  margin: 4% auto;
   max-width: 90%;
   font-weight: bold;
   text-align: center;
+  bottom: 0;
 }
 
 .source {
     text-align: left;
     color: $accent;
     font-family: $fontfirst;
-    padding: 1vw;
+    padding: 1%;
     & a {
       text-decoration: none;
       font-weight: bold;
@@ -542,7 +358,7 @@ footer#autofooter {
 
 .sources {
     text-align: left;
-    margin: 2vh auto;
+    margin: 2% auto;
     font-family: $fontsecond;
     font-weight: bold;
 }
@@ -551,11 +367,11 @@ footer#autofooter {
     background: $yellow;
     color: $royalblue;
     border-radius: $radius;
-    padding: 1.5vw;
+    padding: 1.5%;
     font-family: $fontfirst;
     font-weight: bold;
     width: 90%;
-    margin: 2vw auto;
+    margin: 2% auto;
     text-decoration: none;
     list-style: none;
 }
@@ -567,10 +383,10 @@ footer#autofooter {
 .color3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4vw;
-    padding: 2vw;
+    gap: 4%;
+    padding: 2%;
     border-radius: $radius;
-    margin: 4vw;
+    margin: 4%;
     font-weight: bold;
 }
 
@@ -659,23 +475,23 @@ footer#autofooter {
 .col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2vw;
+  gap: 2%;
 }
 
 .container {
   max-width: 90%;
   margin: 0 auto;
-  padding: 2vw;
+  padding: 2%;
   text-align: center;
 }
 
 .col5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2vw;
+  gap: 2%;
 }
 
-.nav { padding: 1vw; }
+.nav { padding: 1%; }
 
 pre {
   overflow-x: auto;
@@ -686,16 +502,16 @@ pre {
   word-wrap: break-word;
 }
 
-h1.title { font-size: 1.05rem; padding: 1vw; }
-h2.title { font-size: 1rem; padding: 1vw; }
-#tabbar, h2.subtitle { font-size: .75rem; padding: 1vw; }
-h3.title { font-size: .9rem; padding: 1vw; }
+h1.title { font-size: 1.05rem; padding: 1%; }
+h2.title { font-size: 1rem; padding: 1%; }
+#tabbar, h2.subtitle { font-size: .75rem; padding: 1%; }
+h3.title { font-size: .9rem; padding: 1%; }
 .sources { font-size: .8rem; color: $accent3; }
 .normal-text, h4.title { font-size: .75rem; }
 
 h2.subtitle {
   color: $yellow;
-  height: 3vh;
+  height: 3%;
   font-family: $fontsecond;
   font-size: .75rem;
   font-weight: bold;
@@ -705,9 +521,7 @@ h2.subtitle {
 }
 
 li.normal-text { list-style-type: square; margin: 0 auto; }
-h3.title, h4.title { color: $accent2; }
-h5.title, h6.title {  color: $accent3; }
-p.normal-text { padding-left: 4vw; }
+p.normal-text { padding-left: 4%; }
 //p.normal-text, li.normal-text, li a, #autofooter, .code, .source, li.title { font-size: .25rem; }
 
 @import "large";

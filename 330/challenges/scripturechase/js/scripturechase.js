@@ -85,7 +85,7 @@ export default class Scriptures {
         "",
         "",
         "",
-        "listitem bordered item-row nodots"
+        "listitem bordered nodots"
       );
       let sRef = `${field.book} ${field.chapter}:${field.verse}`;
       // if (field.scripture.length > 75) {

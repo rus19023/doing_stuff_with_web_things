@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -24,10 +25,18 @@ body header #main-nav ul li a {
 }
 
 #gridcontainer {
+  position: relative;
+  min-height: 100vh;
   grid-area: gridcontainer;
   display: grid;
-  max-width: 90%;
+  max-width: 80%;
+  margin: 0 auto;
   grid-template-areas: "left" "right";
+}
+#gridcontainer autofooter {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
 }
 #gridcontainer #signInForm {
   grid-area: right;
@@ -40,11 +49,148 @@ body header #main-nav ul li a {
 }
 #gridcontainer #right {
   grid-area: right;
-  grid-template-areas: "todocontainer";
 }
-#gridcontainer #right #todocontainer {
+
+#todocontainer {
   display: grid;
-  grid-template-areas: "header" "todos" "footer" "addbar";
+  grid-area: todocontainer;
+  background: black;
+  text-align: center;
+  margin: 1% auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header1" "todos" "addbar" "listfooter";
+}
+#todocontainer #header1 {
+  grid-area: header1;
+  margin-bottom: 10%;
+}
+#todocontainer #todos, #todocontainer #dtodos {
+  grid-area: todos;
+  padding: 1%;
+  margin: 1% auto;
+  grid-template-areas: "listitem";
+}
+#todocontainer #todos li.listitem, #todocontainer #dtodos li.listitem {
+  grid-area: listitem;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: "markbtn itemtext delbtn";
+}
+#todocontainer #todos li.listitem .markbtn, #todocontainer #dtodos li.listitem .markbtn {
+  grid-area: markbtn;
+  border-radius: 10px;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 2%;
+  margin: auto;
+}
+#todocontainer #todos li.listitem #itemtext, #todocontainer #dtodos li.listitem #itemtext {
+  grid-area: itemtext;
+  height: 2rem;
+  margin: 2% auto;
+  padding: 10%;
+}
+#todocontainer #todos li.listitem .delbtn, #todocontainer #dtodos li.listitem .delbtn {
+  grid-area: delbtn;
+  color: #b70057;
+  background: transparent;
+  margin: auto;
+  border: none;
+  font-size: 2em;
+  font-weight: bold;
+}
+#todocontainer #addbar {
+  grid-area: addbar;
+  grid-template-areas: "addinput addbtn";
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+}
+#todocontainer #addbar #addinput {
+  height: 2rem;
+  background: #ffd700;
+  font-size: 1rem;
+}
+#todocontainer #addbar #addbtn {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  margin: 1% auto;
+  padding: 0.5%;
+  border-radius: 10px;
+  color: #0057b7;
+  background: #ffd700;
+}
+#todocontainer h3 {
+  padding: 1%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#listfooter {
+  display: grid;
+  max-width: 100%;
+  max-height: 28%;
+  grid-area: listfooter;
+  grid-template-columns: 1fr 1fr;
+  justify-content: left;
+  grid-template-areas: "tasks btns" "srchbar srchbar";
+}
+#listfooter #btncontainer {
+  grid-area: btns;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+#listfooter p#tasks {
+  grid-area: tasks;
+  text-align: center;
+  margin: 1% auto;
+  max-height: 6%;
+  width: 100%;
+}
+#listfooter #allbtn {
+  grid-area: allbtn;
+}
+#listfooter #actbtn {
+  grid-area: actbtn;
+}
+#listfooter #donebtn {
+  grid-area: donebtn;
+}
+#listfooter #allbtn, #listfooter #actbtn, #listfooter #donebtn {
+  border: 2px dotted white;
+  padding: 1%;
+  margin: 0 2%;
+}
+#listfooter #srchbar {
+  display: grid;
+  grid-area: srchbar;
+  max-width: 100%;
+  margin: 0 auto;
+  grid-template-areas: "srchinput srchbtn";
+}
+#listfooter #srchbar #srchbtn {
+  grid-area: srchbtn;
+  background: #00b705;
+  padding: 0.5%;
+  margin-left: 1%;
+  color: #ffd700;
+  max-width: 100%;
+}
+#listfooter #srchbar #srchinput {
+  grid-area: srchinput;
+  padding: 1%;
+  font-weight: bold;
+  background: #00b705;
+  color: #ffd700;
+}
+
+#content-wrap, #listfooter {
+  padding-bottom: 2.5rem;
+  /* Footer height */
 }
 
 .color3 {
@@ -187,17 +333,16 @@ body {
   font-size: 16px;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  border-radius: 10px;
+  max-width: 100%;
 }
 
-ul {
-  list-style: none;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-li {
-  padding: 0.5vw 0;
-  max-width: 100%;
+main, header, section, footer {
+  max-width: 90%;
+  border-radius: 10px;
+  margin: 2% auto;
+  padding: 1%;
+  background: black;
 }
 
 .bold {
@@ -269,8 +414,8 @@ li {
   align-items: center;
   max-width: 90%;
   padding: 0.5rem;
-  margin: 1vw;
-  max-height: 40vh;
+  margin: 1%;
+  max-height: 40%;
   font-size: 0.25rem;
 }
 
@@ -286,11 +431,15 @@ li {
   font-family: "Handlee", cursive;
 }
 
+.fifty {
+  max-width: 50%;
+}
+
 .gridparts {
   border: 5px solid white;
   border-radius: 15px;
   margin: 0 auto;
-  padding: 2vw;
+  padding: 2%;
   max-width: 100%;
 }
 
@@ -301,7 +450,7 @@ li {
 
 h2.subtitle {
   color: #ffd700;
-  height: 3vh;
+  height: 3%;
   font-family: "Handlee", cursive;
   font-weight: bold;
   margin: 0;
@@ -310,59 +459,43 @@ h2.subtitle {
 }
 
 #autoheader {
-  margin: 1vw;
+  margin: 1%;
 }
 
 .marg {
-  margin: 2vw 10vw;
+  margin: 2% 10%;
 }
 
 .pad2 {
-  padding: 2vw;
+  padding: 2%;
 }
 
 .pad1 {
-  padding: 1vw;
+  padding: 1%;
 }
 
 .padleft {
-  padding-left: 4vw;
+  padding-left: 4%;
 }
 
 .padleft8 {
-  padding-left: 8vw;
+  padding-left: 8%;
 }
 
 h2#tab-bar {
   overflow: hidden;
-  margin-left: 4vw;
+  margin-left: 4%;
   bottom: 0;
-  max-width: 100%;
   border-radius: 0;
-  max-height: 4vh;
+  max-height: 4%;
 }
 h2#tab-bar a {
   float: left;
-  max-width: 100%;
   display: block;
   text-align: center;
   text-decoration: none;
   color: #57b700;
-  padding: 1vw 2vw;
-}
-
-div,
-form,
-footer,
-p,
-header,
-section,
-.title,
-main {
-  max-width: 90%;
-  border-radius: 10px;
-  margin: 1vw auto;
-  background: black;
+  padding: 1% 2%;
 }
 
 header {
@@ -375,7 +508,7 @@ header {
 .exercise {
   border: 2px solid #b76000;
   border-radius: 10px;
-  margin: 2vw;
+  margin: 2%;
 }
 
 .morespc {
@@ -410,7 +543,7 @@ li.cert-text {
   color: white;
   font-family: "Hubbali", sans-serif;
   font-size: 0.6rem;
-  padding: 1vw;
+  padding: 1%;
   font-weight: bold;
 }
 
@@ -434,8 +567,11 @@ a {
   color: #57b700;
   text-decoration: none;
 }
-a a:hover {
-  color: #b70057;
+a :hover {
+  color: #ff241e;
+}
+a :visited {
+  color: #00e4ea;
 }
 
 ::-moz-placeholder {
@@ -450,14 +586,6 @@ a a:hover {
   color: black;
 }
 
-a:visited {
-  color: #00e4ea;
-}
-
-a:hover {
-  color: #ff241e;
-}
-
 .nodots {
   list-style-type: none;
 }
@@ -465,8 +593,8 @@ a:hover {
 .todo-text, p.todo-text {
   text-align: left;
   font-weight: bold;
-  margin: 1vw;
-  padding: 1vw;
+  margin: 1%;
+  padding: 1%;
   color: white;
   font-family: "Hubbali", sans-serif;
 }
@@ -474,17 +602,10 @@ a:hover {
 .markbtn {
   border: 2px solid white;
   border-radius: 10px;
-  margin: 0.5vh;
-  padding: 0.5vh;
-  width: 6vh;
-  height: 6vh;
-}
-
-.todo-text, p.todo-text {
-  text-align: left;
-  font-weight: bold;
-  margin: 1vw;
-  padding: 1vw;
+  margin: 0.5%;
+  padding: 0.5%;
+  width: 6rem;
+  height: 6rem;
 }
 
 .row {
@@ -494,152 +615,9 @@ a:hover {
   margin: 0 auto;
 }
 
-#todocontainer {
-  display: grid;
-  grid-area: todocontainer;
-  background: black;
-  text-align: center;
-  max-width: 90%;
-  margin: 1vw auto;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header1" "todos" "addbar" "listfooter";
-}
-#todocontainer #header1 {
-  grid-area: header1;
-  margin-bottom: 0;
-}
-#todocontainer #todos, #todocontainer #dtodos {
-  grid-area: todos;
-  padding: 1vw;
-  grid-template-areas: "listitem";
-}
-#todocontainer #todos li.listitem, #todocontainer #dtodos li.listitem {
-  grid-area: listitem;
-  display: grid;
-  grid-template-columns: 1fr 9fr 1fr;
-  margin: 0;
-  max-height: 25vw;
-  max-width: 100%;
-  grid-template-areas: "markbtn itemtext delbtn";
-}
-#todocontainer #todos li.listitem .markbtn, #todocontainer #dtodos li.listitem .markbtn {
-  grid-area: markbtn;
-  width: 4vh;
-  height: 4vh;
-  padding: 1vw;
-  margin: auto;
-}
-#todocontainer #todos li.listitem #itemtext, #todocontainer #dtodos li.listitem #itemtext {
-  grid-area: itemtext;
-  height: 4vh;
-  margin: 2vh;
-}
-#todocontainer #todos li.listitem .delbtn, #todocontainer #dtodos li.listitem .delbtn {
-  grid-area: delbtn;
-  color: #b70057;
-  background: transparent;
-  margin: auto;
-  border: none;
-  max-width: 8vw;
-  height: 8vh;
-  font-size: 2em;
-  font-weight: bold;
-}
-#todocontainer #listfooter {
-  display: grid;
-  max-height: 28vh;
-  grid-area: listfooter;
-  text-align: left;
-  margin: 2vw;
-  grid-template-columns: 1fr 1fr;
-  justify-content: left;
-  color: #ffd700;
-  grid-template-areas: "tasks btns" "srchbar srchbar";
-}
-#todocontainer #listfooter #btncontainer {
-  grid-area: btns;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-#todocontainer #listfooter p#tasks {
-  grid-area: tasks;
-  text-align: center;
-  margin: 1vw auto;
-  max-height: 6vh;
-  width: 100%;
-}
-#todocontainer #listfooter #allbtn {
-  grid-area: allbtn;
-}
-#todocontainer #listfooter #actbtn {
-  grid-area: actbtn;
-}
-#todocontainer #listfooter #donebtn {
-  grid-area: donebtn;
-}
-#todocontainer #listfooter #allbtn, #todocontainer #listfooter #actbtn, #todocontainer #listfooter #donebtn {
-  border: 2px dotted white;
-  padding: 1vw;
-  margin: 0 2vw;
-}
-#todocontainer #listfooter #srchbar {
-  display: grid;
-  grid-area: srchbar;
-  max-width: 100%;
-  grid-template-areas: "srchinput srchbtn";
-}
-#todocontainer #listfooter #srchbar #srchbtn {
-  grid-area: srchbtn;
-  background: #00b705;
-  padding: 0.5vw;
-  margin-left: 1vw;
-  color: #ffd700;
-  max-width: 100%;
-}
-#todocontainer #listfooter #srchbar #srchinput {
-  grid-area: srchinput;
-  width: 46vw;
-  height: 4vh;
-  margin: auto;
-  padding: 1vw;
-  font-weight: bold;
-  background: #00b705;
-  color: #ffd700;
-}
-#todocontainer #addbar {
-  grid-area: addbar;
-  margin: 2vw;
-  grid-template-areas: "addinput addbtn";
-  cursor: pointer;
-  height: 8vw;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 9fr 1fr;
-}
-#todocontainer #addbar #addinput {
-  background: #ffd700;
-}
-#todocontainer #addbar #addbtn {
-  width: 8vw;
-  height: 8vw;
-  margin: 1vw auto;
-  padding: 0.25vw;
-  color: #0057b7;
-  background: #ffd700;
-  font-size: 2.5em;
-}
-#todocontainer h3 {
-  padding: 1vh;
-  text-align: center;
-  font-weight: bolder;
-}
-
 .todo-buttons {
-  max-height: 8vw;
-  padding: 1vw;
+  max-height: 8%;
+  padding: 1%;
   color: #ffd700;
   background: #0057b7;
   border: 2px solid white;
@@ -657,10 +635,6 @@ a:hover {
 .todo-bordered {
   border: 2px solid white;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 .white {
@@ -677,10 +651,10 @@ a:hover {
   cursor: pointer;
   background: #0500b7;
   box-shadow: 0 0 10px #ff241e;
-  padding: 2vw;
+  padding: 2%;
   max-width: 50%;
   margin: 0 auto;
-  height: 10vh;
+  height: 10%;
   border: 4px solid white;
   border-radius: 10px;
   color: #ffd700;
@@ -693,17 +667,17 @@ a:hover {
 }
 
 .padit {
-  padding: 2vw;
+  padding: 2%;
 }
 
 .padhead {
-  padding: 1vw;
+  padding: 1%;
 }
 
 #presentations {
   max-width: 100%;
-  margin: 1vw auto;
-  padding: 2vw;
+  margin: 1% auto;
+  padding: 2%;
 }
 
 #certnav a {
@@ -719,40 +693,34 @@ a:hover {
   font-size: 1rem;
 }
 
-.inputs {
-  max-width: 80%;
-}
-
 .textarea,
 .inputs {
-  background: #ffd700;
-  color: #0500b7;
   border-radius: 10px;
-  border: 4px solid #998100;
-  margin: 2vw;
+  margin-left: 4.5%;
 }
 
 textarea {
   width: 90%;
-  height: 15vh;
+  height: 15%;
 }
 
 footer#autofooter {
   color: #ffd700;
   font-family: "Handlee", cursive;
   border-radius: 10px;
-  padding: 2vw 0;
-  margin: 4vw auto;
+  padding: 2% 0;
+  margin: 4% auto;
   max-width: 90%;
   font-weight: bold;
   text-align: center;
+  bottom: 0;
 }
 
 .source {
   text-align: left;
   color: #57b700;
   font-family: "Hubbali", sans-serif;
-  padding: 1vw;
+  padding: 1%;
 }
 .source a {
   text-decoration: none;
@@ -762,7 +730,7 @@ footer#autofooter {
 
 .sources {
   text-align: left;
-  margin: 2vh auto;
+  margin: 2% auto;
   font-family: "Handlee", cursive;
   font-weight: bold;
 }
@@ -771,11 +739,11 @@ footer#autofooter {
   background: #ffd700;
   color: #0500b7;
   border-radius: 10px;
-  padding: 1.5vw;
+  padding: 1.5%;
   font-family: "Hubbali", sans-serif;
   font-weight: bold;
   width: 90%;
-  margin: 2vw auto;
+  margin: 2% auto;
   text-decoration: none;
   list-style: none;
 }
@@ -787,10 +755,10 @@ footer#autofooter {
 .color3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4vw;
-  padding: 2vw;
+  gap: 4%;
+  padding: 2%;
   border-radius: 10px;
-  margin: 4vw;
+  margin: 4%;
   font-weight: bold;
 }
 
@@ -937,24 +905,24 @@ footer#autofooter {
 .col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2vw;
+  gap: 2%;
 }
 
 .container {
   max-width: 90%;
   margin: 0 auto;
-  padding: 2vw;
+  padding: 2%;
   text-align: center;
 }
 
 .col5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2vw;
+  gap: 2%;
 }
 
 .nav {
-  padding: 1vw;
+  padding: 1%;
 }
 
 pre {
@@ -968,22 +936,22 @@ pre {
 
 h1.title {
   font-size: 1.05rem;
-  padding: 1vw;
+  padding: 1%;
 }
 
 h2.title {
   font-size: 1rem;
-  padding: 1vw;
+  padding: 1%;
 }
 
 #tabbar, h2.subtitle {
   font-size: 0.75rem;
-  padding: 1vw;
+  padding: 1%;
 }
 
 h3.title {
   font-size: 0.9rem;
-  padding: 1vw;
+  padding: 1%;
 }
 
 .sources {
@@ -997,7 +965,7 @@ h3.title {
 
 h2.subtitle {
   color: #ffd700;
-  height: 3vh;
+  height: 3%;
   font-family: "Handlee", cursive;
   font-size: 0.75rem;
   font-weight: bold;
@@ -1011,16 +979,8 @@ li.normal-text {
   margin: 0 auto;
 }
 
-h3.title, h4.title {
-  color: #00e4ea;
-}
-
-h5.title, h6.title {
-  color: #ff241e;
-}
-
 p.normal-text {
-  padding-left: 4vw;
+  padding-left: 4%;
 }
 
 @media screen and (min-width: 451px) {
@@ -1029,10 +989,6 @@ p.normal-text {
   }
 }
 @media screen and (min-width: 992px) {
-  #gridcontainer {
-    margin: 2vw 4vw;
-  }
-
   .color3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -1040,22 +996,22 @@ p.normal-text {
 @media screen and (min-width: 1200px) {
   h1.title {
     font-size: 0.8rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   h2.title {
     font-size: 0.7rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   #tabbar, h2.subtitle {
     font-size: 0.7rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   h3.title {
     font-size: 0.6rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   .sources {
@@ -1069,29 +1025,28 @@ p.normal-text {
 
   #gridcontainer {
     max-width: 85%;
-    margin: 0 auto;
     border-radius: 20px;
   }
 }
 @media screen and (min-width: 1500px) {
   h1.title {
     font-size: 0.7rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   h2.title {
     font-size: 0.6rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   #tabbar, h2.subtitle {
     font-size: 0.5rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   h3.title {
     font-size: 0.4rem;
-    padding: 1vw;
+    padding: 1%;
   }
 
   .sources {

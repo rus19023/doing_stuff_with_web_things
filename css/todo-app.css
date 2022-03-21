@@ -499,12 +499,6 @@ h1 {
   grid-template-areas: "tasks allbtn actbtn donebtn";
 }
 
-.item-row {
-  display: grid;
-  grid-template-columns: 1fr 9fr 1fr;
-  max-width: 100%;
-}
-
 #todocontainer {
   grid-area: todocontainer;
   text-align: center;

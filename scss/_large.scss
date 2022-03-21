@@ -12,11 +12,6 @@
 
 @media screen and (min-width: 992px) {
 
-    #gridcontainer {
-        margin: 2vw 4vw;
-        
-    }
-
     .color3 {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -26,26 +21,25 @@
 
 @media screen and (min-width: 1200px) {
 
-    h1.title { font-size: .8rem; padding: 1vw; }
-    h2.title { font-size: .7rem; padding: 1vw; }
-    #tabbar, h2.subtitle { font-size: .7rem; padding: 1vw; }
-    h3.title { font-size: .6rem; padding: 1vw; }
+    h1.title { font-size: .8rem; padding: 1%; }
+    h2.title { font-size: .7rem; padding: 1%; }
+    #tabbar, h2.subtitle { font-size: .7rem; padding: 1%; }
+    h3.title { font-size: .6rem; padding: 1%; }
     .sources { font-size: .5rem; color: $accent3; }
     .normal-text, h4.title, #autofooter { font-size: .5rem; }
 
     #gridcontainer {
         max-width: 85%;
-        margin: 0 auto;
         border-radius: $lgradius;
     }
 }
 
 @media screen and (min-width: 1500px) {
 
-    h1.title { font-size: .7rem; padding: 1vw; }
-    h2.title { font-size: .6rem; padding: 1vw; }
-    #tabbar, h2.subtitle { font-size: .5rem; padding: 1vw; }
-    h3.title { font-size: .4rem; padding: 1vw; }
+    h1.title { font-size: .7rem; padding: 1%; }
+    h2.title { font-size: .6rem; padding: 1%; }
+    #tabbar, h2.subtitle { font-size: .5rem; padding: 1%; }
+    h3.title { font-size: .4rem; padding: 1%; }
     .sources { font-size: .3rem; color: $accent3; }
     .normal-text, h4.title, #autofooter { font-size: .3rem; }
 

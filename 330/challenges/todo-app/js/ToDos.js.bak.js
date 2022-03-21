@@ -98,7 +98,7 @@ function renderTodoList(parentId, renderlist) {
       "",
       field.id,
       "",
-      "listitem bordered item-row"
+      "listitem bordered"
     );
     itemtext = util.createLMNT("p", "", "", field.task, "todo-text");
     markbox = util.createLMNT("div", "", `markbox${field.id}`, "", "bordered");

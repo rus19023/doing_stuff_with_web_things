@@ -76,7 +76,7 @@ export default class todos {
       renderlist.forEach((field) => {
         // create new list item
         //            createLMNT(LMNT, LMNTtype, LMNTid, LMNTtext, LMNTclass)
-        let item = util.createLMNT('li', '', '', '', 'listitem todo-bordered item-row nodots');
+        let item = util.createLMNT('li', '', '', '', 'listitem todo-bordered nodots');
         //console.log(field);
         if (field.task.length > 75) {
           item.style.height = '12vh';
