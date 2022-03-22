@@ -49,8 +49,7 @@ const list330 = [
       },
       {
           name: "Week 09 Challenge 2: New App Proposal",
-          url: `${getBase()}challenges/week09.html`, 
-          
+          url: `${getBase()}challenges/week09.html`,
       },
       {
             name: "Week 10: Updates to To Do App",

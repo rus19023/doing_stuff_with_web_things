@@ -1,13 +1,18 @@
 
+input[type="checkbox"].markbtn {
+    content: " ";
+    background: transparent;
+    border-radius: $radius;
+    //font-size: $font6;
+}
 
 input[type="checkbox"].markbtnX {
     content: "✕";
     color: $redorange;
+    background: transparent;
+    border-radius: $radius;
     //font-size: $font6;
-
 }
-
-
 
 // label {
 //     cursor: pointer;

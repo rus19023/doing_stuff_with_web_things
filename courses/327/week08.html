@@ -14,19 +14,19 @@
         <h1 id="cit327weekpagetitle2" class="title">page title</h1>
         <h2 id="paperTitle" class="title">paper title</h2>
         <div>
-            <p class="normal-text padleft">
+            <p class="normal-text">
                 MongoDB is easy to start using, even for someone who has never used it before. The documentation is complete and easy to understand for those with limited knowledge. It does not need any schema set up before data can be inserted.
             </p>
-            <p class="normal-text padleft">
+            <p class="normal-text">
                 MongoDB uses the document store type of database storage. Each document is like a table row in a traditional database and the fields within the document are similar the columns.
                 <br><br>
             </p>
-            <p class="normal-text padleft">
+            <p class="normal-text">
               To migrate data from MongoDB to a relational database, the schema for the RDBMS will have to be set up before any records are inserted. If any fields are changed after some records are inserted, the RDBMS schema will need to be altered before any new records can be added. This will put and additional workload on the app developers to be sure the data keeps its integrity.
               <br><br>
               The good news is that there are ready-made tools to help with this task, if the enterprise has funds to pay for them, to migigate the extra time cost for developers.
             </p>
-            <p class="normal-text padleft">
+            <p class="normal-text">
               <figure>
                   <img src="../../images/migration.png" alt="Proposal data model from MongoDB to RDBMS" class="centerimg" />
                   <br>
@@ -38,10 +38,10 @@
                   </figcaption>
               </figure>
           </p>
-            <p class="normal-text padleft">
+            <p class="normal-text">
               The schema model can be built and altered in the app's code, using a variety of app programming languages, including at the very least Vanilla Javascript, Python and Node.js. The syntax for configuring the model and CRUD operations is simplistic, and easy to update. Object fields can also be indexed to facilitate searches. Scaling up and out is easy with MongoDB, as it will work for small apps or large enterprises with massive data inflows.
             </p>
-            <p class="normal-text padleft">
+            <p class="normal-text">
                 While complex joins are not supported in MongoDB, some subqueries can be achieved as documents embedded in the parent documents, for example, a comments document can be embedded within a document containing hike listings for a travel guide. These subdocuments are linked by their auto-generated id numbers to the parent document. This nesting of documents is limited to 100 levels and document size limit is 16 MB, but these limits would only be an issue for the largest enterprises.
                 <br><br>
                 Another challenge for MongoDB users is the speed. Writes are optimized, but query reads, not so much. There are, however, configuration settings that can help mitigate this issue.
@@ -49,10 +49,10 @@
                 Another limitation is the naming convention. There must be more than just a difference in case between database names. An example would be two databases named productDB and productdb. The use of these two names would produce an error.
             </p>
             <h3 class="title">Summary</h3>
-            <p class="normal-text padleft">
+            <p class="normal-text">
                 MongoDB would be a great choice for a orange data source for the Inmon model. There will extra work, time and financial costs for migration to a relational database for the Kimball model.
             </p>
-          <ul class="sources">
+          <ul class="sources nodots">
             Sources:
             <li>
               <a class="normal-text" href="https://sdtimes.com/author/tomer-shiran/">Shiran, Tomer</a>

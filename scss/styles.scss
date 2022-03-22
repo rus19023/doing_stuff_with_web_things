@@ -7,34 +7,33 @@
 
 
 body {
-  background: $background;
-  font-size: 16px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  border-radius: $radius;
-  max-width: 100%;
+    background: $background;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: $radius;
+    max-width: 100%;
 }
 
 main, header, section, footer {
-  max-width: 90%;
-  border-radius: $radius;
-  margin: 2% auto;
-  padding: 1%;
-  background: black;
+    max-width: 90%;
+    border-radius: $radius;
+    margin: 2% auto;
+    padding: 1%;
+    background: black;
 }
 
 .bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .centered {
-  text-align: center;
-  max-width: 100%;
-  margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .whitebg {
-  background: white;
+    background: white;
 }
 
 .orange { color: $orange; }
@@ -51,12 +50,12 @@ main, header, section, footer {
 .redorange { color: $redorange; }
 
 .imgbox {
-  align-items: center;
-  max-width: 90%;
-  padding: .5rem;
-  margin: 1%;
-  max-height: 40%;
-  font-size: .25rem;
+    align-items: center;
+    max-width: 90%;
+    padding: .5rem;
+    margin: 1%;
+    max-height: 40%;
+    font-size: .25rem;
 }
 
 .listdots {
@@ -85,54 +84,44 @@ main, header, section, footer {
 
 .warning { color: $warning; font-weight: bold; }
 
-h2.subtitle {
-  color: $yellow;
-  height: 3%;
-  font-family: $fontsecond;
-  font-weight: bold;
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
-}
-
 #autoheader {
-  margin: 1%;
+    margin: 1%;
 }
 
 .marg {
-  margin: 2% 10%;
+    margin: 2% 10%;
 }
 
 .pad2 {
-  padding: 2%;
+    padding: 2%;
 }
 
 .pad1 {
-  padding: 1%;
+    padding: 1%;
 }
 
 .padleft {
-  padding-left: 4%;
+    padding-left: 4%;
 }
 
 .padleft8 {
-  padding-left: 8%;
+    padding-left: 8%;
 }
 
 h2#tab-bar {
-  overflow: hidden;
-  margin-left: 4%;
-  bottom: 0;
-  border-radius: 0;
-  max-height: 4%;
-  a {
-    float: left;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: $accent;
-    padding: 1% 2%;
-  }
+    overflow: hidden;
+    margin-left: 4%;
+    bottom: 0;
+    border-radius: 0;
+    max-height: 4%;
+    a {
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $accent;
+        padding: 1% 2%;
+    }
 }
 
 header {
@@ -156,8 +145,12 @@ header {
     margin: auto;
 }
 
+.img50 {
+    width: 50%;
+}
+
 img {
-    // font-size: $font3;
+    font-size: $font1;
     color: $accent2;
     border-radius: $radius;
 }
@@ -189,12 +182,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title {
-  font-family: $fontsecond;
-  color: $yellow;
+    font-family: $fontsecond;
+    color: $yellow;
 }
 
 .hotpink {
-  background: $hotpink;
+    background: $hotpink;
 }
 
 a {
@@ -220,9 +213,6 @@ a {
 
 .todo-text, p.todo-text {
     text-align: left;
-    font-weight: bold;
-    margin: 1%;
-    padding: 1%;
     color: white;
     font-family: $fontfirst;
 }
@@ -244,12 +234,11 @@ a {
 }
 
 .todo-buttons {
-    max-height: 8%;
-    padding: 1%;
     color: $yellow;
     background: $contrast;
-    border: $todoborder;
     border-radius: $radius;
+    height: 2rem;
+    font-size: $font1;
     & a {
       text-decoration: none;
       color: $royalblue;
@@ -270,42 +259,42 @@ a {
 }
 
 .wborder {
-  border: $buttonborder;
-  border-radius: $radius;
+    border: $buttonborder;
+    border-radius: $radius;
 }
 
 .buttons {
-  text-align: center;
-  cursor: pointer;
-  background: $royalblue;
-  box-shadow: $formshadow;
-  padding: 2%;
-  max-width: 50%;
-  margin: 0 auto;
-  height: 10%;
-  border: $buttonborder;
-  border-radius: $radius;
-  color: $yellow;
-  font-family: $fontsecond;
-  font-weight: bold;
-  & a {
-    text-decoration: none;
-    color: $royalblue;
-  }
+    text-align: center;
+    cursor: pointer;
+    background: $royalblue;
+    box-shadow: $formshadow;
+    padding: 2%;
+    max-width: 50%;
+    margin: 0 auto;
+    height: 10%;
+    border: $buttonborder;
+    border-radius: $radius;
+    color: $yellow;
+    font-family: $fontsecond;
+    font-weight: bold;
+    & a {
+        text-decoration: none;
+        color: $royalblue;
+    }
 }
 
 .padit {
-  padding: 2%;
+    padding: 2%;
 }
 
 .padhead {
-  padding: 1%;
+    padding: 1%;
 }
 
 #presentations {
-  max-width: 100%;
-  margin: 1% auto;
-  padding: 2%;
+    max-width: 100%;
+    margin: 1% auto;
+    padding: 2%;
 }
 
 #certnav a {
@@ -323,25 +312,34 @@ a {
 
 .textarea,
 .inputs {
-  border-radius: $radius;
-  margin-left: 4.5%;
+    border-radius: $radius;
+    margin-left: 1%;
+    min-height: 2rem;
+}
+
+.chkbtn {
+    border-radius: $radius;
+}
+
+.foot-row {
+    margin: auto;
 }
 
 textarea {
-  width: 90%;
-  height: 15%;
+    width: 90%;
+    height: 15%;
 }
 
 footer#autofooter {
-  color: $yellow;
-  font-family: $fontsecond;
-  border-radius: $radius;
-  padding: 2% 0;
-  margin: 4% auto;
-  max-width: 90%;
-  font-weight: bold;
-  text-align: center;
-  bottom: 0;
+    color: $yellow;
+    font-family: $fontsecond;
+    border-radius: $radius;
+    padding: 2% 0;
+    margin: 4% auto;
+    max-width: 90%;
+    font-weight: bold;
+    text-align: center;
+    bottom: 0;
 }
 
 .source {
@@ -397,22 +395,22 @@ footer#autofooter {
 }
 
 .icon {
-  margin: 0 auto;
-  width: 45px;
-  height: 45px;
-  font-size: .25rem;
-  padding: .5rem;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+    font-size: .25rem;
+    padding: .5rem;
 }
 
 .icondiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
-  width: 85px;
-  height: 85px;
-  font-size: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 85px;
+    height: 85px;
+    font-size: .25rem;
 }
 
 .sc-slider-ot {
@@ -447,78 +445,80 @@ footer#autofooter {
 }
 
 .progress-bar {
-  position: relative;
-  top: -5px;
-  width: 680px;
-  height: 5px;
-  background: #000;
-  animation: fullexpand 25s ease-out infinite;
+    position: relative;
+    top: -5px;
+    width: 680px;
+    height: 5px;
+    background: #000;
+    animation: fullexpand 25s ease-out infinite;
 }
 
 @keyframes fullexpand {
-  /* In these keyframes, the progress-bar is stationary */
-  0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+    /* In these keyframes, the progress-bar is stationary */
+    0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
 
-  /* In these keyframes, the progress-bar starts to come alive */
-  4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+    /* In these keyframes, the progress-bar starts to come alive */
+    4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
 
-  /* In these keyframes, the progress-bar moves forward for 3 seconds */
-  16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+    /* In these keyframes, the progress-bar moves forward for 3 seconds */
+    16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
 
-  /* In these keyframes, the progress-bar has finished his path */
-  17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+    /* In these keyframes, the progress-bar has finished his path */
+    17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
 
-  /* In these keyframes, the progress-bar will disappear and then resume the cycle */
-  18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+    /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+    18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
 }
 
 .col2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
 }
 
 .container {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 2%;
-  text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2%;
+    text-align: center;
 }
 
 .col5 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2%;
 }
 
 .nav { padding: 1%; }
 
 pre {
-  overflow-x: auto;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 h1.title { font-size: 1.05rem; padding: 1%; }
 h2.title { font-size: 1rem; padding: 1%; }
-#tabbar, h2.subtitle { font-size: .75rem; padding: 1%; }
 h3.title { font-size: .9rem; padding: 1%; }
+#tabbar, h2.subtitle { font-size: .75rem; padding: 1%; }
 .sources { font-size: .8rem; color: $accent3; }
-.normal-text, h4.title { font-size: .75rem; }
+.normal-text, h4.title, .source, .todo-text { font-size: .75rem; }
 
 h2.subtitle {
-  color: $yellow;
-  height: 3%;
-  font-family: $fontsecond;
-  font-size: .75rem;
-  font-weight: bold;
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
+    color: $yellow;
+    height: 3%;
+    font-family: $fontsecond;
+    font-size: .75rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
 }
+
+li { line-height: 1.25rem; }
 
 li.normal-text { list-style-type: square; margin: 0 auto; }
 p.normal-text { padding-left: 4%; }

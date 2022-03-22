@@ -59,7 +59,6 @@ body {
     display: grid;
     grid-area: todocontainer;
     background: black;
-    text-align: center;
     margin: 1% auto;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -69,16 +68,19 @@ body {
     "listfooter";
     & #header1 {
         grid-area: header1;
-        margin-bottom: 10%;
+        margin-bottom: 1%;
     }
-    & #todos, #dtodos {
+    & #todos {
         grid-area: todos;
         padding: 1%;
+        width: 100%;
         margin: 1% auto;
         grid-template-areas:
         "listitem";
         & li.listitem {
             grid-area: listitem;
+            margin: 0;
+            padding: 0;
             display: grid;
             grid-template-columns: 1fr 8fr 1fr;
             grid-template-areas:
@@ -86,8 +88,8 @@ body {
             & .markbtn {
                 grid-area: markbtn;
                 border-radius: $radius;
-                width: 1.75rem;
-                height: 1.75rem;
+                width: 1rem;
+                height: 1rem;
                 padding: 2%;
                 margin: auto;
             }
@@ -110,25 +112,27 @@ body {
     }
     & #addbar {
         grid-area: addbar;
+        gap: 2%;
+        max-width: 100%;
+        height: 4rem;
         grid-template-areas:
         "addinput addbtn";
         cursor: pointer;
         display: grid;
         grid-template-columns: 10fr 1fr;
         & #addinput {
-            height: 2rem;
+            height: 2.65rem;
             background: $yellow;
-            font-size: 1rem;
         }
         & #addbtn {
-            width: 3rem;
+            font-size: 2rem;
             height: 3rem;
-            font-size: 3rem;
-            margin: 1% auto;
-            padding: .5%;
+            width: 3rem;
+            padding: 2%;
             border-radius: $radius;
-            color: $medblue;
             background: $yellow;
+            color: black;
+            border: $todoborder;
         }
     }
     & h3 {
@@ -139,70 +143,70 @@ body {
 }
 
 #listfooter {
-  display: grid;
-  max-width: 100%;
-
-  max-height: 28%;
-  grid-area: listfooter;
-  grid-template-columns: 1fr 1fr;
-  justify-content: left;
-  grid-template-areas:
-  "tasks btns"
-  "srchbar srchbar";
-  & #btncontainer {
-      grid-area: btns;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      margin: 0;
-      padding: 0;
-  }
-  & p#tasks {
-      grid-area: tasks;
-      text-align: center;
-      margin: 1% auto;
-      max-height: 6%;
-      width: 100%;
-  }
-  & #allbtn {
-      grid-area: allbtn;
-  }
-  & #actbtn {
-      grid-area: actbtn;
-  }
-  & #donebtn {
-      grid-area: donebtn;
-  }
-  & #allbtn, #actbtn, #donebtn {
-      border: $dotborder;
-      padding: 1%;
-      margin: 0 2%;
-  }
-  & #srchbar {
-      display: grid;
-      grid-area: srchbar;
-      max-width: 100%;
-      margin: 0 auto;
-      grid-template-areas:
-      "srchinput srchbtn";
-      & #srchbtn {
-          grid-area: srchbtn;
-          background: $limegreen;
-          padding: .5%;
-          margin-left: 1%;
-          color: $yellow;
-          max-width: 100%;
-      }
-      & #srchinput {
-          grid-area: srchinput;
-          padding: 1%;
-          font-weight: bold;
-          background: $limegreen;
-          color: $yellow;
-      }
-  }
+    display: grid;
+    height: 20%;
+    grid-area: listfooter;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    grid-template-areas:
+    "tasks btns"
+    "srchbar srchbar";
+    & #btncontainer {
+        grid-area: btns;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+        padding: 2%;
+    }
+    & #tasks {
+        grid-area: tasks;
+        text-align: center;
+        margin: 2% auto;
+        max-height: 10rem;
+        width: 95%;
+        padding: 2%;
+    }
+    & #allbtn {
+        grid-area: allbtn;
+    }
+    & #actbtn {
+        grid-area: actbtn;
+    }
+    & #donebtn {
+        grid-area: donebtn;
+    }
+    & #allbtn, #actbtn, #donebtn {
+        border: $dotborder;
+        margin: 0 2%;
+    }
+    & #srchbar {
+        display: grid;
+        gap: 2%;
+        grid-area: srchbar;
+        width: 98%;
+        margin: 2% auto;
+        height: 2rem;
+        grid-template-columns: 9fr 1fr;
+        grid-template-areas:
+        "srchinput srchbtn";
+        & #srchinput {
+            grid-area: srchinput;
+            padding: 1%;
+            font-weight: bold;
+            background: $limegreen;
+            color: white;
+            height: 2rem;
+        }
+        & #srchbtn {
+            grid-area: srchbtn;
+            background: $limegreen;
+            color: white;
+            height: 100% !important;
+        }
+    }
 }
 
-#content-wrap, #listfooter {
+#content-wrap {
   padding-bottom: 2.5rem;    /* Footer height */
 }
