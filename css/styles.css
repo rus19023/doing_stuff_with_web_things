@@ -1,6 +1,5 @@
-body {
-  background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -133,7 +132,7 @@ body header #main-nav ul li a {
 
 #listfooter {
   display: grid;
-  height: 20%;
+  height: 10rem;
   grid-area: listfooter;
   grid-template-columns: 1fr 1fr;
   justify-content: left;
@@ -444,7 +443,7 @@ main, header, section, footer {
 }
 
 .fifty {
-  max-width: 50%;
+  width: 50%;
 }
 
 .gridparts {
@@ -544,6 +543,7 @@ li.cert-text {
   color: #00b3b7;
   font-weight: bold;
   max-width: 100%;
+  line-height: 1.5rem;
 }
 
 .normal-text {
@@ -657,7 +657,6 @@ a :visited {
   padding: 2%;
   max-width: 50%;
   margin: 0 auto;
-  height: 10%;
   border: 4px solid white;
   border-radius: 10px;
   color: #ffd700;
@@ -686,7 +685,6 @@ a :visited {
 #certnav a {
   font-size: 1rem;
   font-weight: bold;
-  text-decoration: none;
   color: #ffd700;
 }
 
@@ -982,8 +980,6 @@ h2.subtitle {
   font-size: 0.75rem;
   font-weight: bold;
   margin: 0;
-  padding: 1rem;
-  text-align: center;
 }
 
 li {

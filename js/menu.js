@@ -934,7 +934,10 @@ function createCertNav(array, id) {
       });
       // create cert list element
       const certmenu = document.createElement('ul');
-      certmenu.setAttribute(id, 'menu');
+      const br = document.createElement('br');
+      certmenu.setAttribute('id', 'menu');
+      certmenu.classList.add('nodots');
+      certmenu.classList.add('morespc');
       // get list of files to create links for each menu entry
       let certcount = 1;
       certs.forEach((element) => {
@@ -943,7 +946,7 @@ function createCertNav(array, id) {
           // create list item for this cert
           const certitem = document.createElement('li');
           certitem.classList.add('cert-text');
-          certitem.setAttribute(id, `cert${certcount}`);
+          certitem.setAttribute('id', `cert${certcount}`);
           // set text for item
           certitem.innerText += `${element.certname}, Issue date: ${element.certdate}`;
           // add item to cert submenu list
@@ -987,7 +990,7 @@ function createCertNav(array, id) {
         // if subitem's cert number = item's cert number, add to submenu list
         if (element.cert === certCheck) {
           const submenuitem = document.createElement('li');
-          submenuitem.classList.add('nomarg');
+          submenuitem.classList.add('cert-text');
           submenuitem.setAttribute(id, `course${coursecount}`);
           // if url does not exist AND data url length is less than 100, exit program
           if ((!urlExists(element.url)) && (element.url.length < 100)) {
@@ -996,7 +999,7 @@ function createCertNav(array, id) {
             const link = document.createElement('a');
             // url and term exist, create the link and post to page
             if ((element.term) && (element.term.length > 0)) {
-              const linktext = document.createTextNode(`${element.term}, ${element.code} - ${element.name}, (${element.tech})`);
+              const linktext = document.createTextNode(`${element.term}, ${element.code} - ${element.name}`); //, (${element.tech})`);
               link.setAttribute('href', element.url);
               link.appendChild(linktext);
               //submenuitem.innerText = `${createLink(url, linktext)}`;
@@ -1010,6 +1013,7 @@ function createCertNav(array, id) {
             submenu.appendChild(submenuitem);
           }
         certitem.appendChild(submenu);
+        certitem.appendChild(br);
         }
         coursecount++;
       });

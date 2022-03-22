@@ -71,7 +71,7 @@ main, header, section, footer {
 }
 
 .fifty {
-    max-width: 50%;
+    width: 50%;
 }
 
 .gridparts {
@@ -166,6 +166,7 @@ li.cert-text {
     color: $skyblue;
     font-weight: bold;
     max-width: 100%;
+    line-height: 1.5rem;
 }
 
 .normal-text {
@@ -271,7 +272,6 @@ a {
     padding: 2%;
     max-width: 50%;
     margin: 0 auto;
-    height: 10%;
     border: $buttonborder;
     border-radius: $radius;
     color: $yellow;
@@ -300,7 +300,6 @@ a {
 #certnav a {
     font-size: 1rem;
     font-weight: bold;
-    text-decoration: none;
     color: $yellow;
 }
 
@@ -514,8 +513,6 @@ h2.subtitle {
     font-size: .75rem;
     font-weight: bold;
     margin: 0;
-    padding: 1rem;
-    text-align: center;
 }
 
 li { line-height: 1.25rem; }
