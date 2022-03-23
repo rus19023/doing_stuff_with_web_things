@@ -102,12 +102,6 @@ $ft: $contrast;
     margin: 0 auto;
 }
 
-.foot-row {
-    display: grid;
-    grid-template-areas:
-    "tasks allbtn actbtn donebtn";
-}
-
 #todocontainer {
     grid-area: todocontainer;
     text-align: center;

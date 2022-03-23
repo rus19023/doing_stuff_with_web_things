@@ -72,6 +72,7 @@ body header #main-nav ul li a {
 }
 #todocontainer #todos li.listitem {
   grid-area: listitem;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   display: grid;
@@ -141,32 +142,21 @@ body header #main-nav ul li a {
 }
 #listfooter #btncontainer {
   grid-area: btns;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0;
-  padding: 2%;
+  min-height: 4rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 #listfooter #tasks {
   grid-area: tasks;
   text-align: center;
-  margin: 2% auto;
-  max-height: 10rem;
-  width: 95%;
-  padding: 2%;
+  margin: 1% auto;
+  min-height: 4rem;
+  width: 80%;
+  padding: 1%;
 }
-#listfooter #allbtn {
-  grid-area: allbtn;
-}
-#listfooter #actbtn {
-  grid-area: actbtn;
-}
-#listfooter #donebtn {
-  grid-area: donebtn;
-}
-#listfooter #allbtn, #listfooter #actbtn, #listfooter #donebtn {
-  border: 2px dotted white;
-  margin: 0 2%;
+#listfooter #allbtn, #listfooter #actbtn, #listfooter #donebtn, #listfooter #srchbtn {
+  border: 2px dotted white !important;
 }
 #listfooter #srchbar {
   display: grid;
@@ -182,14 +172,15 @@ body header #main-nav ul li a {
   grid-area: srchinput;
   padding: 1%;
   font-weight: bold;
+  border: 2px solid white;
   background: #00b705;
-  color: white;
+  color: black;
   height: 2rem;
 }
 #listfooter #srchbar #srchbtn {
   grid-area: srchbtn;
   background: #00b705;
-  color: white;
+  color: black;
   height: 100% !important;
 }
 
@@ -632,7 +623,8 @@ a :visited {
 
 .todo-buttons {
   color: #ffd700;
-  background: #0057b7;
+  background: #0500b7;
+  border: 2px solid white;
   border-radius: 10px;
   height: 2rem;
   font-size: 1em;
@@ -643,7 +635,7 @@ a :visited {
   text-align: center;
 }
 .todo-buttons a :hover {
-  border: 2px solid #00b3b7;
+  border: 2px solid #ffd700;
 }
 
 .todo-bordered {

@@ -238,7 +238,8 @@ a {
 
 .todo-buttons {
     color: $yellow;
-    background: $contrast;
+    background: $royalblue;
+    border: $todoborder;
     border-radius: $radius;
     height: 2rem;
     font-size: $font1;
@@ -247,7 +248,7 @@ a {
       color: $royalblue;
       text-align: center;
       & :hover {
-          border: 2px solid $skyblue;
+          border: 2px solid $yellow;
       }
     }
 }

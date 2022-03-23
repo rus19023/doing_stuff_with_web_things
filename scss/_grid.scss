@@ -2,7 +2,7 @@ body {
     grid-template-areas:
     "header"
     "main"
-    "footer" ;
+    "footer";
     & header {
         grid-area: header;
         & #main-nav {
@@ -79,6 +79,7 @@ body {
         "listitem";
         & li.listitem {
             grid-area: listitem;
+            max-width: 100%;
             margin: 0;
             padding: 0;
             display: grid;
@@ -153,32 +154,21 @@ body {
     "srchbar srchbar";
     & #btncontainer {
         grid-area: btns;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin: 0;
-        padding: 2%;
+        min-height: 4rem;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     & #tasks {
         grid-area: tasks;
         text-align: center;
-        margin: 2% auto;
-        max-height: 10rem;
-        width: 95%;
-        padding: 2%;
+        margin: 1% auto;
+        min-height: 4rem;
+        width: 80%;
+        padding: 1%;
     }
-    & #allbtn {
-        grid-area: allbtn;
-    }
-    & #actbtn {
-        grid-area: actbtn;
-    }
-    & #donebtn {
-        grid-area: donebtn;
-    }
-    & #allbtn, #actbtn, #donebtn {
-        border: $dotborder;
-        margin: 0 2%;
+    & #allbtn, #actbtn, #donebtn, #srchbtn {
+        border: $dotborder !important;
     }
     & #srchbar {
         display: grid;
@@ -194,14 +184,15 @@ body {
             grid-area: srchinput;
             padding: 1%;
             font-weight: bold;
+            border: $todoborder;
             background: $limegreen;
-            color: white;
+            color: black;
             height: 2rem;
         }
         & #srchbtn {
             grid-area: srchbtn;
             background: $limegreen;
-            color: white;
+            color: black;
             height: 100% !important;
         }
     }
