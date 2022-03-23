@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -132,7 +133,7 @@ body header #main-nav ul li a {
 
 #listfooter {
   display: grid;
-  height: 10rem;
+  height: 8rem;
   grid-area: listfooter;
   grid-template-columns: 1fr 1fr;
   justify-content: left;

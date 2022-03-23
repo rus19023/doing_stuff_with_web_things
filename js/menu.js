@@ -335,7 +335,7 @@ const mainNav = [
         year: "22",
         code: "WDD330",
         name: "Web Frontend Development II",
-        tech: "HTML, CSS, JavaScript, NPM, JSON, API, AJAX, jQuery, GitHub, Git, ",
+        tech: "HTML, CSS, JavaScript, NPM, JSON, API, AJAX, jQuery, GitHub, Git ",
         instructor: "Adam Gedeborg",
         cert: "05",
     },
@@ -846,12 +846,13 @@ function getIndexPageTitle(id) {
             const term = `${course.term}: 20${course.year} - ${termtext}`;
             spot = id.indexOf("-");
             if ((course.code.toLowerCase() === id.substr(0, spot).toLowerCase()) && (isElement(id)) && (isElement(`${id}`))) {
-                title = `${course.code} - ${course.name}
+                title = course.code + ' ' + course.name + '<br> Technology learned:<br>' + course.tech;
+                // title = `${course.code} - ${course.name}
 
-                  Technology learned:
-                  ${course.tech}
+                //   Technology learned:
+                //   ${course.tech}
 
-                  `;
+                //   `;
                   writeById(id, title);
                   let id2 = `${id}2`;
                   writeById(id2, title);
@@ -863,6 +864,7 @@ getIndexPageTitle("CS101-indexpagetitle");
 getIndexPageTitle("CIT327-indexpagetitle");
 getIndexPageTitle("WDD330-indexpagetitle");
 getIndexPageTitle("CSE340-indexpagetitle");
+getIndexPageTitle("WDD331-indexpagetitle");
 
 
 // set page title for WDD330 weekly pages
