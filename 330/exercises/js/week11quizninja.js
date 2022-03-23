@@ -42,15 +42,6 @@ fetch(url3)
     view.response.addEventListener('click', (event) => game.check(event), false);
 });
 
-// const quiz = [
-//   { name: "Superman", realName: "Clark Kent" },
-//   { name: "Wonder Woman", realName: "Dianna Prince" },
-//   { name: "Batman", realName: "Bruce Wayne" },
-//   { name: "The Hulk", realName: "Bruce Banner" },
-//   { name: "Spider-man", realName: "Peter Parker" },
-//   { name: "Cyclops", realName: "Scott Summers" }
-// ];
-
 function random(a,b=1) {
     // if only 1 argument is provided, we need to swap the values of a and b
     if (b === 1) {

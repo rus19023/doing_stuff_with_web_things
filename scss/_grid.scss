@@ -34,18 +34,18 @@ body {
     max-width: 80%;
     margin: 0 auto;
     grid-template-areas:
-      "left"
-      "right";
+        "left"
+        "right";
     & autofooter {
-      position: absolute;
-      bottom: 0;
-      height: 2.5rem;
+        position: absolute;
+        bottom: 0;
+        height: 2.5rem;
     }
     & #signInForm {
-      grid-area: right;
+        grid-area: right;
     }
     & #signUpForm {
-      grid-area: right;
+        grid-area: right;
     }
     & #left {
         grid-area: left;
@@ -208,5 +208,5 @@ body {
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem;    /* Footer height */
 }

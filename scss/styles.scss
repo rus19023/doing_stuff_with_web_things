@@ -185,6 +185,8 @@ h1, h2, h3, h4, h5, h6 {
 .title {
     font-family: $fontsecond;
     color: $yellow;
+    background: black;
+    padding: 2%;
 }
 
 .hotpink {
@@ -264,11 +266,13 @@ a {
     border-radius: $radius;
 }
 
+.startbtn { width: 50%; }
+
 .buttons {
     text-align: center;
     cursor: pointer;
     background: $royalblue;
-    box-shadow: $formshadow;
+    // box-shadow: $formshadow;
     padding: 2%;
     max-width: 50%;
     margin: 0 auto;
@@ -413,11 +417,11 @@ footer#autofooter {
 }
 
 .sc-slider-ot {
-    background-size: 200px 304px;
-    width: 200px;
-    height: 304px;
+    width: 100px;
+    height: 150px;
     background: url('https://rus19023.github.io/scripturechase/img/ot/three_men_in_fiery_furnace-ot-tall.webp') no-repeat center center;
-    margin: 0 auto;
+    margin: 2% auto;
+    border-radius: $radius;
     animation: sc-slide-ot 20s ease-in-out infinite;
 }
 
@@ -480,15 +484,18 @@ footer#autofooter {
     margin: 0 auto;
     padding: 2%;
     text-align: center;
+    background: black;
+    border-radius: $radius;
 }
 
 .col5 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 2%;
+    margin: 0 auto;
+    gap: 4%;
 }
 
-.nav { padding: 1%; }
+.nav { padding: 2%; }
 
 pre {
     overflow-x: auto;
@@ -499,10 +506,10 @@ pre {
     word-wrap: break-word;
 }
 
-h1.title { font-size: 1.05rem; padding: 1%; }
-h2.title { font-size: 1rem; padding: 1%; }
-h3.title { font-size: .9rem; padding: 1%; }
-#tabbar, h2.subtitle { font-size: .75rem; padding: 1%; }
+h1.title { font-size: 1.05rem; }
+h2.title { font-size: 1rem; }
+h3.title { font-size: .9rem; }
+#tabbar, h2.subtitle { font-size: .75rem; padding: 2%; }
 .sources { font-size: .8rem; color: $accent3; }
 .normal-text, h4.title, .source, .todo-text { font-size: .75rem; }
 
@@ -512,7 +519,7 @@ h2.subtitle {
     font-family: $fontsecond;
     font-size: .75rem;
     font-weight: bold;
-    margin: 0;
+    margin: 2%;
 }
 
 li { line-height: 1.25rem; }

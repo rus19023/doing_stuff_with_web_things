@@ -291,19 +291,24 @@ input[type=checkbox].markbtnX {
 }
 
 .dojo {
-  background: url(https://gistcdn.githack.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/635810bd1a925c06b5c0bc0c861d62fe53597078/dojo.svg) no-repeat;
-  width: 90%;
+  width: 80%;
   height: 800px;
   background-size: 100% auto;
   padding-top: 10px;
 }
 
 .quiz-body {
-  width: 50%;
-  background: white;
+  border: 2px solid white;
+  border-radius: 10px;
   margin: 0 auto;
   padding: 10px 20px 50px 20px;
   box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
+}
+
+.quizhead {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 #question {
@@ -317,6 +322,9 @@ input[type=checkbox].markbtnX {
 }
 
 #info, #question, #result {
+  border: 2px solid white;
+  border-radius: 10px;
+  min-height: 2rem;
   width: 90%;
   margin: 2vh auto;
 }
@@ -563,6 +571,8 @@ h1, h2, h3, h4, h5, h6 {
 .title {
   font-family: "Handlee", cursive;
   color: #ffd700;
+  background: black;
+  padding: 2%;
 }
 
 .hotpink {
@@ -650,11 +660,14 @@ a :visited {
   border-radius: 10px;
 }
 
+.startbtn {
+  width: 50%;
+}
+
 .buttons {
   text-align: center;
   cursor: pointer;
   background: #0500b7;
-  box-shadow: 0 0 10px #ff241e;
   padding: 2%;
   max-width: 50%;
   margin: 0 auto;
@@ -799,11 +812,11 @@ footer#autofooter {
 }
 
 .sc-slider-ot {
-  background-size: 200px 304px;
-  width: 200px;
-  height: 304px;
+  width: 100px;
+  height: 150px;
   background: url("https://rus19023.github.io/scripturechase/img/ot/three_men_in_fiery_furnace-ot-tall.webp") no-repeat center center;
-  margin: 0 auto;
+  margin: 2% auto;
+  border-radius: 10px;
   -webkit-animation: sc-slide-ot 20s ease-in-out infinite;
           animation: sc-slide-ot 20s ease-in-out infinite;
 }
@@ -924,16 +937,19 @@ footer#autofooter {
   margin: 0 auto;
   padding: 2%;
   text-align: center;
+  background: black;
+  border-radius: 10px;
 }
 
 .col5 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2%;
+  margin: 0 auto;
+  gap: 4%;
 }
 
 .nav {
-  padding: 1%;
+  padding: 2%;
 }
 
 pre {
@@ -947,22 +963,19 @@ pre {
 
 h1.title {
   font-size: 1.05rem;
-  padding: 1%;
 }
 
 h2.title {
   font-size: 1rem;
-  padding: 1%;
 }
 
 h3.title {
   font-size: 0.9rem;
-  padding: 1%;
 }
 
 #tabbar, h2.subtitle {
   font-size: 0.75rem;
-  padding: 1%;
+  padding: 2%;
 }
 
 .sources {
@@ -980,7 +993,7 @@ h2.subtitle {
   font-family: "Handlee", cursive;
   font-size: 0.75rem;
   font-weight: bold;
-  margin: 0;
+  margin: 2%;
 }
 
 li {
@@ -996,7 +1009,7 @@ p.normal-text {
   padding-left: 4%;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: 15px;
   }
@@ -1009,10 +1022,26 @@ p.normal-text {
   .color3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .sc-slider-ot {
+    background-size: 200px 300px;
+    width: 200px;
+    height: 300px;
+  }
 }
 @media screen and (min-width: 1200px) {
   #todocontainer {
     max-width: 50%;
+  }
+
+  .col2 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .sc-slider-ot {
+    background-size: 300px 450px;
+    width: 300px;
+    height: 450px;
   }
 
   body {
@@ -1027,6 +1056,10 @@ p.normal-text {
 @media screen and (min-width: 1500px) {
   body {
     font-size: 9px;
+  }
+
+  .col2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   #gridcontainer {

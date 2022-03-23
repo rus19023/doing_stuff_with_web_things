@@ -1,46 +1,54 @@
 .dojo {
-    background: url(https://gistcdn.githack.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/635810bd1a925c06b5c0bc0c861d62fe53597078/dojo.svg) no-repeat;
-    width: 90%;
+    width: 80%;
     height: 800px;
     background-size: 100% auto;
     padding-top: 10px;
-  }
+}
 
-  .quiz-body {
-    width: 50%;
-    background: rgba(255,255,255,1);
+.quiz-body {
+    border: $todoborder;
+    border-radius: $radius;
     margin: 0 auto;
     padding: 10px 20px 50px 20px;
     -webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-  box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-  }
+    -moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+    box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
+}
 
-  #question {
+.quizhead {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#question {
    font-size: 16px;
    height: 8vh;
-  }
+}
 
-  #result{
+#result{
     color: #fff;
     text-align: center;
-  }
+}
 
-  #info, #question, #result {
+#info, #question, #result {
+    border: $todoborder;
+    border-radius: $radius;
+    min-height: 2rem;
     width: 90%;
     margin: 2vh auto;
-  }
+}
 
-  .correct {
-      background-color: #0c0;
-  }
+.correct {
+    background-color: #0c0;
+}
 
-  .wrong {
+.wrong {
     color: #fff;
     background-color: #c00;
-  }
+}
 
-  .button {
+.button {
     color: #ffffff;
     background-color: #611BBD;
     border-color: #130269;
@@ -49,4 +57,4 @@
     display: block;
     max-width: 100%;
     font-size: 24px;
-  }
+}
