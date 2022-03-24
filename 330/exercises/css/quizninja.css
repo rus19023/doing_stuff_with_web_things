@@ -1,13 +1,11 @@
 .dojo {
     background: url(https://gistcdn.githack.com/alexmwalker/6acbe9040d9fe6e5e9fd758a25e1b2a5/raw/635810bd1a925c06b5c0bc0c861d62fe53597078/dojo.svg) no-repeat;
     width: 90%;
-    height: 800px;
     background-size: 100% auto;
     padding-top: 10px;
   }
 
   .quiz-body {
-    width: 50%;
     background: rgba(255,255,255,1);
     margin: 0 auto;
     padding: 10px 20px 50px 20px;
@@ -18,7 +16,6 @@
 
   #question {
    font-size: 16px;
-   height: 8vh;
   }
 
   #result{
