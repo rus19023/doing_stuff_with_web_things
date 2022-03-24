@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -303,6 +304,7 @@ input[type=checkbox].markbtnX {
 
 #question {
   font-size: 14px;
+  min-height: 4rem;
 }
 
 #result {
@@ -313,7 +315,6 @@ input[type=checkbox].markbtnX {
 #info, #question, #result {
   border: 2px solid white;
   border-radius: 10px;
-  min-height: 6rem;
   width: 90%;
   margin: 2vh auto;
 }
@@ -325,6 +326,16 @@ input[type=checkbox].markbtnX {
 .wrong {
   color: #fff;
   background-color: #c00;
+}
+
+#response {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  min-height: 6rem;
+}
+
+.bghotpink {
+  background-color: hotpink;
 }
 
 .button {
@@ -655,22 +666,31 @@ a :visited {
   width: 50%;
 }
 
-.buttons {
+.quizbutton {
+  min-height: 3rem;
+  width: 100% !important;
+  margin: 1% auto;
+}
+
+.buttons, .quizbutton {
   text-align: center;
   cursor: pointer;
   background: #0500b7;
   padding: 2%;
-  max-width: 50%;
-  margin: 0 auto;
   border: 4px solid white;
   border-radius: 10px;
   color: #ffd700;
-  font-family: "Handlee", cursive;
+  font-family: "Hubbali", sans-serif;
   font-weight: bold;
 }
-.buttons a {
+.buttons a, .quizbutton a {
   text-decoration: none;
   color: #0500b7;
+}
+
+.buttons {
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 .padit {

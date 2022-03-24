@@ -269,23 +269,31 @@ a {
 
 .startbtn { width: 50%; }
 
-.buttons {
+.quizbutton {
+    min-height: 3rem;
+    width: 100% !important;
+    margin: 1% auto;
+ }
+
+.buttons, .quizbutton {
     text-align: center;
     cursor: pointer;
     background: $royalblue;
-    // box-shadow: $formshadow;
     padding: 2%;
-    max-width: 50%;
-    margin: 0 auto;
     border: $buttonborder;
     border-radius: $radius;
     color: $yellow;
-    font-family: $fontsecond;
+    font-family: $fontfirst;
     font-weight: bold;
     & a {
         text-decoration: none;
         color: $royalblue;
     }
+}
+
+.buttons {
+    margin: 0 auto;
+    max-width: 50%;
 }
 
 .padit {

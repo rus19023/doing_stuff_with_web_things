@@ -23,6 +23,7 @@
 
 #question {
    font-size: 14px;
+   min-height: 4rem;
 }
 
 #result{
@@ -33,7 +34,6 @@
 #info, #question, #result {
     border: $todoborder;
     border-radius: $radius;
-    min-height: 6rem;
     width: 90%;
     margin: 2vh auto;
 }
@@ -46,6 +46,14 @@
     color: #fff;
     background-color: #c00;
 }
+
+#response {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    min-height: 6rem;
+}
+
+.bghotpink { background-color: hotpink; }
 
 .button {
     color: #ffffff;
