@@ -1,6 +1,6 @@
 body {
   background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&display=swap");
+}/*# sourceMappingURL=styles.css.map */is:wght@300;400;500&family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -464,7 +464,7 @@ main, header, section, footer {
 }
 
 .f1 {
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
 }
 
 .f2 {
@@ -577,14 +577,14 @@ li.cert-text {
 
 .normal-text {
   color: white;
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
   font-size: 0.6rem;
   padding: 1%;
   font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
   font-weight: bold;
 }
 
@@ -600,7 +600,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
   font-weight: bold;
   color: #57b700;
   text-decoration: none;
@@ -631,7 +631,7 @@ a :visited {
 .todo-text, p.todo-text {
   text-align: left;
   color: white;
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
 }
 
 .markbtn {
@@ -699,7 +699,7 @@ a :visited {
   border: 4px solid white;
   border-radius: 10px;
   color: #ffd700;
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
   font-weight: bold;
 }
 .buttons a, .quizbutton a {
@@ -771,7 +771,7 @@ footer#autofooter {
 .source {
   text-align: left;
   color: #57b700;
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
   padding: 1%;
 }
 .source a {
@@ -792,7 +792,7 @@ footer#autofooter {
   color: #0500b7;
   border-radius: 10px;
   padding: 1.5%;
-  font-family: "Hubbali", sans-serif;
+  font-family: "Hubbali", cursive;
   font-weight: bold;
   width: 90%;
   margin: 2% auto;
