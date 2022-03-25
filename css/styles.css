@@ -95,11 +95,11 @@ body header #main-nav ul li a {
 }
 #todocontainer #todos li.listitem .delbtn {
   grid-area: delbtn;
-  color: #b70057;
+  color: #b70500;
   background: transparent;
   margin: auto;
   border: none;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 #todocontainer #addbar {
@@ -134,18 +134,29 @@ body header #main-nav ul li a {
 
 #listfooter {
   display: grid;
-  height: 8rem;
+  margin: 2%;
   grid-area: listfooter;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: left;
-  grid-template-areas: "tasks btns" "srchbar srchbar";
+  grid-template-areas: "tasks" "sort" "btns" "srchbar";
+}
+#listfooter #sortitems {
+  grid-area: sort;
+  padding: 1%;
+  margin: 1%;
+}
+#listfooter #sortitems h3 {
+  font-family: "Handlee", cursive;
+  padding: 0;
+  margin: 0;
+  color: #ffd700;
 }
 #listfooter #btncontainer {
   grid-area: btns;
-  min-height: 4rem;
   width: 90%;
+  margin: 2% auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #listfooter #tasks {
   grid-area: tasks;
@@ -164,7 +175,6 @@ body header #main-nav ul li a {
   grid-area: srchbar;
   width: 98%;
   margin: 2% auto;
-  height: 2rem;
   grid-template-columns: 9fr 1fr;
   grid-template-areas: "srchinput srchbtn";
 }

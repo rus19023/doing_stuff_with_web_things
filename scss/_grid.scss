@@ -102,11 +102,11 @@ body {
             }
             & .delbtn {
                 grid-area: delbtn;
-                color: $dksalmon;
+                color: $redorange;
                 background: transparent;
                 margin: auto;
                 border: none;
-                font-size: $font3;
+                font-size: $font2;
                 font-weight: bold;
             }
         }
@@ -145,19 +145,34 @@ body {
 
 #listfooter {
     display: grid;
-    height: 8rem;
+    margin: 2%;
     grid-area: listfooter;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-content: left;
     grid-template-areas:
-    "tasks btns"
-    "srchbar srchbar";
+    "tasks"
+    "sort"
+    "btns"
+    "srchbar";
+    & #sortitems {
+        grid-area: sort;
+        padding: 1%;
+        margin: 1%;
+        & h3 {
+            font-family: $fontsecond;
+            padding: 0;
+            margin: 0;
+            color: $yellow;
+        }
+        & label {
+        }
+    }
     & #btncontainer {
         grid-area: btns;
-        min-height: 4rem;
         width: 90%;
+        margin: 2% auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     & #tasks {
         grid-area: tasks;
@@ -176,7 +191,6 @@ body {
         grid-area: srchbar;
         width: 98%;
         margin: 2% auto;
-        height: 2rem;
         grid-template-columns: 9fr 1fr;
         grid-template-areas:
         "srchinput srchbtn";

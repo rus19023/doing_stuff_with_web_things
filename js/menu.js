@@ -737,16 +737,16 @@ const mainNav = [
           url: `${getBase()}week11.html`,
       },
       {
-          name: "Week 12: MEAN Stack Integration into the Data Warehouse - Outline",
+          name: "Week 12: Manageable Corporate Data Warehouse - Outline",
           url: `${getBase()}week12.html`,
       },
       {
-          name: "Week 13: MEAN Stack Integration into the Data Warehouse - Draft",
+          name: "Week 13: Manageable Corporate Data Warehouse - Draft",
           url: `${getBase()}week13.html`,
       },
       {
-          name: "Week 14: MEAN Stack Integration into the Data Warehouse",
-          url: `${getBase()}week14.html`,
+          name: "Week 14: Manageable Corporate Data Warehouse",
+          url: `${getBase()}week14.html`,  
       },
 ];
 
