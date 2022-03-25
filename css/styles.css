@@ -36,7 +36,6 @@ body header #main-nav ul li a {
 #gridcontainer autofooter {
   position: absolute;
   bottom: 0;
-  height: 2.5rem;
 }
 #gridcontainer #signInForm {
   grid-area: right;
@@ -76,12 +75,26 @@ body header #main-nav ul li a {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
-  grid-template-areas: "markbtn itemtext delbtn";
+  grid-template-columns: 1fr 8fr 1fr 1fr;
+  grid-template-areas: "markbtn itemtext delbtn editbtn";
+}
+#todocontainer #todos li.listitem .editbtn {
+  grid-area: editbtn;
+  background: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 5px;
+  margin: auto;
+  border: none;
+}
+#todocontainer #todos li.listitem .editbtn .editicon {
+  background: transparent;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 #todocontainer #todos li.listitem .markbtn {
   grid-area: markbtn;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 1rem;
   height: 1rem;
   padding: 2%;
@@ -106,21 +119,18 @@ body header #main-nav ul li a {
   grid-area: addbar;
   gap: 2%;
   max-width: 100%;
-  height: 4rem;
+  margin: 2%;
   grid-template-areas: "addinput addbtn";
   cursor: pointer;
   display: grid;
   grid-template-columns: 10fr 1fr;
 }
 #todocontainer #addbar #addinput {
-  height: 2.65rem;
   background: #ffd700;
+  border: 2px solid white;
 }
 #todocontainer #addbar #addbtn {
   font-size: 2rem;
-  height: 3rem;
-  width: 3rem;
-  padding: 2%;
   border-radius: 10px;
   background: #ffd700;
   color: black;
@@ -134,7 +144,7 @@ body header #main-nav ul li a {
 
 #listfooter {
   display: grid;
-  margin: 2%;
+  margin: 1%;
   grid-area: listfooter;
   grid-template-columns: 1fr;
   justify-content: left;
@@ -156,13 +166,13 @@ body header #main-nav ul li a {
   width: 90%;
   margin: 2% auto;
   display: grid;
+  gap: 1%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #listfooter #tasks {
   grid-area: tasks;
   text-align: center;
   margin: 1% auto;
-  min-height: 4rem;
   width: 80%;
   padding: 1%;
 }
@@ -185,7 +195,6 @@ body header #main-nav ul li a {
   border: 2px solid white;
   background: #00b705;
   color: black;
-  height: 2rem;
 }
 #listfooter #srchbar #srchbtn {
   grid-area: srchbtn;
@@ -732,12 +741,10 @@ a :visited {
 .textarea,
 .inputs {
   border-radius: 10px;
-  margin-left: 1%;
-  min-height: 2rem;
 }
 
-.chkbtn {
-  border-radius: 10px;
+.bwhite {
+  background: white;
 }
 
 .foot-row {
@@ -1005,7 +1012,7 @@ h3.title {
 }
 
 .normal-text, h4.title, .source, .todo-text {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
 }
 
 h2.subtitle {
