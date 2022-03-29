@@ -80,6 +80,7 @@ body {
             grid-area: listitem;
             max-width: 100%;
             margin: 0;
+            line-height: normal;
             padding: 0;
             display: grid;
             grid-template-columns: 1fr 8fr 1fr 1fr;
@@ -95,8 +96,8 @@ body {
                 border: none;
                 & .editicon {
                     background: transparent;
-                    width: .5rem;
-                    height: .5rem;
+                    width: .65rem;
+                    height: .65rem;
                 }
             }
             & .markbtn {
@@ -205,6 +206,7 @@ body {
         & #srchinput {
             grid-area: srchinput;
             padding: 1%;
+            margin: 4%;
             font-weight: bold;
             border: $todoborder;
             background: $limegreen;
@@ -213,8 +215,9 @@ body {
         & #srchbtn {
             grid-area: srchbtn;
             background: $limegreen;
+            margin: 4%;
+            padding: 1%;
             color: black;
-            height: 100% !important;
         }
     }
 }

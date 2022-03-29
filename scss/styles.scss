@@ -1,26 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
 @import "variables";
 @import "grid";
 @import "colors";
 @import "checkbox";
 @import "quizninja";
 
-
 body {
+    margin: 0;
+    // background: $yellow;
     background: $background;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 100vh;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    border-radius: $radius;
-    max-width: 100%;
+}
+
+a {
+    font-family: $fontfirst;
+    font-weight: bold;
+    color: $accent1;
+    text-decoration: none;
+    & :hover {
+        color: $accent3;
+    }
+    & :visited {
+      color: $accent2;
+    }
+}
+
+#ocean {
+    position: absolute;
+    background-attachment: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave {
+    background: $medblue;
+    display: inline-block;
+    height: 60%;
+    width: 10px;
+    position: absolute;
+    animation-name:             dostuff;
+    animation-duration:         3s;
+    animation-iteration-count:  infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes dostuff {
+    0% {
+       height:60%;
+    }
+    50% {
+       height:40%;
+    }
+    100% {
+       height:60%;
+    }
 }
 
 main, header, section, footer {
     max-width: 100%;
     border-radius: $radius;
-    margin: 2% auto;
+    margin: 4% ;
     padding: 1%;
     background: black;
 }
+
+footer.title { margin-bottom: 10vh; position: absolute; bottom: 0; }
 
 .bold {
     font-weight: bold;
@@ -34,6 +87,53 @@ main, header, section, footer {
 
 .whitebg {
     background: white;
+    border-radius: $radius;
+}
+
+.maincontainer {
+    position: absolute;
+    width: 250px;
+    height: 320px;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flipcard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: $background;
+    border-radius: $radius;
+
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: $background;
+    border-radius: $radius;
+    transform: rotateY(180deg);
+}
+
+.flipcard {
+    transform: rotateY(180deg);
+}
+
+.flipcard:hover {
+    transform: rotateY(180deg);
 }
 
 .orange { color: $orange; }
@@ -74,6 +174,17 @@ main, header, section, footer {
     width: 50%;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+    padding: 1%;
+    margin: 1% auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    & .inputs {
+        padding: 2%;
+    }
+}
+
 .gridparts {
     border: 5px solid white;
     border-radius: 15px;
@@ -82,7 +193,12 @@ main, header, section, footer {
     max-width: 100%;
 }
 
-.warning { color: $warning; font-weight: bold; }
+.warning {
+    color: $warning;
+    font-weight: bold;
+    font-family: $fontfirst;
+    padding: 1%;
+}
 
 #autoheader {
     margin: 1%;
@@ -119,7 +235,7 @@ h2#tab-bar {
         display: block;
         text-align: center;
         text-decoration: none;
-        color: $accent;
+        color: $accent1;
         padding: 1% 2%;
     }
 }
@@ -159,14 +275,32 @@ img {
     list-style: square;
 }
 
-li.cert-text {
-    font-size: 1rem;
+a.cert-text {
+    font-size: .85rem;
     font-family: $fontsecond;
     text-align: left;
-    color: $skyblue;
     font-weight: bold;
     max-width: 100%;
     line-height: 1.5rem;
+}
+
+a:visited.cert-text {
+    color: $accent2;
+    font-family: $fontsecond;
+}
+
+a.sub-text {
+    font-size: .65rem;
+    font-family: $fontfirst;
+    color: $accent1;
+    text-align: left;
+    font-weight: bold;
+    max-width: 100%;
+}
+
+a:visited.sub-text {
+    color: $accent3;
+    font-family: $fontfirst;
 }
 
 .normal-text {
@@ -178,7 +312,7 @@ li.cert-text {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $fontfirst;
+    font-family: $fontsecond;
     font-weight: bold;
 }
 
@@ -189,21 +323,17 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2%;
 }
 
-.hotpink {
-    background: $hotpink;
+.title a {
+    color: $accent1;
+    text-decoration: none;
+    &:hover {
+        color: $hotpink;
+    }
+
 }
 
-a {
-    font-family: $fontfirst;
-    font-weight: bold;
-    color: $accent;
-    text-decoration: none;
-    & :hover {
-        color: $accent3;
-    }
-    & :visited {
-      color: $accent2;
-    }
+.hotpink {
+    background: $hotpink;
 }
 
 ::placeholder {
@@ -310,12 +440,6 @@ a {
     padding: 2%;
 }
 
-#certnav a {
-    font-size: 1rem;
-    font-weight: bold;
-    color: $yellow;
-}
-
 #siteTitle2 {
     font-weight: bold;
     text-align: center;
@@ -342,9 +466,7 @@ footer#autofooter {
     color: $yellow;
     font-family: $fontsecond;
     border-radius: $radius;
-    padding: 2% 0;
-    margin: 4% auto;
-    max-width: 90%;
+    padding: 2%;
     font-weight: bold;
     text-align: center;
     bottom: 0;
@@ -352,13 +474,13 @@ footer#autofooter {
 
 .source {
     text-align: left;
-    color: $accent;
+    color: $accent1;
     font-family: $fontfirst;
     padding: 1%;
     & a {
       text-decoration: none;
       font-weight: bold;
-      color: $accent;
+      color: $accent2;
     }
 }
 

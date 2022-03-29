@@ -17,14 +17,15 @@ $dotborder: 2px dotted white;
 
 $ublue: #0057b7;
 
-$accent3: lighten($redorange, 20%);
+$accent1: lighten($chartreuse, 10%);
 $accent2: lighten($skyblue, 10%);
-$accent: $chartreuse;
-$headings: $accent;
+$accent3: lighten($purple, 40%);
+$accent4: lighten($dksalmon, 40%);
+$headings: $accent1;
 $contrast: $medblue;
 $orangeborder: darken($orange, 20%);
 $yellowborder: darken($yellow, 20%);
-$warning: darken($redorange, 50%);
+$warning: lighten($redorange, 30%);
 $nav: $dksalmon;
 $valid: $hotpink;
 $bgmoz: -moz-linear-gradient(180deg, rgba(3,0,202,1) 0%, rgba(255,215,0,1) 67%);
@@ -76,7 +77,7 @@ $legendborder: 4px solid $mdgrey;
 
 
 // Fonts
-$fontfirst: 'Hubbali', cursive;
+$fontfirst: 'Hubbali', sans-serif;
 $fontsecond: 'Handlee', cursive;
  $font1: 1em;
  $font2: 1.5em;
