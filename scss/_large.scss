@@ -22,6 +22,14 @@
         height: 300px;
     }
 
+    #gridcontainer {
+        max-width: 85%;
+        border-radius: $lgradius;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "left right";
+    }
+
 }
 
 
@@ -50,10 +58,6 @@
     // .sources { font-size: .5rem; color: $accent3; }
     // .normal-text, h4.title, #autofooter { font-size: .5rem; }
 
-    #gridcontainer {
-        max-width: 85%;
-        border-radius: $lgradius;
-    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -87,7 +91,6 @@
 
     #gridcontainer {
         max-width: 60%;
-        margin: 0 auto;
     }
 
     .color3 {

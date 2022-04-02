@@ -37,7 +37,7 @@
                       Explain when you should use Inmon or Kimball methods for your data marts and warehouses.
                   </li>
                   <li class="normal-text">
-                      Provide perspective (agree, disagree or provided alternative) with the statement that “embedded structures, tables, and documents, like JSON, are big data elements, and almost always require ETL processes to simplify their structures”.
+                      Provide perspective (agree, disagree or provided alternative) with the statement that “embedded structures, tables, and documents like JSON, are big data elements, and almost always require ETL processes to simplify their structures”.
                   </li>
                   <li class="normal-text">
                       Define how would you go about selecting an analytical tool for the corporation; consider analytical programming but avoid where possible (due to high technical debt) when other tool sets can met needs effectively at low cost (like MicroStrategy, Tableau, Microsoft Power BI, etc.)
@@ -45,7 +45,7 @@
                   <li class="normal-text">
                       Explain how you would qualify big data
 
-                      embedded structures, tables, and documents, like JSON, are big data elements
+                      "embedded structures, tables, and documents like JSON, are big data elements"
                   </li>
                   <li class="normal-text">
                       Qualify how the selected seven aspects of data analysis (identified further below) work [with] various data sources, specifically
@@ -65,7 +65,6 @@
 
                   </li>
               </ul>
-              
 
                 <h2 class="title">Definitions</h2>
 
@@ -85,7 +84,8 @@
 
                 <h3 class="title">IT telemetry: </h3>
                 <p class="normal-text">
-                  “the automatic recording and transmission of data from remote or inaccessible sources to an IT system in a different location for monitoring and analysis” (source). <br>
+                  “the automatic recording and transmission of data from remote or inaccessible sources to an IT system in a different location for monitoring and analysis” (source).
+                  <br>
                   Technical debt: “the extra [future] development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution.” (source)
                 </p>
 
@@ -99,7 +99,7 @@
 
                 <h3 class="title">Analytics:</h3>
                 <p class="normal-text">
-                  “The field of data analysis. Analytics often involves studying past historical data to research potential trends, to analyze the effects of certain decisions or events, or to evaluate the performance of a given tool or scenario. The goal of analytics is to improve the business by gaining knowledge which can be used to make improvements or changes.“ (source)
+                  “The field of data analysis. Analytics often involves studying past historical data to research potential trends, to analyze the effects of certain decisions or events, or to evaluate the performance of a given tool or scenario. The goal of analytics is to improve the business by gaining knowledge which can be used to make improvements or changes.” (source)
                 </p>
 
 
@@ -138,28 +138,34 @@
         <h3 class="title">Introduction</h3>
         1. Section 1 - Objective
           <p class="normal-text">
-            This paper is to share concepts I have learned about Big Data Analysis and Warehousing, and the accompanying Technology, Methodology and Techniques.
+              This paper is to share concepts I have learned about Big Data Analysis and Warehousing, and the accompanying Technology, Methodology, available Tools and Techniques.
           </p>
           <p class="normal-text">
-            With the massive numbers of available tools, frameworks, libraries, databases, companies and corporations, developers, techniques and other resources available today, that is increasing at rocket speed, managing Big Data is a mountainous issue.
+              With the massive numbers of available tools, frameworks, libraries, databases, companies and corporations, developers, techniques and other resources available today, that is increasing at rocket speed, managing Big Data is a mountainous issue.
           </p>
-        <p class="normal-text">
+          <h4 class="title">What is Big Data?</h4>
+          <p class="normal-text">
+              Many data relationships can be represented by a hierarchical or tree structure. In the Enterprise Database Server, these relationships can be represented by including a data set among the items of a record. If a data set contains another data set as an item, then the contained data set is called an embedded data set, and the data record in which it is declared is called the owner or master of the embedded structure. Any number of embedded records can belong to each master.
+            Sets, subsets, and accesses can be embedded within a data set.
 
-        </p>
-        <p class="normal-text">
+              From <https://public.support.unisys.com/aseries/docs/clearpath-mcp-18.0/86000213-420/section-000019644.html> 
+          </p>
+          <p class="normal-text">
+            One popular interpretation of big data refers to extremely large data sets. A National Institute of Standards and Technology report defined big data as consisting of “extensive datasets—primarily in the characteristics of volume, velocity, and/or variability—that require a scalable architecture for efficient storage, manipulation, and analysis.” Some have defined big data as an amount of data that exceeds a petabyte—one million gigabytes.
 
-        </p>
+            From <https://datasciencedegree.wisconsin.edu/data-science/what-is-big-data/> 
+          </p>
 
       <h4 class="title">Project Setup</h4>
-        2. Section 2 – Project Setup
-        <p class="normal-text">
+          2. Section 2 – Project Setup
+          <p class="normal-text">
 
-        </p>
-        <p class="normal-text">
+          </p>
+          <p class="normal-text">
 
-        </p>
+          </p>
 
-            <h5 class="title">Drivers and Outcomes</h5>
+          <h5 class="title">Drivers and Outcomes</h5>
               a. Identify project drivers and desired outcomes (the “why?” and maybe “when?”)
               <p class="normal-text">
                   "The data requirements analysis process employs a top-down approach that emphasizes business-driven needs, so the analysis is conducted to ensure the identified requirements are relevant and feasible. The process incorporates data discovery and assessment in the context of explicitly qualified business data consumer needs. Having identified the data requirements, candidate data sources are determined and their quality is assessed using the data quality assessment process described in chapter 11."
@@ -172,6 +178,15 @@
                   Master the art of data viz and you’ll soon be spotting trends and correlations, all while flexing your creative muscle."
 
                   From <https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/>
+              </p>
+              <p class="normal-text col3">
+                  <img src="../images/pivot.png" alt="pivot table image" class="fifty centered">
+                  <img src="../images/piechart.png" alt="pivot table image" class="fifty centered">
+                  <img src="../images/boxplot.png" alt="pivot table image" class="fifty centered">
+                  <img src="../images/linegraph.png" alt="pivot table image" class="fifty centered">
+                  <img src="../images/areachart.png" alt="pivot table image" class="fifty centered">
+                  <img src="../images/barchart.png" alt="pivot table image" class="fifty centered">
+                  Images from <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">Career Foundry online.</a>
               </p>
               <p class="normal-text">
 
@@ -217,35 +232,102 @@
         <h4 class="title">Project Evaluation</h4>
           3. Section 3 - Project Execution
           <p class="normal-text">
-
+              Combining Streaming Telemetry with Other Data Sources
+              From the network operations perspective, streaming telemetry can improve efficiency in many use cases, including:
+              • Detecting problems by setting up network monitors and alerts based on pre-configured thresholds or network performance baselines
+              • Troubleshooting connectivity and performance issues
+              • Planning for network capacity according to usage and budgets
+              • And much more… especially when we are able to use AI or machine-learning techniques to make automated decisions based on telemetry data.
+              However, streaming telemetry shouldn’t be the only data source that drives these capabilities. As an example:
+              Let’s say that you, as a network operator, want to be notified when utilization is high for critical backbone links. The next step would be to determine the characteristics of the traffic that’s driving up utilization. Which applications, clients, and servers are prominent on the highly-utilized links and can thus be used to make vaious optimization decisions (e.g., changing traffic patterns)?
+              An appropriate approach could be:
+                1. Use streaming telemetry metrics as a set of indicators of thresholds, and then
+                2. Use NetFlow to figure out what type of traffic is causing it.
+              
+              From <https://www.kentik.com/blog/how-to-maximize-the-value-of-streaming-telemetry-for-network-monitoring-and/> 
           </p>
           <p class="normal-text">
+              Technical debt is a term that conceptualizes the tradeoff between the short-term benefits of rapid delivery and the long-term value of developing a software system that is easy to evolve, modify, repair, and sustain. Like financial debt, technical debt can be a burden or an investment. Technical debt can be a burden when it is taken on unintentionally without a solid plan to manage it. Technical debt can also be part of an intentional investment strategy that speeds up development … as long as you have a plan to pay it back before the interest swamps your principal.  
+              From <https://www.sei.cmu.edu/our-work/projects/display.cfm?customel_datapageid_4050=6520>
+          </p>
+          <p class="normal-text">
+            When it comes to software development, technical debt is the idea that certain necessary work gets delayed during the development of a software project in order to hit a deliverable or deadline.
 
+            Technical debt is the coding you must do tomorrow because you took a shortcut in order to deliver the software today. <https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt/>
           </p>
 
             <h5 class="title">Working Processes</h5>
               a. Define working processes (project management, prioritization, bug triage, tech debt 
             management, etc.)
             <p class="normal-text">
+              A critical product insight is understanding user engagement (who is using the product, how often, what flows, etc.). Typically, a data pipeline is built to aggregate the user clickstream details, scripts/programs in spark, hive, impala, etc. to cleanse, process and extract the engagement metrics. The pipeline can be running daily, hourly, or in real-time. 
+
+              Now, multiply the number of such pipelines by 1000s given the different types of business dashboards, ML models, data products that a typical enterprise runs today. How do you manage and optimize the performance, SLA, cost, resource allocation, quality of these pipelines processing data at petabyte scale? This is a non-trivial problem given the plethora of technology building blocks involved in a data pipeline and the deep expertise required to efficiently map pipeline configurations to workload and application requirements.    
+              Enter Data Science for Big Data Telemetry. By analyzing billions of data points aggregated across hardware-, cluster-, job-, and application-level, the goal is to provide data users and engineers an understanding into: 1) What is the current state; 2) Why root-causes and signals; 3) How-to tune the application, cluster, resource allocation to get to an optimal state. Data pipelines today are treated no longer as an IT overhead, but as part of the business differentiator powering the insights, data products, AI/ML explorations within the enterprise. Data Science for Big Data Telemetry is critical in answering questions such as:
+                • How much budget do I need for running my pipelines based on workload patterns (especially in the cloud)?
+                • Why is this spark application running slow?
+                • How do I improve the resource utilization of the big data cluster?
+                • Is my CPU-memory allocation within the cluster balanced?
+                • Is a particular big data application rogue?
+                • Which cloud instance types should I migrate when moving from on-premise to cloud?
+                • Given the optimization goal (such as cost, performance), finding the best configuration to run the big data pipeline?  
+
+              From <https://www.linkedin.com/pulse/unraveling-data-science-big-telemetry-join-mission-sandeep/> 
+
+            </p>
+            <p class="normal-text">
                 "The majority of companies today realize the value of a data-driven business strategy and are in need of talented individuals to provide insight into the constant stream of collected information. Research shows that nearly 70 percent of U.S. executives say they will prefer job candidates with data skills by 2021, and the demand for analysts will only grow as we continue to digitize our physical world.
                 If you’re just starting your research and are wondering how to make the transition to a career in data analytics, you’re not alone. Scanning job postings for data-driven positions is a great starting point, but many analyst roles are highly nuanced, making it difficult to discern which skills are the most necessary to invest in.""
-              
+
               From <https://www.northeastern.edu/graduate/blog/data-analyst-skills/> 
             </p>
             <p class="normal-text">
+                But first, let’s define telemetry and what it means for gaming companies. Defined as an automated communications process of recording and receiving data, telemetry is utilized in wide range of industries. In the gaming industry, telemetry is a fundamental part of game analytics. In fact, it’s the core of the game analytics realm in a lot of ways.
+                What’s more, the definition of telemetry can be simplified even more as the ability to collect multiple variables and data sets over time.
+                Gaming telemetry or recording and receiving data on user behavior covers a lot of activities – in fact, everything from the naming conventions and structure of the data itself to the operations performed on it could be covered under that umbrella term. However, it’s often also used to describe the raw data itself as it exists in analytics software or reports. And of course, the goal of all of this is improving performance and solving problems in game development, marketing, and research.
 
+                From <https://gameanalytics.com/blog/maximizing-the-value-of-player-data/#telemetry-in-the-context-of-gaming> 
             </p>
 
             <h5 class="title">Technology</h5>
               b. Select technologies/platforms and tools
               <p class="normal-text">
                   "The App development industry is the most competitive and rewarding industry of this decade. Business owners that want to start a new business or want to expand their existing business are making app development their first and foremost priority.
-                App development is easier and simpler with MEAN stack and Full-stack developers. However, due to the increasing demand for app development, getting hold of a developer’s expert in MEAN technology and Full-stack is harder and expensive."
-                
-                From <https://www.softsuave.com/blog/mean-stack-vs-full-stack-developer-hire-for-your-next-project/> 
+                  App development is easier and simpler with MEAN stack and Full-stack developers. However, due to the increasing demand for app development, getting hold of a developer’s expert in MEAN technology and Full-stack is harder and expensive."
+
+                  From <https://www.softsuave.com/blog/mean-stack-vs-full-stack-developer-hire-for-your-next-project/> 
               </p>
               <p class="normal-text">
 
+                  telemetry’s primary benefit is found in a combination of the data it gleans and how that data is used to generate insights.
+
+                  OpenTelemetry is a cloud-native, vendor-neutral collection of application programming interfaces (APIs), tools, and software development kits (SDKs). It’s used to generate telemetry data, as well as collect and export it. You can then use what OpenTelemetry produces to gain insights into the way your software performs or behaves.
+                  OpenTelemetry supports a variety of languages, including:
+                  • Java
+                  • C#
+                  • C++
+                  • JavaScript
+                  • Python
+                  • Rust
+                  • Erlang/Elixir
+                  OpenTelemetry also integrates with many common libraries and frameworks, including:
+                  • MySQL
+                  • Django
+                  • Redis
+                  • Kafka
+                  • Jetty
+                  • RabbitMQ
+                  • Akka
+                  • Spring
+                  • Flask
+                  • gorilla/mux
+                  • net/http
+                  • WSGI
+                  • JDBC
+                  • PostgreSQL
+                  With OpenTelemetry, you can forward telemetric data from your software and services to analysis tools. This allows you to gather, organize, and analyze telemetry data to gain insights.
+
+                  From <https://www.stackstate.com/blog/the-ultimate-guide-to-telemetry> 
               </p>
 
             <h5 class="title">Developing, Testing, Releasing</h5>
@@ -253,8 +335,7 @@
               <p class="normal-text">
                   "Identifying and dealing with outliers can be tough, but it is an essential part of the data analytics process, as well as for feature engineering for machine learning. So how do we find outliers?"
 
-                  From <https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/> 
-                
+                  From <https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/>
               </p>
               <p class="normal-text">
 

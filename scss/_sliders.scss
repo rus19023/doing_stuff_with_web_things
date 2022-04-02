@@ -1,0 +1,189 @@
+// input[type="checkbox"][id^="myCheckbox"] {
+//     display: none;
+// }
+
+.slider-label {
+  border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+label img {
+    height: 150px;
+    width: 100px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+}
+
+:checked + label {
+    border-color: #ddd;
+}
+
+:checked + label:before {
+    content: "✓";
+    background-color: grey;
+    transform: scale(1);
+}
+
+:checked + label img {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+}
+
+.sc-slider-ot {
+    width: 100px;
+    height: 150px;
+    background: url('https://rus19023.github.io/scripturechase/src/img/ot/three_men_in_fiery_furnace-ot-tall.webp') no-repeat center center;
+    margin: 2% auto;
+    border-radius: $radius;
+    animation: sc-slide-ot 20s ease-in-out infinite;
+}
+
+@keyframes sc-slide-ot {
+    20% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+    40% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/moses_brass_serpent-ot-tall.webp') no-repeat center center;
+    }
+    60% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/joseph_resists_potiphars_wife-ot-tall.webp') no-repeat center center;
+    }
+    80% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/hannah_presents_son_samuel_barrett-ot-tall.webp') no-repeat center center;
+    }
+    100% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+}
+
+.sc-slider-ot:hover, .progress-bar:hover {
+    animation-play-state: paused;
+}
+
+.progress-bar {
+    position: relative;
+    top: -5px;
+    width: 680px;
+    height: 5px;
+    background: #000;
+    animation: fullexpand 25s ease-out infinite;
+}
+
+@keyframes fullexpand {
+    /* In these keyframes, the progress-bar is stationary */
+    0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+    /* In these keyframes, the progress-bar starts to come alive */
+    4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+
+    /* In these keyframes, the progress-bar moves forward for 3 seconds */
+    16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+
+    /* In these keyframes, the progress-bar has finished his path */
+    17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+
+    /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+    18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+
+.sc-slider-nt {
+    width: 100px;
+    height: 150px;
+    background: url('https://rus19023.github.io/scripturechase/src/img/ot/three_men_in_fiery_furnace-ot-tall.webp') no-repeat center center;
+    margin: 2% auto;
+    border-radius: $radius;
+    animation: sc-slide-ot 20s ease-in-out infinite;
+}
+
+@keyframes sc-slide-nt {
+    20% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+    40% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/moses_brass_serpent-ot-tall.webp') no-repeat center center;
+    }
+    60% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/joseph_resists_potiphars_wife-ot-tall.webp') no-repeat center center;
+    }
+    80% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/hannah_presents_son_samuel_barrett-ot-tall.webp') no-repeat center center;
+    }
+    100% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+}
+
+.sc-slider-bom {
+    width: 100px;
+    height: 150px;
+    background: url('https://rus19023.github.io/scripturechase/src/img/ot/three_men_in_fiery_furnace-ot-tall.webp') no-repeat center center;
+    margin: 2% auto;
+    border-radius: $radius;
+    animation: sc-slide-ot 20s ease-in-out infinite;
+}
+
+@keyframes sc-slide-bom {
+    20% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+    40% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/moses_brass_serpent-ot-tall.webp') no-repeat center center;
+    }
+    60% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/joseph_resists_potiphars_wife-ot-tall.webp') no-repeat center center;
+    }
+    80% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/hannah_presents_son_samuel_barrett-ot-tall.webp') no-repeat center center;
+    }
+    100% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+}.sc-slider-dc {
+    width: 100px;
+    height: 150px;
+    background: url('https://rus19023.github.io/scripturechase/src/img/ot/three_men_in_fiery_furnace-ot-tall.webp') no-repeat center center;
+    margin: 2% auto;
+    border-radius: $radius;
+    animation: sc-slide-ot 20s ease-in-out infinite;
+}
+
+@keyframes sc-slide-dc {
+    20% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+    40% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/moses_brass_serpent-ot-tall.webp') no-repeat center center;
+    }
+    60% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/joseph_resists_potiphars_wife-ot-tall.webp') no-repeat center center;
+    }
+    80% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/hannah_presents_son_samuel_barrett-ot-tall.webp') no-repeat center center;
+    }
+    100% {
+      background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
+    }
+}

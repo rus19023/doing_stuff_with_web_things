@@ -33,6 +33,7 @@ body {
     display: grid;
     max-width: 80%;
     margin: 0 auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "left"
         "right";
@@ -48,9 +49,11 @@ body {
     }
     & #left {
         grid-area: left;
+        margin: 0 auto;
     }
     & #right {
         grid-area: right;
+        margin: 0 auto;
     }
 }
 
@@ -103,9 +106,9 @@ body {
             & .markbtn {
                 grid-area: markbtn;
                 border-radius: 5px;
-                width: 1rem;
-                height: 1rem;
-                padding: 2%;
+                width: 1.5rem;
+                height: 1.5rem;
+                padding: 1%;
                 margin: auto;
             }
             & #itemtext {
@@ -167,8 +170,11 @@ body {
     "srchbar";
     & #sortitems {
         grid-area: sort;
+        display: flex;
+        flex-direction: row;
         padding: 1%;
         margin: 1%;
+        border: none;
         & h3 {
             font-family: $fontsecond;
             padding: 0;
