@@ -685,7 +685,7 @@ label img {
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, #0059b8 40%, #9fa290 50%, #ffd900 60%);
+  background: linear-gradient(180deg, hsl(211deg, 100%, 36%) 40%, hsl(69deg, 9%, 60%) 50%, hsl(51deg, 100%, 50%) 60%);
   position: absolute;
   top: 0;
   width: 100%;
@@ -829,7 +829,7 @@ main, header, section, footer {
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: linear-gradient(180deg, #0059b8 40%, #9fa290 50%, #ffd900 60%);
+  background: linear-gradient(180deg, hsl(211deg, 100%, 36%) 40%, hsl(69deg, 9%, 60%) 50%, hsl(51deg, 100%, 50%) 60%);
   border-radius: 10px;
 }
 
@@ -839,7 +839,7 @@ main, header, section, footer {
   height: 100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: linear-gradient(180deg, #0059b8 40%, #9fa290 50%, #ffd900 60%);
+  background: linear-gradient(180deg, hsl(211deg, 100%, 36%) 40%, hsl(69deg, 9%, 60%) 50%, hsl(51deg, 100%, 50%) 60%);
   border-radius: 10px;
   transform: rotateY(180deg);
 }
