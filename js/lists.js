@@ -265,6 +265,13 @@ export const list325 = [
     }
   ];
 
+  export const listcsa = [
+    {
+      name: "Presentation: Remote Work Security",
+      url: "https://docs.google.com/presentation/d/e/2PACX-1vQS_n-iAUCKBmTuE8oMwD5cNRCVL55eS9Wh15lF8z8S6cgKx1-W4wZ3rRxE_6WgwNZtKwJlEH_eU-KA/pub?start=false&loop=false&delayms=30000",
+    }
+  ];
+
   export const certs = [
     {
         cert: "01",

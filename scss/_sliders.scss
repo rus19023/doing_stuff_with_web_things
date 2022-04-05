@@ -42,7 +42,7 @@ label img {
 
 :checked + label:before {
     content: "✓";
-    background-color: grey;
+    background-color: $limegreen;
     transform: scale(1);
 }
 

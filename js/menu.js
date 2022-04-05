@@ -36,6 +36,7 @@ siteTitle("330");
 siteTitle("340");
 // Todo: get other courses added here with their index and links
 siteTitle("home");
+siteTitle("csa");
 siteTitle("courses");
 
 
@@ -98,6 +99,7 @@ getIndexPageTitle("CIT327-indexpagetitle");
 getIndexPageTitle("WDD330-indexpagetitle");
 getIndexPageTitle("CSE340-indexpagetitle");
 getIndexPageTitle("WDD331-indexpagetitle");
+getIndexPageTitle("CSA-indexpagetitle");
 
 
 // set page title for WDD330 weekly pages
