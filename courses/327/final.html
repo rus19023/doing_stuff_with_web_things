@@ -130,25 +130,101 @@
                   Big Data Integration: “...differs from traditional data integration in many dimensions: Volume, Velocity, Variety and Veracity, which are the big data main characteristics” (source)                </p>
 
                   <h3 class="title">Sample Paper Outline (Save as week13 on Sat eve for next week)</h3>
+
+                  Do we have the data in the data warehouse If not, where does that data exist, is it in a relational database is it a no sequel database is it in unstructured data in files.
+21:24
+If once we identify that then the next thing we have to figure out is what do we need to do with that data so that we can get it into the data warehouse so that we can.
+21:32
+So that we can answer the business question that has come up that's the incremental portion, but when you first start out.
+21:41
+you're usually you you're usually told we want to reporting program we want to do, reporting and you've got to go out and build out the base architecture.
+21:52
+knowing what your environment is and say okay well how am I going to how am I going to integrate that information.
+21:58
+What type of data warehouse am I going to have what type of reporting, am I going to have that's going to minimize tech debt but maximize telemetry and and you're going to start with your first question through that that process once it's built.
+
+What you're going to do is you're going to want to compare inman versus.
+23:34
+England versus kimball.
+23:36
+So, knowing that kimball is your star scheme ID normalized inman is normalized and when, would you use either one.
+23:47
+that's going to be your your first decision and you're going to have to take a look and say what is the how do I, how do I pull the data from my source systems into that.
+23:59
+Now, when when you're looking at choosing your analytical tool if let's say that you're talking you make the assumption that this is a small business.
+24:10
+You know a lot of times and I don't I can't remember who who argued for in men and who argued.
+24:16
+kimball in the first assignment, but a lot of the people that argued for kimball said, you know we're making the assumption that this is a smaller business just getting started out.
+24:26
+Well, if it's a smaller business just getting started out and they don't want to do the full inman model and they just don't want to do data marts with a specific.
+24:34
+Area of data, like accounting data or HR data they're probably not going to get into these advanced analytics and so as they as they select an analytics tool.
+24:44
+Reporting and business intelligence, are going to be probably their primary goal, so, if you look, if you want to if you're saying my business is a smaller business.
+24:53
+you're probably going to pick the data Mart with a specific subject area you're probably going to pick a off the shelf reporting tool you're probably going to pick some type of an ETF tool that that.
+25:06
+Can kind of read relational databases and maybe no sequel databases, but you might not be you might not need stream processing, you might not need.
+25:16
+hadoop and mapreduce because your databases your operational databases might not be horizontally scale you probably have a single instance relational database and maybe a single instance of Cassandra or of.
+25:34
+mongo and so you're not talking about these huge architectures that have multiple nodes of multiple and multiple instances now if you say my business is big.
+25:47
+And i'm trying to ingest all of my subject areas that might require that you take the approach of i'm going to do admin.
+25:55
+i'm not only going to have a business intelligence tool but I needed to do a little bit more and you're going to want maybe tablo can get you into some data mining or some forecasting.
+26:06
+or power bi.
+26:08
+Or you might say, i'm going to use tableau for my reporting and business intelligence, but i'm going to do more analytic programming with our or SAS to get into these some of these other areas.
+26:21
+In that case, you might have a much more complex operational environment.
+26:26
+You might have multiple relational databases, you might have a mongo database like family search where there's probably hundreds of nodes.
+26:36
+And you have to to be able to pull data from all different places and you might need stream processing.
+26:43
+And so, with a bigger business, you might not be able to do with just a kimball and a simple reporting database, you might have to use hadoop and an inman model and and not only a reporting instance, but you might have to use some analytic.
+26:59
+Programming to make that all work so depending on depending on what you make as the assumption of the business that you're representing is really going to determine which path you're going to get to to this analytic tool recommendation for your CIO.
+
+the Google blog it's a big table this is for fast reads and writes.
+35:46
+For heavy reads and writes.
+35:48
+Big query is large scale ad hoc sequel based on lap analysis.
+35:54
+So yeah once you put it in here, and you need a lab analysis that's where big query Is this because it's a column store it's fast reads and writes.
+user avatar
+cai
+36:05
+And that is similar so, then you have like redshift right that's similar to big query but then you have big table that's similar to like EC to.
+
+kUBERNETES
+
+container management tool it's it's a scripting tool for your container management, it allows you to automate the process of creating containers like PC to configuring those and deploying knows.
+
+
                   <h1 class="title">DELETE UP TO HERE     ///\\\   DUE APRIL 7, 2022   ///\\\</h1>
                   <br><br><br>
 
 
         <h2 class="title">Create and Maintain a Manageable Corporate Data Warehouse</h2>
         <h3 class="title">Introduction</h3>
-        1. Section 1 - Objective
+        
           <p class="normal-text">
-              This paper is to share concepts I have learned about Big Data Analysis and Warehousing, and the accompanying Technology, Methodology, available Tools and Techniques.
+              This paper is to share concepts I have learned about Big Data Analysis and Warehousing, and the accompanying Technology, Methodology and the available Tools and Techniques.
           </p>
           <p class="normal-text">
               With the massive numbers of available tools, frameworks, libraries, databases, companies and corporations, developers, techniques and other resources available today, that is increasing at rocket speed, managing Big Data is a colossal issue.
           </p>
-          <h4 class="title">What is Big Data?</h4>
+          <h3 class="title">Big Data</h3>
           <p class="normal-text">
               Many data relationships can be represented by a hierarchical or tree structure. In the Enterprise Database Server, these relationships can be represented by including a data set among the items of a record. If a data set contains another data set as an item, then the contained data set is called an embedded data set, and the data record in which it is declared is called the owner or master of the embedded structure. Any number of embedded records can belong to each master.
             Sets, subsets, and accesses can be embedded within a data set.
 
-              From <https://public.support.unisys.com/aseries/docs/clearpath-mcp-18.0/86000213-420/section-000019644.html> 
+              From <https://public.support.unisys.com/aseries/docs/clearpath-mcp-18.0/86000213-420/section-000019644.html>
           </p>
           <p class="normal-text">
             One popular interpretation of big data refers to extremely large data sets. A National Institute of Standards and Technology report defined big data as consisting of “extensive datasets—primarily in the characteristics of volume, velocity, and/or variability—that require a scalable architecture for efficient storage, manipulation, and analysis.” Some have defined big data as an amount of data that exceeds a petabyte—one million gigabytes.
@@ -156,32 +232,67 @@
             From <https://datasciencedegree.wisconsin.edu/data-science/what-is-big-data/> 
           </p>
 
-      <h4 class="title">Project Setup</h4>
-          2. Section 2 – Project Setup
-          <p class="normal-text">
+        <h3 class="title">Data Models</h3>
+            2. Section 2 – Project Setup
+            <p class="normal-text">
+                Which model to use when: Inmon or Kimball?
 
-          </p>
-          <p class="normal-text">
+            </p>
+            <p class="normal-text">
 
-          </p>
+            </p>
 
-          <h5 class="title">Drivers and Outcomes</h5>
-              a. Identify project drivers and desired outcomes (the “why?” and maybe “when?”)
-              <p class="normal-text">
+            <h3 class="title">Data Transformation</h3>
+            What are the methods and tools and techniques that i'm going to be utilizing that's going to be your transformation stage.
+
+            How does that fit into my big data elements of my of my operational systems from there that's going to be the that's going to be the PRIMARY PORTION of your paper and I and again
+
+            I would say that you said that goes right along with this so kimball or inman what methods or techniques, do you agree that you, you need this ETF layer
+            16:38
+            What would you use for your analytics.
+            16:42
+            And then, finally, how does it fit in with those other these other.
+            16:47
+            pieces of data visualization analytics all lab document management decision services integrations all of these are really just covered in what we talked about.
+
+            
+                
+            <h4 class="title">Requirements and Constraints</h4>
+                a. Identify project drivers and desired outcomes (the “why?” and maybe “when?”)
+                c. Document requirements and constraints (the “what?”)
+                <p class="normal-text">
                   "The data requirements analysis process employs a top-down approach that emphasizes business-driven needs, so the analysis is conducted to ensure the identified requirements are relevant and feasible. The process incorporates data discovery and assessment in the context of explicitly qualified business data consumer needs. Having identified the data requirements, candidate data sources are determined and their quality is assessed using the data quality assessment process described in chapter 11."
 
                   From <https://www.sciencedirect.com/topics/computer-science/data-requirement-analysis>
 
               </p>
+                <h4 class="title">Data Quality</h4>
+              
               <p class="normal-text">
-                  "Data visualization (or ‘data viz’) is one of the most important aspects of data analytics. Mapping raw data using graphical elements is great for aiding pattern-spotting and it’s useful for sharing findings in an easily digestible, eye-catching way. And while the priority should always be the integrity of your data, if done well, data visualization can also be a lot of fun.
-                  Master the art of data viz and you’ll soon be spotting trends and correlations, all while flexing your creative muscle."
+                "Data quality is crucial – it assesses whether information can serve its purpose in a particular context (such as data analysis, for example). So, how do you determine the quality of a given set of information? There are data quality characteristics of which you should be aware. 
+                 There are five traits that you’ll find within data quality: accuracy, completeness, reliability, relevance, and timeliness – read on to learn more.
+                   • Accuracy
+                   • Completeness
+                   • Reliability
+                   • Relevance
+                   • Timeliness"
 
+               From <https://www.precisely.com/blog/data-quality/5-characteristics-of-data-quality> 
+             </p>
+             
+             <h4 class="title">Data ?</h4>
+              <p class="normal-text">
 
-                  https://docs.google.com/presentation/d/e/2PACX-1vQS_n-iAUCKBmTuE8oMwD5cNRCVL55eS9Wh15lF8z8S6cgKx1-W4wZ3rRxE_6WgwNZtKwJlEH_eU-KA/pub?start=false&loop=false&delayms=30000
-
-                  From <https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/>
               </p>
+
+            <h4 class="title">Data Analysis</h4>
+              b. Establish the participants – stakeholders, technology team, etc. (the “who?”)
+              <p class="normal-text">
+                  "A data analyst takes the raw data and analyzes it to draw out useful insights. They then present these insights in the form of visualizations, such as graphs and charts, so that stakeholders can understand and act upon them. The kinds of insights gleaned from the data depends on the type of analysis performed. There are four main types of analysis used by data experts: Descriptive, diagnostic, predictive, and prescriptive. Descriptive analytics looks at what happened in the past, while diagnostic analytics looks at why it might have happened. Predictive and prescriptive analytics consider what is likely to happen in the future and, based on these predictions, what the best course of action might be."
+
+                  From <https://careerfoundry.com/en/blog/data-analytics/> 
+              </p>
+              <h3 class="title">Data Visualization</h3>
               <p class="normal-text col3">
                   <img src="../images/pivot.png" alt="pivot table image" class="fifty centered">
                   <img src="../images/piechart.png" alt="pivot table image" class="fifty centered">
@@ -192,38 +303,24 @@
                   Images from <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">Career Foundry online.</a>
               </p>
               <p class="normal-text">
+                  "Data visualization (or ‘data viz’) is one of the most important aspects of data analytics. Mapping raw data using graphical elements is great for aiding pattern-spotting and it’s useful for sharing findings in an easily digestible, eye-catching way. And while the priority should always be the integrity of your data, if done well, data visualization can also be a lot of fun.
+                  Master the art of data viz and you’ll soon be spotting trends and correlations, all while flexing your creative muscle."
 
-              </p>
 
-            <h5 class="title">Participants</h5>
-              b. Establish the participants – stakeholders, technology team, etc. (the “who?”)
-              <p class="normal-text">
-                  "A data analyst takes the raw data and analyzes it to draw out useful insights. They then present these insights in the form of visualizations, such as graphs and charts, so that stakeholders can understand and act upon them. The kinds of insights gleaned from the data depends on the type of analysis performed. There are four main types of analysis used by data experts: Descriptive, diagnostic, predictive, and prescriptive. Descriptive analytics looks at what happened in the past, while diagnostic analytics looks at why it might have happened. Predictive and prescriptive analytics consider what is likely to happen in the future and, based on these predictions, what the best course of action might be."
+                  https://docs.google.com/presentation/d/e/2PACX-1vQS_n-iAUCKBmTuE8oMwD5cNRCVL55eS9Wh15lF8z8S6cgKx1-W4wZ3rRxE_6WgwNZtKwJlEH_eU-KA/pub?start=false&loop=false&delayms=30000
 
-                  From <https://careerfoundry.com/en/blog/data-analytics/> 
+                  From <https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/>
               </p>
               <p class="normal-text">
 
               </p>
 
-          <h5 class="title">Requirements and Constraints</h5>
-              c. Document requirements and constraints (the “what?”)
-              <p class="normal-text">
-                 "Data quality is crucial – it assesses whether information can serve its purpose in a particular context (such as data analysis, for example). So, how do you determine the quality of a given set of information? There are data quality characteristics of which you should be aware. 
-                  There are five traits that you’ll find within data quality: accuracy, completeness, reliability, relevance, and timeliness – read on to learn more.
-                    • Accuracy
-                    • Completeness
-                    • Reliability
-                    • Relevance
-                    • Timeliness"
-
-                From <https://www.precisely.com/blog/data-quality/5-characteristics-of-data-quality> 
-              </p>
+          
               <p class="normal-text">
 
               </p>
 
-          <h5 class="title">Methodology</h5>
+          <h4 class="title">Methodology</h4>
             d. Choose the methodology - Inmon, Kimball, hybrid (the “how?”)
             <p class="normal-text">
 
@@ -232,7 +329,7 @@
 
             </p>
 
-        <h4 class="title">Project Evaluation</h4>
+        <h3 class="title">Project Evaluation</h3>
             3. Section 3 - Project Execution
             <p class="normal-text">
                 Combining Streaming Telemetry with Other Data Sources
@@ -259,7 +356,7 @@
             Technical debt is the coding you must do tomorrow because you took a shortcut in order to deliver the software today. <https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt/>
           </p>
 
-      <h5 class="title">Working Processes</h5>
+      <h4 class="title">Working Processes</h4>
               a. Define working processes (project management, prioritization, bug triage, tech debt 
             management, etc.)
             <p class="normal-text">
@@ -293,7 +390,7 @@
                 From <https://gameanalytics.com/blog/maximizing-the-value-of-player-data/#telemetry-in-the-context-of-gaming> 
             </p>
 
-            <h5 class="title">Technology</h5>
+            <h4 class="title">Technology</h4>
                 b. Select technologies/platforms and tools
                 <p class="normal-text">
                     "The App development industry is the most competitive and rewarding industry of this decade. Business owners that want to start a new business or want to expand their existing business are making app development their first and foremost priority.
@@ -334,7 +431,7 @@
                     From <https://www.stackstate.com/blog/the-ultimate-guide-to-telemetry> 
                 </p>
 
-            <h5 class="title">Developing, Testing, Releasing</h5>
+            <h4 class="title">Developing, Testing, Releasing</h4>
                 c. Begin developing, testing, releasing
                 <p class="normal-text">
                     "Identifying and dealing with outliers can be tough, but it is an essential part of the data analytics process, as well as for feature engineering for machine learning. So how do we find outliers?"
@@ -345,8 +442,50 @@
 
                 </p>
 
-            <h4 class="title"></h4>
-                4. Section 4 – Project Closer
+            <h3 class="title">Managing Telemetry and Technical Debt</h3>
+            <h4 class="title">Telemetry</h4>
+            " Measure project over time to ensure continued success"
+            <p class="normal-text">
+
+            </p>
+            <p class="normal-text">
+
+            </p>
+            <p class="normal-text">
+
+            </p>
+            <p class="normal-text">
+
+            </p>
+
+
+
+            <h4 class="title">Technical Debt</h4>
+            "Reasons of Technical Debts
+            There are two main reasons: Unwanted debts due to lacks of skill or knowledge and consciously accepted ones e.g. due to time pressure. But there are also many technical reasons for both categories [1]:
+                • Architectural principles are not adhered to, such as deviating from the layer model
+                • Poor technical infrastructure
+                • Lack of development standards and design patterns
+                • Inaccurate business requirements that are misunderstood and implemented
+                • Insufficient testing which results in unwanted errors
+                • Constantly changing or additional requirements, etc…"
+
+            <https://towardsdatascience.com/understand-and-fight-technical-debts-in-your-data-warehouse-d455afed770e></https:>
+            <p class="normal-text">"The Cloud Native Computing Foundation (CNCF) maintains an interactive graphic of the nearly 1,000 unique services that make up the cloud-native ecosystem, many of which are free and open source to boot. Additionally, each of the big three cloud providers—Amazon Web Services, Microsoft Azure, and Google Cloud—offers about 200 unique services to customers, across compute, storage, database, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
+
+                “The process of application development is simply too fragmented at this point; the days of every enterprise architecture being three-tier, every database being relational, and every business application being written in Java and deployed to an application server are over,” wrote RedMonk analyst Stephen O’Grady in a 2020 blog post. “The single most defining characteristic of today’s infrastructure is that there is no single defining characteristic. It’s diverse to a fault.”  <https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html>
+
+            </p>
+            <p class="normal-text">
+
+            </p>
+
+                <p class="normal-text">
+
+                </p>
+                <p class="normal-text">
+
+                </p>
                 <p class="normal-text">
 
                 </p>
@@ -354,16 +493,7 @@
 
                 </p>
 
-            <h5 class="title">Measuring Success</h5>
-                Measure project over time to ensure continued success
-                <p class="normal-text">
-
-                </p>
-                <p class="normal-text">
-
-                </p>
-
-            <h5 class="title">Ongoing Maintenance and Enhancement</h5>
+            <h4 class="title">Ongoing Maintenance and Enhancement</h4>
                 Establish maintenance process for ongoing sustainment and enhancement
                 <p class="normal-text">
 
@@ -468,7 +598,7 @@
                             line 298
                         </a>
                     </li>
-                    <li class="normal-text">
+                    <li class="normal-text">E
                         <a class="source" href="https://www.stackstate.com/blog/the-ultimate-guide-to-telemetry">
                             line 331
                         </a>
@@ -479,13 +609,12 @@
                         </a>
                     </li>
                     <li class="normal-text">
-                        <a class="source" href="">
-                            linktext
+                        <a class="source" href="https://towardsdatascience.com/understand-and-fight-technical-debts-in-your-data-warehouse-d455afed770e">
+                            Lauer, Christian, "9 Technical Debts in your Data Warehouse - Reasons and how to solve them", Towards Data Science, 26 December 2020
                         </a>
                     </li>
                     <li class="normal-text">
-                        <a class="source" href="">
-                            linktext
+                        <a href="https://www.infoworld.com/author/Scott-Carey/">Carey, Scott</a>, <a class="source" href="https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html">"Complexity is killing software developers", InfoWorld, 1 November 2021
                         </a>
                     </li>
                     <li class="normal-text">

@@ -1,6 +1,5 @@
-body {
-  background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -390,12 +389,12 @@ input[type=checkbox].markbtnX {
 }
 
 label:before {
-  background-color: white;
+  background-color: #00b705;
   color: white;
   content: " ";
   display: block;
   border-radius: 50%;
-  border: 1px solid grey;
+  border: 1px solid #00b705;
   position: absolute;
   top: -5px;
   left: -5px;
@@ -420,8 +419,10 @@ label img {
 
 :checked + label:before {
   content: "✓";
+  font-size: 2em;
+  margin: auto;
   background-color: #00b705;
-  transform: scale(1);
+  transform: scale(2);
 }
 
 :checked + label img {
@@ -721,6 +722,7 @@ a :visited {
 
 .labels {
   border-radius: 10px;
+  border: 2px solid white;
 }
 
 #social-share {
@@ -1124,7 +1126,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .markbtn {
-  border: 2px solid white;
   border-radius: 10px;
   margin: 0.5%;
   padding: 0.5%;

@@ -12,12 +12,12 @@
 }
 
 label:before {
-    background-color: white;
+    background-color: $limegreen;
     color: white;
     content: " ";
     display: block;
     border-radius: 50%;
-    border: 1px solid grey;
+    border: 1px solid $limegreen;
     position: absolute;
     top: -5px;
     left: -5px;
@@ -42,8 +42,10 @@ label img {
 
 :checked + label:before {
     content: "✓";
+    font-size: 2em;
+    margin: auto;
     background-color: $limegreen;
-    transform: scale(1);
+    transform: scale(2);
 }
 
 :checked + label img {

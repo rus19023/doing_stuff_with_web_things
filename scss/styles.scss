@@ -47,7 +47,7 @@ a {
     z-index: -1;
 }
 
-.labels { border-radius: $radius; }
+.labels { border-radius: $radius; border: $todoborder; }
 
 #social-share {
     display: flex;
@@ -384,7 +384,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .markbtn {
-    border: $todoborder;
     border-radius: 10px;
     margin: .5%;
     padding: .5%;
