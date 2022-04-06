@@ -19,8 +19,8 @@
 }
 
 #question {
-   font-size: 14px;
-   min-height: 4rem;
+   font-size: 12px;
+   min-height: 6rem;
 }
 
 #result{
@@ -32,7 +32,7 @@
     border: $todoborder;
     border-radius: $radius;
     width: 90%;
-    margin: 2vh auto;
+    margin: 2% auto;
 }
 
 .correct {

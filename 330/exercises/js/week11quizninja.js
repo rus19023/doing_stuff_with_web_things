@@ -38,6 +38,7 @@ console.log(url3);
 fetch(url3)
 .then(res => res.json())
 .then(quiz => {
+    console.log(quiz);
     view.start.addEventListener('click', () => game.start(quiz.questions), false);
     view.response.addEventListener('click', (event) => game.check(event), false);
 });

@@ -332,8 +332,8 @@ input[type=checkbox].markbtnX {
 }
 
 #question {
-  font-size: 14px;
-  min-height: 4rem;
+  font-size: 12px;
+  min-height: 6rem;
 }
 
 #result {
@@ -345,7 +345,7 @@ input[type=checkbox].markbtnX {
   border: 2px solid white;
   border-radius: 10px;
   width: 90%;
-  margin: 2vh auto;
+  margin: 2% auto;
 }
 
 .correct {
