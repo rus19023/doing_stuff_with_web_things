@@ -277,37 +277,37 @@ export const list325 = [
         cert: "01",
         certname: "Certificate: Computer Programming",
         certdate: "2020-07-22",
-        certurl: "https://rus19023.github.io/myportfolio/images/computer_programming_eDiploma.pdf",
+        certurl: "computer_programming_eDiploma.pdf",
     },
     {
         cert: "04",
         certname: "Certificate: Databases",
         certdate: "2022-04-15 (Anticipated)",
-        certurl: "https://rus19023.github.io/myportfolio/images/databases_eDiploma.pdf",
+        certurl: "/databases_eDiploma.pdf",
     },
     {
         cert: "03",
         certname: "Certificate: System Administration",
         certdate: "2021-12-15",
-        certurl: "https://rus19023.github.io/myportfolio/images/system_administration_eDiploma.pdf",
+        certurl: "/system_administration_eDiploma.pdf",
     },
     {
         cert: "02",
         certname: "Certificate: Web Frontend Development",
         certdate: "2020-12-16",
-        certurl: "https://rus19023.github.io/myportfolio/images/web_frontend_eDiploma.pdf",
+        certurl: "/web_frontend_eDiploma.pdf",
     },
     {
         cert: "05",
         certname: "Certificate: Web Backend Development",
         certdate: "2022-07-22 (Anticipated)",
-        certurl: "https://rus19023.github.io/myportfolio/images/web_backend_eDiploma.pdf",
+        certurl: `web_backend_eDiploma.pdf`,
     },
     {
         cert: "06",
         certname: "Degree: Bachelor of Science in Applied Technology",
         certdate: "2024-12-22 (Anticipated)",
-        certurl: "https://rus19023.github.io/myportfolio/images/applied_technology_eDiploma.pdf",
+        certurl: "applied_technology_eDiploma.pdf",
     },
 ];
 
