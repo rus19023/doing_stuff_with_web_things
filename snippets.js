@@ -41,6 +41,47 @@ function onTap(event) {
     }
   }
 
+  // Create a new json file for the mastery scripture passages
+            // getQuizArray.forEach(vol => {
+            //         vol.bom.forEach(el => {
+            //             if (el.mastery) {
+            //                 console.log(el);
+            //                 newArray.push(el);
+            //             }
+            //         });
+            //         vol.ot.forEach(el => {
+            //             if (el.mastery) {
+            //                 console.log(el);
+            //                 newArray.push(el);
+            //             }
+            //         });
+            //         vol.nt.forEach(el => {
+            //             if (el.mastery) {
+            //                 console.log(el);
+            //                 newArray.push(el);
+            //             }
+            //         });
+            //         vol.dc.forEach(el => {
+            //             if (el.mastery) {
+            //                 console.log(el);
+            //                 newArray.push(el);
+            //             }
+            //         });
+            //     console.log(newArray);
+            //     const text = JSON.stringify(newArray);
+            //     const name = "sample.json";
+            //     const type = "text/plain";
+            //     // create file
+            //     const a = document.createElement("a");
+            //     const file = new Blob([text], { type: type });
+            //     a.href = URL.createObjectURL(file);
+                   //  auto download the json file
+            //     a.download = name;
+            //     document.body.appendChild(a);
+            //     a.click();
+            //     a.remove();
+            // });
+
 
 
 //   const key = Object.keys(localStorage).find(key => key.includes(lskey));

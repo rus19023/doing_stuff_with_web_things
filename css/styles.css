@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -315,14 +316,13 @@ input[type=checkbox].markbtnX {
   height: 800px;
   background-size: 100% auto;
   padding-top: 10px;
+  margin: 0 auto;
 }
 
 .quiz-body {
   border: 2px solid white;
   border-radius: 10px;
   margin: 0 auto;
-  padding: 10px 20px 50px 20px;
-  box-shadow: 4px 4px 11px 3px rgba(0, 0, 0, 0.3);
 }
 
 .quizhead {
@@ -406,9 +406,17 @@ label:before {
   transform: scale(0);
 }
 
+img {
+  border-radius: 10px;
+}
+
 label img {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0;
   height: 150px;
   width: 100px;
+  margin-bottom: 1.5rem;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;
 }
@@ -484,7 +492,7 @@ label img {
 .progress-bar {
   position: relative;
   top: -5px;
-  width: 680px;
+  width: 94%;
   height: 5px;
   background: #000;
   -webkit-animation: fullexpand 25s ease-out infinite;

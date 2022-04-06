@@ -3,16 +3,13 @@
     height: 800px;
     background-size: 100% auto;
     padding-top: 10px;
+    margin: 0 auto;
 }
 
 .quiz-body {
     border: $todoborder;
     border-radius: $radius;
     margin: 0 auto;
-    padding: 10px 20px 50px 20px;
-    -webkit-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-    -moz-box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
-    box-shadow: 4px 4px 11px 3px rgba(0,0,0,0.3);
 }
 
 .quizhead {
