@@ -241,3 +241,40 @@ document.getElementById("link").addEventListener('click', function(e) {
   //     }
   //   });
   //}
+
+
+
+// $.ajax({
+//     url: url6,
+//     cache: false
+//   })
+//     .done(function( html ) {
+//       $( "#results" ).append( html );
+//     });
+
+// $(document).ready(function() {
+//     //$("button").click(function(){
+//         $.ajax({
+//             url: url6,
+//             error: function(xhr) {
+//                 console.log("An error occured: " + xhr.status + " " + xhr.statusText);
+//             }
+//             .done(function( html ) {
+//               $( "#results" ).append( html );
+//             })
+//         });
+//     //});
+// });
+
+
+next.addEventListener('click', () => {
+  //flipcard.classList.toggle('flipcard');
+  // get next card
+
+});
+
+hint.addEventListener('click', () => {
+  //flipcard.classList.toggle('flipcard');
+  // get next hint
+  
+});

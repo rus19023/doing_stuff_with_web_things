@@ -59,18 +59,19 @@ a {
     background: black;
     margin: 2%;
     padding: 2%;
-    & button {
+    transform: none;
+    & div {
         margin: 2%;
         padding: 1%;
         border-radius: $radius;
         background: black;
         width: 2rem;
+        & :hover {
+            background: black;
+            transform: scale(1.25);
+            transition: all .1s ease-in-out;
+        }
     }
-    & :hover {
-        background: black;
-        transform: scale(1.25);
-        transition: all .15s ease-in-out;
-      }
 }
 
 h3.small {
@@ -279,8 +280,7 @@ h2#tab-bar {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
 }
 

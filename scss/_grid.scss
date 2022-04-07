@@ -5,26 +5,26 @@ body {
     "footer";
     & header {
         grid-area: header;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         & #main-nav {
-        display: grid;
-        grid-area: main-nav;
-        grid-template-areas:
-        "list";
-        & ul {
             display: grid;
-            grid-area: list;
+            grid-area: main-nav;
             grid-template-areas:
-            "list-item";
-            & li {
-            display: grid;
-            & a {
-                grid-area: list-item;
-          }
+            "list";
+            & ul {
+                display: grid;
+                grid-area: list;
+                grid-template-areas:
+                "list-item";
+                & li {
+                    display: grid;
+                    & a {
+                        grid-area: list-item;
+                    }
+                }
+            }
         }
-      }
     }
-  }
 }
 
 #gridcontainer {

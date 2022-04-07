@@ -1,11 +1,12 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
 body header {
   grid-area: header;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 body header #main-nav {
   display: grid;
@@ -377,6 +378,46 @@ input[type=checkbox].markbtnX {
   display: block;
   max-width: 100%;
   font-size: 24px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
 }
 
 #flipcontainer {
@@ -789,18 +830,19 @@ a :visited {
   background: black;
   margin: 2%;
   padding: 2%;
+  transform: none;
 }
-#social-share button {
+#social-share div {
   margin: 2%;
   padding: 1%;
   border-radius: 10px;
   background: black;
   width: 2rem;
 }
-#social-share :hover {
+#social-share div :hover {
   background: black;
   transform: scale(1.25);
-  transition: all 0.15s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 h3.small {
@@ -1065,8 +1107,7 @@ h2#tab-bar a {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
 }
 

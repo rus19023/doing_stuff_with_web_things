@@ -171,8 +171,24 @@ export const list225 = [
 
 export const list230 = [
   {
+    name: "WDD230 Main Portal - Doris Rush-Lopez",
+    url: "https://rus19023.github.io/WDD230/",
+  },
+  {
     name: "",
     url: "",
+  },
+  {
+    name: "",
+    url: "",
+  },
+  {
+    name: "WDD230 First Project - Edge of the Cloud  - live weather site",
+    url: "https://rus19023.github.io/WDD230/lesson-11/",
+  },
+  {
+    name: "Final Project - Salmon River Adventures - whitewater rafting site",
+    url: "https://rus19023.github.io/salmon-river-adventures/",
   }
 ];
 
@@ -775,7 +791,7 @@ export const mainNav = [
           url: `${getBase()}week13.html`,
       },
       {
-          name: "Week 14: Manageable Corporate Data Warehouse",
+          name: "Week 14 - Final Paper: Manageable Corporate Data Warehouse",
           url: `${getBase()}week14.html`,
       },
 ];
