@@ -127,6 +127,7 @@
                     Big Data Integration: “...differs from traditional data integration in many dimensions: Volume, Velocity, Variety and Veracity, which are the big data main characteristics” (source)
                 </p>
 
+        <p class="normal-text">
         Do we have the data in the data warehouse If not, where does that data exist, is it in a relational database is it a no sequel database is it in unstructured data in files.
         21:24
         If once we identify that then the next thing we have to figure out is what do we need to do with that data so that we can get it into the data warehouse so that we can.
@@ -201,7 +202,7 @@
 
         container management tool it's it's a scripting tool for your container management, it allows you to automate the process of creating containers like PC to configuring those and deploying knows.
 
-
+                </p>
         <h1 class="title">DELETE UP TO HERE     ///\\\   DUE APRIL 7, 2022   ///\\\</h1>
         <br><br><br>
 
@@ -263,7 +264,7 @@
 
               </p>
                 <h4 class="title">Data Quality</h4>
-              
+
               <p class="normal-text">
                 "Data quality is crucial – it assesses whether information can serve its purpose in a particular context (such as data analysis, for example). So, how do you determine the quality of a given set of information? There are data quality characteristics of which you should be aware. 
                  There are five traits that you’ll find within data quality: accuracy, completeness, reliability, relevance, and timeliness – read on to learn more.
@@ -288,22 +289,29 @@
 
                   From <https://careerfoundry.com/en/blog/data-analytics/> 
               </p>
-              <h3 class="title">Data Visualization</h3>
-              <p class="normal-text col3">
-                  <img src="../images/pivot.png" alt="pivot table image" class="fifty centered">
-                  <img src="../images/piechart.png" alt="pivot table image" class="fifty centered">
-                  <img src="../images/boxplot.png" alt="pivot table image" class="fifty centered">
-                  <img src="../images/linegraph.png" alt="pivot table image" class="fifty centered">
-                  <img src="../images/areachart.png" alt="pivot table image" class="fifty centered">
-                  <img src="../images/barchart.png" alt="pivot table image" class="fifty centered">
-                  Images from <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">Career Foundry online.</a>
-              </p>
-              <p class="normal-text">
+                <h3 class="title">Data Visualization</h3>
+                <p class="normal-text">
+                    <figure class="col2">
+                        <h5 class="title">Pivot Table</h5>
+                            <img src="../../images/pivot.png" alt="pivot table image" class="centered">
+                        <h5 class="title">Pie Chart</h5>
+                            <img src="../../images/piechart.png" alt="pie chart image" class="centered">
+                        <h5 class="title">Box Plot Chart</h5>
+                            <img src="../../images/boxplot.png" alt="boxplot image" class="centered">
+                        <h5 class="title">Line Graph</h5>
+                            <img src="../../images/linegraph.png" alt="line graph image" class="centered">
+                        <h5 class="title">Area Chart</h5>
+                            <img src="../../images/areachart.png" alt="area chart image" class="centered">
+                        <h5 class="title">Bar Chart</h5>
+                            <img src="../../images/barchart.png" alt="bar chart image" class="centered">
+                    </figure>
+                    <figcaption class="normal-text">Images from <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">Career Foundry online.</a></figcaption> <br><br>
+                </p>
+                <p class="normal-text">
+                    
+
                   "Data visualization (or ‘data viz’) is one of the most important aspects of data analytics. Mapping raw data using graphical elements is great for aiding pattern-spotting and it’s useful for sharing findings in an easily digestible, eye-catching way. And while the priority should always be the integrity of your data, if done well, data visualization can also be a lot of fun.
                   Master the art of data viz and you’ll soon be spotting trends and correlations, all while flexing your creative muscle."
-
-
-                  https://docs.google.com/presentation/d/e/2PACX-1vQS_n-iAUCKBmTuE8oMwD5cNRCVL55eS9Wh15lF8z8S6cgKx1-W4wZ3rRxE_6WgwNZtKwJlEH_eU-KA/pub?start=false&loop=false&delayms=30000
 
                   From <https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/>
               </p>
@@ -335,7 +343,7 @@
                 • Planning for network capacity according to usage and budgets
                 • And much more… especially when we are able to use AI or machine-learning techniques to make automated decisions based on telemetry data.
                 However, streaming telemetry shouldn’t be the only data source that drives these capabilities. As an example:
-                Let’s say that you, as a network operator, want to be notified when utilization is high for critical backbone links. The next step would be to determine the characteristics of the traffic that’s driving up utilization. Which applications, clients, and servers are prominent on the highly-utilized links and can thus be used to make vaious optimization decisions (e.g., changing traffic patterns)?
+                Let’s say that you, as a network operator, want to be notified when utilization is high for critical backbone links. The next step would be to determine the characteristics of the traffic that’s driving up utilization. Which applications, clients, and servers are prominent on the highly-utilized links and can thus be used to make various optimization decisions (e.g., changing traffic patterns)?
                 An appropriate approach could be:
                   1. Use streaming telemetry metrics as a set of indicators of thresholds, and then
                   2. Use NetFlow to figure out what type of traffic is causing it.
@@ -438,7 +446,7 @@
 
                 </p>
 
-            <h3 class="title">Managing Telemetry and Technical Debt</h3>
+        <h3 class="title">Managing Telemetry and Technical Debt</h3>
 
             <h4 class="title">Telemetry</h4>
                 " Measure project over time to ensure continued success"
@@ -462,38 +470,31 @@
                     Technical debt is the name given to previously unforeseen issues that cause extra financial cost, including salaries for developers.
                 </p>
                 <p class="normal-text">
-                    There are many reasons why technical debt exists. 
+                    There are many reasons why technical debt exists:
                 </p>
                 <ul>
                     <li class="normal-text">
-
+                        Poorly designed infrastructure
                     </li>
                     <li class="normal-text">
-                        
+                        Deviation from business rules/principles
                     </li>
                     <li class="normal-text">
-                        
+                        Poor or no design standards and patterns
                     </li>
                     <li class="normal-text">
-                        
+                        Little or no testing
+                    </li>
+                    <li class="normal-text">
+                        Constant or frequent variations of business rules and requirements or incoming data traffic patterns
                     </li>
                 </ul>
                 <p class="normal-text">
-
+                    It is 
                 </p>
                 <p class="normal-text">
 
                 </p>
-                "Reasons of Technical Debts
-                There are two main reasons: Unwanted debts due to lacks of skill or knowledge and consciously accepted ones e.g. due to time pressure. But there are also many technical reasons for both categories [1]:
-                    • Architectural principles are not adhered to, such as deviating from the layer model
-                    • Poor technical infrastructure
-                    • Lack of development standards and design patterns
-                    • Inaccurate business requirements that are misunderstood and implemented
-                    • Insufficient testing which results in unwanted errors
-                    • Constantly changing or additional requirements, etc…"
-
-                <https://towardsdatascience.com/understand-and-fight-technical-debts-in-your-data-warehouse-d455afed770e></https:>
                 <p class="normal-text">
                     "The Cloud Native Computing Foundation (CNCF) maintains an interactive graphic of the nearly 1,000 unique services that make up the cloud-native ecosystem, many of which are free and open source to boot. Additionally, each of the big three cloud providers—Amazon Web Services, Microsoft Azure, and Google Cloud—offers about 200 unique services to customers, across compute, storage, database, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
 
