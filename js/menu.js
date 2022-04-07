@@ -1,5 +1,15 @@
 // Menu Functions
 import * as lists from './lists.js';
+import { isElement, writeById, createLink, getFilename, urlExists, getBase, createLMNT, appendNestLMNT, appendLMNT } from './utilities.js';
+
+
+function getWeeknum(menuweek) {
+    let weekno;
+    if (menuweek.substr(0, 4) === "week") {
+        weekno = menuweek.substr(4, 2);
+    }
+    return weekno;
+}
 
 const siteTitle = (el) => {
     let elheader = `autoheader${el}`;
@@ -28,7 +38,7 @@ const siteTitle = (el) => {
     //console.log(elhref);
     //console.log(createLink(elhref, "Back to Index"));
     if (isElement(elheader)) {
-        writeById(elheader, '<h1 id="siteTitle2" class="title">Doris Rush-Lopez <br> My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1>' + `<h2 id="tabbar" class="">${createLink(elhref, "Back to Index")}</h2>`);
+        writeById(elheader, `<h1 id="siteTitle2" class="title">Doris Rush-Lopez <br> My BYU-Idaho Portfolio <br>  Major: Applied Technology</h1><h3 class="normal-text centered ">In solidarity with the Ukraine, the color scheme is based on<a href="https://en.wikipedia.org/wiki/Flag_of_Ukraine#Design"> their flag colors.</a><br><br>${createLink(elhref, "Back to Index")}</h3>`);
     }
 }
 siteTitle("327");
@@ -108,11 +118,28 @@ if (isElement("wdd330pagetitle") && substr(0, 4, getFilename()) === "week") {
     document.getElementById("wdd330pagetitle").innerText = header330;
 }
 
-function setTitle(course) {
+const setTitle = (course) => {
     if (isElement(course)) {
         writeById(course, `My ${course} Portfolio`);
     }
 }
+
+const setTitles = (list) => {
+    list.forEach(course => {
+        setTitle(course.code);
+    });
+}
+
+const getTitles = (list) => {
+    let courseCodes = [];
+    list.forEach(course => {
+        courseCodes.push(course.code);
+    });
+    console.log(courseCodes);
+    return courseCodes;
+}
+const courseCodes = getTitles(lists.mainNav);
+setTitles(courseCodes);
 
 function getWeekPageTitle(id, page) {
     let weekNo = getWeeknum(getFilename()) || '5';
@@ -169,34 +196,25 @@ function createCertNav(array, id) {
             return 0;
         });
         // create cert list element
-        const certmenu = document.createElement('ul');
-        certmenu.setAttribute('id', 'menu');
-        certmenu.classList.add('nodots');
-        certmenu.classList.add('morespc');
+        const certmenu = createLMNT('ul', '', 'menu', '', 'nodots', '');
         // create submenu of links for each cert's courses
         let certcount = 1;
         lists.certs.forEach((element) => {
             // get cert number
             const certCheck = element.cert;
             // create list item for this cert
-            const certitem = document.createElement('li');
-            certitem.setAttribute('id', `cert${certcount}`);
-            const certh3 = document.createElement('h3');
-            certh3.classList.add('title');
-            const certa = document.createElement('a');
-            certa.classList.add('cert-text');
+            const certitem = createLMNT('li', '', `cert${certcount}` , '', '', '');
+            const certh3 = createLMNT('h3', '', '', '', 'title', '');
+            const certa = createLMNT('a', '', '', '', '', 'cert-text', '');
             certa.setAttribute('href', getBase() + 'images/' + element.certurl);
             // set text for item
             certa.innerText = `${element.certname}, Issue date: ${element.certdate}`;
             //console.log(certa);
             // add item to cert menu list
-            certh3.appendChild(certa);
-            certitem.appendChild(certh3);
-            certmenu.appendChild(certitem);
+            appendNestLMNT(certmenu, certitem, certh3, certa, '', '');
             // create submenu list element
-            let submenu = document.createElement('ul');
-            submenu.style.listStyleType = "none";
-            submenu.setAttribute(id, 'submenu')
+            let submenu = createLMNT('ul', '', `submenu${certcount}`, '', ' nodots', '');
+            //submenu.style.listStyleType = "none";
             // set count of courses
             let coursecount = 1;
             // get list of courses to create links under each cert
@@ -210,7 +228,7 @@ function createCertNav(array, id) {
                     certcourses.push(element);
                 }
             });
-            console.log(certcourses);
+            //console.log(certcourses);
             // sort courses by name
             certcourses = certcourses.sort(function(a, b) {
                 var nameA = a.year + a.term + a.name.toUpperCase(); // ignore upper and lowercase
@@ -227,40 +245,37 @@ function createCertNav(array, id) {
             });
             console.log(certcourses);
             certcourses.forEach((element) => {
-                const submenuitem = document.createElement('li');
-                submenuitem.setAttribute(id, `course${coursecount}`);
-                const submenuh3 = document.createElement('h3');
+                const submenuitem = createLMNT('li', '', `course${coursecount}`, '', '', '');
+                const submenuh3 = createLMNT('h3', '', '', '', 'title', '');
                 // if url does not exist AND data url length is less than 100, exit program
                 if ((!urlExists(element.url)) && (element.url.length < 100)) {
                     return;
                 } else {  // create link
-                    const link = document.createElement('a');
-                    link.classList.add('sub-text');
+                    const link = createLMNT('a', '', '', '', 'sub-text', '');
+                    console.log(link);
                     // url and term exist, create the link and post to page
                     if ((element.term) && (element.term.length > 0)) {
                         const linktext = document.createTextNode(`${getTerm(element.term)} 20${element.year}, ${element.code} - ${element.name}`); //, (${element.tech})`);
                         link.setAttribute('href', element.url);
-                        link.appendChild(linktext);
+                        appendLMNT(link, linktext);
                     } else {
                         link.setAttribute('href', element.url);
                         const linktext = document.createTextNode(`${createLink(element.url, element.name)}`);
                         link.appendChild(linktext);
                     }
-                    submenuh3.appendChild(link);
-                    submenuitem.appendChild(submenuh3);
-                    submenu.appendChild(submenuitem);
+                    appendNestLMNT(submenu, submenuitem, submenuh3, link, '', '');
                 }
                 certitem.appendChild(submenu);
                 coursecount++;
             });
             certcount++;
+            appendNestLMNT(certbox, certmenu, certitem, '', '');
             certmenu.appendChild(certitem);
             //console.log(certmenu);
             certbox.appendChild(certmenu);
         });
     }
 }
-
 createCertNav(lists.mainNav,'certnav');
 
 function createNav(array, id) {
@@ -281,23 +296,17 @@ function createNav(array, id) {
       return 0;
     });
     // create link list element
-    let menu = "<ul>";
+    let menu = '<ul class="nodots">';
     // get list of files to create links for each menu entry
     array.forEach((element) => {
-      // if url does not exist AND data url length is less than 100, exit program
-      if ((!urlExists(element.url)) && (element.url.length < 100)) {
-        return;
-      } else {
-        // url and term exist, create the link and post to page
         if ((element.term) && (element.term.length > 0)) {
-          const url = element.url;
           const linktext = `${element.term}, ${element.code} - ${element.name}`;
           // TODO: save as variable for adding to index.html page as parameter? (${element.tech})
-          menu += `<li class="nav">${createLink(url, linktext)}</li>`;
+          menu += `<li class="nav">${createLink(element.url, linktext)}</li>`;
         } else {
-          menu += `<li class="nav">${createLink(element.url, element.name)}</li>`;
+            console.log(element.url, element.name);
+          menu += `<li class="normal-text nodots">${createLink(element.url, element.name)}</li>`;
         }
-      }
     });
     menu += "</ul>";
     container.innerHTML = menu;
@@ -308,4 +317,3 @@ function createNav(array, id) {
 createNav(lists.list330, "notes");
 createNav(lists.paperslist, "papers");
 createNav(lists.presentations, "presentations");
-

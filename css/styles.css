@@ -5,6 +5,7 @@ body {
 }
 body header {
   grid-area: header;
+  grid-template-columns: 1fr 1fr;
 }
 body header #main-nav {
   display: grid;
@@ -800,6 +801,11 @@ a :visited {
   background: black;
   transform: scale(1.25);
   transition: all 0.15s ease-in-out;
+}
+
+h3.small {
+  font-size: 0.75rem;
+  color: #ffd700;
 }
 
 .wave {

@@ -9,8 +9,6 @@ const quiz = [
     // { name: "Riddler", realName: "Edward Nygma" },
 ];
 
-
-
 // View Object
 const view = {
     score: document.querySelector('#score strong'),

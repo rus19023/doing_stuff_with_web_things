@@ -1,89 +1,106 @@
+function getBase() {
+  //return window.location.href.replace(/\/[^\/]*$/, '/');
+  var href = location.href; //returns the entire url
+  var host = location.hostname; //returns just the hostname of the url
+  //console.log(href, host);
+  return location.href;
+}
+
+function getCbase() {
+  return `${location.href}courses/`;
+}
+
 export const list330 = [
     {
         name: "Week 01 Notes",
-        url: `${getBase()}week01.html`,
+        url: `${getBase()}week01.html`
     },
     {
         name: "Week 02 Notes",
-        url: `${getBase()}week02.html`,
+        url: `${getBase()}week02.html`
     },
     {
         name: "Week 03 Notes",
-        url: `${getBase()}week03.html`,
+        url: `${getBase()}week03.html`
     },
     {
         name: "Week 01 Exercises",
-        url: `${getBase()}exercises/week01.html`,
+        url: `${getBase()}exercises/week01.html`
     },
     {
         name: "Week 02 Exercises",
-        url: `${getBase()}exercises/week02.html`,
+        url: `${getBase()}exercises/week02.html`
     },
     {
         name: "Week 04 Exercises: Further work on team project - Tic Tac Toe game",
-        url: `${getBase()}exercises/week04.html`,
+        url: `${getBase()}exercises/week04.html`
       },
       {
           name: "Week 05 Challenge 1: To Do App",
-          url: `${getBase()}challenges/todo-app/`,
+          url: `${getBase()}challenges/todo-app/`
       },
       {
           name: "Week 06 Challenge 1: To Do App",
-          url: `${getBase()}challenges/todo-app/`,
+          url: `${getBase()}challenges/todo-app/`
       },
       {
           name: "Week 07 Quiz Ninja",
-          url: `${getBase()}exercises/ninjaquiz.html`,
+          url: `${getBase()}exercises/ninjaquiz.html`
       },
       {
           name: "Week 07 Exercises",
-          url: `${getBase()}exercises/week07.html`,
+          url: `${getBase()}exercises/week07.html`
       },
       {
           name: "Week 08  Exercises: Quiz Ninja",
-          url: `${getBase()}exercises/week08ninjaquiz.html`,
+          url: `${getBase()}exercises/week08ninjaquiz.html`
       },
       {
           name: "Week 09  Exercises: Quiz Ninja",
-          url: `${getBase()}exercises/week09ninjaquiz.html`,
+          url: `${getBase()}exercises/week09ninjaquiz.html`
       },
       {
           name: "Week 09 Challenge 2: New App Proposal",
-          url: `${getBase()}challenges/week09.html`,
+          url: `${getBase()}challenges/week09.html`
       },
       {
-            name: "Week 10: Updates to To Do App",
-            url: "https://rus19023.github.io/ToDoApp/",
+          name: "Week 10: Updates to To Do App",
+          url: 'https://rus19023.github.io/ToDoApp/'
       },
       {
-            name: "Week 10: Quiz Ninja",
-            url: `${getBase()}exercises/week10ninjaquiz.html`,
+          name: "Week 10: Quiz Ninja",
+          url: `${getBase()}exercises/week10ninjaquiz.html`
       },
       {
-            name: "Week 10: Challenge Two - App: Scripture Chase",
-            url: `${getBase()}challenges/scripturechase/`,
+          name: "Week 10: Challenge Two - App: Scripture Chase",
+          url: `${getBase()}challenges/scripturechase/`
       },
       {
-            name: "Week 10: To Do App, Revisited (added search feature and style changes to use with new app)",
-            url: "https://rus19023.github.io/ToDoApp/",
+          name: "Week 10: To Do App, Revisited (added share, sort and search features and style changes)",
+          url: "https://rus19023.github.io/ToDoApp/"
       },
       {
-            name: "Week 11: Quiz Ninja - Ch. 14",
-            url: `${getBase()}exercises/week11ninjaquiz.html`,
+          name: "Week 11: Quiz Ninja - Ch. 14",
+          url: `${getBase()}exercises/week11ninjaquiz.html`
       },
       {
-            name: "Week 11: Quiz Ninja - Ch. 14",
-            url: `${getBase()}exercises/week11ninjaquizteam.html`,
+          name: "Week 11: Scripture Chase App",
+          url: `${getBase()}challenges/scripturechase/scripturechase.html`
       },
       {
-            name: "Week 11: Quiz Ninja - Ch. 15",
-            url: `${getBase()}exercises/week11ch15ninjaquizteam.html`,
+          name: "Week 12: Scripture Chase App",
+          url: 'https://rus19023.github.io/scripturechase/pages/home.html',
       },
       {
-            name: "Week 11: Scripture Chase App",
-            url: 'https://rus19023.github.io/pages/home.html',
+          name: "Week 13: ",
+          url: 'https://rus19023.github.io/scripturechase/pages/quiz.html'
+      },
+      {
+          name: "Week 14: Final Project - Scripture Chase App",
+          url: 'https://rus19023.github.io/scripturechase/'
       }
   ];
+  console.log(list330.length);
 
   // End of **list330
 
@@ -766,14 +783,14 @@ export const mainNav = [
 export const presentations = [
     {
         name: "Week 01: Data Analysis: Data Marts and Warehouses",
-        url: "https://docs.google.com/presentation/d/15pcCC7TgYBYADt-GCUH3Z2PBmvRGabU173_DxFrfDTM/edit#slide=id.g65a5c374d8_0_208",
+        url: "https://docs.google.com/presentation/d/e/2PACX-1vTdLiK54DqaJd6L2a3H5o9iJjxHKdPPX-jfnafGvKjB8IGX2ctksnkVrcCXDCiYlduqt1FAzE20flpR/pub?start=false&loop=false&delayms=30000",
     },
     {
         name: "Week 02: Data Models, Methodologies and Analysis",
         url: "https://docs.google.com/presentation/d/e/2PACX-1vSmsQEfdjs7kauZoXWd4oqFNkwVR6ykmo83GPylSiWiKAH-arkbtY6u66kazQhtrDRZ8ItA5GC1fPOc/pub?start=true&loop=false&delayms=30000",
     },
     {
-        name: "template",
+        name: "Week 03: ",
         url: "template.html",
     },
 ];
