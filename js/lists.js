@@ -277,7 +277,7 @@ export const list325 = [
         cert: "01",
         certname: "Certificate: Computer Programming",
         certdate: "2020-07-22",
-        certurl: "computer_programming_eDiploma.pdf",
+        certurl: "/computer_programming_eDiploma.pdf",
     },
     {
         cert: "04",
@@ -301,13 +301,13 @@ export const list325 = [
         cert: "05",
         certname: "Certificate: Web Backend Development",
         certdate: "2022-07-22 (Anticipated)",
-        certurl: `web_backend_eDiploma.pdf`,
+        certurl: '/web_backend_eDiploma.pdf',
     },
     {
         cert: "06",
         certname: "Degree: Bachelor of Science in Applied Technology",
         certdate: "2024-12-22 (Anticipated)",
-        certurl: "applied_technology_eDiploma.pdf",
+        certurl: "/applied_technology_eDiploma.pdf",
     },
 ];
 
