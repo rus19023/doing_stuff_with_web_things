@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
 @import "variables";
 @import "grid";
 @import "colors";
@@ -494,14 +496,14 @@ textarea {
     height: 15%;
 }
 
-footer#autofooter {
+footer#autofooter, footer {
     color: $yellow;
     font-family: $fontsecond;
     border-radius: $radius;
     padding: 2%;
     font-weight: bold;
     text-align: center;
-    bottom: -4rem;
+    bottom: -5%;
 }
 
 .source {
@@ -590,10 +592,11 @@ footer#autofooter {
 }
 
 .col5 {
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin: 0 auto;
-    gap: 4%;
+    gap: 5%;
 }
 
 .nav { padding: 2%; }
