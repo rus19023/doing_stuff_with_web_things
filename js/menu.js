@@ -185,7 +185,7 @@ function createCertNav(array, id) {
             certh3.classList.add('title');
             const certa = document.createElement('a');
             certa.classList.add('cert-text');
-            certa.setAttribute('href', `${getBase()}`);
+            certa.setAttribute('href', getBase() + 'images/' + element.certurl);
             // set text for item
             certa.innerText = `${element.certname}, Issue date: ${element.certdate}`;
             //console.log(certa);
