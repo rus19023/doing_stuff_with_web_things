@@ -98,6 +98,10 @@ export const list330 = [
       {
           name: "Week 14: Final Project - Scripture Chase App",
           url: 'https://rus19023.github.io/scripturechase/'
+      },
+      {
+          name: "Week 14: Final Project - Scripture Chase App Video",
+          url: ''
       }
   ];
   console.log(list330.length);
@@ -371,7 +375,7 @@ export const mainNav = [
         year: "22",
         code: "CIT327",
         name: "Data Warehousing",
-        tech: "ETL Tools, MongoDB, XQuery",
+        tech: "ETL/ELT, MongoDB, XQuery, Cassandra, Hadoop",
         instructor: "Troy Hiltbrand",
         cert: "04",
     },

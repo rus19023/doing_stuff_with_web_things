@@ -1326,13 +1326,15 @@ footer#autofooter, footer {
   bottom: -5%;
 }
 
-.source {
+a.source {
   text-align: left;
   color: #6fea00;
   font-family: "Hubbali", sans-serif;
-  padding: 1%;
+  padding: 2%;
+  margin: 2rem auto;
+  line-height: 1.2rem;
 }
-.source a {
+a.source a {
   text-decoration: none;
   font-weight: bold;
   color: #00e4ea;

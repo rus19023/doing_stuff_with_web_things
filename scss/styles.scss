@@ -527,11 +527,13 @@ footer#autofooter, footer {
     bottom: -5%;
 }
 
-.source {
+a.source {
     text-align: left;
     color: $accent1;
     font-family: $fontfirst;
-    padding: 1%;
+    padding: 2%;
+    margin: 2rem auto;
+    line-height: 1.2rem;
     & a {
       text-decoration: none;
       font-weight: bold;

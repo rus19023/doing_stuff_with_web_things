@@ -53,7 +53,7 @@
                     <p class="normal-text">
                         Data Marts contain data for one specific business purpose. These repositories are usually containers of summarized data ready to be analyzed for said business purpose.
                         <br><br>
-                        Data Warehouses may contain various Data Marts, and aggregate this data
+                        Data Warehouses may contain various Data Marts, and each of these marts will serve a different purpose in the overall corporate plan. Following is a topical comparison of Data Marts vs. Data Warehouses. Please note that these are generalizations and some actual systems may differ from these details.
                         <table>
                             <tr class="title">
                                 <th></th>
@@ -104,7 +104,7 @@
                     </p>
                     
                     <p class="specialfont ">
-                        *  Data is often measured in petabytes for mega-corporations, and is may be referred to as Data Lakes
+                        *  Data is often measured in petabytes for mega-corporations, and may be referred to as Data Lakes
                     </p>
             
                 <a class="source" href="https://panoply.io/data-warehouse-guide/data-mart-vs-data-warehouse/">Table data obtained from Panoply website</a>
@@ -126,7 +126,7 @@
             </p>
 
             <p class="normal-text">
-                The Inmon Model (snowflake model) is best suited for the largest collections of data in Data Warehouses. They are not the fastest type of system to set up, they take many months of planning, setting up infrastructure, data collection, selecting the best tools to use to produce the results for the specific needs of the end users. This model takes advantage of horizontal scaling to handle the heavy burden of all the data spread across many nodes or computers.
+                The Inmon Model (snowflake schema) is best suited for the largest collections of data in Data Warehouses. They are not the fastest type of system to set up, they take many months of planning, setting up infrastructure, data collection, selecting the best tools to use to produce the results for the specific needs of the end users. This model takes advantage of horizontal scaling to handle the heavy burden of all the data spread across many nodes or computers.
                 
                 <br><br>
                 <figure>
@@ -156,7 +156,7 @@
             <h3 class="title">Data Transformation</h3>
 
                <p class="normal-text">
-                When designing a system for a Data Warehouse that needs to be spread out, tools like Cassandra, Hadoop and MapReduce will help significantly. They are created to support multiple programming languages for any custom query needs, and for horizontal scaling across many nodes. 
+                When designing a system for a Data Warehouse that needs to be spread out, tools like Cassandra (a NoSQL database), Hadoop and MapReduce will help significantly. They are created to support multiple programming languages for any custom query needs, and for horizontal scaling across many nodes. Some of many other tools, frameworks and libraries used for ETL (Extract Transform Load) or its sister ELT (Extract Load Transform) use different algorithms and infrastructures, such as document-driven databases (MongoDB, CSV or XML documents, spreadsheets), traditional relational databases (Oracle, RedShift).
                 
             </p>
              
@@ -164,11 +164,11 @@
             <h3 class="title">Data Analysis</h3>
               
                 <p class="normal-text">
-                    Once data sources are collected, they must be processed to draw out the insights hidden in the ocean of bits and bytes. Descriptive analytics is viewing past events' data. Diagnostic analytics finds out why the events may have happened. Predictive analytics are for viewing future events. Prescriptive analytics facilite future decisions based on these predictions.
+                    Once data sources are collated, they must be processed to draw out the insights hidden in the ocean of bits and bytes. Descriptive analytics is viewing past events' data. Diagnostic analytics finds out why the events may have happened. Predictive analytics are for viewing future events. Prescriptive analytics facilitate future decisions based on these predictions.
               </p>
                 <h4 class="title">Data Visualization</h4>
                 <p class="normal-text">
-                    Data vizualization will facilitate finding outliers, trends, cycles, anomalies and other points of interest for making the big business decisions. It is much more difficult to see patterns in tables of numbers that don't seem to make any sense, but having colors, lines, bars, circles, bubble and other visual aids make the patterns, or lack of patterns, pop out. Here a few samples of data visual aids:
+                    Data visualization will facilitate finding outliers, trends, cycles, anomalies and other points of interest for making the big business decisions. It is much more difficult to see patterns in tables of numbers that don't seem to make any sense, but having colors, lines, bars, circles, bubble and other visual aids make the patterns, or lack of patterns, pop out. Here a few samples of data visual aids:
                     <figure class="col2">
                         <div>
                             <h5 class="title">Bar Chart</h5>
@@ -195,9 +195,7 @@
                                 <img src="../../images/areachart.png" alt="area chart image" class="centered">
                         </div>
                         <figcaption class="source padleft8">
-                            Images from     
-                            <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">
-                                Career Foundry online.
+                            Images from <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/"> Career Foundry online.
                             </a>
                         </figcaption>
                     </figure> <br><br>
@@ -236,19 +234,20 @@
                     • WSGI<br>
                     • JDBC<br>
                     • PostgreSQL<br>
-                    OpenTelemetry also supports analysis of telemetric data from your system by their tools for easy extraction of valuable insigts.
+                    OpenTelemetry also supports analysis of telemetric data from your system by their tools for easy extraction of valuable insights.
                 </p>
 
 
 
             <h4 class="title">Technical Debt</h4>
                 <p class="normal-text">
+                      "Technical debt is the coding you must do tomorrow because you took a shortcut in order to deliver the software today." <a class="source" href="https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt">[Quote source]</a>
+                </p>
+                <p class="normal-text">
                    Technical debt is the name given to previously unforeseen issues that cause extra financial and time costs, including salaries for developers and loss of respect from clients if the system is not available as contracted or there is downtime.
                 </p>
                 <p class="normal-text">
                       When it comes to software development, technical debt is the idea that certain necessary work gets delayed during the development of a software project in order to hit a deliverable or deadline.
-      
-                      "Technical debt is the coding you must do tomorrow because you took a shortcut in order to deliver the software today." <a class="source" href="https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt">[Quote source]</a>
                 </p>
                 <p class="normal-text">
                     There are many reasons why technical debt exists:
@@ -271,37 +270,22 @@
                     </li>
                 </ul>
                 <p class="normal-text">
-                    It is 
-                </p>
-                <p class="normal-text">
-
-                </p>
-                <p class="normal-text">
                     Integration of data collections with tools, frameworks and libraries to process them can have heavy technical debt. Using the MEAN stack with JavaScript developers on staff, this can be mitigated, as the MEAN stack is based on JavaScript and many tools support JavaScript.
                 </p>
             
 
             <h3 class="title">Summary</h3>
                 
-                <p class="normal-text">
-                    Explain what methods, tools, and techniques are best suited to deliver a manageable corporate data warehouse [or data mart?]
+                <p class="normal-text">        
 
-                    Define how would you go about selecting an analytical tool for the corporation; consider analytical programming but avoid where possible (due to high technical debt) when other tool sets can met needs effectively at low cost (like MicroStrategy, Tableau, Microsoft Power BI, etc.)
-
-                    Planning is tantamount for any successful system. To select the correct tools, both financial and time costs must be taken into consideration. On-premise systems will have higher financial costs than cloud systems. Consisten telemetry measurements over time can be analyzed using the same methods to control technical debt and budget costs. Custom integrations should only be used if no other tools can provide the results needed for the business purpose(s).
+                    Planning is tantamount for any successful system. To select the correct tools, both financial and time costs must be taken into consideration. Consistent telemetry measurements over time can be analyzed using the same methods to control technical debt and budget costs. Custom integrations should only be used if no other tools can provide the results needed for the business purpose(s).
 
                 </p>
                 <p class="normal-text">
-
+                    Finding the right tools to give the best final results can be daunting. However, there is some advantage to using cloud systems over on-premise, as the cost in both technical debt and financial are more affordable with managed systems in the cloud. On-premise solutions will generally include a much higher technical and financial budget due to the heavy personnel needs to maintain all the equipment and software. JavaScript-trained developers can use the MEAN stack to provide customized solutions with less technical debt and possibly no added financial burden, as all the components are open-source.
                 </p>
-
-            <h3 class="title"></h3>
-                <p class="normal-text">
-
-                </p>
-                <p class="normal-text">
-
-                </p>
+                <br>
+            
 
                 <ul class="sources nodots">
                     Sources:
@@ -312,35 +296,86 @@
                     </li>
                     <li class="normal-text">
                         <a href="https://www.infoworld.com/author/Scott-Carey/">
-                            &nbsp;&nbsp;&nbsp;Carey, Scott
-                        </a>,
+                            &nbsp;&nbsp;&nbsp;Carey, Scott.
+                        </a>
                         <a class="source" href="https://www.infoworld.com/article/3639050/complexity-is-killing-software-developers.html">
                             "Complexity is killing software developers", InfoWorld, 1 November 2021
                         </a>
                     </li>
                     <li class="normal-text">
                         <a class="source" href="https://public.support.unisys.com/aseries/docs/clearpath-mcp-18.0/86000213-420/section-000019644.html">
-                             "Enterprise Database Server Data and Structure Definition Language (DASDL) Programming Reference Manual - Embedded Structures", public.support.unisys.com Line 151
+                             "Enterprise Database Server Data and Structure Definition Language (DASDL) Programming Reference Manual - Embedded Structures", public.support.unisys.com
                         </a>
                     </li>
                     <li class="normal-text">
                         <a class="source" href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types">
-                             Hiller, Will  "13 of the Most Common Types of Data Visualization", Career Foundry, 26 July 2021  line 180
+                             Hiller, Will.  "13 of the Most Common Types of Data Visualization", Career Foundry, 26 July 2021  line 180
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://www.kentik.com/blog/how-to-maximize-the-value-of-streaming-telemetry-for-network-monitoring-and">
+                             Kagawa, Aaron & Li, Crystal. "How to Maximize the Value of Streaming Telemetry for Network Monitoring and Analytics", kentik.com/blog, 28 August 2019
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers">
+                             Kleppen, Eric. "How To Find Outliers in Data Using Python (and How To Handle Them)", Career Foundry, Updated 24 February 2022
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://www.stackstate.com/blog/the-ultimate-guide-to-telemetry">
+                             Kortier, Annerieke. "The Ultimate Guide to Telemetry", StackState, 7 September 2021
                         </a>
                     </li>
                     <li class="normal-text">
                         <a class="source" href="https://towardsdatascience.com/understand-and-fight-technical-debts-in-your-data-warehouse-d455afed770e">
-                             Lauer, Christian, "9 Technical Debts in your Data Warehouse - Reasons and how to solve them", Towards Data Science, 26 December 2020
+                             Lauer, Christian. "9 Technical Debts in your Data Warehouse - Reasons and how to solve them", Towards Data Science, 26 December 2020
                         </a>
                     </li>
                     <li class="normal-text">
                         <a class="source" href="https://www.precisely.com/blog/data-quality/5-characteristics-of-data-quality">
-                             Levy Sarfin, Rachel, "5 Characteristics of Data Quality", precisely.com/blog, 7 May 2021 Line 217
+                             Levy Sarfin, Rachel. "5 Characteristics of Data Quality", precisely.com/blog, 7 May 2021 Line 217
                         </a>
                     </li>
                     <li class="normal-text">
                         <a class="source" href="https://www.sciencedirect.com/topics/computer-science/data-requirement-analysis">
-                             Loshin, David "Data Requirement Analysis", Science Direct Line 173
+                             Loshin, David. "Data Requirement Analysis", Science Direct Line 173
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://www.sei.cmu.edu/our-work/projects/display.cfm?customel_datapageid_4050=6520">
+                             "Managing Technical Debt with Data-Driven Analysis", Carnegie Mellon University, Software Engineering Institute, Created September 2017, Updated February 2022
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                       <a href="https://gameanalytics.com/author/jacqueline-zenn/">Zenn, Jacqueline. &nbsp;</a> <a class="source" href="https://gameanalytics.com/blog/maximizing-the-value-of-player-data/">
+                             "Maximizing The Value Of Player Data", Game Analytics, 16 November 2017
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://www.softsuave.com/blog/mean-stack-vs-full-stack-developer-hire-for-your-next-project">
+                             "MEAN Stack Vs Full Stack Developer: Whom Should you Hire for Your Next Project", Soft Suave, 12 August 2021
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://www.northeastern.edu/graduate/blog/data-analyst-skills">
+                            O'Connor, Scott W. "7 Must-Have Skills For Data Analysts", Northeastern University Graduate Programs, 23 January 2020
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source"
+                        href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f">
+                            Strengholt, Piethein. "The Extinction of Enterprise Data Warehousing", medium.com, 30 September 2020
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                         <a href="https://www.linkedin.com/in/sandeepuc/">Uttamchandani, Sandeep Ph.D.&nbsp; </a><a class="source" href="https://www.linkedin.com/pulse/unraveling-data-science-big-telemetry-join-mission-sandeep">
+                             "Unraveling Data Science for Big Data Telemetry -- Join the mission!", LinkedIn Pulse, 25 September 2020
+                        </a>
+                    </li>
+                    <li class="normal-text">
+                        <a class="source" href="https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt">
+                            Watts, Steven & Hertvik, Joe. "Technical Debt: The Ultimate Guide", bmc.com/blog, 30 July 2020
                         </a>
                     </li>
                     <li class="normal-text">
@@ -353,58 +388,8 @@
                              "What is data analytics?", Career Foundry
                         </a>
                     </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://www.kentik.com/blog/how-to-maximize-the-value-of-streaming-telemetry-for-network-monitoring-and">
-                             Kagawa, Aaron & Li, Crystal, "How to Maximize the Value of Streaming Telemetry for Network Monitoring and Analytics", kentik.com/blog, 28 August 2019
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://www.sei.cmu.edu/our-work/projects/display.cfm?customel_datapageid_4050=6520">
-                             line 251
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt">
-                            line 257
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://www.linkedin.com/pulse/unraveling-data-science-big-telemetry-join-mission-sandeep">
-                             line 275
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://www.northeastern.edu/graduate/blog/data-analyst-skills">
-                            line 282
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://gameanalytics.com/blog/maximizing-the-value-of-player-data/#telemetry-in-the-context-of-gaming">
-                             line 289
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://www.softsuave.com/blog/mean-stack-vs-full-stack-developer-hire-for-your-next-project">
-                             line 298
-                        </a>
-                    </li>
-                    <li class="normal-text">E
-                        <a class="source" href="https://www.stackstate.com/blog/the-ultimate-guide-to-telemetry">
-                             line 331
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source" href="https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers">
-                             line 338
-                        </a>
-                    </li>
-                    <li class="normal-text">
-                        <a class="source"
-                        href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f">
-                            Strengholt, Piethein, "The Extinction of Enterprise Data Warehousing"
-                        </a>
-                    </li>
                 </ul>
+                <h6 class="title">All resources were last accessed on 7 April 2022.</h6>
             </div>
         </main>
         <footer id="autofooter"></footer>
