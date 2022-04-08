@@ -92,7 +92,7 @@ export const list330 = [
           url: 'https://rus19023.github.io/scripturechase/pages/home.html',
       },
       {
-          name: "Week 13: ",
+          name: "Week 13: Scripture Chase App Draft",
           url: 'https://rus19023.github.io/scripturechase/pages/quiz.html'
       },
       {
