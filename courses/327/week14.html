@@ -4,245 +4,153 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link type="text/css" rel="stylesheet" href="https://rus19023.github.io/myportfolio/css/styles.css" />
+        <link type="text/css" rel="stylesheet" href="http://127.0.0.1:5501/css/styles.css" />
+
         <title id="cit327weekpagetitle" class="title">page title</title>
     </head>
 
     <body>
         <header id="autoheader327" class="title">auto header</header>
-        <main class="sevenO">
+        <main class="centered">
             <h1 id="cit327weekpagetitle2" class="padit title">page title</h1>
             <h2 id="paperTitle" class="padit title">paper title</h2>
             <div>
+                <h2 class="title">Create and Maintain a Manageable Corporate Data Warehouse</h2>
+                <h3 class="title">Introduction</h3>
 
-              <h3 class="title">Objective</h3>
-              <p class="normal-text">
-                  Write a 5-10 position page paper, which in addition to the requirements below, focuses on maximizing telemetry and reducing technical debt.
-                  <br><br>
-                  The goal of this final project is to perform an analysis of the data warehouse to support CIO-level decision-making.
-                  <br><br>
-                  The idea is that you will be looking at the parts of the data warehouse model below (not including those boxes that are not filled in with blue).
-              </p>
-
-              <h2 class="title"> Requirements</h2>
-              <ul>
-                  <li class="normal-text">
-                      Explain what methods, tools, and techniques are best suited to deliver a manageable corporate data warehouse [or data mart?]
-                  </li>
-                  <li class="normal-text">
-                      Explain when you should use Inmon or Kimball methods for your data marts and warehouses.
-                  </li>
-                  <li class="normal-text">
-                      Provide perspective (agree, disagree or provided alternative) with the statement that “embedded structures, tables, and documents like JSON, are big data elements, and almost always require ETL processes to simplify their structures”.
-                  </li>
-                  <li class="normal-text">
-                      Define how would you go about selecting an analytical tool for the corporation; consider analytical programming but avoid where possible (due to high technical debt) when other tool sets can met needs effectively at low cost (like MicroStrategy, Tableau, Microsoft Power BI, etc.)
-                  </li>
-                  <li class="normal-text">
-                      Explain how you would qualify big data
-
-                      "embedded structures, tables, and documents like JSON, are big data elements"
-                  </li>
-                  <li class="normal-text">
-                      Qualify how the selected seven aspects of data analysis (identified further below) work [with] various data sources, specifically
-                      <ul>
-                        <li class="normal-text">
-                            a. Relational or object relational database management systems.
-                        </li>
-                        <li class="normal-text">
-                            b. NoSQL (Not only SQL) database management systems, like Cassandra and MongoDB.
-                        </li>
-                        <li class="normal-text">
-                            c. XML raw files and database managed documents.
-                        </li>
-                      </ul>
-                  </li>
-                  <li class="normal-text">
-
-                  </li>
-              </ul>
-
-                <h2 class="title">Definitions</h2>
-
-                <h3 class="title">Analytical tool:</h3>
-                In context of this paper, the assumption is that “analytical tool” refers to the end-to-end analytics platform, specifically:
-                <ul>
-                    <li class="normal-text">
-                        Database layer for data storage and processing
-                    </li>
-                    <li class="normal-text">
-                        ETL/ELT for data acquisition and integration
-                    </li>
-                    <li class="normal-text">
-                        Presentation layer for user access, visualization and analytics
-                    </li>
-                </ul>
-
-                <h3 class="title">IT telemetry: </h3>
                 <p class="normal-text">
-                    “the automatic recording and transmission of data from remote or inaccessible sources to an IT system in a different location for monitoring and analysis” (source).
-                    <br>
-                    Technical debt: “the extra [future] development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution.” (source)
+                    This paper is to share concepts I have learned about Big Data Analysis and Warehousing, and the accompanying Technology, Methodology and the available Tools and Techniques.
+                    With the massive numbers of available tools, frameworks, libraries, databases, companies and corporations, developers, techniques, data sources and other resources available today, all of which is increasing at rocket speed, managing Big Data is a colossal issue.
                 </p>
 
+                <h4 class="title">Big Data</h4>
+                    <p class="normal-text">
+                        Big Data elements are "extremely large" datasets, including JSON or XML document-based collections or embedded structures of up to 100 nested container levels, spreadsheets, wide columnar tables or relational database tables of millions of rows, or any combination of these types of data sources.
+                        <br><br>
+                        There are many ways to analyze Big Data using the above-mentioned resources that to filter, summarize, and detect outliers, trends, patterns and cycles. These necessary procedures enable business decisions to be made correctly, due to the varied types of sources that are collected needing to be formatted, summarized and/or normalized through ETL or ELT processes.
+                    </p>
 
-                <h2 class="title">7 Aspects of Data Analysis</h2>
+                    <p class="normal-text">
+                        <figure>
+                            <img class="centerimg" src="../../images/Model.jpg" alt="Basic data warehouse model infographic">
+                            <figcaption class="source centered">
+                                Basic data warehouse model infographic provided by Instructor
+                            </figcaption>
+                        </figure>
+                    </p>
 
-                <h3 class="title">Data Visualization:</h3>
-                <p class="normal-text">
-                    “Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. In the world of Big Data, data visualization tools and technologies are essential to analyze massive amounts of information and make data-driven decisions.” (source)
-                </p>
+                    <p class="normal-text">
+                        The National Institute of Standards and Technology issued a report defining Big Data as “extensive datasets—primarily in the characteristics of volume, velocity, and/or variability—that require a scalable architecture for efficient storage, manipulation, and analysis.” <a href="#bigdata">[source]</a>
+                        <br><br>
+                        Big Data has also been defined as an amount of data that exceeds a petabyte, which is a million gigabytes.
+                    </p>
 
-                <h3 class="title">Analytics:</h3>
-                <p class="normal-text">
-                    “The field of data analysis. Analytics often involves studying past historical data to research potential trends, to analyze the effects of certain decisions or events, or to evaluate the performance of a given tool or scenario. The goal of analytics is to improve the business by gaining knowledge which can be used to make improvements or changes.” (source)
-                </p>
-
-
-                <h3 class="title">Online Analytical Processing (OLAP):</h3>
-                <p class="normal-text">
-                    “...enables end-users to perform ad hoc analysis of data in multiple dimensions, thereby providing the insight and understanding they need for better decision making [by providing the] ability to create very fast aggregations and calculations of underlying data sets.” (source) · Document Management: “a document-oriented database contains documents, which are records that describe the data in the document, as well as the actual data; one or more document [can be used] to represent a real-world object.” (source)
-                </p>
-
-                <h3 class="title">Decision Services:</h3>
-                    see note
-                <p class="normal-text">
-
-                </p>
-                <p class="normal-text">
-                    Integrations: “To integrate data across mixed application environments, you need to get data from one data environment (source) to another data environment (destination).
-                </p>
-
-                <h3 class="title"></h3>
-                <p class="normal-text">
-                    Extract, Transform and Load (ETL) technologies have been used to accomplish this in traditional data warehouse environments.” (source)
-                </p>
-
-                <h3 class="title"></h3>
-                <p class="normal-text">
-                    Big Data Integration: “...differs from traditional data integration in many dimensions: Volume, Velocity, Variety and Veracity, which are the big data main characteristics” (source)
-                </p>
-
-        <p class="normal-text">
-        Do we have the data in the data warehouse If not, where does that data exist, is it in a relational database is it a no sequel database is it in unstructured data in files.
-        21:24
-        If once we identify that then the next thing we have to figure out is what do we need to do with that data so that we can get it into the data warehouse so that we can.
-        21:32
-        So that we can answer the business question that has come up that's the incremental portion, but when you first start out.
-        21:41
-        you're usually you you're usually told we want to reporting program we want to do, reporting and you've got to go out and build out the base architecture.
-        21:52
-        knowing what your environment is and say okay well how am I going to how am I going to integrate that information.
-        21:58
-        What type of data warehouse am I going to have what type of reporting, am I going to have that's going to minimize tech debt but maximize telemetry and and you're going to start with your first question through that that process once it's built.
-
-        What you're going to do is you're going to want to compare inman versus.
-        23:34
-        Inmon versus Kimball.
-        23:36
-        So, knowing that kimball is your star scheme ID normalized inman is normalized and when, would you use either one.
-        23:47
-        that's going to be your your first decision and you're going to have to take a look and say what is the how do I, how do I pull the data from my source systems into that.
-        23:59
-        Now, when when you're looking at choosing your analytical tool if let's say that you're talking you make the assumption that this is a small business.
-        24:10
-        You know a lot of times and I don't I can't remember who who argued for in men and who argued.
-        24:16
-        kimball in the first assignment, but a lot of the people that argued for kimball said, you know we're making the assumption that this is a smaller business just getting started out.
-        24:26
-        Well, if it's a smaller business just getting started out and they don't want to do the full inman model and they just don't want to do data marts with a specific.
-        24:34
-        Area of data, like accounting data or HR data they're probably not going to get into these advanced analytics and so as they as they select an analytics tool.
-        24:44
-        Reporting and business intelligence, are going to be probably their primary goal, so, if you look, if you want to if you're saying my business is a smaller business.
-        24:53
-        you're probably going to pick the data Mart with a specific subject area you're probably going to pick a off the shelf reporting tool you're probably going to pick some type of an ETF tool that that.
-        25:06
-        Can kind of read relational databases and maybe no sequel databases, but you might not be you might not need stream processing, you might not need.
-        25:16
-        hadoop and mapreduce because your databases your operational databases might not be horizontally scale you probably have a single instance relational database and maybe a single instance of Cassandra or of.
-        25:34
-        mongo and so you're not talking about these huge architectures that have multiple nodes of multiple and multiple instances now if you say my business is big.
-        25:47
-        And i'm trying to ingest all of my subject areas that might require that you take the approach of i'm going to do admin.
-        25:55
-        i'm not only going to have a business intelligence tool but I needed to do a little bit more and you're going to want maybe tablo can get you into some data mining or some forecasting.
-        26:06
-        or power bi.
-        26:08
-        Or you might say, i'm going to use tableau for my reporting and business intelligence, but i'm going to do more analytic programming with our or SAS to get into these some of these other areas.
-        26:21
-        In that case, you might have a much more complex operational environment.
-        26:26
-        You might have multiple relational databases, you might have a mongo database like family search where there's probably hundreds of nodes.
-        26:36
-        And you have to to be able to pull data from all different places and you might need stream processing.
-        26:43
-        And so, with a bigger business, you might not be able to do with just a kimball and a simple reporting database, you might have to use hadoop and an inman model and and not only a reporting instance, but you might have to use some analytic.
-        26:59
-        Programming to make that all work so depending on depending on what you make as the assumption of the business that you're representing is really going to determine which path you're going to get to to this analytic tool recommendation for your CIO.
-
-        the Google blog it's a big table this is for fast reads and writes.
-        35:46
-        For heavy reads and writes.
-        35:48
-        Big query is large scale ad hoc sequel based on lap analysis.
-        35:54
-        So yeah once you put it in here, and you need a lab analysis that's where big query Is this because it's a column store it's fast reads and writes.
-        user avatar
-        cai
-        36:05
-        And that is similar so, then you have like redshift right that's similar to big query but then you have big table that's similar to like EC to.
-
-        kUBERNETES
-
-        container management tool it's it's a scripting tool for your container management, it allows you to automate the process of creating containers like PC to configuring those and deploying knows.
-
-                </p>
-
-        <h1 class="title">DELETE UP TO HERE     ///\\\   DUE APRIL 7, 2022   ///\\\</h1>
-        <p class="title">
-*********************************************************************
-        </p>
-        <h2 class="title">Create and Maintain a Manageable Corporate Data Warehouse</h2>
-        <h3 class="title">Introduction</h3>
-        
-          <p class="normal-text">
-              This paper is to share concepts I have learned about Big Data Analysis and Warehousing, and the accompanying Technology, Methodology and the available Tools and Techniques.
-              
-              With the massive numbers of available tools, frameworks, libraries, databases, companies and corporations, developers, techniques, data sources and other resources available today, all of which is increasing at rocket speed, managing Big Data is a colossal issue.
-          </p>
-          <h4 class="title">Big Data</h4>
-            <p class="normal-text">
-                Big Data elements are "extremely large" datasets, including JSON or XML document-based collections or embedded structures of up to 100 nested container levels, spreadsheets, wide columnar tables or relational database tables of millions of rows, or any combination of these types of data sources.
-
-                There are many ways to analyze Big Data using the above-mentioned resources that to filter, summarize, and detect outliers, trends, patterns and cycles. These are the necessary processes to enable business decisions to be made correctly.
-            </p>
-
-            <p class="normal-text">
+                    <h4 class="title">
+                        When is Big Data contained in a Data Mart or Data Warehouse?
+                    </h4>
+                    <p class="normal-text">
+                        Data Marts contain data for one specific business purpose. These repositories are usually containers of summarized data ready to be analyzed for said business purpose.
+                        <br><br>
+                        Data Warehouses may contain various Data Marts, and aggregate this data
+                        <table>
+                            <tr class="title">
+                                <th></th>
+                                <th><h6>Data Mart</h6></th>
+                                <th><h6>Data Warehouse</h6></th>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Focus:</td>
+                                <td>A single subject or functional organization area</td>
+                                <td>Enterprise-wide repository of disparate data sources</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Sources:</td>
+                                <td>Relatively few sources linked to one line of business</td>
+                                <td>Many external and internal sources from different areas of an organization</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Size:</td>
+                                <td>Less than 100 GB</td>
+                                <td>100 GB minimum but often in the range of terabytes for large organizations *</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Normalization:</td>
+                                <td>No preference between a normalized and denormalized structure</td>
+                                <td>Modern warehouses are mostly denormalized for quicker data querying and read performance</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Decision Types:</td>
+                                <td>Tactical decisions pertaining to particular business lines and ways of doing things</td>
+                                <td>Strategic decisions that affect the entire enterprise</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Cost:</td>
+                                <td>Typically from $10,000 upwards</td>
+                                <td>Varies but often greater than $100,000; for cloud solutions costs can be dramatically lower as organizations pay per use</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Setup Time:</td>
+                                <td>3-6 months</td>
+                                <td>At least a year for on-premise warehouses; cloud data warehouses are much quicker to set up</td>
+                            </tr>
+                            <tr class="normal-text">
+                                <td>Data Held:</td>
+                                <td>Typically summarized data</td>
+                                <td>Raw data, metadata, and summary data </td>
+                            </tr>
+                        </table>
+                    </p>
+                    
+                    <p class="specialfont ">
+                        *  Data is often measured in petabytes for mega-corporations, and is may be referred to as Data Lakes
+                    </p>
+            
+                <a class="source" href="https://panoply.io/data-warehouse-guide/data-mart-vs-data-warehouse/">Table data obtained from Panoply website</a>
+                <br><br>
                 <figure>
-                    <img class="centerimg " src="../../images/Model.jpg" alt="Model graphic given to help with capstone project for CIT327">
-                    <figcaption class="normal-text centered">Basic data warehouse model infographic </figcaption>
+                    <img class="centerimg " src="../../images/dataOrganization.jpg" alt="Model graphic given to help with capstone project for CIT327">
+                    <figcaption class="source centered">Sample data organization model
+                        <a href="https://panoply.io/data-warehouse-guide/data-mart-vs-data-warehouse/"> &nbsp;&nbsp;
+                            [Image source]
+                        </a>
+                    </figcaption>
                 </figure>
             </p>
-            
-
-            <p class="normal-text">
-
-            </p>
-          <p class="normal-text">
-            One popular interpretation of big data refers to extremely large data sets. A National Institute of Standards and Technology report defined big data as consisting of “extensive datasets—primarily in the characteristics of volume, velocity, and/or variability—that require a scalable architecture for efficient storage, manipulation, and analysis.” Some have defined big data as an amount of data that exceeds a petabyte—one million gigabytes.
-
-            From <https://datasciencedegree.wisconsin.edu/data-science/what-is-big-data/> 
-          </p>
 
         <h3 class="title">Data Models</h3>
-            2. Section 2 – Project Setup
+            
             <p class="normal-text">
                 Which model to use when: Inmon or Kimball?
-
             </p>
+
             <p class="normal-text">
+                The Inmon Model (snowflake model) is best suited for the largest collections of data in Data Warehouses. They are not the fastest type of system to set up, they take many months of planning, setting up infrastructure, data collection, selecting the best tools to use to produce the results for the specific needs of the end users. This model takes advantage of horizontal scaling to handle the heavy burden of all the data spread across many nodes or computers.
+                
+                <br><br>
+                <figure>
+                    <img class="centerimg " src="../../images/inmon.png" alt="Graphic of Inmon Model">
+                    <figcaption class="source centered">"Graphic of Inmon Model
+                        <a href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f"> &nbsp;&nbsp;
+                            [Image source, accessed 7 April 2022]
+                        </a>
+                    </figcaption>
+                </figure>
+            </p>
+
+            <p class="normal-text">
+                The Kimball Model (star schema) works best for Data Marts with smaller data collections. They can be set up fairly quickly, and are must less costly, which helps smaller enterprises keep a lower budget. This model works well with vertical scaling.
+                
+                <br><br>
+                <figure>
+                    <img class="centerimg " src="../../images/kimball.png" alt="Kimball Model graphic">
+                    <figcaption class="source centered">Kimball Model graphic
+                        <a href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f"> &nbsp;&nbsp;
+                            [Image source, accessed 7 April 2022]
+                        </a>
+                    </figcaption>
+                </figure>
 
             </p>
 
@@ -259,17 +167,9 @@
             16:47
             pieces of data visualization analytics all lab document management decision services integrations all of these are really just covered in what we talked about.
 
-            <h4 class="title">Requirements and Constraints</h4>
-                a. Identify project drivers and desired outcomes (the “why?” and maybe “when?”)
-                c. Document requirements and constraints (the “what?”)
-                
-                <p class="normal-text">
-                    Data analysis requires processes that conform to business rule relevance. Once these requirements and the necessary data sources are identified, then quality assessment is done.
+            
 
-
-                  
-
-              </p>
+            
                 <h4 class="title">Data Quality</h4>
 
               <p class="normal-text">
@@ -284,22 +184,15 @@
                From <https://www.precisely.com/blog/data-quality/5-characteristics-of-data-quality> 
              </p>
              
-             <h4 class="title">Data end-to-end analytics platform</h4>
-              <p class="normal-text">
-
-              </p>
-
-            <h4 class="title">Data Analysis</h4>
-              b. Establish the participants – stakeholders, technology team, etc. (the “who?”)
+             
+            <h3 class="title">Data Analysis</h3>
+              
                 <p class="normal-text">
-                    Once data sources are collected, they must be processed to draw out the insights hidden in the ocean of bits and bytes. Descriptive 
-
-                  "A data analyst takes the raw data and analyzes it to draw out useful insights. They then present these insights in the form of visualizations, such as graphs and charts, so that stakeholders can understand and act upon them. The kinds of insights gleaned from the data depends on the type of analysis performed. There are four main types of analysis used by data experts: Descriptive, diagnostic, predictive, and prescriptive. Descriptive analytics looks at what happened in the past, while diagnostic analytics looks at why it might have happened. Predictive and prescriptive analytics consider what is likely to happen in the future and, based on these predictions, what the best course of action might be."
-
-                  From <https://careerfoundry.com/en/blog/data-analytics/> 
+                    Once data sources are collected, they must be processed to draw out the insights hidden in the ocean of bits and bytes. Descriptive analytics is viewing past events' data. Diagnostic analytics finds out why the events may have happened. Predictive analytics are for viewing future events. Prescriptive analytics facilite future decisions based on these predictions.
               </p>
-                <h3 class="title">Data Visualization</h3>
+                <h4 class="title">Data Visualization</h4>
                 <p class="normal-text">
+                    Data vizualization will facilitate finding outliers, trends, cycles, anomalies and other points of interest for making the big business decisions. It is much more difficult to see patterns in tables of numbers that don't seem to make any sense, but having colors, lines, bars, circles, bubble and other visual aids make the patterns, or lack of patterns, pop out. Here a few samples of data visual aids:
                     <figure class="col2">
                         <div>
                             <h5 class="title">Bar Chart</h5>
@@ -325,17 +218,22 @@
                             <h5 class="title">Area Chart</h5>
                                 <img src="../../images/areachart.png" alt="area chart image" class="centered">
                         </div>
-                        <br><br>
-                    </figure>
-                    <figcaption class="normal-text">Images from <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">Career Foundry online.</a></figcaption> <br><br>
+                        <figcaption class="source padleft8">
+                            Images from     
+                            <a href="https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/">
+                                Career Foundry online.
+                            </a>
+                        </figcaption>
+                    </figure> <br><br>
                 </p>
                 <p class="normal-text">
-                    
+                    Data vizualization: RDBMS, NoSQL, XML docs
 
-                  "Data visualization (or ‘data viz’) is one of the most important aspects of data analytics. Mapping raw data using graphical elements is great for aiding pattern-spotting and it’s useful for sharing findings in an easily digestible, eye-catching way. And while the priority should always be the integrity of your data, if done well, data visualization can also be a lot of fun.
-                  Master the art of data viz and you’ll soon be spotting trends and correlations, all while flexing your creative muscle."
-
-                  From <https://careerfoundry.com/en/blog/data-analytics/data-visualization-types/>
+                    “Data visualization is the graphical representation of information and 
+                    data. By using visual elements like charts, graphs, and maps, data visualization tools provide 
+                    an accessible way to see and understand trends, outliers, and patterns in data. In the world 
+                    of Big Data, data visualization tools and technologies are essential to analyze massive 
+                    amounts of information and make data-driven decisions.” (source)
               </p>
               <p class="normal-text">
 
@@ -346,18 +244,34 @@
 
               </p>
 
-          <h4 class="title">Methodology</h4>
-            d. Choose the methodology - Inmon, Kimball, hybrid (the “how?”)
+          <h4 class="title">Analytics</h4>
+            
             <p class="normal-text">
+                RDBMS, NoSQL, XML docs
 
+                “The field of data analysis. Analytics often involves studying past historical data to 
+                research potential trends, to analyze the effects of certain decisions or events, or to 
+                evaluate the performance of a given tool or scenario. The goal of analytics is to improve the 
+                business by gaining knowledge which can be used to make improvements or changes.“ 
+                (source)
             </p>
             <p class="normal-text">
 
             </p>
 
-        <h3 class="title">Project Evaluation</h3>
-            3. Section 3 - Project Execution
+        <h4 class="title">Online Analytical Processing (OLAP):</h4>
+                        RDBMS, NoSQL, XML docs
             <p class="normal-text">
+                “...enables end-users to perform ad hoc analysis of data 
+                in multiple dimensions, thereby providing the insight and understanding they need for 
+                better decision making [by providing the] ability to create very fast aggregations and 
+                calculations of underlying data sets.” (source) · Document Management: “a document-
+                oriented database contains documents, which are records that describe the data in the 
+                document, as well as the actual data; one or more document [can be used] to represent a 
+                real-world object.” (source) · 
+
+
+
                 Combining Streaming Telemetry with Other Data Sources
                 From the network operations perspective, streaming telemetry can improve efficiency in many use cases, including:
                 • Detecting problems by setting up network monitors and alerts based on pre-configured thresholds or network performance baselines
@@ -377,16 +291,17 @@
               From <https://www.sei.cmu.edu/our-work/projects/display.cfm?customel_datapageid_4050=6520>
           </p>
           <p class="normal-text">
-            When it comes to software development, technical debt is the idea that certain necessary work gets delayed during the development of a software project in order to hit a deliverable or deadline.
+                When it comes to software development, technical debt is the idea that certain necessary work gets delayed during the development of a software project in order to hit a deliverable or deadline.
 
-            Technical debt is the coding you must do tomorrow because you took a shortcut in order to deliver the software today. <https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt/>
+                "Technical debt is the coding you must do tomorrow because you took a shortcut in order to deliver the software today." <a class="source" href="https://www.bmc.com/blogs/technical-debt-explained-the-complete-guide-to-understanding-and-dealing-with-technical-debt">[Quote source]</a>
           </p>
 
-      <h4 class="title">Working Processes</h4>
-              a. Define working processes (project management, prioritization, bug triage, tech debt 
-            management, etc.)
+        <h4 class="title">Document Management</h4>
+                RDBMS, NoSQL, XML docs
             <p class="normal-text">
-              A critical product insight is understanding user engagement (who is using the product, how often, what flows, etc.). Typically, a data pipeline is built to aggregate the user clickstream details, scripts/programs in spark, hive, impala, etc. to cleanse, process and extract the engagement metrics. The pipeline can be running daily, hourly, or in real-time.
+              
+            
+                A critical product insight is understanding user engagement (who is using the product, how often, what flows, etc.). Typically, a data pipeline is built to aggregate the user clickstream details, scripts/programs in spark, hive, impala, etc. to cleanse, process and extract the engagement metrics. The pipeline can be running daily, hourly, or in real-time.
 
               Now, multiply the number of such pipelines by 1000s given the different types of business dashboards, ML models, data products that a typical enterprise runs today. How do you manage and optimize the performance, SLA, cost, resource allocation, quality of these pipelines processing data at petabyte scale? This is a non-trivial problem given the plethora of technology building blocks involved in a data pipeline and the deep expertise required to efficiently map pipeline configurations to workload and application requirements.
 
@@ -416,67 +331,40 @@
                 From <https://gameanalytics.com/blog/maximizing-the-value-of-player-data/#telemetry-in-the-context-of-gaming> 
             </p>
 
-            <h4 class="title">Technology</h4>
-                b. Select technologies/platforms and tools
-                <p class="normal-text">
-                    "The App development industry is the most competitive and rewarding industry of this decade. Business owners that want to start a new business or want to expand their existing business are making app development their first and foremost priority.
-                    App development is easier and simpler with MEAN stack and Full-stack developers. However, due to the increasing demand for app development, getting hold of a developer’s expert in MEAN technology and Full-stack is harder and expensive."
-
-                    From <https://www.softsuave.com/blog/mean-stack-vs-full-stack-developer-hire-for-your-next-project/> 
-                </p>
-                <p class="normal-text">
-
-                    telemetry’s primary benefit is found in a combination of the data it gleans and how that data is used to generate insights.
-
-                    OpenTelemetry is a cloud-native, vendor-neutral collection of application programming interfaces (APIs), tools, and software development kits (SDKs). It’s used to generate telemetry data, as well as collect and export it. You can then use what OpenTelemetry produces to gain insights into the way your software performs or behaves.
-                    OpenTelemetry supports a variety of languages, including:
-                    • Java
-                    • C#
-                    • C++
-                    • JavaScript
-                    • Python
-                    • Rust
-                    • Erlang/Elixir
-                    OpenTelemetry also integrates with many common libraries and frameworks, including:
-                    • MySQL
-                    • Django
-                    • Redis
-                    • Kafka
-                    • Jetty
-                    • RabbitMQ
-                    • Akka
-                    • Spring
-                    • Flask
-                    • gorilla/mux
-                    • net/http
-                    • WSGI
-                    • JDBC
-                    • PostgreSQL
-                    With OpenTelemetry, you can forward telemetric data from your software and services to analysis tools. This allows you to gather, organize, and analyze telemetry data to gain insights.
-
-                    From <https://www.stackstate.com/blog/the-ultimate-guide-to-telemetry> 
-                </p>
-
-            <h4 class="title">Developing, Testing, Releasing</h4>
-                c. Begin developing, testing, releasing
-                <p class="normal-text">
-                    "Identifying and dealing with outliers can be tough, but it is an essential part of the data analytics process, as well as for feature engineering for machine learning. So how do we find outliers?"
-
-                    From <https://careerfoundry.com/en/blog/data-analytics/how-to-find-outliers/>
-                </p>
-                <p class="normal-text">
-
-                </p>
-
-        <h3 class="title">Managing Telemetry and Technical Debt</h3>
+                    
+            <h3 class="title">Managing Telemetry and Technical Debt</h3>
 
             <h4 class="title">Telemetry</h4>
-                " Measure project over time to ensure continued success"
+                
                 <p class="normal-text">
-
+                    Constant and consistent measuring data flow, fluctuations, user engagement and feedback and many other values and monitoring charts and graphs based on this data is a whole other Big Data collection to worry about, but it helps maintain the necessary qualities of the Data Mart or Warehouse.
                 </p>
                 <p class="normal-text">
+                    OpenTelemetry is a very popular, example of an integration tool, an open-source collection of APIs, supports many languages, including, but not limited to:<br><br>
+                    • Java<br>
+                    • C#<br>
+                    • C++<br>
+                    • JavaScript<br>
+                    • Python<br>
+                    • Rust<br>
+                    • Erlang/Elixir<br><br>
 
+                    OpenTelemetry also integrates with many common libraries and frameworks, including:<br><br>
+                    • MySQL<br>
+                    • Django<br>
+                    • Redis<br>
+                    • Kafka<br>
+                    • Jetty<br>
+                    • RabbitMQ<br>
+                    • Akka<br>
+                    • Spring<br>
+                    • Flask<br>
+                    • gorilla/mux<br>
+                    • net/http<br>
+                    • WSGI<br>
+                    • JDBC<br>
+                    • PostgreSQL<br>
+                    OpenTelemetry also supports analysis of telemetric data from your system by their tools for easy extraction of valuable insigts.
                 </p>
                 <p class="normal-text">
 
@@ -489,6 +377,8 @@
 
             <h4 class="title">Technical Debt</h4>
                 <p class="normal-text">
+                    Technical debt: “the extra [future] development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution.” (source)
+
                     Technical debt is the name given to previously unforeseen issues that cause extra financial cost, including salaries for developers.
                 </p>
                 <p class="normal-text">
@@ -517,6 +407,24 @@
                 <p class="normal-text">
 
                 </p>
+                <p class="normal-text">
+                    Integration of data collections with tools, frameworks and libraries to process them can have heavy technical debt. Using the MEAN stack with JavaScript developers on staff, this can be mitigated, as the MEAN stack is based on JavaScript and many tools support JavaScript.
+                </p>
+
+            <h4 class="title">Big Data Integration</h4>
+            RDBMS, NoSQL, XML docs
+            <p class="normal-text">
+                “...differs from traditional data integration in many dimensions: 
+                Volume, Velocity, Variety and Veracity, which are the big data main characteristics” (source)
+                <https://www.techtarget.com/searchdatamanagement/definition/5-Vs-of-big-data>
+            </p>
+            <p class="normal-text">
+
+            </p>
+
+
+
+        
                 <p class="normal-text">
                     "The Cloud Native Computing Foundation (CNCF) maintains an interactive graphic of the nearly 1,000 unique services that make up the cloud-native ecosystem, many of which are free and open source to boot. Additionally, each of the big three cloud providers—Amazon Web Services, Microsoft Azure, and Google Cloud—offers about 200 unique services to customers, across compute, storage, database, analytics, networking, mobile, developer tools, management tools, IoT, security, and enterprise applications.
 
@@ -552,8 +460,11 @@
                 </p>
 
             <h3 class="title">Conclusion</h3>
-                Section 5 – Conclusion
+                
                 <p class="normal-text">
+                    Explain what methods, tools, and techniques are best suited to deliver a manageable corporate data warehouse [or data mart?]
+
+                    Define how would you go about selecting an analytical tool for the corporation; consider analytical programming but avoid where possible (due to high technical debt) when other tool sets can met needs effectively at low cost (like MicroStrategy, Tableau, Microsoft Power BI, etc.)
 
                 </p>
                 <p class="normal-text">
@@ -622,7 +533,7 @@
                         </a>
                     </li>
                     <li class="normal-text">
-                        <a class="source" href="https://datasciencedegree.wisconsin.edu/data-science/what-is-big-data">
+                        <a id="bigdata" class="source" href="https://datasciencedegree.wisconsin.edu/data-science/what-is-big-data">
                              "What Is Big Data?", University of Wisconsin, Data Science  Line 156
                         </a>
                     </li>
@@ -677,8 +588,9 @@
                         </a>
                     </li>
                     <li class="normal-text">
-                        <a class="source" href="">
-                             linktext
+                        <a class="source"
+                        href="https://piethein.medium.com/the-extinction-of-enterprise-data-warehousing-570b0034f47f">
+                            Strengholt, Piethein, "The Extinction of Enterprise Data Warehousing"
                         </a>
                     </li>
                     <li class="normal-text">

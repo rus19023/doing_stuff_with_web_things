@@ -791,7 +791,7 @@ export const mainNav = [
           url: `${getBase()}week13.html`,
       },
       {
-          name: "Week 14 - Final Paper: Manageable Corporate Data Warehouse",
+          name: "Week 14 - Final Paper",
           url: `${getBase()}week14.html`,
       },
 ];
