@@ -419,56 +419,6 @@ input[type=checkbox].markbtnX {
   transform: rotateY(180deg);
 }
 
-#flipcontainer {
-  display: grid;
-  background: black;
-  width: 250px;
-  min-height: 350px;
-  border: 2px solid white;
-  margin: 1% auto;
-}
-#flipcontainer #flipcard {
-  position: relative;
-  background: black;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-  transition: all 0.8s ease;
-  transform-origin: center;
-}
-#flipcontainer #flipcard #front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background: black;
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(238, 198, 198, 0.2);
-}
-#flipcontainer #flipcard #back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background: black;
-  color: #c584ff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(238, 198, 198, 0.2);
-}
-
-.slider-label {
-  border: 1px solid #fff;
-  padding: 10px;
-  display: block;
-  position: relative;
-  margin: 10px;
-  cursor: pointer;
-}
-
 label:before {
   background-color: #00b705;
   color: white;
@@ -525,6 +475,15 @@ label img {
   transition-duration: 0.2s;
   /* box-shadow: 0 0 5px #333; */
   z-index: -1;
+}
+
+.slider-label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
 }
 
 .sc-slider-ot {
@@ -1031,6 +990,12 @@ main, header, section, footer {
 
 .fifty {
   width: 50%;
+  margin: 1% auto;
+}
+
+.sevenO {
+  width: 70%;
+  margin: 1% auto;
 }
 
 .form-group {
@@ -1172,7 +1137,7 @@ a:visited.sub-text {
   color: white;
   font-family: "Hubbali", sans-serif;
   font-size: 0.6rem;
-  padding: 1%;
+  padding: 0 4%;
   font-weight: bold;
 }
 
@@ -1186,6 +1151,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffd700;
   background: black;
   padding: 2%;
+  margin: 0 auto;
 }
 
 .title a {
@@ -1493,17 +1459,9 @@ h2.subtitle {
   margin: 2%;
 }
 
-li {
-  line-height: 1.25rem;
-}
-
 li.normal-text {
   list-style-type: square;
   margin: 0 auto;
-}
-
-p.normal-text {
-  padding-left: 4%;
 }
 
 @media screen and (min-width: 768px) {

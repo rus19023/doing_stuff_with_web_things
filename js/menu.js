@@ -55,9 +55,6 @@ if (isElement("autofooter")) {
     writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
 }
 
-const footerText = footer => `Hello ${footer}`;
-const footertext = footerText("Ada");
-
 function getTerm(term) {
     switch (term) {
         case "01":
@@ -145,10 +142,12 @@ function getWeekPageTitle(id, page) {
     let weekNo = getWeeknum(getFilename()) || '5';
         // set page title for weekly pages
         let pageTitle = `${page} | Week ${weekNo}`;
+        console.log(pageTitle);
     if (isElement(id)) {
         writeById(id, pageTitle);
     }
     let id2 = id + "2";
+    console.log(id2);
     if (isElement(id2)) {
         console.log(id2, pageTitle)
         writeById(id2, pageTitle);

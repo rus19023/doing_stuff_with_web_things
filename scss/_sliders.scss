@@ -50,53 +50,7 @@
 
 //  End flipcards
 
-#flipcontainer {
-    display: grid;
-    background: black;
-    width: 250px;
-    min-height: 350px;
-    border: $todoborder;
-    margin: 1% auto;
-    & #flipcard {
-        position: relative;
-        background: black;
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-        transition: transform 0.6s;
-        transition: all 0.8s ease;
-        transform-origin: center;
-        & #front {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            background: black;
-            color: white;
-            border-radius: $radius;
-            box-shadow: 0px 0px 10px rgba(238, 198, 198, 0.2);
-        }
-        & #back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            background: black;
-            color: $accent3;
-            border-radius: $radius;
-            box-shadow: 0px 0px 10px rgba(238, 198, 198, 0.2);
-        }
-    }
-}
-
-.slider-label {
-  border: 1px solid #fff;
-    padding: 10px;
-    display: block;
-    position: relative;
-    margin: 10px;
-    cursor: pointer;
-}
+//  CHECKBOXES
 
 label:before {
     background-color: $limegreen;
@@ -154,6 +108,21 @@ label img {
     transition-duration: 0.2s;
     /* box-shadow: 0 0 5px #333; */
     z-index: -1;
+}
+
+//  End CHECKBOXES //
+
+
+
+//  SLIDERS
+
+.slider-label {
+  border: 1px solid #fff;
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .sc-slider-ot {
@@ -265,7 +234,9 @@ label img {
     100% {
       background: url('https://rus19023.github.io/scripturechase/src/img/ot/adam_eve_altar-ot-tall.webp') no-repeat center center;
     }
-}.sc-slider-dc {
+}
+
+.sc-slider-dc {
     width: 100px;
     height: 150px;
     background: url('https://rus19023.github.io/scripturechase/src/img/ot/three_men_in_fiery_furnace-ot-tall.webp') no-repeat center center;
