@@ -796,7 +796,7 @@ export const mainNav = [
       },
       {
           name: "Week 14 - Final Paper",
-          url: `${getBase()}week14.html`,
+          url: `${getBase()}final.html`,
       },
 ];
 
