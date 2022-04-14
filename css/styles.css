@@ -1,5 +1,6 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
+body {
+  background-color: #DDDDDD;
+}/*# sourceMappingURL=styles.css.map */dlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -52,15 +53,36 @@ body header #main-nav ul li a {
   grid-area: right;
   margin: 0 auto;
 }
+#gridcontainer #right #addbar {
+  grid-area: addbar;
+  gap: 2%;
+  max-width: 100%;
+  margin: 2%;
+  grid-template-areas: "addinput addbtn";
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+}
+#gridcontainer #right #addbar #addinput {
+  background: #ffd700;
+  border: 2px solid white;
+}
+#gridcontainer #right #addbar #addbtn {
+  font-size: 2rem;
+  border-radius: 10px;
+  background: #ffd700;
+  color: black;
+  border: 2px solid white;
+}
 
 #todocontainer {
   display: grid;
   grid-area: todocontainer;
   background: black;
   max-width: 100%;
-  margin: 1% auto;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "header1" "todos" "addbar" "listfooter";
+  margin: 4% auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "left" "right";
 }
 #todocontainer #header1 {
   grid-area: header1;
@@ -119,27 +141,6 @@ body header #main-nav ul li a {
   border: none;
   font-size: 1.5em;
   font-weight: bold;
-}
-#todocontainer #addbar {
-  grid-area: addbar;
-  gap: 2%;
-  max-width: 100%;
-  margin: 2%;
-  grid-template-areas: "addinput addbtn";
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 10fr 1fr;
-}
-#todocontainer #addbar #addinput {
-  background: #ffd700;
-  border: 2px solid white;
-}
-#todocontainer #addbar #addbtn {
-  font-size: 2rem;
-  border-radius: 10px;
-  background: #ffd700;
-  color: black;
-  border: 2px solid white;
 }
 #todocontainer h3 {
   padding: 1%;

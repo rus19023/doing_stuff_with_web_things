@@ -53,6 +53,28 @@ body {
         margin: 0 auto;
     }
     & #right {
+        & #addbar {
+            grid-area: addbar;
+            gap: 2%;
+            max-width: 100%;
+            margin: 2%;
+            grid-template-areas:
+            "addinput addbtn";
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 10fr 1fr;
+            & #addinput {
+                background: $yellow;
+                border: $todoborder;
+            }
+            & #addbtn {
+                font-size: 2rem;
+                border-radius: $radius;
+                background: $yellow;
+                color: black;
+                border: $todoborder;
+            }
+        }
         grid-area: right;
         margin: 0 auto;
     }
@@ -63,13 +85,11 @@ body {
     grid-area: todocontainer;
     background: black;
     max-width: 100%;
-    margin: 1% auto;
-    grid-template-columns: 1fr 1fr;
+    margin: 4% auto;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    "header1"
-    "todos"
-    "addbar"
-    "listfooter";
+    "left"
+    "right";
     & #header1 {
         grid-area: header1;
         margin-bottom: 1%;
@@ -128,28 +148,6 @@ body {
                 font-size: $font2;
                 font-weight: bold;
             }
-        }
-    }
-    & #addbar {
-        grid-area: addbar;
-        gap: 2%;
-        max-width: 100%;
-        margin: 2%;
-        grid-template-areas:
-        "addinput addbtn";
-        cursor: pointer;
-        display: grid;
-        grid-template-columns: 10fr 1fr;
-        & #addinput {
-            background: $yellow;
-            border: $todoborder;
-        }
-        & #addbtn {
-            font-size: 2rem;
-            border-radius: $radius;
-            background: $yellow;
-            color: black;
-            border: $todoborder;
         }
     }
     & h3 {
