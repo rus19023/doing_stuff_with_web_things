@@ -23,21 +23,24 @@
     }
 
     #gridcontainer {
-        max-width: 85%;
+        max-width: 90%;
         border-radius: $lgradius;
-        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
         "left right";
+        & #content-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        }
     }
 
+    #todocontainer {
+        grid-template-areas:
+        "header1 addbar"
+        "todos listfooter";
+    }
 }
 
 
 @media screen and (min-width: 1200px) {
-
-    #todocontainer {
-        max-width: 50%;
-    }
 
     .col2 {
         grid-template-columns: 1fr 1fr 1fr;
@@ -75,11 +78,6 @@
     // .sources { color: $accent3; }
     // .normal-text, h4.title, #autofooter, .sources, .todo-text { font-size: .3rem; }
 
-    #gridcontainer {
-        max-width: 75%;
-        margin: 0 auto;
-    }
-
     .color3 {
         grid-template-columns: repeat(6, 1fr);
     }
@@ -88,10 +86,6 @@
 @media screen and (min-width: 1700px) {
 
     body { font-size: 7px; }
-
-    #gridcontainer {
-        max-width: 60%;
-    }
 
     .color3 {
         grid-template-columns: repeat(7, 1fr);

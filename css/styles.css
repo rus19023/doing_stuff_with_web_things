@@ -29,8 +29,8 @@ body header #main-nav ul li a {
   min-height: 100vh;
   grid-area: gridcontainer;
   display: grid;
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 90%;
+  margin: 4% auto;
   grid-template-columns: 1fr;
   grid-template-areas: "left" "right";
 }
@@ -57,8 +57,9 @@ body header #main-nav ul li a {
   display: grid;
   grid-area: todocontainer;
   background: black;
+  max-width: 100%;
   margin: 1% auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "header1" "todos" "addbar" "listfooter";
 }
 #todocontainer #header1 {
@@ -1275,7 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .buttons {
   margin: 0 auto;
-  max-width: 50%;
+  max-width: 80%;
 }
 
 .padit {
@@ -1507,17 +1508,19 @@ li.normal-text {
   }
 
   #gridcontainer {
-    max-width: 85%;
+    max-width: 90%;
     border-radius: 20px;
-    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "left right";
+  }
+  #gridcontainer #content-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #todocontainer {
+    grid-template-areas: "header1 addbar" "todos listfooter";
   }
 }
 @media screen and (min-width: 1200px) {
-  #todocontainer {
-    max-width: 50%;
-  }
-
   .col2 {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -1541,11 +1544,6 @@ li.normal-text {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  #gridcontainer {
-    max-width: 75%;
-    margin: 0 auto;
-  }
-
   .color3 {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -1553,10 +1551,6 @@ li.normal-text {
 @media screen and (min-width: 1700px) {
   body {
     font-size: 7px;
-  }
-
-  #gridcontainer {
-    max-width: 60%;
   }
 
   .color3 {

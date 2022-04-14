@@ -32,8 +32,8 @@ body {
     min-height: 100vh;
     grid-area: gridcontainer;
     display: grid;
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 90%;
+    margin: 4% auto;
     grid-template-columns: 1fr;
     grid-template-areas:
         "left"
@@ -62,8 +62,9 @@ body {
     display: grid;
     grid-area: todocontainer;
     background: black;
+    max-width: 100%;
     margin: 1% auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "header1"
     "todos"
