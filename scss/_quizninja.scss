@@ -15,17 +15,12 @@
 .quizhead {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: right;
+    font-family: $fontfirst;
 }
 
 #question {
    font-size: .8rem;
-}
-
-#result{
-    color: #fff;
-    text-align: center;
-    padding: 2%;
 }
 
 #info, #question, #result {
@@ -41,8 +36,13 @@
 }
 
 .wrong {
-    color: $yellow;
+    color: $chartreuse;
     background-color: $redorange;
+}
+
+#result {
+    padding: 2% 4%;
+    font-family: $fontfirst;
 }
 
 #hint {
@@ -51,9 +51,10 @@
 }
 
 #hint, #next, #start {
-    width: 28%;
+    max-width: 100%;
     margin: 2%;
-    font-size: .8rem;
+    padding: 1% 4%;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: $radius;
 }

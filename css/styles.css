@@ -334,17 +334,12 @@ input[type=checkbox].markbtnX {
 .quizhead {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: right;
+  font-family: "Hubbali", sans-serif;
 }
 
 #question {
   font-size: 0.8rem;
-}
-
-#result {
-  color: #fff;
-  text-align: center;
-  padding: 2%;
 }
 
 #info, #question, #result {
@@ -360,8 +355,13 @@ input[type=checkbox].markbtnX {
 }
 
 .wrong {
-  color: #ffd700;
+  color: #a8ff00;
   background-color: #b70500;
+}
+
+#result {
+  padding: 2% 4%;
+  font-family: "Hubbali", sans-serif;
 }
 
 #hint {
@@ -370,9 +370,10 @@ input[type=checkbox].markbtnX {
 }
 
 #hint, #next, #start {
-  width: 28%;
+  max-width: 100%;
   margin: 2%;
-  font-size: 0.8rem;
+  padding: 1% 4%;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 10px;
 }
