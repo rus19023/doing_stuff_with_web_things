@@ -19,8 +19,7 @@
 }
 
 #question {
-   font-size: 12px;
-   min-height: 6rem;
+   font-size: .8rem;
 }
 
 #result{
@@ -37,20 +36,18 @@
 }
 
 .correct {
-    background-color: #0c0;
+    background-color: $seafoam;
+    color: $purple;
 }
 
 .wrong {
-    color: #fff;
-    background-color: #c00;
+    color: $yellow;
+    background-color: $redorange;
 }
 
 #hint {
     color: $royalblue;
     background-color: $yellow;
-    border: $todoborder;
-    border-radius: $radius;
-    margin: 2%;
 }
 
 #hint, #next, #start {
@@ -58,6 +55,7 @@
     margin: 2%;
     font-size: .8rem;
     font-weight: bold;
+    border-radius: $radius;
 }
 
 #response {

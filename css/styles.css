@@ -338,8 +338,7 @@ input[type=checkbox].markbtnX {
 }
 
 #question {
-  font-size: 12px;
-  min-height: 6rem;
+  font-size: 0.8rem;
 }
 
 #result {
@@ -356,20 +355,18 @@ input[type=checkbox].markbtnX {
 }
 
 .correct {
-  background-color: #0c0;
+  background-color: #00ff58;
+  color: #6000b7;
 }
 
 .wrong {
-  color: #fff;
-  background-color: #c00;
+  color: #ffd700;
+  background-color: #b70500;
 }
 
 #hint {
   color: #0500b7;
   background-color: #ffd700;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin: 2%;
 }
 
 #hint, #next, #start {
@@ -377,6 +374,7 @@ input[type=checkbox].markbtnX {
   margin: 2%;
   font-size: 0.8rem;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 #response {
@@ -1155,6 +1153,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hide {
   display: none !important;
+}
+
+.show {
+  display: inline-block !important;
 }
 
 .hotpinkbg {
