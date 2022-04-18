@@ -26,6 +26,7 @@
 #result{
     color: #fff;
     text-align: center;
+    padding: 2%;
 }
 
 #info, #question, #result {
@@ -44,9 +45,24 @@
     background-color: #c00;
 }
 
+#hint {
+    color: $royalblue;
+    background-color: $yellow;
+    border: $todoborder;
+    border-radius: $radius;
+    margin: 2%;
+}
+
+#hint, #next, #start {
+    width: 28%;
+    margin: 2%;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
 #response {
     display: grid !important;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     min-height: 6rem;
 }
 

@@ -1,9 +1,13 @@
 .color3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    //font-size: $font4;
-    padding: .25vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    padding: 4%;
+    border-radius: $radius;
+    margin: 4% auto;
+    font-family: $fontfirst;
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-width: 90%;
 }
 
 .orange { background: black; color: $orange; margin: 0; }

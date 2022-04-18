@@ -51,7 +51,7 @@ body header #main-nav ul li a {
 }
 #gridcontainer #right {
   grid-area: right;
-  margin: 0 auto;
+  margin: 2% auto;
 }
 #gridcontainer #right #addbar {
   grid-area: addbar;
@@ -82,7 +82,6 @@ body header #main-nav ul li a {
   max-width: 100%;
   margin: 4% auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "left" "right";
 }
 #todocontainer #header1 {
   grid-area: header1;
@@ -203,12 +202,12 @@ body header #main-nav ul li a {
   margin: 4%;
   font-weight: bold;
   border: 2px solid white;
-  background: #00b705;
+  background: #28ff00;
   color: black;
 }
 #listfooter #srchbar #srchbtn {
   grid-area: srchbtn;
-  background: #00b705;
+  background: #28ff00;
   margin: 4%;
   padding: 1%;
   color: black;
@@ -220,15 +219,20 @@ body header #main-nav ul li a {
 }
 
 .color3 {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 100%;
-  padding: 0.25vw;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  padding: 4%;
+  border-radius: 10px;
+  margin: 4% auto;
+  font-family: "Hubbali", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: 90%;
 }
 
 .orange {
   background: black;
-  color: #b76000;
+  color: #ff5800;
   margin: 0;
 }
 
@@ -240,25 +244,25 @@ body header #main-nav ul li a {
 
 .chartreuse {
   background: black;
-  color: #57b700;
+  color: #a8ff00;
   margin: 0;
 }
 
 .limegreen {
   background: black;
-  color: #00b705;
+  color: #28ff00;
   margin: 0;
 }
 
 .seafoam {
   background: black;
-  color: #00b760;
+  color: #00ff58;
   margin: 0;
 }
 
 .skyblue {
   background: black;
-  color: #00b3b7;
+  color: #00ffd7;
   margin: 0;
 }
 
@@ -341,6 +345,7 @@ input[type=checkbox].markbtnX {
 #result {
   color: #fff;
   text-align: center;
+  padding: 2%;
 }
 
 #info, #question, #result {
@@ -359,9 +364,24 @@ input[type=checkbox].markbtnX {
   background-color: #c00;
 }
 
+#hint {
+  color: #0500b7;
+  background-color: #ffd700;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 2%;
+}
+
+#hint, #next, #start {
+  width: 28%;
+  margin: 2%;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
 #response {
   display: grid !important;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   min-height: 6rem;
 }
 
@@ -422,12 +442,12 @@ input[type=checkbox].markbtnX {
 }
 
 label:before {
-  background-color: #00b705;
+  background-color: #28ff00;
   color: white;
   content: " ";
   display: block;
   border-radius: 50%;
-  border: 1px solid #00b705;
+  border: 1px solid #28ff00;
   position: absolute;
   top: -5px;
   left: -5px;
@@ -463,7 +483,7 @@ label img {
   content: "✓";
   font-size: 2em;
   margin: auto;
-  background-color: #00b705;
+  background-color: #28ff00;
   transform: scale(1.1);
   transition-duration: 0.2s;
 }
@@ -758,14 +778,14 @@ body {
 a {
   font-family: "Hubbali", sans-serif;
   font-weight: bold;
-  color: #6fea00;
+  color: #b9ff33;
   text-decoration: none;
 }
 a :hover {
   color: #c584ff;
 }
 a :visited {
-  color: #00e4ea;
+  color: #33ffdf;
 }
 
 #ocean {
@@ -799,10 +819,13 @@ a :visited {
   background: black;
   width: 2rem;
 }
-#social-share div :hover {
+#social-share div button:hover {
   background: black;
   transform: scale(1.25);
   transition: all 0.1s ease-in-out;
+}
+#social-share div button:hover img {
+  width: 50px;
 }
 
 h3.small {
@@ -848,11 +871,14 @@ h3.small {
     height: 60%;
   }
 }
-main, header, section, footer {
+main, header, footer {
   max-width: 90%;
   border-radius: 10px;
   margin: 4%;
   padding: 1%;
+}
+
+main, header, section, footer, div {
   background: black;
 }
 
@@ -916,57 +942,6 @@ main, header, section, footer {
 
 .flipcard:hover {
   transform: rotateY(180deg);
-}
-
-.orange {
-  color: #b76000;
-}
-
-.yellow {
-  color: #ffd700;
-}
-
-.chartreuse {
-  color: #57b700;
-}
-
-.limegreen {
-  color: #00b705;
-}
-
-.seafoam {
-  color: #00b760;
-}
-
-.skyblue {
-  color: #00b3b7;
-}
-
-.medblue {
-  background: #bbbbbb;
-  color: #0057b7;
-}
-
-.royalblue {
-  background: #bbbbbb;
-  color: #0500b7;
-}
-
-.purple {
-  background: #bbbbbb;
-  color: #6000b7;
-}
-
-.hotpink {
-  color: #b700b3;
-}
-
-.dksalmon {
-  color: #b70057;
-}
-
-.redorange {
-  color: #b70500;
 }
 
 .imgbox {
@@ -1069,8 +1044,13 @@ h2#tab-bar a {
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #6fea00;
+  color: #b9ff33;
   padding: 1% 2%;
+}
+
+.col3 {
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 4% auto;
 }
 
 #get-unit {
@@ -1085,7 +1065,7 @@ header {
 }
 
 .exercise {
-  border: 2px solid #b76000;
+  border: 2px solid #ff5800;
   border-radius: 10px;
   margin: 2%;
 }
@@ -1106,7 +1086,7 @@ header {
 
 img {
   font-size: 1em;
-  color: #00e4ea;
+  color: #33ffdf;
   border-radius: 10px;
 }
 
@@ -1124,14 +1104,14 @@ a.cert-text {
 }
 
 a:visited.cert-text {
-  color: #00e4ea;
+  color: #33ffdf;
   font-family: "Handlee", cursive;
 }
 
 a.sub-text {
   font-size: 0.65rem;
   font-family: "Hubbali", sans-serif;
-  color: #6fea00;
+  color: #b9ff33;
   text-align: left;
   font-weight: bold;
   max-width: 100%;
@@ -1166,7 +1146,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title a {
-  color: #6fea00;
+  color: #b9ff33;
   text-decoration: none;
 }
 .title a:hover {
@@ -1177,7 +1157,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none !important;
 }
 
-.hotpink {
+.hotpinkbg {
   background: #b700b3;
 }
 
@@ -1322,15 +1302,13 @@ footer#autofooter, footer {
   color: #ffd700;
   font-family: "Handlee", cursive;
   border-radius: 10px;
-  padding: 2%;
   font-weight: bold;
   text-align: center;
-  bottom: -5%;
 }
 
 a.source {
   text-align: left;
-  color: #6fea00;
+  color: #b9ff33;
   font-family: "Hubbali", sans-serif;
   padding: 2%;
   margin: 2rem auto;
@@ -1339,7 +1317,7 @@ a.source {
 a.source a {
   text-decoration: none;
   font-weight: bold;
-  color: #00e4ea;
+  color: #33ffdf;
 }
 
 .sources {
@@ -1375,16 +1353,6 @@ tr {
 
 .todo-scratch {
   text-decoration: line-through;
-}
-
-.color3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4%;
-  padding: 2%;
-  border-radius: 10px;
-  margin: 4%;
-  font-weight: bold;
 }
 
 .col1 {
@@ -1435,8 +1403,9 @@ tr {
   gap: 5%;
 }
 
-.nav {
+.nav, header {
   padding: 2%;
+  margin: 2% auto;
 }
 
 pre {

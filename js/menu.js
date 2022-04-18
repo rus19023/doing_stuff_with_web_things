@@ -48,14 +48,15 @@ siteTitle("340");
 siteTitle("home");
 siteTitle("csa");
 siteTitle("courses");
+siteTitle("palette");
 
 
 // set footer
 if (isElement("autofooter")) {
-    writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for Bachelor of Science in Applied Technology");
+    writeById("autofooter", "&copy; 2019-2022 | Doris Rush-Lopez, BYU-Idaho Candidate for <br> Bachelor of Science in Applied Technology");
 }
 
-function getTerm(term) {
+const getTerm = (term) => {
     switch (term) {
         case "01":
             return "Winter";
@@ -75,7 +76,7 @@ function getTerm(term) {
     }
 }
 
-function getIndexPageTitle(id) {
+const getIndexPageTitle = (id) => {
     //console.table(`mainNav.sort: ${mainNav.sort((a, b) => (a.term.toLowerCase() > b.term.toLowerCase()) ? 1 : -1)}`);
     const courses = lists.mainNav.sort((a, b) => ((a.cert + a.year + a.term) > (b.cert + b.year + b.term)) ? 1 : -1);
     //console.table(courses);
@@ -138,7 +139,7 @@ const getTitles = (list) => {
 const courseCodes = getTitles(lists.mainNav);
 setTitles(courseCodes);
 
-function getWeekPageTitle(id, page) {
+const getWeekPageTitle = (id, page) => {
     let weekNo = getWeeknum(getFilename()) || '5';
         // set page title for weekly pages
         let pageTitle = `${page} | Week ${weekNo}`;

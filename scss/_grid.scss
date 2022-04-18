@@ -53,6 +53,8 @@ body {
         margin: 0 auto;
     }
     & #right {
+        grid-area: right;
+        margin: 2% auto;
         & #addbar {
             grid-area: addbar;
             gap: 2%;
@@ -75,8 +77,6 @@ body {
                 border: $todoborder;
             }
         }
-        grid-area: right;
-        margin: 0 auto;
     }
 }
 
@@ -87,9 +87,6 @@ body {
     max-width: 100%;
     margin: 4% auto;
     grid-template-columns: 1fr;
-    grid-template-areas:
-    "left"
-    "right";
     & #header1 {
         grid-area: header1;
         margin-bottom: 1%;

@@ -1,26 +1,27 @@
 // Colors
-$orange: #b76000;
-$yellow: #ffd700;
-$chartreuse: adjust-hue($orange, 60deg);
-$limegreen: adjust-hue($orange, 90deg);
-$seafoam: adjust-hue($orange, 120deg);
-$skyblue: adjust-hue($orange, 150deg);
-$medblue: adjust-hue($orange, 180deg);
-$royalblue: adjust-hue($orange, -150deg);
+$medblue: #0057b7;
+$royalblue: adjust-hue($medblue, 30deg);
+$purple: adjust-hue($medblue, 60deg);
+$hotpink: adjust-hue($medblue, 90deg);
+$dksalmon: adjust-hue($medblue, 120deg);
+$redorange: adjust-hue($medblue, 150deg);
 
-$purple: adjust-hue($orange, -120deg);
-$hotpink: adjust-hue($orange, -90deg);
-$dksalmon: adjust-hue($orange, -60deg);
-$redorange: adjust-hue($orange, -30deg);
+$yellow: #ffd700;
+$chartreuse: adjust-hue($yellow, 30deg);
+$limegreen: adjust-hue($yellow, 60deg);
+$seafoam: adjust-hue($yellow, 90deg);
+$skyblue: adjust-hue($yellow, 120deg);
+$orange: adjust-hue($yellow, -30deg);
+
 $todoborder: 2px solid white;
 $dotborder: 2px dotted white;
-
-$ublue: #0057b7;
 
 $accent1: lighten($chartreuse, 10%);
 $accent2: lighten($skyblue, 10%);
 $accent3: lighten($purple, 40%);
 $accent4: lighten($dksalmon, 40%);
+$accentye: lighten($yellow, 20%);
+
 $headings: $accent1;
 $contrast: $medblue;
 $orangeborder: darken($orange, 20%);
@@ -52,6 +53,7 @@ $newvgradient: linear-gradient(
 
 $background: $newhgradient;
 $debug: rgb(190, 255, 60);
+$debug: $chartreuse;
 
 $dkgrey: #3a3a3a;
 $mdgrey: #686868;

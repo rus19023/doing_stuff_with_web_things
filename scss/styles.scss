@@ -66,10 +66,13 @@ a {
         border-radius: $radius;
         background: black;
         width: 2rem;
-        & :hover {
+        & button:hover {
             background: black;
             transform: scale(1.25);
             transition: all .1s ease-in-out;
+            & img {
+                width: 50px;
+            }
         }
     }
 }
@@ -103,11 +106,14 @@ h3.small {
     }
 }
 
-main, header, section, footer {
+main, header, footer {
     max-width: 90%;
     border-radius: $radius;
     margin: 4% ;
     padding: 1%;
+}
+
+main, header, section, footer, div {
     background: black;
 }
 
@@ -171,20 +177,6 @@ main, header, section, footer {
 .flipcard:hover {
     transform: rotateY(180deg);
 }
-
-.orange { color: $orange; }
-.yellow { color: $yellow; }
-.chartreuse { color: $chartreuse; }
-.limegreen { color: $limegreen; }
-.seafoam { color: $seafoam; }
-.skyblue { color: $skyblue; }
-.medblue { background: #bbbbbb; color: $medblue; }
-.royalblue { background: #bbbbbb; color: $royalblue; }
-.purple { background: #bbbbbb; color: $purple; }
-.hotpink { color: $hotpink; }
-.dksalmon { color: $dksalmon; }
-.redorange { color: $redorange; }
-
 .imgbox {
     align-items: center;
     max-width: 90%;
@@ -289,6 +281,11 @@ h2#tab-bar {
     }
 }
 
+.col3 {
+   grid-template-columns: 1fr 4fr 1fr;
+    margin: 4% auto;
+}
+
 #get-unit { display: grid; grid-template-columns: 1fr 1fr; }
 
 header {
@@ -388,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none !important;
 }
 
-.hotpink {
+.hotpinkbg {
     background: $hotpink;
 }
 
@@ -521,10 +518,8 @@ footer#autofooter, footer {
     color: $yellow;
     font-family: $fontsecond;
     border-radius: $radius;
-    padding: 2%;
     font-weight: bold;
     text-align: center;
-    bottom: -5%;
 }
 
 a.source {
@@ -576,16 +571,6 @@ tr {
     text-decoration: line-through;
 }
 
-.color3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4%;
-    padding: 2%;
-    border-radius: $radius;
-    margin: 4%;
-    font-weight: bold;
-}
-
 .col1 {
     width: 50%;
     display: grid;
@@ -633,7 +618,7 @@ tr {
     gap: 5%;
 }
 
-.nav { padding: 2%; }
+.nav, header { padding: 2%; margin: 2% auto; }
 
 pre {
     overflow-x: auto;
