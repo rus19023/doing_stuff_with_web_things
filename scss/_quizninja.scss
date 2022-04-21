@@ -33,6 +33,7 @@
 .correct {
     background-color: $seafoam;
     color: $purple;
+    font-weight: bold;
 }
 
 .wrong {
@@ -62,6 +63,8 @@
 #response {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
+    margin: 1.5rem;
+    gap: 1rem;
     min-height: 6rem;
 }
 

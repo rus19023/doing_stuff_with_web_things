@@ -352,6 +352,7 @@ input[type=checkbox].markbtnX {
 .correct {
   background-color: #00ff58;
   color: #6000b7;
+  font-weight: bold;
 }
 
 .wrong {
@@ -381,6 +382,8 @@ input[type=checkbox].markbtnX {
 #response {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
+  margin: 1.5rem;
+  gap: 1rem;
   min-height: 6rem;
 }
 
