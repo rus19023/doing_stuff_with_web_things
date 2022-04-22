@@ -10,7 +10,7 @@ const getCbase = () => {
     return `${location.href}courses/`;
 }
 
-function weeknumber() {
+const weeknumber = () => {
     // calculate which week we are on
     // set first date of term
     let termdate = new Date(2022, 0, 1, 0, 59, 0);
@@ -87,7 +87,7 @@ const isClass = (element) => {
     }
 }
 
-function createLMNT(LMNT, type, id, text, classes, html) {
+const createLMNT = (LMNT, type, id, text, classes, html) => {
     let lmnt = document.createElement(LMNT);
     if (type) {
         lmnt.setAttribute('type', type);
@@ -108,7 +108,8 @@ function createLMNT(LMNT, type, id, text, classes, html) {
     return lmnt;
 }
 
-function appendLMNT(node, append1, append2, append3, append4, append5) {
+// append any parameter nodes to the first parameter
+const appendLMNT = (node, append1, append2, append3, append4, append5) => {
     node.appendChild(append1);
     if (append1) {
         node.appendChild(append1);
@@ -129,7 +130,8 @@ function appendLMNT(node, append1, append2, append3, append4, append5) {
     return node;
 }
 
-function appendNestLMNT(node, append1, append2, append3, append4, append5) {
+// append parameters nested to previous node
+const appendNestLMNT = (node, append1, append2, append3, append4, append5) => {
     if (append5) {
         append4.appendChild(append5);
     }
@@ -146,7 +148,5 @@ function appendNestLMNT(node, append1, append2, append3, append4, append5) {
     console.log(node);
     return node;
 }
-
-
 
   export { isClass, isElement, getBase, getCbase, getFilename, writeByClass, writeById, cleanInput, createLink, urlExists, qs, qsAll, createLMNT, appendNestLMNT, appendLMNT, weeknumber };

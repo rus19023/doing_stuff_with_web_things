@@ -1,6 +1,5 @@
-body {
-  background-color: #DDDDDD;
-}/*# sourceMappingURL=styles.css.map */dlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -808,10 +807,6 @@ a :visited {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 10px;
-  background: black;
-  margin: 2%;
-  padding: 2%;
   transform: none;
 }
 #social-share div {
@@ -821,13 +816,14 @@ a :visited {
   background: black;
   width: 2rem;
 }
-#social-share div button:hover {
-  background: black;
+#social-share div button :hover {
   transform: scale(1.25);
   transition: all 0.1s ease-in-out;
 }
-#social-share div button:hover img {
+#social-share div button img {
   width: 50px;
+  height: 50px;
+  margin: 0 auto;
 }
 
 h3.small {
