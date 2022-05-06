@@ -153,5 +153,4 @@ function createNav(array, id) {
     }
 }
 
-
-createNav(newsFeed202202spring,'newsfeed');`;`
+createNav(newsFeed202202spring,'newsfeed');

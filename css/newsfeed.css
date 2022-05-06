@@ -3,6 +3,16 @@
   grid-template-columns: 1fr;
 }
 
+a {
+  color: white;
+  background: chartreuse;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 p {
   font-size: 0.8rem;
   padding: 1%;
