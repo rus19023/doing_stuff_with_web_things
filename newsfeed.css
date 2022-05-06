@@ -85,7 +85,6 @@ p {
 @media screen and (min-width: 768px) {
 
     #newsfeed {
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -93,7 +92,6 @@ p {
 @media screen and (min-width: 992px) {
 
     #newsfeed {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
@@ -102,5 +100,22 @@ p {
 
     #newsfeed {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+
+    #newsfeed {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .flipcard {
+      width: 600px;
+      height: 400px;
+    }
+
+    img {
+      width: 600px;
+      height: 400px;
     }
 }
