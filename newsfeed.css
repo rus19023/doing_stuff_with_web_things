@@ -1,11 +1,18 @@
 #newsfeed {
   display: grid;
   grid-template-columns: 1fr;
+  background: black;
+  color: hotpink;
+  padding: 2%;
 }
 
 a {
   color: chartreuse;
-  background: black;
+}
+
+img {
+  border-radius: 10px;
+  padding: 0;
 }
 
 a:visited {
@@ -19,16 +26,16 @@ ul li {
 
 p {
   font-size: 0.8rem;
-  padding: 1%;
-  margin: 5px;
+  padding: 0;
 }
 
 .flipcard {
-  background-color: transparent;
+  background: black;
   width: 300px;
   height: 200px;
   border-radius: 10px;
   perspective: 1000px;
+  margin: 2%;
   /* Remove this if you don't want the 3D effect */
 }
 
@@ -59,8 +66,7 @@ p {
 
 /* Style the front side (fallback if image is missing) */
 .flipcard-front {
-  background-color: #bbb;
-  color: black;
+  background-color: black;
 }
 
 /* Style the back side */
