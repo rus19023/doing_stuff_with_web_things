@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&family=Handlee&family=Hubballi&family=Nunito:wght@300&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+
+body {
+  background: black;
+}
+
 #newsfeed {
   display: grid;
+  gap: 2%;
   grid-template-columns: 1fr;
   background: black;
   color: hotpink;
-  padding: 2%;
+}
+
+h1 {
+  color: chartreuse;
+  text-align: center;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 1.2rem;
 }
 
 a {
@@ -13,6 +26,7 @@ a {
 img {
   border-radius: 10px;
   padding: 0;
+  margin: 0;
 }
 
 a:visited {
@@ -35,11 +49,9 @@ p {
   height: 200px;
   border-radius: 10px;
   perspective: 1000px;
-  margin: 2%;
-  /* Remove this if you don't want the 3D effect */
+  margin: 3% auto;
 }
 
-/* This container is needed to position the front and back side */
 .flipcard-inner {
   position: relative;
   width: 100%;
@@ -49,29 +61,23 @@ p {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flipcard:hover .flipcard-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flipcard-front, .flipcard-back {
   position: absolute;
   -webkit-backface-visibility: hidden;
-  /* Safari */
   backface-visibility: hidden;
-  border: 1px solid #f1f1f1;
   border-radius: 10px;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flipcard-front {
-  background-color: black;
+  background: #444;
 }
 
-/* Style the back side */
 .flipcard-back {
-  background-color: grey;
+  background-color: #444;
   color: white;
   transform: rotateY(180deg);
 }
@@ -92,10 +98,9 @@ p {
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1300px) {
 
     #newsfeed {
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
