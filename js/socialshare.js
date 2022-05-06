@@ -62,8 +62,6 @@ export const createSharer = (title, url, postimg, hashtags) => {
     appendLMNT(sharer, divfb, divli, divwa);
 }
 
-
-
 // set sharer
 if (isElement("social-share")) {
   writeById("autoshare", sharer);
