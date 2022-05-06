@@ -8,6 +8,10 @@ a {
   background: chartreuse;
 }
 
+a:visited {
+  color: white;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
