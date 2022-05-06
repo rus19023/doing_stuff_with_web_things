@@ -20,6 +20,7 @@ ul li {
 p {
   font-size: 0.8rem;
   padding: 1%;
+  margin: 5px;
 }
 
 .flipcard {
@@ -67,4 +68,28 @@ p {
   background-color: grey;
   color: white;
   transform: rotateY(180deg);
-}/*# sourceMappingURL=newsfeed.css.map */
+}
+
+@media screen and (min-width: 768px) {
+
+    #newsfeed {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    #newsfeed {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    #newsfeed {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
