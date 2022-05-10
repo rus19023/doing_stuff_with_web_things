@@ -115,8 +115,8 @@ body header #main-nav ul li a {
 }
 #todocontainer #todos li.listitem .editbtn .editicon {
   background: transparent;
-  width: 0.65rem;
-  height: 0.65rem;
+  width: 0.75rem;
+  height: 0.75rem;
 }
 #todocontainer #todos li.listitem .markbtn {
   grid-area: markbtn;
@@ -307,11 +307,29 @@ body header #main-nav ul li a {
   grid-template-columns: 1fr;
 }
 
+a {
+  color: white;
+  background: chartreuse;
+}
+
+a:visited {
+  color: lightcoral;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 0;
+}
+
+p {
+  font-size: 0.8rem;
+  padding: 1%;
+}
+
 .flipcard {
   background-color: transparent;
   width: 300px;
   height: 200px;
-  border: 1px solid #f1f1f1;
   border-radius: 10px;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
@@ -340,6 +358,8 @@ body header #main-nav ul li a {
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
 }
 
 /* Style the front side (fallback if image is missing) */

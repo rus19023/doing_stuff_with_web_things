@@ -1,5 +1,5 @@
 // Menu Functions
-import { isElement, writeById, createLink, getFilename, urlExists, getBase, createLMNT, appendNestLMNT, appendLMNT } from './js/utilities.js';
+import { isElement, writeById, createLink, getFilename, urlExists, getBase, createLMNT, appendNestLMNT, appendLMNT } from './utilities.js';
 
 const newsFeed202202spring = [
     {
