@@ -115,6 +115,8 @@ body header #main-nav ul li a {
 }
 #todocontainer #todos li.listitem .editbtn .editicon {
   background: transparent;
+  margin: 0;
+  padding: 0;
   width: 0.75rem;
   height: 0.75rem;
 }
