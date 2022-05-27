@@ -946,7 +946,7 @@ h3.small {
 main, header, footer {
   max-width: 90%;
   border-radius: 10px;
-  margin: 4%;
+  margin: 4% auto;
   padding: 1%;
 }
 
