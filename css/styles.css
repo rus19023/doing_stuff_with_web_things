@@ -1,5 +1,8 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
+body {
+  background-color: #DDDDDD;
+}
+
+/*# sourceMappingURL=styles.css.map */dlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap");
 body {
   grid-template-areas: "header" "main" "footer";
 }
@@ -405,10 +408,16 @@ input[type=checkbox].markbtnX {
 }
 
 .quizhead {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
   font-family: "Hubbali", sans-serif;
+}
+
+.quizcol {
+  padding: 0 2%;
+  display: grid;
+  grid-template-columns: 6fr 1fr;
 }
 
 #question {
@@ -861,6 +870,14 @@ a :hover {
 }
 a :visited {
   color: #33ffdf;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
 }
 
 #ocean {
@@ -1530,6 +1547,11 @@ li.normal-text {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 451px) {
+  .quizhead {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media screen and (min-width: 768px) {
   body {
     font-size: 15px;
@@ -1540,7 +1562,7 @@ li.normal-text {
     font-size: 13px;
   }
 
-  .color3 {
+  .color3, .quizhead {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -1564,7 +1586,7 @@ li.normal-text {
   }
 }
 @media screen and (min-width: 1200px) {
-  .col2 {
+  .col2, .quizhead {
     grid-template-columns: 1fr 1fr 1fr;
   }
 

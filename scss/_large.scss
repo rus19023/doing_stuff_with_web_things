@@ -1,4 +1,8 @@
 @media screen and (min-width: 451px) {
+    .quizhead {
+        grid-template-columns: 1fr 1fr;
+
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -12,7 +16,7 @@
 
     body { font-size: 13px; }
 
-    .color3 {
+    .color3, .quizhead {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -42,7 +46,7 @@
 
 @media screen and (min-width: 1200px) {
 
-    .col2 {
+    .col2, .quizhead {
         grid-template-columns: 1fr 1fr 1fr;
     }
 

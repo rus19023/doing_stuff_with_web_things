@@ -13,10 +13,16 @@
 }
 
 .quizhead {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
     font-family: $fontfirst;
+}
+
+.quizcol {
+    padding: 0 2%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
 }
 
 #question {
