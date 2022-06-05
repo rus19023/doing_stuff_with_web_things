@@ -1565,6 +1565,18 @@ li.normal-text {
   body {
     font-size: 15px;
   }
+
+  .table {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  th, td {
+    width: 5%;
+    text-align: left;
+    padding: 2%;
+  }
 }
 @media screen and (min-width: 992px) {
   body {
