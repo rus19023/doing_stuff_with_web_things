@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Handlee&amp;family=Hubballi&amp;family=Nunito:wght@300&amp;family=Yanone+Kaffeesatz:wght@200;300;400;500&amp;display=swap');
+
 @import "variables";
 @import "grid";
 @import "colors";
@@ -9,9 +8,9 @@
 @import "quizninja";
 @import "sliders";
 
-
 * {
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 body {
@@ -47,6 +46,10 @@ a {
 
 .right-align {
     text-align: right;
+}
+
+.no-spc {
+    margin: 0 -15px;
 }
 
 #ocean {
@@ -88,11 +91,18 @@ a {
 .table {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: 1fr;
 }
 
-th, td {
-    width: 5%;
+.sjcol {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr 2fr;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
     text-align: left;
     padding: 2%;
 }
@@ -237,12 +247,15 @@ main, header, section, footer, div {
 
 .form-group {
     margin-bottom: 1rem;
+    background-color: $royalblue;
+    color: $yellow;
     padding: 1%;
     margin: 1% auto;
     display: grid;
     grid-template-columns: 1fr;
-    & .inputs {
+    & p .inputs {
         padding: 2%;
+        width: 33%;
     }
 }
 
@@ -481,21 +494,41 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     cursor: pointer;
     background: $royalblue;
-    padding: 2%;
+    padding: 1%;
     border: $buttonborder;
     border-radius: $radius;
     color: $yellow;
     font-family: $fontfirst;
     font-weight: bold;
     & a {
+        width: 100%;
         text-decoration: none;
-        color: $royalblue;
+        margin-bottom: 4%;
     }
 }
 
-.buttons {
+.smbuttons {
+    font-size: small;
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 100%;
+}
+
+.buttons-danger {
+    text-align: center;
+    cursor: pointer;
+    background: $yellow;
+    padding: 1%;
+    border: $buttonborder;
+    border-radius: $radius;
+    color: $redorange;
+    font-family: $fontfirst;
+    font-weight: bold;
+    & a {
+        width: 100%;
+        text-decoration: none;
+        margin-bottom: 4%;
+    }
+
 }
 
 .padit {
@@ -565,13 +598,12 @@ a.source {
 }
 
 tr, td, th {
-    padding: 1%;
+    padding: 2%;
+    text-align: left;
 }
 
 tr {
     line-height: 1.5;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
 }
 
 .code {
