@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@300&display=swap");
+body {
+  background: darkkhaki;
+  padding: 1%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merienda", sans-serif;
+}
+
+ul.navbar-nav li a {
+  text-decoration: none;
+}
+
+.text, li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.navcontainer {
+  padding: 2%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navlink {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  color: darkolivegreen;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+.navlink :hover {
+  background: darkolivegreen;
+  border: 1px solid lemonchiffon;
+  color: lemonchiffon;
+}
+
+.btn {
+  color: darkolivegreen;
+  background: lemonchiffon;
+  border: 1px solid lemonchiffon;
+  font-family: "Montserrat", sans-serif;
+}
+.btn :hover {
+  background: darkolivegreen;
+  border: 1px solid lemonchiffon;
+  color: lemonchiffon;
+}
+
+.btn, .inputs, .labels, th, td {
+  padding: 2%;
+  margin: 0 auto;
+}
+
+table thead {
+  background: lemonchiffon;
+  color: darkolivegreen;
+}
+table tbody {
+  background: darkkhaki;
+  color: darkolivegreen;
+}
+
+.form-group {
+  background: darkkhaki;
+  color: darkolivegreen;
+}
+.form-group .inputs {
+  background: darkolivegreen;
+  color: lemonchiffon;
+  font-family: "Montserrat", sans-serif;
+}
+.form-group .labels {
+  background: lemonchiffon;
+  color: darkolivegreen;
+  font-family: "Merienda", sans-serif;
+}
+
+.createpage {
+  background-image: url("/img/addQuote.jpg");
+}
+
+.editpage {
+  background-image: url("/img/addQuote.jpg");
+}
+
+.viewpage {
+  background-image: url("/img/viewQuote.jpg");
+}
+
+.deletepage {
+  background-image: url("/img/addQuote.jpg");
+}
+
+.detailpage {
+  background-image: url("/img/displayQuote.jpg");
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.left {
+  background-image: url(./mainmenu.jpg);
+  background-size: cover;
+  position: relative;
+  top: 0;
+}
+
+.right {
+  background: darkolivegreen;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.home {
+  background-image: url("/img/mainmenu.jpg");
+  width: 100%;
+  height: 100vh;
+}
+
+.homesplit {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.title {
+  background: lemonchiffon;
+  color: darkolivegreen;
+  font-family: "Merienda", sans-serif;
+  border: 2px solid darkolivegreen;
+}
+
+.title, a, h1, h2, h3, h4, h5, h6 {
+  border-radius: 15px;
+  padding: 1% 2%;
+  margin: 2% auto;
+  max-width: 100%;
+}
+.title :hover, a :hover, h1 :hover, h2 :hover, h3 :hover, h4 :hover, h5 :hover, h6 :hover {
+  background: darkolivegreen;
+  border: 1px solid lemonchiffon;
+  color: lemonchiffon;
+}
+
+a:hover {
+  color: lemonchiffon;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 20px;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 60px;
+  /* Vertically center the text there */
+}
+.footer a {
+  color: lemonchiffon;
+}
+.footer a :hover {
+  color: darkolivegreen;
+}/*# sourceMappingURL=megadesk.css.map */
