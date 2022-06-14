@@ -379,7 +379,7 @@ a:visited.sub-text {
     font-family: $fontfirst;
 }
 
-.normal-text {
+.normal-text, .text, ul li {
     color: white;
     font-family: $fontfirst;
     text-align: left;
@@ -514,11 +514,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
 .smbuttons {
-    font-size: smaller;
+    font-size: .9rem;
     margin: 0 auto;
+    height: 2rem;
     max-width: 100%;
-    padding: 1%;
+    padding: .4rem;
+    border: 2px solid white;
+    border-radius: $radius;
 }
 
 .buttons-danger {
@@ -559,9 +563,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
 }
 
+
+
 .textarea,
 .inputs {
     border-radius: $radius;
+}
+
+.footer {
+    text-align: center;
 }
 
 .bwhite { background: white; }
@@ -704,6 +714,13 @@ h2.subtitle {
     font-size: .75rem;
     font-weight: bold;
     margin: 2%;
+}
+
+td.normal-text {
+    color: $yellow;
+    font-family: $fontfirst;
+    font-size: .9rem;
+    font-weight: bold;
 }
 
 li.normal-text { list-style-type: square; margin: 0 auto; }

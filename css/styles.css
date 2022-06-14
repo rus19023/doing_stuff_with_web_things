@@ -1231,7 +1231,7 @@ a:visited.sub-text {
   font-family: "Hubbali", sans-serif;
 }
 
-.normal-text {
+.normal-text, .text, ul li {
   color: white;
   font-family: "Hubbali", sans-serif;
   text-align: left;
@@ -1377,10 +1377,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .smbuttons {
-  font-size: smaller;
+  font-size: 0.9rem;
   margin: 0 auto;
+  height: 2rem;
   max-width: 100%;
-  padding: 1%;
+  padding: 0.4rem;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .buttons-danger {
@@ -1423,6 +1426,10 @@ h1, h2, h3, h4, h5, h6 {
 .textarea,
 .inputs {
   border-radius: 10px;
+}
+
+.footer {
+  text-align: center;
 }
 
 .bwhite {
@@ -1590,6 +1597,13 @@ h2.subtitle {
   font-size: 0.75rem;
   font-weight: bold;
   margin: 2%;
+}
+
+td.normal-text {
+  color: #ffd700;
+  font-family: "Hubbali", sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 li.normal-text {
