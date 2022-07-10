@@ -29,8 +29,7 @@ body header #main-nav ul li a {
   min-height: 100vh;
   grid-area: gridcontainer;
   display: grid;
-  max-width: 90%;
-  margin: 4% auto;
+  width: 100%;
   grid-template-columns: 1fr;
   grid-template-areas: "left" "right";
 }
@@ -46,28 +45,37 @@ body header #main-nav ul li a {
 }
 #gridcontainer #left {
   grid-area: left;
-  margin: 0 auto;
+  width: 100%;
+  margin: 2% auto;
 }
 #gridcontainer #right {
   grid-area: right;
+  width: 100%;
   margin: 2% auto;
 }
 #gridcontainer #right #addbar {
-  grid-area: addbar;
-  gap: 2%;
-  max-width: 100%;
-  margin: 2%;
-  grid-template-areas: "addinput addbtn";
-  cursor: pointer;
   display: grid;
-  grid-template-columns: 10fr 1fr;
+  max-width: 100%;
+  grid-area: addbar;
+  gap: 1%;
+  margin: 2%;
+  grid-template-areas: "catinput addinput addbtn";
+  cursor: pointer;
+}
+#gridcontainer #right #addbar #catinput {
+  grid-area: catinput;
+  background: #ffd700;
+  border: 2px solid white;
 }
 #gridcontainer #right #addbar #addinput {
+  grid-area: addinput;
   background: #ffd700;
   border: 2px solid white;
 }
 #gridcontainer #right #addbar #addbtn {
+  grid-area: addbtn;
   font-size: 2rem;
+  padding: 1% 2%;
   border-radius: 10px;
   background: #ffd700;
   color: black;
@@ -75,11 +83,9 @@ body header #main-nav ul li a {
 }
 
 #todocontainer {
-  display: grid;
   grid-area: todocontainer;
   background: black;
-  max-width: 100%;
-  margin: 4% auto;
+  margin: 2% auto;
   grid-template-columns: 1fr;
 }
 #todocontainer #header1 {
@@ -88,17 +94,14 @@ body header #main-nav ul li a {
 }
 #todocontainer #todos {
   grid-area: todos;
-  padding: 1%;
   width: 100%;
   margin: 1% auto;
   grid-template-areas: "listitem";
 }
 #todocontainer #todos li.listitem {
   grid-area: listitem;
-  max-width: 100%;
-  margin: 0;
+  width: 100%;
   line-height: normal;
-  padding: 0;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr 1fr;
   grid-template-areas: "markbtn itemtext delbtn editbtn";
@@ -110,6 +113,7 @@ body header #main-nav ul li a {
   height: 1.5rem;
   border-radius: 5px;
   margin: auto;
+  padding: none;
   border: none;
 }
 #todocontainer #todos li.listitem .editbtn .editicon {
@@ -150,7 +154,8 @@ body header #main-nav ul li a {
 
 #listfooter {
   display: grid;
-  margin: 1%;
+  max-width: 95%;
+  margin: 1% auto;
   grid-area: listfooter;
   grid-template-columns: 1fr;
   justify-content: left;
@@ -166,13 +171,16 @@ body header #main-nav ul li a {
 }
 #listfooter #sortitems h3 {
   font-family: "Handlee", cursive;
-  padding: 0;
+  padding: 1%;
   margin: 0;
   color: #ffd700;
 }
+#listfooter #sortitems label {
+  padding: 2%;
+}
 #listfooter #btncontainer {
   grid-area: btns;
-  width: 90%;
+  width: 95%;
   margin: 2% auto;
   display: grid;
   gap: 1%;
@@ -190,17 +198,17 @@ body header #main-nav ul li a {
 }
 #listfooter #srchbar {
   display: grid;
-  gap: 2%;
+  gap: 1%;
   grid-area: srchbar;
-  width: 98%;
-  margin: 2% auto;
-  grid-template-columns: 9fr 1fr;
+  width: 95%;
+  margin: 1% auto;
+  grid-template-columns: 3fr 1fr;
   grid-template-areas: "srchinput srchbtn";
 }
 #listfooter #srchbar #srchinput {
   grid-area: srchinput;
   padding: 1%;
-  margin: 4%;
+  margin: 0;
   font-weight: bold;
   border: 2px solid white;
   background: #28ff00;
@@ -209,8 +217,9 @@ body header #main-nav ul li a {
 #listfooter #srchbar #srchbtn {
   grid-area: srchbtn;
   background: #28ff00;
-  margin: 4%;
-  padding: 1%;
+  margin: 2%;
+  padding: 2%;
+  font-size: 0.75rem;
   color: black;
 }
 
@@ -919,6 +928,16 @@ a :visited {
   margin: 0 auto;
 }
 
+.sharer {
+  background: black;
+  border: none;
+}
+
+.sharer img {
+  height: 100%;
+  width: 100%;
+}
+
 .table {
   width: 100%;
   display: grid;
@@ -982,7 +1001,7 @@ h3.small {
   }
 }
 main, header, footer {
-  max-width: 90%;
+  max-width: 95%;
   border-radius: 10px;
   margin: 4% auto;
   padding: 1%;
@@ -1158,8 +1177,8 @@ h2#tab-bar a {
 }
 
 .col3 {
+  width: 100%;
   grid-template-columns: 1fr 4fr 1fr;
-  margin: 4% auto;
 }
 
 #get-unit {
@@ -1194,7 +1213,7 @@ header {
 }
 
 img {
-  font-size: 1em;
+  font-size: 0.75em;
   color: #33ffdf;
   border-radius: 10px;
 }
@@ -1249,6 +1268,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Handlee", cursive;
   text-align: left;
   color: #ffd700;
+  width: 100%;
   background: black;
   padding: 2%;
   margin: 0 auto;
@@ -1317,7 +1337,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid white;
   border-radius: 10px;
   height: 2rem;
-  font-size: 1em;
+  font-size: 0.75em;
 }
 .todo-buttons a {
   text-decoration: none;
@@ -1642,16 +1662,9 @@ li.normal-text {
   }
 
   #gridcontainer {
-    max-width: 90%;
     border-radius: 20px;
     grid-template-areas: "left right";
-  }
-  #gridcontainer #content-wrap {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #todocontainer {
-    grid-template-areas: "header1 addbar" "todos listfooter";
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1200px) {

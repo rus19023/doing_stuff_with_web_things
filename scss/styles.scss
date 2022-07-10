@@ -88,6 +88,13 @@ a {
     }
 }
 
+.sharer {
+    background: black;
+    border: none;
+}
+
+.sharer img { height: 100%; width: 100%; }
+
 .table {
     width: 100%;
     display: grid;
@@ -137,7 +144,7 @@ h3.small {
 }
 
 main, header, footer {
-    max-width: 90%;
+    max-width: 95%;
     border-radius: $radius;
     margin: 4% auto;
     padding: 1%;
@@ -311,8 +318,8 @@ h2#tab-bar {
 }
 
 .col3 {
+    width: 100%;
    grid-template-columns: 1fr 4fr 1fr;
-    margin: 4% auto;
 }
 
 #get-unit { display: grid; grid-template-columns: 1fr 1fr; }
@@ -397,6 +404,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $fontsecond;
     text-align: left;
     color: $yellow;
+    width: 100%;
     background: black;
     padding: 2%;
     margin: 0 auto;

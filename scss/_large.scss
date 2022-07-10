@@ -1,4 +1,5 @@
 @media screen and (min-width: 451px) {
+
     .quizhead {
         grid-template-columns: 1fr 1fr;
 
@@ -25,19 +26,10 @@
     }
 
     #gridcontainer {
-        max-width: 90%;
         border-radius: $lgradius;
         grid-template-areas:
         "left right";
-        & #content-wrap {
-        grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    #todocontainer {
-        grid-template-areas:
-        "header1 addbar"
-        "todos listfooter";
+        grid-template-columns: 1fr 1fr;
     }
 }
 
