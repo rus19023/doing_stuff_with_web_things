@@ -1,4 +1,3 @@
-
 .editbtn { padding: 1.5vh; color: $skyblue !important; border: 1px solid $skyblue !important; }
 .delbtn { padding: 1.5vh; color: $redorange !important; border: 1px solid $redorange !important; }
 
@@ -126,7 +125,7 @@ $ft: $contrast;
         "listitem";
         & li.listitem {
             grid-area: listitem;
-            grid-template-columns: 1fr 2fr 7fr 2fr 2fr;
+            grid-template-columns: 2fr 5fr 7fr 2fr 2fr;
             list-style-type: none;
             max-width: 100%;
             border: $todoborder;
@@ -156,7 +155,6 @@ $ft: $contrast;
                 border-radius: 10px;
                 width: 100%;
                 height: 4vh;
-                font-size: $font2;
                 background: black;
             }
             & .editbtn {
@@ -164,7 +162,6 @@ $ft: $contrast;
                 border-radius: 10px;
                 width: 100%;
                 height: 4vh;
-                font-size: $font2;
                 background: black;
             }
         }
