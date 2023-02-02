@@ -320,7 +320,7 @@ export const list325 = [
         cert: "04",
         certname: "Certificate: Database",
         certdate: "2022-04-07",
-        certurl: "Database_eDiploma.pdf",
+        certurl: "database_eDiploma.pdf",
     },
     {
         cert: "03",
@@ -338,7 +338,7 @@ export const list325 = [
         cert: "05",
         certname: "Certificate: Web Backend Development",
         certdate: "2022-07-22 (Anticipated)",
-        certurl: 'web_backend_eDiploma.pdf',
+        certurl: 'backend_eDiploma.pdf',
     },
     {
         cert: "06",
